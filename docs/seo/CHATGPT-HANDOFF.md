@@ -6,7 +6,7 @@
 | Phase-gate status | Phase 0 `passed_with_documented_debt` |
 | Current task | DISC-101 — Export and inventory products and collections read-only |
 | Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate |
-| Last verified commit | `pending` |
+| Last verified commit | `dbaf68e` |
 | Development-theme deployment status | Development theme `130287665232` unchanged; no governance files deployed |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 | Work completed since previous handoff | Recorded autonomous routine approval roles, approved the ordered safe read-only Shopify method, passed GATE-0 with documented debt, and created GOV-003 for deferred business facts |

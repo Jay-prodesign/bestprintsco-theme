@@ -7,11 +7,11 @@ Last updated: 2026-07-11
 | Current phase | Phase 1 — Catalog source-of-truth and commercial discovery |
 | Phase-gate status | Phase 0 `passed_with_documented_debt` |
 | Current task | DISC-101 — Export and inventory products and collections read-only |
-| Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate (`pending`) |
+| Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate (`dbaf68e`) |
 | Open blockers | DISC-101 must prove safe read-only Shopify access; supplier/source ownership remains due before DISC-102 approval |
 | Required business decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `pending` (GATE-0 implementation commit) |
+| Last verified commit | `dbaf68e` (GATE-0 implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate
