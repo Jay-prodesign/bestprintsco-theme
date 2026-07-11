@@ -2,15 +2,15 @@
 
 | Field | Latest state |
 |---|---|
-| Current phase | Phase 0 — Governance and baseline |
-| Phase-gate status | `ready_for_review` |
-| Current task | GATE-0 — Review Phase 0 commercial-first governance gate |
-| Last completed task | DOC-001 — Normalize operating system to commercial-first strategy |
-| Last verified commit | `83cccaf` |
+| Current phase | Phase 1 — Catalog source-of-truth and commercial discovery |
+| Phase-gate status | Phase 0 `passed_with_documented_debt` |
+| Current task | DISC-101 — Export and inventory products and collections read-only |
+| Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate |
+| Last verified commit | `pending` |
 | Development-theme deployment status | Development theme `130287665232` unchanged; no governance files deployed |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
-| Work completed since previous handoff | Normalized commercial-first roadmap and tasks; added PillowProfits evidence hierarchy, clustering controls, ordered discovery plan, and deferred low-impact debt |
-| Open blockers | Phase 0 gate has not been reviewed; safe read-only catalog access, source ownership, and approval roles remain unresolved |
-| Required business-owner decisions | Approve read-only catalog method; assign approval roles; identify PillowProfits/source records; confirm brand positioning, priority markets, verified review source, and measurement-data access |
-| Next recommended task | Review GATE-0 and record `passed` or `passed_with_documented_debt`; do not execute Phase 1 before that decision |
+| Work completed since previous handoff | Recorded autonomous routine approval roles, approved the ordered safe read-only Shopify method, passed GATE-0 with documented debt, and created GOV-003 for deferred business facts |
+| Open blockers | DISC-101 must prove safe read-only access; PillowProfits/source ownership is due before DISC-102 approval |
+| Required business-owner decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
+| Next recommended task | Execute DISC-101 read-only inventory after confirming authentication and preserving private exports outside Git |
 | Repository files ChatGPT should inspect before advising | `AGENTS.md`; `docs/seo/CHATGPT-HANDOFF.md`; `docs/seo/PROJECT-STATE.md`; `docs/seo/TASKS.yaml`; `docs/seo/DECISIONS.md`; relevant phase reports |

@@ -4,24 +4,22 @@ Last updated: 2026-07-11
 
 | Field | State |
 |---|---|
-| Current phase | Phase 0 — Governance and baseline |
-| Phase-gate status | ready_for_review |
-| Current task | GATE-0 — Review Phase 0 commercial-first governance gate |
-| Last completed task | DOC-001 — Normalize operating system to commercial-first strategy (`83cccaf`) |
-| Open blockers | Phase 0 gate not yet reviewed; safe read-only catalog access, source ownership, and approval roles remain unresolved |
-| Required business decisions | Approve read-only catalog method; assign approval roles; identify PillowProfits/source records; confirm brand positioning, priority markets, verified review source, and measurement-data access |
+| Current phase | Phase 1 — Catalog source-of-truth and commercial discovery |
+| Phase-gate status | Phase 0 `passed_with_documented_debt` |
+| Current task | DISC-101 — Export and inventory products and collections read-only |
+| Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate (`pending`) |
+| Open blockers | DISC-101 must prove safe read-only Shopify access; supplier/source ownership remains due before DISC-102 approval |
+| Required business decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `83cccaf` (commercial-first normalization implementation commit) |
+| Last verified commit | `pending` (GATE-0 implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate
 
-Phase 0 may be marked `passed` only after the commercial-first normalization is reviewed, task schema/state consistency validates, safety/evidence rules are accepted, the baseline tag exists remotely, approval roles are assigned, and a safe read-only Phase 1 catalog method is approved. It may be marked `passed_with_documented_debt` only when deferred governance debt has an owner, due condition, risk statement, and backlog task.
-
-Do not start Phase 1 until the Phase 0 gate is explicitly recorded as `passed` or `passed_with_documented_debt`.
+Phase 0 is recorded as `passed_with_documented_debt` under DEC-014. DEC-008 assigns routine reversible approvals, DEC-012 approves the ordered read-only access method, and GOV-003 records the owner, due conditions, risks, and rollback posture for deferred business facts.
 
 ## Current constraints
 
 - DOC-001 changed governance/documentation only; no theme code or Shopify data was changed.
 - No Shopify push or publish occurred during DOC-001.
-- Ten ordered Phase 1 discovery tasks are prepared but gate-blocked; none is in progress.
+- DISC-101 is the next dependency-safe task. It is read-only and must establish access and baseline evidence before any catalog analysis or write.

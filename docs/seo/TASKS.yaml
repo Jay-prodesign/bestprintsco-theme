@@ -73,7 +73,7 @@ tasks:
     phase: 0
     title: Review Phase 0 commercial-first governance gate
     description: Approve normalized governance, read-only discovery boundaries, decision owners, and Phase 1 readiness.
-    status: ready
+    status: done
     priority: P0
     type: phase_gate
     risk: low
@@ -86,9 +86,30 @@ tasks:
     rollback: Keep Phase 0 active and record revisions.
     branch: null
     worktree: null
+    commit: pending
+    preview_url: null
+    notes: Passed with documented debt under DEC-014. The attached autonomous program approved routine reversible execution roles and the ordered safe read-only catalog method. GOV-003 owns deferred brand, market, review-source, and PillowProfits-source decisions. No theme, Shopify, or catalog change occurred.
+
+  - id: GOV-003
+    phase: 1
+    title: Resolve deferred business facts and source ownership
+    description: Resolve brand positioning, priority markets, verified review source, and authoritative PillowProfits or archived supplier records when their dependent work becomes due.
+    status: backlog
+    priority: P0
+    type: governance_debt
+    risk: medium
+    approval_required: true
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/DECISIONS.md, docs/seo/PROJECT-STATE.md, docs/seo/CHATGPT-HANDOFF.md]
+    affected_urls: []
+    acceptance_criteria: [DEC-005, DEC-006, DEC-007, and DEC-013 have verified answers or individually documented safe deferrals]
+    validation: [Business-owner or authoritative-source verification, evidence and risk review]
+    rollback: Keep affected implementation tasks blocked and retain unknown facts as unknown.
+    branch: task/GOV-003-deferred-decisions
+    worktree: null
     commit: null
     preview_url: null
-    notes: Ready for business-owner review; remains incomplete and blocks all Phase 1 execution.
+    notes: Owner is the business owner. Due before Phase 3 homepage copy for DEC-005; before Phase 4 market-sensitive work for DEC-006; before trust or review schema implementation for DEC-007; and before DISC-102 clustering approval for DEC-013. Risk is unsupported positioning, localization, review, or product claims. These debts do not block DISC-101 read-only inventory.
 
   - id: DISC-101
     phase: 1
