@@ -3,3 +3,38 @@ node_modules/
 .env
 .env.*
 .DS_Store
+
+# Shopify CLI and local exports
+.shopify/
+data/shopify/exports/
+data/shopify/raw/
+data/shopify/downloads/
+*.shopify.csv
+*.shopify.json
+
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*secrets*.json
+*token*.json
+
+# Customer, order, and operational data
+data/shopify/customer*/
+data/shopify/order*/
+data/shopify/private/
+
+# Temporary and generated files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.log
+coverage/
+.cache/

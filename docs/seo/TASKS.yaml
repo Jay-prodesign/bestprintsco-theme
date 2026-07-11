@@ -1,0 +1,347 @@
+schema_version: 1
+allowed_statuses: [backlog, blocked, ready, in_progress, review, done, rejected]
+constraints:
+  max_theme_code_tasks_in_progress: 1
+  require_completed_dependencies_for_execution: true
+  require_phase_gate_before_phase_change: true
+tasks:
+  - id: GOV-001
+    phase: 0
+    title: Establish SEO operating system
+    description: Create governance, state, roadmap, task tracking, standards, data controls, baseline tag, and repository scaffolding.
+    status: in_progress
+    priority: P0
+    type: governance
+    risk: low
+    approval_required: true
+    dependencies: []
+    affected_files: [AGENTS.md, .gitignore, docs/seo, scripts/catalog, data/shopify]
+    affected_urls: []
+    acceptance_criteria: [No theme files changed, YAML and Markdown validate, baseline tag exists, setup branch pushed]
+    validation: [git diff review, YAML parse, Markdown structure check, theme-directory diff check]
+    rollback: Delete governance branch and tag before merge if rejected.
+    branch: setup/seo-operating-system
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Do not start Phase 1 in this task.
+
+  - id: DISC-001
+    phase: 1
+    title: Build canonical URL and page-type inventory
+    description: Perform a read-only inventory of sitemap and discoverable storefront URLs, grouped by template and indexability.
+    status: ready
+    priority: P0
+    type: discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [URLs grouped by type, canonical/indexability sampled, limitations recorded]
+    validation: [sitemap reconciliation, representative manual samples]
+    rollback: Revert documentation commit.
+    branch: task/DISC-001-url-inventory
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Gate-blocked until Phase 0 passes.
+
+  - id: DISC-002
+    phase: 1
+    title: Map templates sections and active usage
+    description: Map storefront page types to Liquid templates, JSON templates, sections, snippets, and settings without editing them.
+    status: ready
+    priority: P0
+    type: discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Active and legacy candidates classified, evidence recorded for each classification]
+    validation: [theme structure reconciliation, preview sampling]
+    rollback: Revert documentation commit.
+    branch: task/DISC-002-template-map
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Do not delete suspected legacy code.
+
+  - id: DISC-003
+    phase: 1
+    title: Inventory apps scripts widgets and integrations
+    description: Identify source, purpose, page scope, ownership, and load behavior of storefront apps and third-party integrations.
+    status: ready
+    priority: P0
+    type: discovery
+    risk: medium
+    approval_required: false
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [Every observed integration has source purpose and page-scope evidence or an explicit unknown owner]
+    validation: [rendered-source inspection, representative template sampling]
+    rollback: Revert documentation commit.
+    branch: task/DISC-003-app-map
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: No app removal is authorized.
+
+  - id: DISC-004
+    phase: 1
+    title: Establish SEO metadata and structured-data baseline
+    description: Sample titles, descriptions, canonicals, robots directives, social tags, headings, and JSON-LD by page type.
+    status: ready
+    priority: P1
+    type: discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0, DISC-001]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [All critical page types sampled, validation failures reproducible]
+    validation: [source/DOM comparison, schema validation samples]
+    rollback: Revert documentation commit.
+    branch: task/DISC-004-seo-baseline
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Discovery only.
+
+  - id: DISC-005
+    phase: 1
+    title: Establish performance mobile and accessibility baseline
+    description: Measure representative page types and inventory major payload, interaction, layout, keyboard, and accessible-name risks.
+    status: ready
+    priority: P1
+    type: discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0, DISC-001, DISC-003]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [Representative mobile and desktop baselines recorded with tool and preview limitations]
+    validation: [repeat sample, compare page types, record environment]
+    rollback: Revert documentation commit.
+    branch: task/DISC-005-experience-baseline
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Prefer real-user Shopify metrics when authorized.
+
+  - id: GATE-0
+    phase: 0
+    title: Review Phase 0 governance gate
+    description: Review repository rules, task schema, ownership, baseline tag, and safety controls before discovery begins.
+    status: blocked
+    priority: P0
+    type: phase_gate
+    risk: low
+    approval_required: true
+    dependencies: [GOV-001]
+    affected_files: [docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml, docs/seo/DECISIONS.md]
+    affected_urls: []
+    acceptance_criteria: [Owner records passed or passed_with_documented_debt, required roles assigned]
+    validation: [governance review]
+    rollback: Keep Phase 0 active and record required revisions.
+    branch: null
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Blocks Phase 1 execution.
+
+  - id: STAB-001
+    phase: 2
+    title: Fix confirmed active Liquid and HTML blockers
+    description: Resolve only Theme Check syntax and unclosed-element findings proven active on storefront paths.
+    status: backlog
+    priority: P0
+    type: theme_code
+    risk: high
+    approval_required: true
+    dependencies: [GATE-1]
+    affected_files: [sections, snippets]
+    affected_urls: []
+    acceptance_criteria: [Confirmed active syntax blockers removed, page behavior preserved]
+    validation: [theme check, page tests, console check, diff review]
+    rollback: Revert task commit and re-push approved main to development theme.
+    branch: task/STAB-001-active-syntax
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit category — Confirmed active storefront blocker; activity must be proven first.
+
+  - id: STAB-002
+    phase: 2
+    title: Repair confirmed active missing assets and invalid schema JSON
+    description: Resolve MissingAsset, ValidSchema, and ValidJSON findings after confirming active usage and app ownership.
+    status: backlog
+    priority: P0
+    type: theme_code
+    risk: high
+    approval_required: true
+    dependencies: [GATE-1, DISC-002, DISC-003]
+    affected_files: [assets, config, sections, snippets, templates]
+    affected_urls: []
+    acceptance_criteria: [Active missing assets and invalid schema/JSON errors resolved]
+    validation: [theme check, schema parse, representative page tests]
+    rollback: Revert task commit and restore development theme from approved main.
+    branch: task/STAB-002-assets-schema-json
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit categories — blocker, app-generated, requires manual verification.
+
+  - id: LOC-001
+    phase: 2
+    title: Restore translation parity and validate localized markup
+    description: Classify and repair 142 MatchingTranslations and 4 TranslationKeyExists errors without inventing business copy.
+    status: backlog
+    priority: P1
+    type: localization
+    risk: medium
+    approval_required: true
+    dependencies: [GATE-1, DISC-002]
+    affected_files: [locales]
+    affected_urls: []
+    acceptance_criteria: [Translation parity restored or unsupported locales explicitly scoped]
+    validation: [theme check, JSON parse, localized page samples]
+    rollback: Restore locale files from prior commit.
+    branch: task/LOC-001-translation-parity
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit category — Translation/localization issue.
+
+  - id: QUAL-001
+    phase: 2
+    title: Classify code-quality and legacy findings
+    description: Review VariableName, HardcodedRoutes, OrphanedSnippet, UnusedAssign, deprecated fonts, and suspected legacy findings before any cleanup.
+    status: backlog
+    priority: P2
+    type: discovery
+    risk: medium
+    approval_required: false
+    dependencies: [GATE-1, DISC-002, DISC-003]
+    affected_files: [docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Each finding classified with usage evidence and disposition]
+    validation: [code references, active-template map, app ownership map]
+    rollback: Revert classification report.
+    branch: task/QUAL-001-finding-classification
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit categories — Code-quality, unused/legacy, app-generated, possible false positive.
+
+  - id: SEO-001
+    phase: 4
+    title: Correct metadata heading and social-schema framework
+    description: Address confirmed homepage targeting, invalid social values, schema placeholders, and social-image behavior after discovery and business approval.
+    status: backlog
+    priority: P0
+    type: theme_code
+    risk: high
+    approval_required: true
+    dependencies: [GATE-3, DISC-004]
+    affected_files: [layout/theme.liquid, snippets/meta-tags.liquid, snippets/header.liquid]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [Valid metadata and schema by page type, no placeholder identities]
+    validation: [theme check, schema tests, source/DOM tests]
+    rollback: Revert task commit and restore development theme from approved main.
+    branch: task/SEO-001-metadata-schema
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit category — Confirmed SEO/performance issue.
+
+  - id: PERF-001
+    phase: 5
+    title: Deduplicate styles and conditionally load integrations
+    description: Address duplicate CSS, global third-party scripts, font/image loading, and LCP priority only after app mapping.
+    status: backlog
+    priority: P0
+    type: theme_code
+    risk: high
+    approval_required: true
+    dependencies: [GATE-4, DISC-003, DISC-005]
+    affected_files: [assets, layout, sections, snippets]
+    affected_urls: []
+    acceptance_criteria: [No required integration regression, measurable payload/blocking improvement]
+    validation: [theme check, page tests, Lighthouse, app flow tests]
+    rollback: Revert task commit and restore development theme from approved main.
+    branch: task/PERF-001-loading-deduplication
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Audit categories — Confirmed performance issue and app-generated issue.
+
+  - id: CAT-001
+    phase: 7
+    title: Build controlled Shopify catalog data pipeline
+    description: Implement authorized export, immutable snapshot, proposal, validation, batch update, verification, and rollback tooling.
+    status: backlog
+    priority: P0
+    type: data_pipeline
+    risk: critical
+    approval_required: true
+    dependencies: [GATE-6]
+    affected_files: [scripts/catalog, data/shopify/proposals, data/shopify/snapshots]
+    affected_urls: []
+    acceptance_criteria: [Dry run passes, secrets excluded, rollback proven on sample]
+    validation: [schema validation, sample round trip, security review]
+    rollback: Remove tooling branch; production data remains unchanged until separately approved.
+    branch: task/CAT-001-catalog-pipeline
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: No credentials requested in Phase 0.
+
+  - id: PILOT-001
+    phase: 8
+    title: Run approved product and collection SEO pilot
+    description: Propose and apply a small approved batch using immutable snapshots and rollback; do not change product handles.
+    status: backlog
+    priority: P0
+    type: catalog_update
+    risk: critical
+    approval_required: true
+    dependencies: [GATE-7, CAT-001]
+    affected_files: [data/shopify/proposals, data/shopify/snapshots]
+    affected_urls: []
+    acceptance_criteria: [Approved factual proposals applied, post-update verification passes, rollback file complete]
+    validation: [before-after diff, page/feed checks, owner review]
+    rollback: Apply approved rollback file from immutable before snapshot.
+    branch: task/PILOT-001-catalog-seo-pilot
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Handles remain unchanged.
+
+finding_classification:
+  confirmed_active_storefront_blocker:
+    source_counts: {LiquidHTMLSyntaxError: 10, MissingAsset: 10, ValidSchema: 5, ValidJSON: 1, UndefinedObject: 20, UnclosedHTMLElement: 13}
+    policy: Confirm active usage before fixing; prioritize runtime and release impact.
+  confirmed_seo_performance_issue:
+    examples: [Weak homepage H1, overlong metadata, invalid social/schema placeholders, missing image alt text, duplicate CSS, globally loaded third-party scripts]
+    policy: Schedule in the appropriate technical SEO or performance phase.
+  translation_localization_issue:
+    source_counts: {MatchingTranslations: 142, TranslationKeyExists: 4}
+    policy: Repair parity with validated copy; do not invent business claims.
+  code_quality_issue:
+    source_counts: {VariableName: 51, HardcodedRoutes: 11, AssetPreload: 3, DeprecatedFontsOnSettingsData: 3, UnusedAssign: 2}
+    policy: Fix only with demonstrated value and regression coverage.
+  unused_legacy_section_issue:
+    source_counts: {OrphanedSnippet: 13}
+    policy: Prove non-use across templates, settings, app embeds, and dynamic references before removal.
+  app_generated_issue:
+    examples: [Customizer scripts, app embeds, injected assets or markup]
+    policy: Identify owner and purpose; never remove without approval and flow tests.
+  requires_manual_verification:
+    examples: [Active-template status, false syntax positives caused by dynamic Liquid, promotion and business claims, app ownership]
+    policy: Record evidence and owner decision before implementation.
+  possible_false_positive:
+    examples: [Parser findings in intentionally dynamic Liquid/HTML, orphan reports for dynamically rendered snippets]
+    policy: Reproduce on active rendered paths before changing code.
