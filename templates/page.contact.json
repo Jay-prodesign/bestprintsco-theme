@@ -1,0 +1,34 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "page-contact",
+      "settings": {
+        "container": "container-fluid",
+        "iframe": "",
+        "show_map": false,
+        "contact_form_heading": "Get in Touch",
+        "contact_form_sub_heading": "<p>We'd love to hear from you about our entire service. Your comments and suggestions will be highly appreciated. Please complete the form below.</p>",
+        "contact_info_heading": "Here to Help",
+        "contact_info_sub_heading": "<p>Have a question? You may find an answer in our FAQs. But you can also contact us:</p>",
+        "store_1": "",
+        "contact_info_content": "",
+        "store_2": "",
+        "contact_info_content_2": "",
+        "store_3": "",
+        "contact_info_content_3": ""
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

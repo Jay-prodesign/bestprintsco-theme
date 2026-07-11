@@ -1,0 +1,934 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "purchase_code": "c3850d8e-ab6a-4dc6-8364-30b03111d1f7",
+    "favicon": "shopify://shop_images/Favicon_971b4ca4-74dd-4ba9-b347-20c2dae81f9d.png",
+    "logo_image_desktop": "shopify://shop_images/lgh_f6.png",
+    "logo_transparent_image": "shopify://shop_images/Logo_0883908e-c667-42db-a16d-ff8299d0da8e.png",
+    "logo_width_desktop": 90,
+    "logo_width_mobile": 90,
+    "first_notification": "👉 Come back!",
+    "rtl": false,
+    "currency_code_enabled": false,
+    "store_phone": "",
+    "store_email": "info@bestprintsco.com",
+    "store_address": "",
+    "link_store_page": "our-stores",
+    "social_twitter_link": "#",
+    "social_facebook_link": "#",
+    "social_pinterest_link": "#",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_tiktok_link": "",
+    "container-fluil-max-width": 1410,
+    "font_source": "1",
+    "fnt_body_sp": "futura_n4",
+    "fnt_body_gg": "Jost",
+    "fnt_headings_sp": "futura_n4",
+    "fnt_headings_gg": "Jost",
+    "headings_font_size_h2": 40,
+    "headings_font_weight": 500,
+    "fnt_menu_sp": "futura_n4",
+    "fnt_menu_gg": "Jost",
+    "menu_font_weight": 500,
+    "button_font_weight": 500,
+    "button_border_radius": 30,
+    "body_bg_color": "rgba(0,0,0,0)",
+    "primary_color": "#f05e2d",
+    "space_for_tablet": 60,
+    "space_for_mobile": 50,
+    "header_layout": "h_layout1",
+    "container": "full-width",
+    "sticky_header": true,
+    "enable_transparent_header": false,
+    "sticky_header_mobile": true,
+    "header_transparent_text_color": "#ffffff",
+    "show_wishlist_icon": false,
+    "search_type": "popup",
+    "predictive_search": true,
+    "quick_search": "boots,shoes,shirt,blanket,",
+    "search_suggest": "blazers",
+    "enable_search_input": false,
+    "free_shipping_progress_bar": true,
+    "shipping_rate": "10",
+    "cart_countdown": true,
+    "cart_countdown_duration": 4,
+    "cart_note": false,
+    "cart_gift_wrap": false,
+    "gift_wrap": "gift-wrap",
+    "cart_shipping_rates_calculator": true,
+    "cart_discount_codes": true,
+    "footer_layout": "footer-1",
+    "help_chat": "",
+    "show_wishlist": false,
+    "show_compare": false,
+    "show_review": false,
+    "show_product_type": false,
+    "content_center": false,
+    "product_style": "bls__product-style-1",
+    "show_product_action_on_mobile": true,
+    "product_aspect_ratio": "1/1",
+    "product_name_line": "1",
+    "enable_sale_label": true,
+    "enable_preorder": false,
+    "product_label_style": "label-depend-on-button",
+    "color_swatches_size": "large",
+    "color_swatches_style": "rounded",
+    "show_qv_product_availability": false,
+    "show_qv_product_sku": false,
+    "show_qv_product_type": false,
+    "show_qv_product_vendor": false,
+    "show_qv_product_collection": false,
+    "show_qv_product_description": true,
+    "show_qv_product_review": true,
+    "show_fake_order": true,
+    "fake_user": "Jonson (California) | Tony (Texas) | Bruno (New York) | Eren (Ohio) | Lauren (Washington) | Flortino (California) | Blue (Ohio) | Jayson (Washington) | Amy (California)  Robert (New York)",
+    "newsletter_width": 530,
+    "newsletter_sub_title": "<p>Subscribe to the BestPrintsCo get notified about exclusive offers every week!</p>",
+    "show_promotion": false,
+    "show_promotion_mobile": false,
+    "promotion_code": "UMINO50",
+    "show_promotion_code": true,
+    "promotion_width": 500,
+    "promotion_banner": "shopify://shop_images/promotion.jpg",
+    "promotion_title": "Cyber Monday",
+    "promotion_sub_title": "<p>Special Offer</p>",
+    "promotion_content": "Up to <span>50% Off</span>\nwhen using code \"[promotion_code]\"",
+    "show_before": false,
+    "bf_banner": "shopify://shop_images/before-you-leave.jpg",
+    "bf_collection": "new-arrivals",
+    "bf_heading": "Top sale!",
+    "bf_sub_heading": "",
+    "bf_desc": "<p>Enter the code below at checkout to get 20% off your first order.</p><p><strong> \"[discount_code]\"</strong></p>",
+    "bf_label_bb": "Continue Shopping",
+    "bf_link_bb": "shopify://collections/all",
+    "enable_cart_terms_conditions": false,
+    "enable_product_terms_conditions": true,
+    "enable_quickview_terms_conditions": false,
+    "content_terms_conditions": "<p> I agree with <a href=\"https://bestprintsco.com/pages/return-refund-policy\" title=\"https://bestprintsco.com/pages/return-refund-policy\">Terms & Conditions </a></p>",
+    "page_terms_conditions": "return-refund-policy",
+    "enable_eu_cookie_bar_gdpr": false,
+    "message_cookie": "<p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking <strong>\"Allow cookies\"</strong>, you consent to our use of cookies. <a href=\"/pages/privacy-policy\" target=\"_blank\" title=\"Privacy Policy\"><strong>More infor</strong></a></p>",
+    "cookie_button_text": "Allow cookies",
+    "global_css": "@media only screen and (min-width: 1025px) {\n  .dlg-box  .bls__menu-parent:not(.default_dropdown) .submenu, .verticalmenu-html .parent .submenu {\n    overflow-y: initial;\n    max-height: 100%;\n  }\n}\n:root{\n--height-bar: 44.5px;\n--height-header: 110px;\n}\n.countdown-announcementBar{\ncolor: #fff;\n}",
+    "checkout_logo_image": "shopify://shop_images/logo_checkout.png",
+    "checkout_logo_size": "small",
+    "checkout_accent_color": "#111111",
+    "checkout_button_color": "#111111",
+    "header_full_width": true,
+    "cookie_url": "shopify://pages/term-condition",
+    "cookie_link_text": "Read more",
+    "bf_label": "Continue Shopping",
+    "bf_link": "shopify://products/knotted-short-skirt",
+    "colors_solid_button_labels": "#ffffff",
+    "colors_accent_1": "#121212",
+    "gradient_accent_1": "",
+    "colors_accent_2": "#334fb4",
+    "gradient_accent_2": "",
+    "colors_text": "#121212",
+    "colors_outline_button_labels": "#121212",
+    "colors_background_1": "#ffffff",
+    "gradient_background_1": "",
+    "colors_background_2": "#f3f3f3",
+    "gradient_background_2": "",
+    "type_header_font": "assistant_n4",
+    "heading_scale": 100,
+    "type_body_font": "assistant_n4",
+    "body_scale": 100,
+    "page_width": 1200,
+    "spacing_sections": 0,
+    "spacing_grid_horizontal": 8,
+    "spacing_grid_vertical": 8,
+    "buttons_border_thickness": 1,
+    "buttons_border_opacity": 100,
+    "buttons_radius": 0,
+    "buttons_shadow_opacity": 0,
+    "buttons_shadow_horizontal_offset": 0,
+    "buttons_shadow_vertical_offset": 4,
+    "buttons_shadow_blur": 5,
+    "variant_pills_border_thickness": 1,
+    "variant_pills_border_opacity": 55,
+    "variant_pills_radius": 40,
+    "variant_pills_shadow_opacity": 0,
+    "variant_pills_shadow_horizontal_offset": 0,
+    "variant_pills_shadow_vertical_offset": 4,
+    "variant_pills_shadow_blur": 5,
+    "inputs_border_thickness": 1,
+    "inputs_border_opacity": 55,
+    "inputs_radius": 0,
+    "inputs_shadow_opacity": 0,
+    "inputs_shadow_horizontal_offset": 0,
+    "inputs_shadow_vertical_offset": 4,
+    "inputs_shadow_blur": 5,
+    "card_style": "standard",
+    "card_image_padding": 0,
+    "card_text_alignment": "left",
+    "card_color_scheme": "background-2",
+    "card_border_thickness": 0,
+    "card_border_opacity": 10,
+    "card_corner_radius": 0,
+    "card_shadow_opacity": 0,
+    "card_shadow_horizontal_offset": 0,
+    "card_shadow_vertical_offset": 4,
+    "card_shadow_blur": 5,
+    "collection_card_style": "standard",
+    "collection_card_image_padding": 0,
+    "collection_card_text_alignment": "left",
+    "collection_card_color_scheme": "background-2",
+    "collection_card_border_thickness": 0,
+    "collection_card_border_opacity": 10,
+    "collection_card_corner_radius": 0,
+    "collection_card_shadow_opacity": 0,
+    "collection_card_shadow_horizontal_offset": 0,
+    "collection_card_shadow_vertical_offset": 4,
+    "collection_card_shadow_blur": 5,
+    "blog_card_style": "standard",
+    "blog_card_image_padding": 0,
+    "blog_card_text_alignment": "left",
+    "blog_card_color_scheme": "background-2",
+    "blog_card_border_thickness": 0,
+    "blog_card_border_opacity": 10,
+    "blog_card_corner_radius": 0,
+    "blog_card_shadow_opacity": 0,
+    "blog_card_shadow_horizontal_offset": 0,
+    "blog_card_shadow_vertical_offset": 4,
+    "blog_card_shadow_blur": 5,
+    "text_boxes_border_thickness": 0,
+    "text_boxes_border_opacity": 10,
+    "text_boxes_radius": 0,
+    "text_boxes_shadow_opacity": 0,
+    "text_boxes_shadow_horizontal_offset": 0,
+    "text_boxes_shadow_vertical_offset": 4,
+    "text_boxes_shadow_blur": 5,
+    "media_border_thickness": 1,
+    "media_border_opacity": 5,
+    "media_radius": 0,
+    "media_shadow_opacity": 0,
+    "media_shadow_horizontal_offset": 0,
+    "media_shadow_vertical_offset": 4,
+    "media_shadow_blur": 5,
+    "popup_border_thickness": 1,
+    "popup_border_opacity": 10,
+    "popup_corner_radius": 0,
+    "popup_shadow_opacity": 0,
+    "popup_shadow_horizontal_offset": 0,
+    "popup_shadow_vertical_offset": 4,
+    "popup_shadow_blur": 5,
+    "drawer_border_thickness": 1,
+    "drawer_border_opacity": 10,
+    "drawer_shadow_opacity": 0,
+    "drawer_shadow_horizontal_offset": 0,
+    "drawer_shadow_vertical_offset": 4,
+    "drawer_shadow_blur": 5,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 40,
+    "sale_badge_color_scheme": "accent-2",
+    "sold_out_badge_color_scheme": "inverse",
+    "accent_icons": "text",
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "sections": {
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "fd8c507a-a402-4ccc-b440-8e60e259f0f1": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Summer Sale ! 50% Off for Boots! No code needed:</p>",
+              "countdown_deadline": "12-30-2025"
+            }
+          }
+        },
+        "block_order": [
+          "fd8c507a-a402-4ccc-b440-8e60e259f0f1"
+        ],
+        "settings": {
+          "container": "full-width",
+          "show_announcement": true,
+          "homepage_only": true,
+          "show_close": true,
+          "show_mobile": true,
+          "text_action": "marquee",
+          "bar_font_size": 14,
+          "bar_uppercase": false,
+          "s_text_time": 10,
+          "s_text_spacing": 50,
+          "bar_background_color": "#111111",
+          "bar_text_color": "#999999",
+          "bar_link_color": "",
+          "bar_link_hover_color": "",
+          "bar_countdown_color": "",
+          "close_btn_color": "#ffffff"
+        }
+      },
+      "top-bar": {
+        "type": "top-bar",
+        "settings": {
+          "container": "full-width",
+          "show_topbar": true,
+          "background_color": "",
+          "text_color": "#111111",
+          "text_hover_color": "#111111",
+          "show_mobile": false,
+          "show_phone_number": false,
+          "show_email": true,
+          "show_social": false,
+          "show_country": true,
+          "show_language": true,
+          "show_store_page": true,
+          "show_message": true,
+          "message": "<p>Sign up for discounts & coupon codes: <a href=\"/account/\" title=\"/account/\"><span style=\"text-decoration:underline\"><strong>Sign Up</strong></span></a></p>"
+        }
+      },
+      "horizontal-menu": {
+        "type": "horizontal-menu",
+        "blocks": {
+          "b74bac2a-ccbf-4dd6-8c5b-f4386c965f04": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Shop",
+              "url": "",
+              "menu": "main-menu-1",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 50
+            }
+          },
+          "88f9c7e2-4cb9-4dea-8acd-2eba84e34cf4": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Footwear",
+              "url": "",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 20,
+              "width": "custom",
+              "custom_width": 800,
+              "background_repeat": "no-repeat",
+              "background_position": "center",
+              "background_size": "auto"
+            }
+          },
+          "b608cac1-9b06-4d7c-ba14-0e67c2ea5134": {
+            "type": "collection",
+            "settings": {
+              "collection": "vegan-leather-boots",
+              "show_count": false,
+              "open_link": false,
+              "col": "4"
+            }
+          },
+          "7a0c3f4d-2c91-4c22-9260-c8674a51833f": {
+            "type": "link",
+            "settings": {
+              "title": "All Shoes",
+              "url": "https://bestprintsco.com/collections/footwear",
+              "open_link": false,
+              "menu": "footwear",
+              "col": "4"
+            }
+          },
+          "09d35fdd-e85e-4a42-b0b9-43552f90971f": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Home",
+              "url": "",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 20,
+              "width": "custom",
+              "custom_width": 800,
+              "background_repeat": "no-repeat",
+              "background_position": "center",
+              "background_size": "auto"
+            }
+          },
+          "4440cfc8-ea54-4f1e-93bd-52960263185e": {
+            "type": "collection",
+            "settings": {
+              "collection": "bedding-sets",
+              "show_count": false,
+              "open_link": false,
+              "col": "5"
+            }
+          },
+          "7cc41daf-566e-4326-ad5c-e67c21cab70a": {
+            "type": "link",
+            "settings": {
+              "title": "All Home Products",
+              "url": "https://bestprintsco.com/collections/all-home-products",
+              "open_link": false,
+              "menu": "home",
+              "col": "4"
+            }
+          },
+          "1dd69a02-d24d-459c-acea-c2e4a57ff6d1": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Car Accessories",
+              "url": "",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 20,
+              "width": "custom",
+              "custom_width": 800,
+              "background_repeat": "no-repeat",
+              "background_position": "center",
+              "background_size": "auto"
+            }
+          },
+          "d6220bd2-1df2-4f00-8697-b6943988e6a6": {
+            "type": "collection",
+            "settings": {
+              "collection": "car-seat-covers",
+              "show_count": false,
+              "open_link": false,
+              "col": "4"
+            }
+          },
+          "4a1321a8-a2fd-4427-8937-70a57320e1f4": {
+            "type": "link",
+            "settings": {
+              "title": "All Car Accessories",
+              "url": "https://bestprintsco.com/collections/car-accessories",
+              "open_link": false,
+              "menu": "car-accessories",
+              "col": "4"
+            }
+          },
+          "9f51dbd9-215e-4238-b9ce-0daa4487b599": {
+            "type": "dropdown",
+            "settings": {
+              "title": "About",
+              "url": "",
+              "menu": "about",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 50
+            }
+          }
+        },
+        "block_order": [
+          "b74bac2a-ccbf-4dd6-8c5b-f4386c965f04",
+          "88f9c7e2-4cb9-4dea-8acd-2eba84e34cf4",
+          "b608cac1-9b06-4d7c-ba14-0e67c2ea5134",
+          "7a0c3f4d-2c91-4c22-9260-c8674a51833f",
+          "09d35fdd-e85e-4a42-b0b9-43552f90971f",
+          "4440cfc8-ea54-4f1e-93bd-52960263185e",
+          "7cc41daf-566e-4326-ad5c-e67c21cab70a",
+          "1dd69a02-d24d-459c-acea-c2e4a57ff6d1",
+          "d6220bd2-1df2-4f00-8697-b6943988e6a6",
+          "4a1321a8-a2fd-4427-8937-70a57320e1f4",
+          "9f51dbd9-215e-4238-b9ce-0daa4487b599"
+        ],
+        "settings": {
+          "m_animation": "up_to_down",
+          "label1": "Hot",
+          "label_color_1": "#f2a0a5",
+          "label2": "New",
+          "label_color_2": "#ffb4b4",
+          "label3": "Sale",
+          "label_color_3": "#177983",
+          "width_sub_menu_center": 800
+        }
+      },
+      "footer-1": {
+        "type": "footer-1",
+        "blocks": {
+          "66e258af-c393-4b5c-b25b-057fd161df52": {
+            "type": "about_us",
+            "settings": {
+              "title": "BestPrintsCo",
+              "description": "<p>Offering the most colorful hand-made gifts ! Shop for cutest merchandise and cute shoes on Best Prints Co !</p><p>Find the latest designs for women, men and kids</p>",
+              "logo_width": 90,
+              "about_description": "",
+              "show_address": false,
+              "show_phone": false,
+              "show_email": true,
+              "show_socials_link": true,
+              "width": "33%"
+            }
+          },
+          "dbc96a1f-7b6c-4dba-9ce1-da9cb5dfc9fc": {
+            "type": "menu",
+            "settings": {
+              "menu": "footer",
+              "title": "Customer Service",
+              "width": "16%"
+            }
+          }
+        },
+        "block_order": [
+          "66e258af-c393-4b5c-b25b-057fd161df52",
+          "dbc96a1f-7b6c-4dba-9ce1-da9cb5dfc9fc"
+        ],
+        "settings": {
+          "container": "container-fluid",
+          "back_to_top": true,
+          "show_border_top": true,
+          "remove_on_homepage": false,
+          "remove_on_inner_page": false,
+          "copyright": "<p>© 2022 BestPrintsCo. All Rights Reserved</p>",
+          "show_country": true,
+          "show_language": true,
+          "payment_icons_width": 331,
+          "show_social_links": false,
+          "footer-heading-size": 18,
+          "footer_background_color": "#f5f5f5",
+          "footer_title_color": "#111111",
+          "footer_text_color": "#555555",
+          "footer_link_color": "#555555",
+          "footer_link_color_hover": "#111111",
+          "footer_border_color": "#dedede",
+          "footer_bottom_background_color": "#f5f5f5",
+          "footer_bottom_text_color": "#555555"
+        }
+      },
+      "vertical-menu": {
+        "type": "vertical-menu",
+        "blocks": {
+          "89b90c3f-dec1-4fb5-b2f5-5cce0546d0d2": {
+            "type": "menu_item",
+            "settings": {
+              "title": "Mega Menu",
+              "url": "",
+              "open_link": false,
+              "label": "",
+              "icon_width_image": 20,
+              "icon_font": "",
+              "custom_width": 1200,
+              "background_repeat": "repeat",
+              "background_position": "center",
+              "background_size": "auto",
+              "col_banner_left": "4",
+              "col_banner_right": "4"
+            }
+          },
+          "252da4e8-bd66-490f-87a3-67833453329d": {
+            "type": "link",
+            "settings": {
+              "title": "Heading",
+              "url": "",
+              "open_link": false,
+              "menu": "footer",
+              "col": "4"
+            }
+          },
+          "d3e68680-5a0b-45d8-999c-417a401a9790": {
+            "type": "banner",
+            "settings": {
+              "title": "Heading",
+              "button_title": "Button Text",
+              "banner_link": "shopify://collections/collections1",
+              "open_link": false,
+              "col": "4"
+            }
+          },
+          "7889d16a-634c-48df-aa5f-7ecfa481f818": {
+            "type": "dropdown",
+            "settings": {
+              "title": "Dropdown",
+              "url": "",
+              "menu": "main-menu",
+              "open_link": false,
+              "label": "",
+              "icon_font": "",
+              "icon_width_image": 50
+            }
+          }
+        },
+        "block_order": [
+          "89b90c3f-dec1-4fb5-b2f5-5cce0546d0d2",
+          "252da4e8-bd66-490f-87a3-67833453329d",
+          "d3e68680-5a0b-45d8-999c-417a401a9790",
+          "7889d16a-634c-48df-aa5f-7ecfa481f818"
+        ],
+        "settings": {
+          "enable": true,
+          "title": "Shop by category",
+          "ver_title_background_color": "#ffffff",
+          "ver_title_text_color": "#111111",
+          "limit_show_item": 10,
+          "limit_item_screen": true,
+          "animation": "down_to_up",
+          "label1": "Hot",
+          "label_color_1": "",
+          "label2": "New",
+          "label_color_2": "",
+          "label3": "Sale",
+          "label_color_3": ""
+        }
+      },
+      "custom-colors": {
+        "type": "custom-colors",
+        "blocks": {
+          "39c002c6-a311-4d27-9a1c-18ee73bf8fb2": {
+            "type": "color",
+            "settings": {
+              "color_name": "Purple Light",
+              "color_code": "#c3b1e1"
+            }
+          },
+          "8c942bd5-d81f-45a8-8f3a-52476724911b": {
+            "type": "color",
+            "settings": {
+              "color_name": "Green",
+              "color_code": "#7abdb5"
+            }
+          },
+          "d0549bcc-1ca2-4876-a6a2-44990ff960ae": {
+            "type": "color",
+            "settings": {
+              "color_name": "Blue",
+              "color_code": "#3f8ad1"
+            }
+          },
+          "0fa4f211-5f8c-4479-b34a-79b2cbdcbb24": {
+            "type": "color",
+            "settings": {
+              "color_name": "Yellow",
+              "color_code": "#e2c28f"
+            }
+          },
+          "b9fda091-7c72-4838-a759-21a42584ec30": {
+            "type": "color",
+            "settings": {
+              "color_name": "Light yellow",
+              "color_code": "#ecdebf"
+            }
+          },
+          "d36ae270-68d1-421f-9447-0e21c3bafc7d": {
+            "type": "color",
+            "settings": {
+              "color_name": "Purple",
+              "color_code": "#d7b2bb"
+            }
+          },
+          "d96c2d21-33d0-462b-90dd-6d4199ddb0a4": {
+            "type": "color",
+            "settings": {
+              "color_name": "Pink",
+              "color_code": "#fcd1db"
+            }
+          },
+          "e00eeac1-ed3d-42b6-b578-4d6885a1b5c4": {
+            "type": "color",
+            "settings": {
+              "color_name": "Red",
+              "color_code": "#ce2e2e"
+            }
+          },
+          "f228bd9f-253f-42cf-ace5-9073a7c4b51f": {
+            "type": "color",
+            "settings": {
+              "color_name": "Teal",
+              "color_code": "#008080"
+            }
+          },
+          "782ec2d0-8ca8-49b6-a7e4-582a8c0c6d80": {
+            "type": "color",
+            "settings": {
+              "color_name": "Light Blue",
+              "color_code": "#a9c0e0"
+            }
+          },
+          "d7655708-3909-433b-a9d1-443e7fa8bbf4": {
+            "type": "color",
+            "settings": {
+              "color_name": "Brown",
+              "color_code": "#7b4b39"
+            }
+          }
+        },
+        "block_order": [
+          "39c002c6-a311-4d27-9a1c-18ee73bf8fb2",
+          "8c942bd5-d81f-45a8-8f3a-52476724911b",
+          "d0549bcc-1ca2-4876-a6a2-44990ff960ae",
+          "0fa4f211-5f8c-4479-b34a-79b2cbdcbb24",
+          "b9fda091-7c72-4838-a759-21a42584ec30",
+          "d36ae270-68d1-421f-9447-0e21c3bafc7d",
+          "d96c2d21-33d0-462b-90dd-6d4199ddb0a4",
+          "e00eeac1-ed3d-42b6-b578-4d6885a1b5c4",
+          "f228bd9f-253f-42cf-ace5-9073a7c4b51f",
+          "782ec2d0-8ca8-49b6-a7e4-582a8c0c6d80",
+          "d7655708-3909-433b-a9d1-443e7fa8bbf4"
+        ],
+        "settings": {}
+      },
+      "mobile-stickybar": {
+        "type": "mobile-stickybar",
+        "settings": {
+          "enable_mobile_stickybar": true,
+          "show_home": true,
+          "show_cart": true,
+          "show_products_all": true,
+          "show_wishlist": true,
+          "show_my_account": true
+        }
+      },
+      "footer-2": {
+        "type": "footer-2",
+        "blocks": {
+          "3f0786f1-5e61-4b65-a504-9e1dd0adaaef": {
+            "type": "about_us",
+            "settings": {
+              "title": "",
+              "description": "",
+              "logo_width": 84,
+              "about_description": "",
+              "show_address": true,
+              "show_phone": true,
+              "show_email": true,
+              "show_socials_link": true,
+              "width": "33%"
+            }
+          },
+          "a6587b7e-fd90-47dd-853f-67dc3ca39d4e": {
+            "type": "menu",
+            "settings": {
+              "menu": "",
+              "title": "Company",
+              "width": "16%"
+            }
+          },
+          "c119ba5b-4f94-4d3b-a545-1e40894b689b": {
+            "type": "menu",
+            "settings": {
+              "menu": "",
+              "title": "Customer Service",
+              "width": "16%"
+            }
+          },
+          "a2bbf732-182c-4778-abc4-14f68803ac6a": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Subscribe",
+              "description": "<p>Newsletter description</p>",
+              "email_placeholder": "Enter your email",
+              "email_btn_label": "subscribe",
+              "show_social": false,
+              "style_light": false,
+              "width": "33%"
+            }
+          }
+        },
+        "block_order": [
+          "3f0786f1-5e61-4b65-a504-9e1dd0adaaef",
+          "a6587b7e-fd90-47dd-853f-67dc3ca39d4e",
+          "c119ba5b-4f94-4d3b-a545-1e40894b689b",
+          "a2bbf732-182c-4778-abc4-14f68803ac6a"
+        ],
+        "settings": {
+          "container": "container-fluid",
+          "back_to_top": true,
+          "show_border_top": false,
+          "remove_on_homepage": false,
+          "remove_on_inner_page": false,
+          "copyright": "<p>Copyright © Uminex all rights reserved. Powered by Blueskytechco.</p>",
+          "show_country": true,
+          "show_language": true,
+          "payment_icons_width": 300,
+          "show_social_links": false,
+          "footer-heading-size": 18,
+          "footer_background_color": "#f5f5f5",
+          "footer_title_color": "#111111",
+          "footer_text_color": "#555555",
+          "footer_link_color": "#111111",
+          "footer_link_color_hover": "#111111",
+          "footer_border_color": "#ebebeb",
+          "footer_bottom_background_color": "#f5f5f5",
+          "footer_bottom_text_color": "#555555"
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "15683396631634586217": {
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "disabled": false,
+        "settings": {
+          "button_color": "#202a36",
+          "button_icon": "chat_bubble",
+          "button_text": "no_text",
+          "button_horizontal_position": "bottom_right",
+          "button_vertical_position": "lowest",
+          "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
+        }
+      },
+      "8765772171712610185": {
+        "type": "shopify://apps/t-lab-ai-language-translate/blocks/language_switcher/b5b83690-efd4-434d-8c6a-a5cef4019faf",
+        "disabled": true,
+        "settings": {
+          "enable_language_switcher": true,
+          "enable_country_region_switcher": true,
+          "use_currency_for_region": true,
+          "switcher_position": "custom",
+          "show_flags": true,
+          "switcher_appearance": "language-code",
+          "invert_switcher_icon_colors": true,
+          "dropdown_appearance": "language-code",
+          "use_modal_dialog": false,
+          "language_country_mapping": "",
+          "countries_filter": "",
+          "custom_css": "",
+          "header_switcher_reference_element": "",
+          "header_switcher_relative_position": "before",
+          "mobile_menu_switcher_reference_element": "",
+          "mobile_switcher_relative_position": "before",
+          "header_switcher_border_width": 0,
+          "switcher_viewport_position": "top-right",
+          "custom_position_spacing": "55,20,20,20",
+          "custom_switcher_font_size": "14px",
+          "custom_switcher_border_width": 1,
+          "custom_switcher_text_color": "#5c5c5c",
+          "custom_switcher_background_color": "#ffffff",
+          "custom_switcher_border_color": "#000000"
+        }
+      },
+      "12793297677437526120": {
+        "type": "shopify://apps/t-lab-ai-language-translate/blocks/custom_translations/b5b83690-efd4-434d-8c6a-a5cef4019faf",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "colors_solid_button_labels": "#ffffff",
+      "colors_accent_1": "#121212",
+      "gradient_accent_1": "",
+      "colors_accent_2": "#334fb4",
+      "gradient_accent_2": "",
+      "colors_text": "#121212",
+      "colors_outline_button_labels": "#121212",
+      "colors_background_1": "#ffffff",
+      "gradient_background_1": "",
+      "colors_background_2": "#f3f3f3",
+      "gradient_background_2": "",
+      "type_header_font": "assistant_n4",
+      "heading_scale": 100,
+      "type_body_font": "assistant_n4",
+      "body_scale": 100,
+      "page_width": 1200,
+      "spacing_sections": 0,
+      "spacing_grid_horizontal": 8,
+      "spacing_grid_vertical": 8,
+      "buttons_border_thickness": 1,
+      "buttons_border_opacity": 100,
+      "buttons_radius": 0,
+      "buttons_shadow_opacity": 0,
+      "buttons_shadow_horizontal_offset": 0,
+      "buttons_shadow_vertical_offset": 4,
+      "buttons_shadow_blur": 5,
+      "variant_pills_border_thickness": 1,
+      "variant_pills_border_opacity": 55,
+      "variant_pills_radius": 40,
+      "variant_pills_shadow_opacity": 0,
+      "variant_pills_shadow_horizontal_offset": 0,
+      "variant_pills_shadow_vertical_offset": 4,
+      "variant_pills_shadow_blur": 5,
+      "inputs_border_thickness": 1,
+      "inputs_border_opacity": 55,
+      "inputs_radius": 0,
+      "inputs_shadow_opacity": 0,
+      "inputs_shadow_horizontal_offset": 0,
+      "inputs_shadow_vertical_offset": 4,
+      "inputs_shadow_blur": 5,
+      "card_style": "standard",
+      "card_image_padding": 0,
+      "card_text_alignment": "left",
+      "card_color_scheme": "background-2",
+      "card_border_thickness": 0,
+      "card_border_opacity": 10,
+      "card_corner_radius": 0,
+      "card_shadow_opacity": 0,
+      "card_shadow_horizontal_offset": 0,
+      "card_shadow_vertical_offset": 4,
+      "card_shadow_blur": 5,
+      "collection_card_style": "standard",
+      "collection_card_image_padding": 0,
+      "collection_card_text_alignment": "left",
+      "collection_card_color_scheme": "background-2",
+      "collection_card_border_thickness": 0,
+      "collection_card_border_opacity": 10,
+      "collection_card_corner_radius": 0,
+      "collection_card_shadow_opacity": 0,
+      "collection_card_shadow_horizontal_offset": 0,
+      "collection_card_shadow_vertical_offset": 4,
+      "collection_card_shadow_blur": 5,
+      "blog_card_style": "standard",
+      "blog_card_image_padding": 0,
+      "blog_card_text_alignment": "left",
+      "blog_card_color_scheme": "background-2",
+      "blog_card_border_thickness": 0,
+      "blog_card_border_opacity": 10,
+      "blog_card_corner_radius": 0,
+      "blog_card_shadow_opacity": 0,
+      "blog_card_shadow_horizontal_offset": 0,
+      "blog_card_shadow_vertical_offset": 4,
+      "blog_card_shadow_blur": 5,
+      "text_boxes_border_thickness": 0,
+      "text_boxes_border_opacity": 10,
+      "text_boxes_radius": 0,
+      "text_boxes_shadow_opacity": 0,
+      "text_boxes_shadow_horizontal_offset": 0,
+      "text_boxes_shadow_vertical_offset": 4,
+      "text_boxes_shadow_blur": 5,
+      "media_border_thickness": 1,
+      "media_border_opacity": 5,
+      "media_radius": 0,
+      "media_shadow_opacity": 0,
+      "media_shadow_horizontal_offset": 0,
+      "media_shadow_vertical_offset": 4,
+      "media_shadow_blur": 5,
+      "popup_border_thickness": 1,
+      "popup_border_opacity": 10,
+      "popup_corner_radius": 0,
+      "popup_shadow_opacity": 0,
+      "popup_shadow_horizontal_offset": 0,
+      "popup_shadow_vertical_offset": 4,
+      "popup_shadow_blur": 5,
+      "drawer_border_thickness": 1,
+      "drawer_border_opacity": 10,
+      "drawer_shadow_opacity": 0,
+      "drawer_shadow_horizontal_offset": 0,
+      "drawer_shadow_vertical_offset": 4,
+      "drawer_shadow_blur": 5,
+      "badge_position": "bottom left",
+      "badge_corner_radius": 40,
+      "sale_badge_color_scheme": "accent-2",
+      "sold_out_badge_color_scheme": "inverse",
+      "accent_icons": "text",
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tiktok_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "predictive_search_enabled": true,
+      "predictive_search_show_vendor": false,
+      "predictive_search_show_price": false,
+      "currency_code_enabled": true
+    }
+  }
+}

@@ -1,0 +1,417 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "0c521c75-5d82-4dd6-aecc-f519d8907411": {
+      "type": "slideshow",
+      "blocks": {
+        "4d89f9ff-8153-4b4a-a089-ccb19f702450": {
+          "type": "slider_item",
+          "settings": {
+            "image": "shopify://shop_images/vegan-boots-banner-bestprintsco-2.webp",
+            "image_mobile": "shopify://shop_images/vegan-boots-banner-bestprintsco-mobile.webp",
+            "content_box": "content_in_container_fullwidth",
+            "content_custom_width": true,
+            "content_width": 50,
+            "content_background_color": "",
+            "content_opacity": 100,
+            "horizontal_position": "left_position",
+            "vertical_position": "middle_position",
+            "slider_effect": "effect_fadeinleft",
+            "text_alignment": "center",
+            "text_alignment_on_mobile": "center",
+            "text_color": "text-dark",
+            "subheading": "SAVE 50% IN THE WEEK",
+            "title": "Top Sale<br>\nOnline Exclusive",
+            "description": "",
+            "image_link": "https://bestprintsco.com/collections/vegan-leather-boots",
+            "button_text": "Explore Now",
+            "button_type": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "4d89f9ff-8153-4b4a-a089-ccb19f702450"
+      ],
+      "settings": {
+        "container": "full-width",
+        "slide_height": "full_screen",
+        "height_dk": 850,
+        "height_tb": 650,
+        "height_mb": 400,
+        "heading_font_size": "80",
+        "heading_font_weight": "400",
+        "subheading_font_size": "14",
+        "subheading_font_weight": "500",
+        "description_font_size": "16",
+        "description_font_weight": "400",
+        "design": "s-text-bellow-image",
+        "show_arrow_desktop": false,
+        "show_arrow_mobile": false,
+        "show_bullet_desktop": false,
+        "autoplay": false,
+        "autorotate_speed": 7,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": true
+      }
+    },
+    "13984142-c960-4325-9811-4f6d92dda785": {
+      "type": "spacing",
+      "settings": {
+        "spacing_desktop": 5,
+        "spacing_moible": 5
+      }
+    },
+    "48263d1a-f37b-4715-893a-ac5dfd296a1a": {
+      "type": "collection-list",
+      "blocks": {
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "Vegan Boots",
+            "collection": "vegan-leather-boots"
+          }
+        },
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "",
+            "collection": "running-shoes"
+          }
+        },
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "",
+            "collection": "car-seat-covers"
+          }
+        },
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "",
+            "collection": "bedding-sets"
+          }
+        },
+        "9e4b029d-3843-4d03-9d59-405cf781f204": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "Hoodie Dress",
+            "collection": "womens-hoodie-dresses",
+            "image": "shopify://shop_images/hooded-dress-bestprintsco.webp"
+          }
+        },
+        "bba02ac4-097d-482e-82eb-f08c5745d044": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "",
+            "collection": "hooded-blankets",
+            "image": "shopify://shop_images/hooded-blanket-bestprintsco.webp"
+          }
+        },
+        "e4994be4-f22c-437f-87a5-5826812d3f36": {
+          "type": "collection_item",
+          "settings": {
+            "title_collection": "Kids Clothing",
+            "collection": "kids-clothing",
+            "image": "shopify://shop_images/kids-hoodies.webp"
+          }
+        }
+      },
+      "block_order": [
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0",
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1",
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2",
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3",
+        "9e4b029d-3843-4d03-9d59-405cf781f204",
+        "bba02ac4-097d-482e-82eb-f08c5745d044",
+        "e4994be4-f22c-437f-87a5-5826812d3f36"
+      ],
+      "settings": {
+        "heading": "Hoodies",
+        "description": "",
+        "text_alignment": "text-center",
+        "container": "full-width",
+        "background_color": "",
+        "design_layout": "carousel",
+        "design_collection": "design-1",
+        "hover_effect": "zoom",
+        "show_count_product": false,
+        "custom_width_images": false,
+        "width_image": 200,
+        "images_style": "square",
+        "image_ratio": "custom",
+        "custom_ratio": "476:450",
+        "custom_column": 4,
+        "column_gap": 5,
+        "autoplay": true,
+        "loop": true,
+        "show_arrow": true,
+        "show_bullet": true,
+        "show_bullet_mobile": false,
+        "reveal_on_scroll": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    },
+    "d6197aaf-d094-4a47-b691-9a16a4490f7c": {
+      "type": "products-grid",
+      "settings": {
+        "heading": "New Arrivals",
+        "description": "<p>Offering the most unique items</p>",
+        "text_alignment": "text-center",
+        "container": "container-fluid",
+        "product_grid_background_color": "",
+        "collection": "vegan-leather-boots",
+        "limit_products": 12,
+        "item_desktop": 4,
+        "column_gap": 30,
+        "enable_banner": false,
+        "banner_type": "image",
+        "video_options": "local",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "desktop_height": 650,
+        "mobile_height": 300,
+        "banner_position": "position-left",
+        "banner_link": "",
+        "banner_width": 30,
+        "view_all_enable": false,
+        "text_view_all": "View All",
+        "load_more_button_enable": true,
+        "number_of_rows": 2,
+        "button_action": "load",
+        "button_label": "Load more",
+        "button_type": "secondary",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    },
+    "6974547b-ad71-482a-b14c-f6b4c1b74363": {
+      "type": "banner-with-text",
+      "blocks": {
+        "17692b41-f06e-4d9c-9b67-6e5aae793ecb": {
+          "type": "subheading",
+          "settings": {
+            "sub_title": "DEAL OF THE WEEK",
+            "subheading_color": "#111111",
+            "subheading_fs": 12,
+            "subheading_fw": 500,
+            "subheading_tf": "unset",
+            "subheading_mt": 0,
+            "subheading_mb": 30
+          }
+        },
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Custom Made for You",
+            "heading_color": "#111111",
+            "heading_fs": 50,
+            "heading_fw": 500,
+            "heading_tf": "unset",
+            "heading_mt": 0,
+            "heading_mb": 10
+          }
+        },
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-1": {
+          "type": "text",
+          "settings": {
+            "txt_content": "<p>We offer a huge discount on one product each week !</p>",
+            "txt_color": "",
+            "txt_fs": 16,
+            "txt_fw": 400,
+            "txt_tf": "unset",
+            "txt_mt": 1,
+            "txt_mb": 10
+          }
+        },
+        "d803b512-f292-4282-8c9c-a9387b341db7": {
+          "type": "countdown_bn",
+          "disabled": true,
+          "settings": {
+            "bn_end_time": "10-21-2023",
+            "bn_txt_color": "",
+            "bn_txt_fs": 18,
+            "number_txt_fs": 36,
+            "bn_txt_fw": 400,
+            "bn_txt_tf": "unset",
+            "bn_txt_mt": 0,
+            "bn_txt_mb": 50
+          }
+        },
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-2": {
+          "type": "buttons",
+          "settings": {
+            "btn_content": "Get At Only $65",
+            "button_type": "primary",
+            "b_mt": 1,
+            "b_mb": 15
+          }
+        }
+      },
+      "block_order": [
+        "17692b41-f06e-4d9c-9b67-6e5aae793ecb",
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-0",
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-1",
+        "d803b512-f292-4282-8c9c-a9387b341db7",
+        "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-2"
+      ],
+      "settings": {
+        "container": "full-width",
+        "background_color": "",
+        "banner_type": "image",
+        "image": "shopify://shop_images/discount-pic-1_802bdd58-0ce4-4c42-9762-453e1615ef63.png",
+        "image_mobile": "shopify://shop_images/skull-roses-women-s-boots-vegan-friendly-leather-women-s-leather-boots-1-1040x1040.jpg",
+        "video_options": "local",
+        "video_url": "",
+        "link": "https://bestprintsco.com/products/black-skull-boots",
+        "hover_effect": "none",
+        "bn_design": "text_overlay",
+        "banner_height": "custom-height",
+        "height_dk": 700,
+        "height_tb": 600,
+        "height_mb": 360,
+        "content_box": "content_in_container",
+        "text_bellow_mobile": true,
+        "img_position": "left",
+        "banner_width": "col-md-6",
+        "column_gap": 10,
+        "text_horizontal_position": "left",
+        "text_position": "center",
+        "text_align": "text-left",
+        "content_width": 70,
+        "content_bg_color": "",
+        "bg_opacity": 100,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": true
+      }
+    },
+    "7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359": {
+      "type": "scrolling-text",
+      "blocks": {
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-0": {
+          "type": "scrolling_text",
+          "settings": {
+            "content": "<p>FREE DELIVERY WORLDWIDE</p>",
+            "text_link": ""
+          }
+        },
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-2": {
+          "type": "scrolling_text",
+          "settings": {
+            "content": "<p>FREE SIZE EXCHANGE FOR ALL ORDERS</p>",
+            "text_link": ""
+          }
+        },
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-1": {
+          "type": "scrolling_text",
+          "settings": {
+            "content": "<p>MID-SEASON SALE UP TO 50% OFF</p>",
+            "text_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-0",
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-2",
+        "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-1"
+      ],
+      "settings": {
+        "container": "full-width",
+        "background_color": "",
+        "s_text_color": "#111111",
+        "text_font_size": 12,
+        "text_font_weight": 500,
+        "text_time": 22,
+        "text_spacing": 50,
+        "spacing_icon": "icon_circle",
+        "padding_top": 30,
+        "padding_bottom": 30,
+        "reset_spacing": true
+      }
+    },
+    "4bab0105-14e5-4ec7-912e-c3c5e1a4391a": {
+      "type": "divider",
+      "settings": {
+        "container": "full-width",
+        "border_height": 1,
+        "border_color": "#ebebeb",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    },
+    "0e27f320-599b-4c22-b9e2-e337ae787780": {
+      "type": "testimonial",
+      "blocks": {
+        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0": {
+          "type": "testimonials",
+          "settings": {
+            "description": "<p>\"One of the best stores i found online. If  you are looking for unique designs and great qualit,  you will be addicted to this store. Thanks to all those who created this products.\"</p>",
+            "author": "",
+            "job": "Emilyx38",
+            "testimonial_width": 100
+          }
+        }
+      },
+      "block_order": [
+        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0"
+      ],
+      "settings": {
+        "heading": "",
+        "description": "",
+        "text_align": "text-center",
+        "container": "container",
+        "background_color": "",
+        "content_width": 78,
+        "testi_text_size": "bigger",
+        "show_rating": true,
+        "img_view": "default",
+        "img_position": "position-top",
+        "car_gap": 30,
+        "carousel_item_desktop": 1,
+        "autoplay": false,
+        "loop": false,
+        "show_arrow": true,
+        "show_bullet": false,
+        "show_bullet_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    },
+    "f9c7e765-f9d1-490f-8725-6ea45c90df67": {
+      "type": "divider",
+      "settings": {
+        "container": "container-fluid",
+        "border_height": 1,
+        "border_color": "#ebebeb",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "reset_spacing": false
+      }
+    }
+  },
+  "order": [
+    "0c521c75-5d82-4dd6-aecc-f519d8907411",
+    "13984142-c960-4325-9811-4f6d92dda785",
+    "48263d1a-f37b-4715-893a-ac5dfd296a1a",
+    "d6197aaf-d094-4a47-b691-9a16a4490f7c",
+    "6974547b-ad71-482a-b14c-f6b4c1b74363",
+    "7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359",
+    "4bab0105-14e5-4ec7-912e-c3c5e1a4391a",
+    "0e27f320-599b-4c22-b9e2-e337ae787780",
+    "f9c7e765-f9d1-490f-8725-6ea45c90df67"
+  ]
+}
