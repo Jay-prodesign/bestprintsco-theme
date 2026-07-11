@@ -6,12 +6,12 @@ Last updated: 2026-07-11
 |---|---|
 | Current phase | Phase 0 — Governance, baseline and project setup |
 | Phase-gate status | pending_review |
-| Current task | GOV-002 — Add permanent ChatGPT handoff protocol |
-| Last completed task | GOV-001 — Establish SEO operating system (`e7b28fd`) |
+| Current task | GATE-0 — Review Phase 0 governance gate |
+| Last completed task | GOV-002 — Add permanent ChatGPT handoff protocol (`2d3b7a5`) |
 | Open blockers | Phase 0 gate not yet reviewed; approval roles and business decisions below remain open |
 | Required business decisions | Confirm brand/value proposition; priority markets; catalog scope; review source; analytics/Search Console access plan; approval roles |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `e7b28fd` (governance implementation commit) |
+| Last verified commit | `2d3b7a5` (handoff protocol implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate

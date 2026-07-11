@@ -9,7 +9,7 @@ tasks:
     phase: 0
     title: Add permanent ChatGPT handoff protocol
     description: Create the concise latest-state handoff and require updates after every completed task and phase-gate review.
-    status: in_progress
+    status: done
     priority: P0
     type: governance
     risk: low
@@ -22,9 +22,9 @@ tasks:
     rollback: Revert GOV-002 commits.
     branch: setup/seo-operating-system
     worktree: null
-    commit: null
+    commit: 2d3b7a5
     preview_url: null
-    notes: Detailed task history remains in TASKS.yaml, DECISIONS.md, and phase reports.
+    notes: Handoff validated with exactly the required latest-state fields; detailed history remains in TASKS.yaml, DECISIONS.md, and phase reports. No theme files changed and no Shopify deployment occurred.
 
   - id: GOV-001
     phase: 0
