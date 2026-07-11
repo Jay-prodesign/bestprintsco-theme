@@ -10,7 +10,7 @@ tasks:
     phase: 0
     title: Normalize operating system to commercial-first strategy
     description: Remove duplicate governance instructions and align roadmap, tasks, evidence standards, state, and handoff to the approved commercial-first sequence.
-    status: in_progress
+    status: done
     priority: P0
     type: governance
     risk: low
@@ -23,9 +23,9 @@ tasks:
     rollback: Revert DOC-001 commits.
     branch: docs/commercial-first-normalization
     worktree: null
-    commit: null
+    commit: 83cccaf
     preview_url: null
-    notes: Documentation and planning only.
+    notes: YAML, dependencies, duplicate IDs, cross-file state, roadmap phases, duplicate instructions, full diff, and no-theme-change boundaries validated. No Shopify changes or deployment occurred.
 
   - id: GOV-001
     phase: 0
@@ -73,7 +73,7 @@ tasks:
     phase: 0
     title: Review Phase 0 commercial-first governance gate
     description: Approve normalized governance, read-only discovery boundaries, decision owners, and Phase 1 readiness.
-    status: blocked
+    status: ready
     priority: P0
     type: phase_gate
     risk: low
@@ -88,7 +88,7 @@ tasks:
     worktree: null
     commit: null
     preview_url: null
-    notes: Blocks all Phase 1 execution.
+    notes: Ready for business-owner review; remains incomplete and blocks all Phase 1 execution.
 
   - id: DISC-101
     phase: 1

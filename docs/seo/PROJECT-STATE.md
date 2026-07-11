@@ -5,13 +5,13 @@ Last updated: 2026-07-11
 | Field | State |
 |---|---|
 | Current phase | Phase 0 — Governance and baseline |
-| Phase-gate status | pending_review |
-| Current task | DOC-001 — Normalize operating system to commercial-first strategy |
-| Last completed task | GOV-002 — Add permanent ChatGPT handoff protocol (`2d3b7a5`) |
+| Phase-gate status | ready_for_review |
+| Current task | GATE-0 — Review Phase 0 commercial-first governance gate |
+| Last completed task | DOC-001 — Normalize operating system to commercial-first strategy (`83cccaf`) |
 | Open blockers | Phase 0 gate not yet reviewed; safe read-only catalog access, source ownership, and approval roles remain unresolved |
 | Required business decisions | Approve read-only catalog method; assign approval roles; identify PillowProfits/source records; confirm brand positioning, priority markets, verified review source, and measurement-data access |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `2d3b7a5` (handoff protocol implementation commit) |
+| Last verified commit | `83cccaf` (commercial-first normalization implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate
@@ -22,6 +22,6 @@ Do not start Phase 1 until the Phase 0 gate is explicitly recorded as `passed` o
 
 ## Current constraints
 
-- GOV-001 changed governance/documentation only; no theme code was changed.
-- No Shopify push or publish occurred during GOV-001.
+- DOC-001 changed governance/documentation only; no theme code or Shopify data was changed.
+- No Shopify push or publish occurred during DOC-001.
 - Ten ordered Phase 1 discovery tasks are prepared but gate-blocked; none is in progress.
