@@ -6,7 +6,7 @@ Last updated: 2026-07-11
 |---|---|
 | Current phase | Phase 0 — Governance, baseline and project setup |
 | Phase-gate status | pending_review |
-| Current task | GATE-0 — Review Phase 0 governance gate |
+| Current task | GOV-002 — Add permanent ChatGPT handoff protocol |
 | Last completed task | GOV-001 — Establish SEO operating system (`e7b28fd`) |
 | Open blockers | Phase 0 gate not yet reviewed; approval roles and business decisions below remain open |
 | Required business decisions | Confirm brand/value proposition; priority markets; catalog scope; review source; analytics/Search Console access plan; approval roles |

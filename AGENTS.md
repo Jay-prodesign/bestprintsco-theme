@@ -37,6 +37,8 @@ These rules apply to every task in this repository.
 - Run baseline tests before modifying code.
 - Run Shopify Theme Check and relevant page tests after changes.
 - Update `TASKS.yaml` and `PROJECT-STATE.md` at the end of every task.
+- Update `docs/seo/CHATGPT-HANDOFF.md` at the end of every completed task and every phase-gate review.
+- Keep `CHATGPT-HANDOFF.md` concise and limited to the latest project state; detailed history belongs in `TASKS.yaml`, `DECISIONS.md`, and phase reports.
 - Do not mark a task done without test evidence, commit hash, and acceptance-criteria results.
 
 ## Content and catalog integrity
@@ -61,8 +63,9 @@ These rules apply to every task in this repository.
 9. Run validation.
 10. Review the full diff.
 11. Update task records and project state.
-12. Commit with the task ID in the commit message.
-13. Merge only after acceptance criteria pass.
-14. Push only approved `main` to unpublished development theme `130287665232`.
-15. Record preview URL, test results, and commit hash.
-16. Run a phase-gate review before advancing phases.
+12. Update `docs/seo/CHATGPT-HANDOFF.md` when the task is completed or a phase gate is reviewed.
+13. Commit with the task ID in the commit message.
+14. Merge only after acceptance criteria pass.
+15. Push only approved `main` to unpublished development theme `130287665232`.
+16. Record preview URL, test results, and commit hash.
+17. Run a phase-gate review before advancing phases.

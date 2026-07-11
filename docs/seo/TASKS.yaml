@@ -5,6 +5,27 @@ constraints:
   require_completed_dependencies_for_execution: true
   require_phase_gate_before_phase_change: true
 tasks:
+  - id: GOV-002
+    phase: 0
+    title: Add permanent ChatGPT handoff protocol
+    description: Create the concise latest-state handoff and require updates after every completed task and phase-gate review.
+    status: in_progress
+    priority: P0
+    type: governance
+    risk: low
+    approval_required: false
+    dependencies: [GOV-001]
+    affected_files: [AGENTS.md, docs/seo/CHATGPT-HANDOFF.md, docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml]
+    affected_urls: []
+    acceptance_criteria: [Handoff contains only required latest-state fields, permanent update rule exists, no theme files changed]
+    validation: [YAML parse, Markdown structure check, full diff review, theme-directory diff check]
+    rollback: Revert GOV-002 commits.
+    branch: setup/seo-operating-system
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Detailed task history remains in TASKS.yaml, DECISIONS.md, and phase reports.
+
   - id: GOV-001
     phase: 0
     title: Establish SEO operating system
