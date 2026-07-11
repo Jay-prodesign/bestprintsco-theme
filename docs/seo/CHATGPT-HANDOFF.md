@@ -6,7 +6,7 @@
 | Phase-gate status | Phase 0 `passed_with_documented_debt` |
 | Current task | DISC-102 — Identify product families and PillowProfits base-product clusters |
 | Last completed task | DISC-101 — Export and inventory products and collections read-only |
-| Last verified commit | `pending` |
+| Last verified commit | `25f300c` |
 | Development-theme deployment status | Development theme `130287665232` unchanged; no governance files deployed |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 | Work completed since previous handoff | Authenticated least-privilege read-only Admin access; exported and reconciled 7,469 products, 91,170 variants, 35,211 media records, and 38 collections to an immutable snapshot outside Git; added a reusable mutation-disabled exporter and sanitized checksum report |

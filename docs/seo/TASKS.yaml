@@ -128,7 +128,7 @@ tasks:
     rollback: Delete sanitized discovery artifacts and revert documentation commit.
     branch: task/DISC-101-catalog-inventory
     worktree: null
-    commit: pending
+    commit: 25f300c
     preview_url: null
     notes: Read-only Admin GraphQL access approved and proven with read_products, read_inventory, and read_publications only. Exact counts reconciled at 7,469 products and 38 collections; snapshot also contains 91,170 unique variants and 35,211 unique media records. Raw CSVs are outside Git at C:\Projects\bestprintsco-backups\2026-07-11_190759. Checksums and uniqueness checks passed; no mutation permission, Shopify write, theme change, or deployment occurred.
 

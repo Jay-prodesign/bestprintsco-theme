@@ -7,11 +7,11 @@ Last updated: 2026-07-11
 | Current phase | Phase 1 — Catalog source-of-truth and commercial discovery |
 | Phase-gate status | Phase 0 `passed_with_documented_debt` |
 | Current task | DISC-102 — Identify product families and PillowProfits base-product clusters |
-| Last completed task | DISC-101 — Export and inventory products and collections read-only (`pending`) |
+| Last completed task | DISC-101 — Export and inventory products and collections read-only (`25f300c`) |
 | Open blockers | PillowProfits/source ownership remains due before DISC-102 cluster approval; commercial performance and measurement sources are not yet available |
 | Required business decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `pending` (DISC-101 implementation commit) |
+| Last verified commit | `25f300c` (DISC-101 implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate
