@@ -1,37 +1,45 @@
-# BestPrintsCo SEO Content Standards
+# BestPrintsCo Commercial SEO Content Standards
 
-## Evidence and integrity
+## PillowProfits product evidence hierarchy
 
-- Use only verified product, policy, brand, delivery, material, compatibility, and availability facts.
-- Never fabricate reviews, customers, visitors, purchases, scarcity, guarantees, certifications, endorsements, or performance.
-- Cite the internal source/evidence for material claims in proposals.
-- Flag missing evidence; do not fill gaps by inference.
+Most products are PillowProfits print-on-demand base products carrying BestPrintsCo original designs. Every factual claim must record its source and confidence.
 
-## Search and customer value
+1. **Authoritative:** verified PillowProfits documentation; verified Shopify product, SKU, and variant data.
+2. **Strong:** approved internal records; archived supplier information for the exact base product.
+3. **Supporting:** actual product images; approved BestPrintsCo information.
+4. **Research only:** competitor listings, reverse-image matches, and similar products on other stores.
+5. **Unknown:** do not create a factual claim.
 
-- Write for a distinct customer intent and real decision need.
-- Avoid keyword stuffing, repeated synonym strings, duplicate templates, thin pages, and doorway pages.
-- Give each indexable page a unique purpose, primary topic, title, description, H1, and internal-link role.
-- Prefer concise, readable product titles; place supporting terms naturally in descriptions and taxonomy.
-- Do not change product handles during the initial pilot.
+Competitor content must never be copied and is never authoritative product-specification evidence. Visual similarity alone cannot establish material, construction, fit, compatibility, dimensions, or performance.
 
-## Metadata
+## Commercial and search value
 
-- Titles should be unique, descriptive, human-readable, and generally fit likely search-result display without mechanical truncation.
-- Descriptions should accurately summarize the page, include a useful differentiator, and avoid unsupported urgency.
-- Social titles/descriptions/images must reflect the visible page.
-- Canonicals, robots directives, and structured data must match actual page behavior.
+- Write for a distinct customer intent and decision need.
+- Prefer concise, human-readable, unique product titles; avoid repeated keyword suffixes.
+- Collection descriptions must explain a coherent assortment and help customers choose.
+- Give each indexable page a unique purpose, title, description, H1, and internal-link role.
+- Avoid keyword stuffing, duplicate templates, thin pages, and doorway pages.
+- Image alt text follows—not precedes—approved product titles and page meaning.
 
-## Product and collection content
+## Catalog clustering and proposals
 
-- Preserve source facts for material, construction, sizing, care, production, delivery, returns, variants, and compatibility.
-- Do not claim an image shows a detail that has not been manually verified.
-- Collection copy must describe a coherent assortment and help customers choose; it must not exist solely to rank.
-- Product and collection proposals require before/after fields, evidence, validation, approval where required, and rollback.
+- Cluster with multiple signals: collection, type, vendor, tags, SKU patterns, variants/sizes, price, title patterns, description blocks, verified PillowProfits base data, and image/mockup similarity.
+- Verify the base product and separate common base facts from design-specific information.
+- Validate each cluster with representative products before proposing a batch.
+- Inspect at least the main image of every product before final title approval.
+- Check exact and near-duplicate titles across the catalog.
+- Record evidence, confidence, unknowns, and review requirements per proposal.
+- Preserve handles, prices, variants, inventory, and publication status during pilots.
+
+## Product and collection fields
+
+- Preserve verified facts for materials, construction, sizing, care, production, delivery, returns, variants, and compatibility.
+- Do not infer visual details that have not been inspected.
+- Metadata must accurately summarize visible page content and avoid unsupported urgency.
+- Structured data must match visible facts; reviews/ratings require genuine visible evidence.
+- Every update requires a before snapshot, explicit before/after proposal, validation, approval where required, post-update verification, and rollback.
 
 ## Accessibility and style
 
-- Use descriptive headings in a logical hierarchy.
-- Alt text should communicate the image's useful content; decorative images use empty alt.
-- Link and button labels must describe their action or destination.
-- Use plain, specific language, consistent brand capitalization, correct grammar, and no fake urgency.
+- Use logical headings, descriptive controls, and meaningful alt text; decorative images use empty alt.
+- Use plain, specific language, consistent brand capitalization, correct grammar, and no fake scarcity.

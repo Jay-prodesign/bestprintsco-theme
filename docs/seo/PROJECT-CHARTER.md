@@ -2,7 +2,7 @@
 
 ## Mission
 
-Transform BestPrintsCo into a technically stable, trustworthy, discoverable, fast, accessible, and conversion-effective Shopify storefront through controlled, evidence-based phases.
+Transform BestPrintsCo into a commercially focused, trustworthy, discoverable, conversion-effective Shopify storefront through controlled, evidence-based phases that measure pilots before scaling.
 
 ## Fixed project boundaries
 
@@ -15,11 +15,11 @@ Transform BestPrintsCo into a technically stable, trustworthy, discoverable, fas
 
 ## Objectives
 
-1. Stabilize the theme before feature or SEO expansion.
-2. Establish reliable technical SEO and structured data.
-3. Improve performance, mobile usability, accessibility, trust, and conversion.
-4. Create a controlled catalog-data pipeline with snapshots and rollback.
-5. Scale content only after architecture, standards, measurement, and gates are in place.
+1. Establish the catalog source of truth, commercial priorities, product-family clusters, and minimum keyword-to-page map.
+2. Fix verified trust, purchase, and active technical blockers without prioritizing inactive debt.
+3. Improve homepage and priority collections, then prove product and image SEO in controlled pilots.
+4. Measure pilot outcomes before architecture changes or scaling.
+5. Preserve snapshots, proposals, approvals, validation, and rollback for catalog work.
 
 ## Non-goals
 

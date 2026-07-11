@@ -1,6 +1,18 @@
 # BestPrintsCo Shopify Data Requirements
 
-The theme repository does not contain the full Shopify product and collection catalog. Catalog analysis and updates require a separately authorized Shopify CSV workflow or Admin API integration. Do not request or create credentials during Phase 0.
+The theme repository does not contain the full Shopify product and collection catalog. Phase 1 requires a separately approved safe read-only Shopify CSV or Admin API method. Do not request or create credentials during this normalization task.
+
+## Phase 1 source-of-truth and clustering fields
+
+- Product and variant IDs, handles, titles, descriptions, SEO fields, publication status, and availability
+- Collections and product counts; product type, vendor, tags, and collection membership
+- SKU patterns, variant/size structures, prices, inventory fields, and image relationships
+- Repeated title prefixes/suffixes and repeated description blocks
+- Verified PillowProfits base-product documentation and approved archived supplier records
+- Main images and mockups for visual-similarity support (never sole factual authority)
+- Optional Search Console, Analytics, and Shopify sales/funnel exports for commercial prioritization
+
+Every cluster record must identify common base-product facts, design-specific information, evidence source, confidence, representative validation, unknowns, and review requirements.
 
 ## Controlled future workflow
 
@@ -33,9 +45,9 @@ The theme repository does not contain the full Shopify product and collection ca
 - Never overwrite a snapshot.
 - No bulk write is authorized without a validated proposal, approval, batch limit, post-check, and rollback.
 
-## Required business decisions before Phase 7
+## Required business decisions before Phase 1 and later writes
 
-- CSV versus authorized Admin API workflow.
+- Safe read-only CSV versus authorized Admin API workflow for discovery.
 - Credential owner and secure storage mechanism outside Git.
 - Approval roles and batch-size thresholds.
 - Required product-fact sources.

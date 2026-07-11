@@ -1,30 +1,31 @@
-schema_version: 1
+schema_version: 2
 allowed_statuses: [backlog, blocked, ready, in_progress, review, done, rejected]
 constraints:
   max_theme_code_tasks_in_progress: 1
   require_completed_dependencies_for_execution: true
   require_phase_gate_before_phase_change: true
+  image_seo_requires_approved_titles_and_content: true
 tasks:
-  - id: GOV-002
+  - id: DOC-001
     phase: 0
-    title: Add permanent ChatGPT handoff protocol
-    description: Create the concise latest-state handoff and require updates after every completed task and phase-gate review.
-    status: done
+    title: Normalize operating system to commercial-first strategy
+    description: Remove duplicate governance instructions and align roadmap, tasks, evidence standards, state, and handoff to the approved commercial-first sequence.
+    status: in_progress
     priority: P0
     type: governance
     risk: low
     approval_required: false
-    dependencies: [GOV-001]
-    affected_files: [AGENTS.md, docs/seo/CHATGPT-HANDOFF.md, docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml]
+    dependencies: [GOV-002]
+    affected_files: [AGENTS.md, docs/seo]
     affected_urls: []
-    acceptance_criteria: [Handoff contains only required latest-state fields, permanent update rule exists, no theme files changed]
-    validation: [YAML parse, Markdown structure check, full diff review, theme-directory diff check]
-    rollback: Revert GOV-002 commits.
-    branch: setup/seo-operating-system
+    acceptance_criteria: [New phase order is consistent, Phase 1 discovery is ordered, audit evidence is preserved, no theme or Shopify data changes]
+    validation: [YAML parse, duplicate ID check, state consistency check, full diff review, theme-directory diff check]
+    rollback: Revert DOC-001 commits.
+    branch: docs/commercial-first-normalization
     worktree: null
-    commit: 2d3b7a5
+    commit: null
     preview_url: null
-    notes: Handoff validated with exactly the required latest-state fields; detailed history remains in TASKS.yaml, DECISIONS.md, and phase reports. No theme files changed and no Shopify deployment occurred.
+    notes: Documentation and planning only.
 
   - id: GOV-001
     phase: 0
@@ -40,329 +41,530 @@ tasks:
     affected_urls: []
     acceptance_criteria: [No theme files changed, YAML and Markdown validate, baseline tag exists, setup branch pushed]
     validation: [git diff review, YAML parse, Markdown structure check, theme-directory diff check]
-    rollback: Delete governance branch and tag before merge if rejected.
+    rollback: Revert governance commits if rejected.
     branch: setup/seo-operating-system
     worktree: null
     commit: e7b28fd
     preview_url: null
-    notes: Validated with YAML parsing, Markdown structure checks, full staged diff review, and zero theme-directory changes. No Shopify push or publish occurred.
+    notes: No Shopify deployment occurred.
 
-  - id: DISC-001
-    phase: 1
-    title: Build canonical URL and page-type inventory
-    description: Perform a read-only inventory of sitemap and discoverable storefront URLs, grouped by template and indexability.
-    status: ready
+  - id: GOV-002
+    phase: 0
+    title: Add permanent ChatGPT handoff protocol
+    description: Create the concise latest-state handoff and require updates after completed tasks and phase-gate reviews.
+    status: done
     priority: P0
-    type: discovery
+    type: governance
     risk: low
     approval_required: false
-    dependencies: [GATE-0]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
-    affected_urls: [https://bestprintsco.com/]
-    acceptance_criteria: [URLs grouped by type, canonical/indexability sampled, limitations recorded]
-    validation: [sitemap reconciliation, representative manual samples]
-    rollback: Revert documentation commit.
-    branch: task/DISC-001-url-inventory
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Gate-blocked until Phase 0 passes.
-
-  - id: DISC-002
-    phase: 1
-    title: Map templates sections and active usage
-    description: Map storefront page types to Liquid templates, JSON templates, sections, snippets, and settings without editing them.
-    status: ready
-    priority: P0
-    type: discovery
-    risk: low
-    approval_required: false
-    dependencies: [GATE-0]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    dependencies: [GOV-001]
+    affected_files: [AGENTS.md, docs/seo/CHATGPT-HANDOFF.md, docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml]
     affected_urls: []
-    acceptance_criteria: [Active and legacy candidates classified, evidence recorded for each classification]
-    validation: [theme structure reconciliation, preview sampling]
-    rollback: Revert documentation commit.
-    branch: task/DISC-002-template-map
+    acceptance_criteria: [Handoff contains required latest-state fields, permanent update rule exists, no theme files changed]
+    validation: [YAML parse, Markdown structure check, full diff review, theme-directory diff check]
+    rollback: Revert GOV-002 commits.
+    branch: setup/seo-operating-system
     worktree: null
-    commit: null
+    commit: 2d3b7a5
     preview_url: null
-    notes: Do not delete suspected legacy code.
-
-  - id: DISC-003
-    phase: 1
-    title: Inventory apps scripts widgets and integrations
-    description: Identify source, purpose, page scope, ownership, and load behavior of storefront apps and third-party integrations.
-    status: ready
-    priority: P0
-    type: discovery
-    risk: medium
-    approval_required: false
-    dependencies: [GATE-0]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
-    affected_urls: [https://bestprintsco.com/]
-    acceptance_criteria: [Every observed integration has source purpose and page-scope evidence or an explicit unknown owner]
-    validation: [rendered-source inspection, representative template sampling]
-    rollback: Revert documentation commit.
-    branch: task/DISC-003-app-map
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: No app removal is authorized.
-
-  - id: DISC-004
-    phase: 1
-    title: Establish SEO metadata and structured-data baseline
-    description: Sample titles, descriptions, canonicals, robots directives, social tags, headings, and JSON-LD by page type.
-    status: ready
-    priority: P1
-    type: discovery
-    risk: low
-    approval_required: false
-    dependencies: [GATE-0, DISC-001]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
-    affected_urls: [https://bestprintsco.com/]
-    acceptance_criteria: [All critical page types sampled, validation failures reproducible]
-    validation: [source/DOM comparison, schema validation samples]
-    rollback: Revert documentation commit.
-    branch: task/DISC-004-seo-baseline
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Discovery only.
-
-  - id: DISC-005
-    phase: 1
-    title: Establish performance mobile and accessibility baseline
-    description: Measure representative page types and inventory major payload, interaction, layout, keyboard, and accessible-name risks.
-    status: ready
-    priority: P1
-    type: discovery
-    risk: low
-    approval_required: false
-    dependencies: [GATE-0, DISC-001, DISC-003]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
-    affected_urls: [https://bestprintsco.com/]
-    acceptance_criteria: [Representative mobile and desktop baselines recorded with tool and preview limitations]
-    validation: [repeat sample, compare page types, record environment]
-    rollback: Revert documentation commit.
-    branch: task/DISC-005-experience-baseline
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Prefer real-user Shopify metrics when authorized.
+    notes: Detailed history remains outside the handoff.
 
   - id: GATE-0
     phase: 0
-    title: Review Phase 0 governance gate
-    description: Review repository rules, task schema, ownership, baseline tag, and safety controls before discovery begins.
+    title: Review Phase 0 commercial-first governance gate
+    description: Approve normalized governance, read-only discovery boundaries, decision owners, and Phase 1 readiness.
     status: blocked
     priority: P0
     type: phase_gate
     risk: low
     approval_required: true
-    dependencies: [GOV-001]
-    affected_files: [docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml, docs/seo/DECISIONS.md]
+    dependencies: [DOC-001]
+    affected_files: [docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml, docs/seo/DECISIONS.md, docs/seo/CHATGPT-HANDOFF.md]
     affected_urls: []
-    acceptance_criteria: [Owner records passed or passed_with_documented_debt, required roles assigned]
-    validation: [governance review]
-    rollback: Keep Phase 0 active and record required revisions.
+    acceptance_criteria: [Gate recorded as passed or passed_with_documented_debt, approval roles assigned, read-only catalog method approved]
+    validation: [governance review, decision review]
+    rollback: Keep Phase 0 active and record revisions.
     branch: null
     worktree: null
     commit: null
     preview_url: null
-    notes: Blocks Phase 1 execution.
+    notes: Blocks all Phase 1 execution.
 
-  - id: STAB-001
-    phase: 2
-    title: Fix confirmed active Liquid and HTML blockers
-    description: Resolve only Theme Check syntax and unclosed-element findings proven active on storefront paths.
-    status: backlog
+  - id: DISC-101
+    phase: 1
+    title: Export and inventory products and collections read-only
+    description: Use an approved safe read-only method to inventory current products, variants, images, publication state, collections, and relevant SEO fields.
+    status: ready
     priority: P0
-    type: theme_code
-    risk: high
-    approval_required: true
-    dependencies: [GATE-1]
-    affected_files: [sections, snippets]
-    affected_urls: []
-    acceptance_criteria: [Confirmed active syntax blockers removed, page behavior preserved]
-    validation: [theme check, page tests, console check, diff review]
-    rollback: Revert task commit and re-push approved main to development theme.
-    branch: task/STAB-001-active-syntax
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Audit category — Confirmed active storefront blocker; activity must be proven first.
-
-  - id: STAB-002
-    phase: 2
-    title: Repair confirmed active missing assets and invalid schema JSON
-    description: Resolve MissingAsset, ValidSchema, and ValidJSON findings after confirming active usage and app ownership.
-    status: backlog
-    priority: P0
-    type: theme_code
-    risk: high
-    approval_required: true
-    dependencies: [GATE-1, DISC-002, DISC-003]
-    affected_files: [assets, config, sections, snippets, templates]
-    affected_urls: []
-    acceptance_criteria: [Active missing assets and invalid schema/JSON errors resolved]
-    validation: [theme check, schema parse, representative page tests]
-    rollback: Revert task commit and restore development theme from approved main.
-    branch: task/STAB-002-assets-schema-json
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Audit categories — blocker, app-generated, requires manual verification.
-
-  - id: LOC-001
-    phase: 2
-    title: Restore translation parity and validate localized markup
-    description: Classify and repair 142 MatchingTranslations and 4 TranslationKeyExists errors without inventing business copy.
-    status: backlog
-    priority: P1
-    type: localization
+    type: catalog_discovery
     risk: medium
     approval_required: true
-    dependencies: [GATE-1, DISC-002]
-    affected_files: [locales]
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports, data/shopify/snapshots]
     affected_urls: []
-    acceptance_criteria: [Translation parity restored or unsupported locales explicitly scoped]
-    validation: [theme check, JSON parse, localized page samples]
-    rollback: Restore locale files from prior commit.
-    branch: task/LOC-001-translation-parity
+    acceptance_criteria: [Counts reconciled, source metadata/checksum recorded, no writes or sensitive data committed]
+    validation: [Shopify count reconciliation, schema check, read-only confirmation]
+    rollback: Delete sanitized discovery artifacts and revert documentation commit.
+    branch: task/DISC-101-catalog-inventory
     worktree: null
     commit: null
     preview_url: null
-    notes: Audit category — Translation/localization issue.
+    notes: First Phase 1 task; requires owner-approved access method.
 
-  - id: QUAL-001
-    phase: 2
-    title: Classify code-quality and legacy findings
-    description: Review VariableName, HardcodedRoutes, OrphanedSnippet, UnusedAssign, deprecated fonts, and suspected legacy findings before any cleanup.
-    status: backlog
-    priority: P2
-    type: discovery
+  - id: DISC-102
+    phase: 1
+    title: Identify product families and PillowProfits base-product clusters
+    description: Detect candidate clusters using collection, type, vendor, tags, SKU, variants/sizes, price, title/description patterns, PillowProfits information, and image/mockup similarity.
+    status: ready
+    priority: P0
+    type: catalog_discovery
     risk: medium
     approval_required: false
-    dependencies: [GATE-1, DISC-002, DISC-003]
+    dependencies: [GATE-0, DISC-101]
+    affected_files: [docs/seo/reports, docs/seo/SITE-INVENTORY.md]
+    affected_urls: []
+    acceptance_criteria: [Candidate clusters list all signals, evidence, confidence, unknowns, and representative validation needs]
+    validation: [Representative product review, authoritative-source check, main-image sampling]
+    rollback: Revert discovery report.
+    branch: task/DISC-102-product-clusters
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Similarity is supporting evidence, not proof of product specifications.
+
+  - id: DISC-103
+    phase: 1
+    title: Analyze repeated product-title and description patterns
+    description: Quantify repeated prefixes, suffixes, keyword strings, boilerplate blocks, and exact/near duplicates by candidate cluster.
+    status: ready
+    priority: P0
+    type: product_seo_discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0, DISC-101]
     affected_files: [docs/seo/reports]
     affected_urls: []
-    acceptance_criteria: [Each finding classified with usage evidence and disposition]
-    validation: [code references, active-template map, app ownership map]
-    rollback: Revert classification report.
-    branch: task/QUAL-001-finding-classification
+    acceptance_criteria: [Duplicate/pattern report is reproducible and linked to stable product IDs]
+    validation: [Exact and near-duplicate checks, sampled manual review]
+    rollback: Revert discovery report.
+    branch: task/DISC-103-content-patterns
     worktree: null
     commit: null
     preview_url: null
-    notes: Audit categories — Code-quality, unused/legacy, app-generated, possible false positive.
+    notes: No title or description changes.
 
-  - id: SEO-001
-    phase: 4
-    title: Correct metadata heading and social-schema framework
-    description: Address confirmed homepage targeting, invalid social values, schema placeholders, and social-image behavior after discovery and business approval.
-    status: backlog
+  - id: DISC-104
+    phase: 1
+    title: Inventory major collections and product counts
+    description: Record collection purpose, handles, product counts, overlap, publication status, and preliminary commercial relevance.
+    status: ready
     priority: P0
-    type: theme_code
-    risk: high
+    type: collection_discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0, DISC-101]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Major collections reconciled with product counts and overlap]
+    validation: [Shopify export reconciliation, storefront sampling]
+    rollback: Revert inventory commit.
+    branch: task/DISC-104-collection-inventory
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Commercial priority requires business and optional performance data.
+
+  - id: DISC-105
+    phase: 1
+    title: Identify missing collection descriptions and metadata
+    description: Inventory collection descriptions, SEO titles, SEO descriptions, headings, canonicals, indexability, and supporting content gaps.
+    status: ready
+    priority: P1
+    type: collection_seo_discovery
+    risk: low
+    approval_required: false
+    dependencies: [GATE-0, DISC-104]
+    affected_files: [docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Every candidate collection has content/metadata completeness and verification status]
+    validation: [Export/source comparison, rendered samples]
+    rollback: Revert report.
+    branch: task/DISC-105-collection-content-gaps
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Discovery only.
+
+  - id: DISC-106
+    phase: 1
+    title: Create minimum keyword-to-page map for priority categories
+    description: Map minimum commercial search intents to existing homepage and collection candidates without creating pages.
+    status: ready
+    priority: P0
+    type: commercial_seo_discovery
+    risk: medium
     approval_required: true
-    dependencies: [GATE-3, DISC-004]
-    affected_files: [layout/theme.liquid, snippets/meta-tags.liquid, snippets/header.liquid]
+    dependencies: [GATE-0, DISC-104, DISC-105]
+    affected_files: [docs/seo/reports]
     affected_urls: [https://bestprintsco.com/]
-    acceptance_criteria: [Valid metadata and schema by page type, no placeholder identities]
-    validation: [theme check, schema tests, source/DOM tests]
-    rollback: Revert task commit and restore development theme from approved main.
-    branch: task/SEO-001-metadata-schema
+    acceptance_criteria: [Each intent has one primary candidate, overlap/cannibalization noted, unsupported opportunities excluded]
+    validation: [Intent/page review, catalog-depth check, owner review]
+    rollback: Revert keyword-map report.
+    branch: task/DISC-106-keyword-page-map
     worktree: null
     commit: null
     preview_url: null
-    notes: Audit category — Confirmed SEO/performance issue.
+    notes: Prefer 3–5 commercially important collections; exact selection is deferred.
 
-  - id: PERF-001
-    phase: 5
-    title: Deduplicate styles and conditionally load integrations
-    description: Address duplicate CSS, global third-party scripts, font/image loading, and LCP priority only after app mapping.
+  - id: DISC-107
+    phase: 1
+    title: Select candidate collections for first SEO pilot
+    description: Apply commercial relevance, catalog depth, evidence quality, intent clarity, conversion readiness, and measurement criteria to shortlist 3–5 collections.
+    status: ready
+    priority: P0
+    type: pilot_selection
+    risk: medium
+    approval_required: true
+    dependencies: [GATE-0, DISC-104, DISC-105, DISC-106, DISC-110]
+    affected_files: [docs/seo/reports, docs/seo/DECISIONS.md]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [Shortlist has scored criteria, evidence, risks, and owner decision points]
+    validation: [Catalog-depth check, keyword-map check, commercial data review where available]
+    rollback: Revert shortlist report.
+    branch: task/DISC-107-collection-pilot-candidates
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Do not modify selected collections.
+
+  - id: DISC-108
+    phase: 1
+    title: Select candidate products for first title and description pilot
+    description: Shortlist approximately 20 products from one verified base-product cluster and one priority collection or related group.
+    status: ready
+    priority: P0
+    type: pilot_selection
+    risk: medium
+    approval_required: true
+    dependencies: [GATE-0, DISC-102, DISC-103, DISC-107]
+    affected_files: [docs/seo/reports, docs/seo/DECISIONS.md]
+    affected_urls: []
+    acceptance_criteria: [Candidate set is one verified cluster, approximately 20 products, with main images and evidence available]
+    validation: [Cluster validation, main-image availability, duplicate-pattern review]
+    rollback: Revert shortlist report.
+    branch: task/DISC-108-product-pilot-candidates
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Do not alter handles, prices, variants, inventory, or publication status.
+
+  - id: DISC-109
+    phase: 1
+    title: Define source-confidence and review process
+    description: Operationalize authoritative, strong, supporting, research-only, and unknown evidence with reviewer and escalation rules.
+    status: ready
+    priority: P0
+    type: governance_discovery
+    risk: low
+    approval_required: true
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/CONTENT-STANDARDS.md, docs/seo/reports, docs/seo/DECISIONS.md]
+    affected_urls: []
+    acceptance_criteria: [Every factual proposal can record source confidence reviewer and unknown status]
+    validation: [Representative evidence classification exercise, owner review]
+    rollback: Revert process documentation.
+    branch: task/DISC-109-source-confidence
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Competitor material remains research-only.
+
+  - id: DISC-110
+    phase: 1
+    title: Document measurement and commercial data requirements
+    description: Specify Search Console, Analytics, Shopify sales/funnel, returns, market, and merchandising data that would improve prioritization, including fallback criteria when unavailable.
+    status: ready
+    priority: P1
+    type: measurement_discovery
+    risk: low
+    approval_required: true
+    dependencies: [GATE-0]
+    affected_files: [docs/seo/DATA-REQUIREMENTS.md, docs/seo/reports, docs/seo/DECISIONS.md]
+    affected_urls: []
+    acceptance_criteria: [Data fields, owners, date ranges, privacy rules, and fallback prioritization are documented]
+    validation: [Owner/access review, privacy check]
+    rollback: Revert requirements update.
+    branch: task/DISC-110-commercial-data
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: No credentials or private data committed.
+
+  - id: BLOCK-201
+    phase: 2
+    title: Verify and fix critical trust and purchase blockers
+    description: Address misleading trust/sales/scarcity and broken product forms, variants, cart, accelerated checkout, size guidance, or serious mobile purchase issues proven active.
+    status: backlog
+    priority: P0
+    type: trust_conversion
+    risk: high
+    approval_required: true
+    dependencies: [DISC-101, DISC-102]
+    affected_files: [docs/seo/reports, sections, snippets, templates]
+    affected_urls: []
+    acceptance_criteria: [Critical pilot purchase journeys pass and claims are verified]
+    validation: [Mobile/desktop product, variant, cart, Buy Now and checkout tests]
+    rollback: Revert task commit and restore approved development theme.
+    branch: task/BLOCK-201-purchase-foundation
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Active commercial blocker and Trust/conversion issue.
+
+  - id: BLOCK-202
+    phase: 2
+    title: Verify and fix active technical blockers
+    description: Fix only active Liquid/HTML/JSON failures, broken schema/canonical/indexability, missing critical assets, or serious render failures on commercial paths.
     status: backlog
     priority: P0
     type: theme_code
     risk: high
     approval_required: true
-    dependencies: [GATE-4, DISC-003, DISC-005]
-    affected_files: [assets, layout, sections, snippets]
+    dependencies: [DISC-101]
+    affected_files: [assets, layout, sections, snippets, templates, config]
     affected_urls: []
-    acceptance_criteria: [No required integration regression, measurable payload/blocking improvement]
-    validation: [theme check, page tests, Lighthouse, app flow tests]
-    rollback: Revert task commit and restore development theme from approved main.
-    branch: task/PERF-001-loading-deduplication
+    acceptance_criteria: [Verified active blockers removed without purchase regressions]
+    validation: [Theme Check, rendered-page, schema, canonical/indexability, console and purchase tests]
+    rollback: Revert task commit and restore approved development theme.
+    branch: task/BLOCK-202-active-technical
     worktree: null
     commit: null
     preview_url: null
-    notes: Audit categories — Confirmed performance issue and app-generated issue.
+    notes: Classification — Active technical blocker; requires rendered impact verification.
 
-  - id: CAT-001
+  - id: COLL-301
+    phase: 3
+    title: Implement homepage and priority collection SEO pilot
+    description: Improve homepage and 3–5 approved collections with unique targeting, useful descriptions/supporting content, metadata, and relevant internal links.
+    status: backlog
+    priority: P0
+    type: collection_seo
+    risk: high
+    approval_required: true
+    dependencies: [BLOCK-201, BLOCK-202, DISC-107]
+    affected_files: [data/shopify/proposals, data/shopify/snapshots, docs/seo/reports]
+    affected_urls: [https://bestprintsco.com/]
+    acceptance_criteria: [Approved distinct intent and useful content for homepage and 3–5 collections]
+    validation: [Before/after review, metadata/source tests, internal-link crawl, mobile QA]
+    rollback: Apply approved rollback records and revert theme task commits.
+    branch: task/COLL-301-home-collection-pilot
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Collection SEO opportunity and Architecture/internal-link opportunity.
+
+  - id: PROD-401
+    phase: 4
+    title: Implement controlled product SEO and conversion pilot
+    description: Update approved titles/descriptions and product conversion presentation for approximately 20 products in one verified base-product cluster.
+    status: backlog
+    priority: P0
+    type: product_seo
+    risk: critical
+    approval_required: true
+    dependencies: [COLL-301, DISC-108, DISC-109]
+    affected_files: [data/shopify/proposals, data/shopify/snapshots, docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Unique human-readable titles, accurate useful descriptions, purchase usability passes, protected fields unchanged]
+    validation: [Every main image inspected, exact/near-duplicate checks, field diff, mobile/product/form/feed verification]
+    rollback: Apply immutable before-snapshot rollback file.
+    branch: task/PROD-401-product-pilot
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Product SEO opportunity and Trust/conversion issue.
+
+  - id: IMG-501
+    phase: 5
+    title: Implement product image SEO pilot
+    description: Propose and apply accurate image alt text for the approved Phase 4 pilot only after titles and descriptions are approved.
+    status: backlog
+    priority: P1
+    type: image_seo
+    risk: high
+    approval_required: true
+    dependencies: [PROD-401]
+    affected_files: [data/shopify/proposals, data/shopify/snapshots, docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Every main image inspected, image roles verified, concise accurate alt text, no unsupported details]
+    validation: [Image-by-image review, accessibility check, field diff]
+    rollback: Apply image-field rollback file.
+    branch: task/IMG-501-image-pilot
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Image SEO opportunity.
+
+  - id: MEAS-601
+    phase: 6
+    title: Measure and iterate commercial pilots
+    description: Evaluate homepage/collection/product/image pilots against approved search, funnel, conversion, revenue, return, and UX measures.
+    status: backlog
+    priority: P0
+    type: measurement
+    risk: medium
+    approval_required: true
+    dependencies: [COLL-301, PROD-401, IMG-501, DISC-110]
+    affected_files: [docs/seo/reports, docs/seo/DECISIONS.md]
+    affected_urls: []
+    acceptance_criteria: [Data quality and limitations documented, scale/revise/hold/reject decision recorded]
+    validation: [Source reconciliation, segment/window review]
+    rollback: Revert report; storefront remains unchanged.
+    branch: task/MEAS-601-pilot-measurement
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Measurement/data requirement.
+
+  - id: ARCH-701
     phase: 7
-    title: Build controlled Shopify catalog data pipeline
-    description: Implement authorized export, immutable snapshot, proposal, validation, batch update, verification, and rollback tooling.
+    title: Implement evidence-led navigation architecture and internal links
+    description: Refine navigation, collection relationships, and internal links using discovery and pilot evidence.
     status: backlog
-    priority: P0
-    type: data_pipeline
-    risk: critical
+    priority: P1
+    type: architecture
+    risk: high
     approval_required: true
-    dependencies: [GATE-6]
-    affected_files: [scripts/catalog, data/shopify/proposals, data/shopify/snapshots]
+    dependencies: [MEAS-601]
+    affected_files: [config, sections, snippets, templates, docs/seo/reports]
     affected_urls: []
-    acceptance_criteria: [Dry run passes, secrets excluded, rollback proven on sample]
-    validation: [schema validation, sample round trip, security review]
-    rollback: Remove tooling branch; production data remains unchanged until separately approved.
-    branch: task/CAT-001-catalog-pipeline
+    acceptance_criteria: [Approved structure improves relevant paths without broken routes or unsupported redirects]
+    validation: [Crawl/click-depth comparison, menu/mobile/link/redirect tests]
+    rollback: Revert theme/Admin changes using recorded snapshots.
+    branch: task/ARCH-701-evidence-led-architecture
     worktree: null
     commit: null
     preview_url: null
-    notes: No credentials requested in Phase 0.
+    notes: Classification — Architecture/internal-link opportunity.
 
-  - id: PILOT-001
+  - id: SCALE-801
     phase: 8
-    title: Run approved product and collection SEO pilot
-    description: Propose and apply a small approved batch using immutable snapshots and rollback; do not change product handles.
+    title: Scale approved collection and product SEO in controlled batches
+    description: Apply proven proposal, validation, approval, update, verification, and rollback workflows to prioritized clusters.
     status: backlog
-    priority: P0
-    type: catalog_update
+    priority: P1
+    type: catalog_scaling
     risk: critical
     approval_required: true
-    dependencies: [GATE-7, CAT-001]
-    affected_files: [data/shopify/proposals, data/shopify/snapshots]
+    dependencies: [MEAS-601, ARCH-701]
+    affected_files: [data/shopify/proposals, data/shopify/snapshots, docs/seo/reports]
     affected_urls: []
-    acceptance_criteria: [Approved factual proposals applied, post-update verification passes, rollback file complete]
-    validation: [before-after diff, page/feed checks, owner review]
-    rollback: Apply approved rollback file from immutable before snapshot.
-    branch: task/PILOT-001-catalog-seo-pilot
+    acceptance_criteria: [Each batch passes quality, factual, uniqueness, protected-field, post-update, and rollback checks]
+    validation: [Automated validators, sampled manual review, storefront/feed checks]
+    rollback: Apply batch rollback file.
+    branch: task/SCALE-801-controlled-scaling
     worktree: null
     commit: null
     preview_url: null
-    notes: Handles remain unchanged.
+    notes: Classification — Product and Collection SEO opportunities.
 
-finding_classification:
-  confirmed_active_storefront_blocker:
-    source_counts: {LiquidHTMLSyntaxError: 10, MissingAsset: 10, ValidSchema: 5, ValidJSON: 1, UndefinedObject: 20, UnclosedHTMLElement: 13}
-    policy: Confirm active usage before fixing; prioritize runtime and release impact.
-  confirmed_seo_performance_issue:
-    examples: [Weak homepage H1, overlong metadata, invalid social/schema placeholders, missing image alt text, duplicate CSS, globally loaded third-party scripts]
-    policy: Schedule in the appropriate technical SEO or performance phase.
-  translation_localization_issue:
-    source_counts: {MatchingTranslations: 142, TranslationKeyExists: 4}
-    policy: Repair parity with validated copy; do not invent business claims.
-  code_quality_issue:
-    source_counts: {VariableName: 51, HardcodedRoutes: 11, AssetPreload: 3, DeprecatedFontsOnSettingsData: 3, UnusedAssign: 2}
-    policy: Fix only with demonstrated value and regression coverage.
-  unused_legacy_section_issue:
-    source_counts: {OrphanedSnippet: 13}
-    policy: Prove non-use across templates, settings, app embeds, and dynamic references before removal.
-  app_generated_issue:
-    examples: [Customizer scripts, app embeds, injected assets or markup]
-    policy: Identify owner and purpose; never remove without approval and flow tests.
-  requires_manual_verification:
-    examples: [Active-template status, false syntax positives caused by dynamic Liquid, promotion and business claims, app ownership]
-    policy: Record evidence and owner decision before implementation.
-  possible_false_positive:
-    examples: [Parser findings in intentionally dynamic Liquid/HTML, orphan reports for dynamically rendered snippets]
-    policy: Reproduce on active rendered paths before changing code.
+  - id: LAND-901
+    phase: 9
+    title: Create evidence-backed SEO landing pages
+    description: Create only pages with distinct intent, sufficient catalog depth, useful content, and defined internal-link roles.
+    status: backlog
+    priority: P2
+    type: landing_pages
+    risk: high
+    approval_required: true
+    dependencies: [SCALE-801]
+    affected_files: [docs/seo/reports, data/shopify/proposals]
+    affected_urls: []
+    acceptance_criteria: [Distinct intent and catalog depth proven; no thin duplicate or doorway page]
+    validation: [Intent/cannibalization review, crawl/index and UX checks]
+    rollback: Remove approved new pages and restore link snapshots.
+    branch: task/LAND-901-landing-pages
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Collection SEO opportunity.
+
+  - id: CONT-1001
+    phase: 10
+    title: Build supporting guides and topic clusters
+    description: Create sourced helpful content that supports approved commercial journeys and internal links.
+    status: backlog
+    priority: P2
+    type: supporting_content
+    risk: medium
+    approval_required: true
+    dependencies: [LAND-901]
+    affected_files: [docs/seo/reports, data/shopify/proposals]
+    affected_urls: []
+    acceptance_criteria: [Content is original sourced useful and linked to a defined commercial journey]
+    validation: [Source/originality/intent/link review]
+    rollback: Unpublish approved content and restore link snapshot.
+    branch: task/CONT-1001-supporting-content
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: No generic filler.
+
+  - id: DEBT-1101
+    phase: 11
+    title: Resolve remaining performance work and low-impact technical debt
+    description: Address verified residual performance work, inactive translation cleanup, variable naming, orphan snippets, unused legacy sections, and other low-impact findings without displacing commercial priorities.
+    status: backlog
+    priority: P3
+    type: technical_debt
+    risk: medium
+    approval_required: true
+    dependencies: [CONT-1001]
+    affected_files: [assets, config, layout, locales, sections, snippets, templates, docs/seo/reports]
+    affected_urls: []
+    acceptance_criteria: [Each cleanup item has usage/impact evidence and regression validation]
+    validation: [Theme Check, active-use proof, page/app regression tests, performance comparison]
+    rollback: Revert cleanup batch and restore approved development theme.
+    branch: task/DEBT-1101-remaining-debt
+    worktree: null
+    commit: null
+    preview_url: null
+    notes: Classification — Low-impact technical debt, Requires verification, or Unused/legacy issue.
+
+audit_reprioritization:
+  source: SEO-AUDIT.md
+  existing_tasks_reprioritized: 8
+  categories:
+    active_commercial_blocker:
+      phase: 2
+      examples: [Broken product forms or variants, broken cart or accelerated checkout, serious mobile purchase failure, misleading scarcity or sales claims]
+    active_technical_blocker:
+      phase: 2
+      examples: [Active Liquid HTML or JSON failure, broken schema, incorrect canonical or indexability, missing critical asset]
+    trust_conversion_issue:
+      phase: 2
+      examples: [Unverified reviews or claims, unclear delivery returns or sizing, weak Add to Cart Buy Now or mobile usability]
+    collection_seo_opportunity:
+      phase: 3
+      examples: [Homepage targeting, collection descriptions, collection metadata]
+    product_seo_opportunity:
+      phase: 4
+      examples: [Keyword-stuffed titles, thin or repetitive descriptions, related-product relevance]
+    image_seo_opportunity:
+      phase: 5
+      examples: [Missing image alt text after title and content approval]
+    architecture_internal_link_opportunity:
+      phase: 7
+      examples: [Collection relationships, navigation, relevant product and collection links]
+    measurement_data_requirement:
+      phase: 1
+      examples: [Search Console Analytics Shopify sales and funnel data, safe catalog source]
+    low_impact_technical_debt:
+      phase: 11
+      examples: [Inactive translation parity, variable naming, preload warnings, unused assigns]
+    requires_verification:
+      phase: 1
+      examples: [Rendered impact, app ownership, supplier evidence, false-positive parser findings]
+    unused_legacy_issue:
+      phase: 11
+      examples: [Orphan snippets and unused sections only after active-use proof]
