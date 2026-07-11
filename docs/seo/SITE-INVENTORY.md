@@ -1,6 +1,6 @@
 # BestPrintsCo Site Inventory
 
-Status: Phase 0 skeleton. Populate during Phase 1 only.
+Status: Phase 1 read-only catalog baseline completed by DISC-101 on 2026-07-11.
 
 ## Known properties
 
@@ -11,6 +11,17 @@ Status: Phase 0 skeleton. Populate during Phase 1 only.
 | Development preview | https://bestprintsco.com/?preview_theme_id=130287665232 |
 | Development theme | `BestPrintsCo Development` / `130287665232` / unpublished |
 | Protected live theme | `122053689424` |
+
+## Catalog baseline
+
+| Resource | Count | Evidence |
+|---|---:|---|
+| Products | 7,469 | Shopify exact count reconciled to immutable export |
+| Variants | 91,170 | Exported stable variant IDs; uniqueness check passed |
+| Product media | 35,211 | Exported stable media IDs; uniqueness check passed |
+| Collections | 38 | Shopify exact count reconciled to immutable export |
+
+Raw snapshot: `C:\Projects\bestprintsco-backups\2026-07-11_190759` (outside Git). See `reports/DISC-101-CATALOG-INVENTORY.md` for source, fields, checksums, limitations, and rollback.
 
 ## Local theme structure baseline
 
@@ -45,4 +56,4 @@ Populate with evidence, source date, canonical/index state, template, traffic/re
 - Authorized analytics/Search Console baselines.
 - App ownership, necessity, and product/vendor scope.
 - Market/language/currency strategy.
-- Catalog field completeness and collection membership.
+- Catalog field completeness patterns and collection-membership analysis (DISC-102 through DISC-105).

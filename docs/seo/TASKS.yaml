@@ -115,22 +115,22 @@ tasks:
     phase: 1
     title: Export and inventory products and collections read-only
     description: Use an approved safe read-only method to inventory current products, variants, images, publication state, collections, and relevant SEO fields.
-    status: ready
+    status: done
     priority: P0
     type: catalog_discovery
     risk: medium
     approval_required: true
     dependencies: [GATE-0]
-    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports, data/shopify/snapshots]
+    affected_files: [docs/seo/SITE-INVENTORY.md, docs/seo/reports, scripts/catalog]
     affected_urls: []
     acceptance_criteria: [Counts reconciled, source metadata/checksum recorded, no writes or sensitive data committed]
     validation: [Shopify count reconciliation, schema check, read-only confirmation]
     rollback: Delete sanitized discovery artifacts and revert documentation commit.
     branch: task/DISC-101-catalog-inventory
     worktree: null
-    commit: null
+    commit: pending
     preview_url: null
-    notes: First Phase 1 task; requires owner-approved access method.
+    notes: Read-only Admin GraphQL access approved and proven with read_products, read_inventory, and read_publications only. Exact counts reconciled at 7,469 products and 38 collections; snapshot also contains 91,170 unique variants and 35,211 unique media records. Raw CSVs are outside Git at C:\Projects\bestprintsco-backups\2026-07-11_190759. Checksums and uniqueness checks passed; no mutation permission, Shopify write, theme change, or deployment occurred.
 
   - id: DISC-102
     phase: 1

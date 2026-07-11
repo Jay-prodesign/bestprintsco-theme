@@ -6,12 +6,12 @@ Last updated: 2026-07-11
 |---|---|
 | Current phase | Phase 1 — Catalog source-of-truth and commercial discovery |
 | Phase-gate status | Phase 0 `passed_with_documented_debt` |
-| Current task | DISC-101 — Export and inventory products and collections read-only |
-| Last completed task | GATE-0 — Review Phase 0 commercial-first governance gate (`dbaf68e`) |
-| Open blockers | DISC-101 must prove safe read-only Shopify access; supplier/source ownership remains due before DISC-102 approval |
+| Current task | DISC-102 — Identify product families and PillowProfits base-product clusters |
+| Last completed task | DISC-101 — Export and inventory products and collections read-only (`pending`) |
+| Open blockers | PillowProfits/source ownership remains due before DISC-102 cluster approval; commercial performance and measurement sources are not yet available |
 | Required business decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
 | Development-theme deployment status | No governance files deployed; development theme unchanged |
-| Last verified commit | `dbaf68e` (GATE-0 implementation commit) |
+| Last verified commit | `pending` (DISC-101 implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
 ## Phase gate
@@ -22,4 +22,5 @@ Phase 0 is recorded as `passed_with_documented_debt` under DEC-014. DEC-008 assi
 
 - DOC-001 changed governance/documentation only; no theme code or Shopify data was changed.
 - No Shopify push or publish occurred during DOC-001.
-- DISC-101 is the next dependency-safe task. It is read-only and must establish access and baseline evidence before any catalog analysis or write.
+- DISC-101 produced an immutable external snapshot with 7,469 products, 91,170 variants, 35,211 media records, and 38 collections. Exact counts, hashes, unique IDs, and read-only boundaries passed.
+- DISC-102 is the next ordered task; it may analyze the snapshot but may not approve factual base-product claims without the source evidence tracked by GOV-003.

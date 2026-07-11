@@ -1,3 +1,5 @@
 # Catalog Scripts
 
-Reserved for the approved Phase 7 catalog pipeline. Scripts must default to read-only/dry-run behavior, validate inputs, never embed credentials, produce explicit proposals, and support post-update verification and rollback. No catalog tooling is implemented in Phase 0.
+Scripts must default to read-only/dry-run behavior, validate inputs, never embed credentials, produce explicit proposals, and support post-update verification and rollback.
+
+`export-readonly-catalog.ps1` uses mutation-disabled `shopify store execute` queries and writes inventory CSVs, a checksum manifest, and reconciliation metadata to an explicitly supplied timestamped directory outside Git. It never requests `--allow-mutations`.
