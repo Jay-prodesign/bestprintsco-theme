@@ -176,24 +176,24 @@ tasks:
 
   - id: DISC-103
     phase: 1
-    title: Analyze repeated product-title and description patterns
-    description: Quantify repeated prefixes, suffixes, keyword strings, boilerplate blocks, and exact/near duplicates by candidate cluster.
-    status: ready
+    title: Build reusable product SEO intelligence by cluster
+    description: Build permanent cluster knowledge covering intent, terminology, representative research, content strategy, FAQ/alt/link/CRO/schema opportunities, risks, unknowns, and evidence without generating or applying product copy.
+    status: done
     priority: P0
     type: product_seo_discovery
     risk: low
     approval_required: false
     dependencies: [GATE-0, DISC-101]
-    affected_files: [docs/seo/reports]
+    affected_files: [docs/seo/clusters, docs/seo/reports]
     affected_urls: []
-    acceptance_criteria: [Duplicate/pattern report is reproducible and linked to stable product IDs]
-    validation: [Exact and near-duplicate checks, sampled manual review]
-    rollback: Revert discovery report.
-    branch: task/DISC-103-content-patterns
-    worktree: null
-    commit: null
+    acceptance_criteria: [Important product families have reusable intelligence files, every file records intent vocabulary opportunities risks unknowns and evidence, no product copy or Shopify write occurs]
+    validation: [Cluster coverage check, source-confidence check, research-only boundary check, documentation review]
+    rollback: Revert cluster knowledge-base and intelligence-report commits.
+    branch: task/DISC-103-product-seo-intelligence
+    worktree: C:\Projects\bestprintsco-theme-worktrees\DISC-103
+    commit: pending
     preview_url: null
-    notes: No title or description changes.
+    notes: Redesigned from pattern analysis into Product SEO Intelligence by owner instruction. Ten cluster documents cover C01–C30, using immutable catalog evidence and representative research only. No Shopify write, title, description, or alt text was generated. Proposed next phase is Cluster SEO Generation, gated by verified supplier facts and the existing proposal/rollback workflow.
 
   - id: DISC-104
     phase: 1
