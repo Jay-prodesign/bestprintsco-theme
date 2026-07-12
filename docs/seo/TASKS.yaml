@@ -136,7 +136,7 @@ tasks:
     phase: 1
     title: Identify product families and PillowProfits base-product clusters
     description: Detect candidate clusters using collection, type, vendor, tags, SKU, variants/sizes, price, title/description patterns, PillowProfits information, and image/mockup similarity.
-    status: ready
+    status: done
     priority: P0
     type: catalog_discovery
     risk: medium
@@ -148,10 +148,31 @@ tasks:
     validation: [Representative product review, authoritative-source check, main-image sampling]
     rollback: Revert discovery report.
     branch: task/DISC-102-product-clusters
+    worktree: C:\Projects\bestprintsco-theme-worktrees\DISC-102
+    commit: pending
+    preview_url: null
+    notes: Completed structural candidate clustering from the immutable DISC-101 snapshot. Thirty top signatures cover 4,324 products and record collection, vendor, variants, prices, options, SKU family, media pattern, status, confidence, unknowns, representative stable IDs, and required validation. Fourteen main images were sampled. No authoritative PillowProfits/source document was found, so no product specification or factual base-product identity was approved. No Shopify or theme write occurred.
+
+  - id: OPS-004
+    phase: 1
+    title: Prepare repository for external AI review and development handoff
+    description: Reconcile and push all authorized changes; update README architecture, setup, environment-variable names, current status, AI instructions, and clearly document TODOs, known issues, and pending pull requests without exposing secrets.
+    status: backlog
+    priority: P1
+    type: repository_operations
+    risk: low
+    approval_required: false
+    dependencies: [DISC-102]
+    affected_files: [README.md, AGENTS.md, .codex/config.toml, docs/seo/CHATGPT-HANDOFF.md, docs/seo/PROJECT-STATE.md, docs/seo/TASKS.yaml]
+    affected_urls: []
+    acceptance_criteria: [Repository is clean and buildable, all authorized changes are committed and pushed, README documents architecture setup non-secret environment variables and status, AI instructions remain consistent with governance, TODOs known issues and open pull requests are documented, latest repository and branch are recorded]
+    validation: [Git status and remote reconciliation, focused build and validation commands, Codex strict-config validation, README and instruction consistency review, GitHub pull-request check, secret scan, full diff review]
+    rollback: Revert OPS-004 commits; do not alter Shopify or theme deployment state.
+    branch: task/OPS-004-ai-review-readiness
     worktree: null
     commit: null
     preview_url: null
-    notes: Similarity is supporting evidence, not proof of product specifications.
+    notes: Added from the owner's 2026-07-12 repository-review request. Execute as a separate task; do not mix with DISC-102. Existing user-owned uncommitted changes must be identified and preserved before reconciliation.
 
   - id: DISC-103
     phase: 1

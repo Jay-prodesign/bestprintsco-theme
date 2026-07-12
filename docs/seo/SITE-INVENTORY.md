@@ -23,6 +23,12 @@ Status: Phase 1 read-only catalog baseline completed by DISC-101 on 2026-07-11.
 
 Raw snapshot: `C:\Projects\bestprintsco-backups\2026-07-11_190759` (outside Git). See `reports/DISC-101-CATALOG-INVENTORY.md` for source, fields, checksums, limitations, and rollback.
 
+## Candidate product-family clusters
+
+DISC-102 identified 30 high-volume structural candidate clusters covering 4,324 products (57.9% of the catalog). The largest candidates are front-seat cover pairs (540), rear-seat pet covers (333), car floor mats (326), two separate ten-variant boot signatures (302 and 262), and steering-wheel covers (295).
+
+These are structural candidates only. No PillowProfits/source documentation is available to approve product specifications. Mixed bags, capri/full-length leggings, multiple boot signatures, inactive product families, and vendor boundaries remain explicitly separated. See `reports/DISC-102-PRODUCT-CLUSTERS.md` and `reports/DISC-102-CANDIDATE-CLUSTERS.csv`.
+
 ## Local theme structure baseline
 
 | Directory | Files | Role |
