@@ -28,11 +28,11 @@
             "text_alignment": "center",
             "text_alignment_on_mobile": "center",
             "text_color": "text-dark",
-            "subheading": "SAVE 50% IN THE WEEK",
-            "title": "Top Sale<br>\nOnline Exclusive",
+            "subheading": "CUSTOM PRINT FAVORITES",
+            "title": "Custom Gifts, Shoes & Home Decor",
             "description": "",
             "image_link": "https://bestprintsco.com/collections/vegan-leather-boots",
-            "button_text": "Explore Now",
+            "button_text": "Shop Best Sellers",
             "button_type": "primary"
           }
         }
@@ -136,7 +136,7 @@
         "e4994be4-f22c-437f-87a5-5826812d3f36"
       ],
       "settings": {
-        "heading": "Hoodies",
+        "heading": "Featured Collections",
         "description": "",
         "text_alignment": "text-center",
         "container": "full-width",
@@ -166,8 +166,8 @@
     "d6197aaf-d094-4a47-b691-9a16a4490f7c": {
       "type": "products-grid",
       "settings": {
-        "heading": "New Arrivals",
-        "description": "<p>Offering the most unique items</p>",
+        "heading": "Custom Vegan Boots",
+        "description": "<p>Browse expressive boot designs from the BestPrintsCo catalog.</p>",
         "text_alignment": "text-center",
         "container": "container-fluid",
         "product_grid_background_color": "",
@@ -202,7 +202,7 @@
         "17692b41-f06e-4d9c-9b67-6e5aae793ecb": {
           "type": "subheading",
           "settings": {
-            "sub_title": "DEAL OF THE WEEK",
+            "sub_title": "CUSTOM PRINT GIFTS",
             "subheading_color": "#111111",
             "subheading_fs": 12,
             "subheading_fw": 500,
@@ -226,7 +226,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>We offer a huge discount on one product each week !</p>",
+            "txt_content": "<p>Explore expressive designs for footwear, home, car accessories, and gifts.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -252,7 +252,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-2": {
           "type": "buttons",
           "settings": {
-            "btn_content": "Get At Only $65",
+            "btn_content": "Shop Vegan Boots",
             "button_type": "primary",
             "b_mt": 1,
             "b_mb": 15
@@ -303,21 +303,21 @@
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-0": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>FREE DELIVERY WORLDWIDE</p>",
+            "content": "<p>Custom print styles for shoes, home, car, and gifts</p>",
             "text_link": ""
           }
         },
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-2": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>FREE SIZE EXCHANGE FOR ALL ORDERS</p>",
+            "content": "<p>Secure checkout options available</p>",
             "text_link": ""
           }
         },
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-1": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>MID-SEASON SALE UP TO 50% OFF</p>",
+            "content": "<p>Questions? Contact info@bestprintsco.com</p>",
             "text_link": ""
           }
         }
@@ -352,45 +352,6 @@
         "reset_spacing": false
       }
     },
-    "0e27f320-599b-4c22-b9e2-e337ae787780": {
-      "type": "testimonial",
-      "blocks": {
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0": {
-          "type": "testimonials",
-          "settings": {
-            "description": "<p>\"One of the best stores i found online. If  you are looking for unique designs and great qualit,  you will be addicted to this store. Thanks to all those who created this products.\"</p>",
-            "author": "",
-            "job": "Emilyx38",
-            "testimonial_width": 100
-          }
-        }
-      },
-      "block_order": [
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0"
-      ],
-      "settings": {
-        "heading": "",
-        "description": "",
-        "text_align": "text-center",
-        "container": "container",
-        "background_color": "",
-        "content_width": 78,
-        "testi_text_size": "bigger",
-        "show_rating": true,
-        "img_view": "default",
-        "img_position": "position-top",
-        "car_gap": 30,
-        "carousel_item_desktop": 1,
-        "autoplay": false,
-        "loop": false,
-        "show_arrow": true,
-        "show_bullet": false,
-        "show_bullet_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
     "f9c7e765-f9d1-490f-8725-6ea45c90df67": {
       "type": "divider",
       "settings": {
@@ -411,7 +372,6 @@
     "6974547b-ad71-482a-b14c-f6b4c1b74363",
     "7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359",
     "4bab0105-14e5-4ec7-912e-c3c5e1a4391a",
-    "0e27f320-599b-4c22-b9e2-e337ae787780",
     "f9c7e765-f9d1-490f-8725-6ea45c90df67"
   ]
 }

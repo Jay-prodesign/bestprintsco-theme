@@ -1,0 +1,47 @@
+{%- if collection != blank -%}
+  <section class="bls__section seo-collection-foundation">
+    <div class="container">
+      <div class="seo-collection-foundation__inner">
+        {%- if section.settings.heading != blank -%}
+          <h2>{{ section.settings.heading }}</h2>
+        {%- endif -%}
+
+        {%- if collection.description != blank -%}
+          <div class="rte">{{ collection.description }}</div>
+        {%- else -%}
+          <p>
+            Explore {{ collection.title | escape }} from BestPrintsCo. Use the collection filters and product cards to compare available designs, styles, and options.
+          </p>
+        {%- endif -%}
+
+        <nav class="seo-collection-foundation__links" aria-label="Related collections">
+          <a href="/collections/vegan-leather-boots">Vegan Leather Boots</a>
+          <a href="/collections/running-shoes">Running Shoes</a>
+          <a href="/collections/car-seat-covers">Car Seat Covers</a>
+          <a href="/collections/bedding-sets">Bedding Sets</a>
+          <a href="/collections/womens-hoodie-dresses">Hoodie Dresses</a>
+          <a href="/collections/hooded-blankets">Hooded Blankets</a>
+        </nav>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "SEO collection foundation",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Shop more BestPrintsCo collections"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SEO collection foundation"
+    }
+  ]
+}
+{% endschema %}

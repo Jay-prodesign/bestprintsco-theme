@@ -19,7 +19,7 @@
             </li>
           {%- endif -%}
           <li class="bls__breadcrumb-item capitalize d-inline">
-            <span class="bls__breadcrumb-link" aria-current="page">{{ product.title }}<span>
+            <span class="bls__breadcrumb-link" aria-current="page">{{ product.title }}</span>
           </li>
         {%- when 'collection' and collection.handle -%}
           {%- if current_tags -%}
@@ -72,4 +72,42 @@
       {%- endcase -%}
     </ol>
   </nav>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": {{ 'general.breadcrumb.home' | t | json }},
+          "item": {{ request.origin | append: routes.root_url | json }}
+        }{% if t == 'product' and collection.url %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": {{ request.origin | append: collection.url | json }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ product.title | json }},
+          "item": {{ request.origin | append: product.url | json }}
+        }{% elsif t == 'collection' and collection.handle %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ collection.title | json }},
+          "item": {{ request.origin | append: collection.url | json }}
+        }{% elsif t == 'page' %},
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": {{ page.title | json }},
+          "item": {{ request.origin | append: page.url | json }}
+        }{% endif %}
+      ]
+    }
+  </script>
 {%- endunless -%}

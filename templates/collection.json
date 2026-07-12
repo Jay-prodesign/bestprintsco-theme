@@ -18,10 +18,18 @@
             "text_cl": "#ffffff",
             "text_fs": 45
           }
+        },
+        "a0f44376-ec26-48cf-9a22-sprint301-desc": {
+          "type": "2",
+          "settings": {
+            "des_text_cl": "#ffffff",
+            "des_text_fs": 16
+          }
         }
       },
       "block_order": [
-        "f06a38ad-a426-42c0-a5ff-48ae0218618e"
+        "f06a38ad-a426-42c0-a5ff-48ae0218618e",
+        "a0f44376-ec26-48cf-9a22-sprint301-desc"
       ],
       "settings": {
         "layout": "full-width",
@@ -88,11 +96,18 @@
         "variant_size": "Color, Size",
         "show_count": true
       }
+    },
+    "seo-foundation": {
+      "type": "seo-collection-foundation",
+      "settings": {
+        "heading": "Shop more BestPrintsCo collections"
+      }
     }
   },
   "order": [
     "main-collection-heading",
     "439e38df-206c-40a8-9cd5-fc0e5f00f9d3",
-    "product-grid"
+    "product-grid",
+    "seo-foundation"
   ]
 }
