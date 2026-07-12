@@ -191,7 +191,7 @@ tasks:
     rollback: Revert cluster knowledge-base and intelligence-report commits.
     branch: task/DISC-103-product-seo-intelligence
     worktree: C:\Projects\bestprintsco-theme-worktrees\DISC-103
-    commit: pending
+    commit: e4ff2cd
     preview_url: null
     notes: Redesigned from pattern analysis into Product SEO Intelligence by owner instruction. Ten cluster documents cover C01–C30, using immutable catalog evidence and representative research only. No Shopify write, title, description, or alt text was generated. Proposed next phase is Cluster SEO Generation, gated by verified supplier facts and the existing proposal/rollback workflow.
 
