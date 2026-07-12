@@ -71,7 +71,7 @@
           "type": "delivery_return",
           "settings": {
             "show_delivery": true,
-            "delivery_text": "<p>Shipping options, delivery timing, taxes, and any applicable charges are shown at checkout and in store policies.</p>",
+            "delivery_text": "<p>Orders ship within 7 business days max according to our shipping policy. Final delivery options, taxes, and any applicable charges are shown at checkout.</p>",
             "show_return": true,
             "return_text": "<p>Review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> before ordering. Contact us if you have questions about a product.</p>"
           }
@@ -184,7 +184,7 @@
           "settings": {
             "title": "Shipping & Returns",
             "tab_content": "content",
-            "content": "<p>Shipping options, delivery timing, taxes, and any applicable charges are shown at checkout and in store policies.</p><p>For return questions, review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> or contact BestPrintsCo before ordering.</p>",
+            "content": "<p>Orders ship within 7 business days max according to our shipping policy. Checkout shows the final delivery options, taxes, and any applicable charges for your order.</p><p>If you have a return question, review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> or contact BestPrintsCo before ordering.</p>",
             "page": ""
           }
         },
@@ -193,7 +193,7 @@
           "settings": {
             "title": "Size & Product Guidance",
             "tab_content": "content",
-            "content": "<p>Select available product options carefully before adding to cart. If a product includes size choices, compare the selected size, product images, and any visible product-page details before checkout.</p><p>If you are unsure about a product option, contact BestPrintsCo before ordering.</p>",
+            "content": "<p>Choose your style, color, and size carefully before adding to cart. For footwear and apparel, compare the selected size with the product images and any visible size information before checkout.</p><p>If you are between sizes, have wide feet, or are unsure which option to choose, contact BestPrintsCo before ordering.</p>",
             "page": ""
           }
         },
