@@ -1,4 +1,76 @@
 {%- if collection != blank -%}
+  {%- liquid
+    assign title = collection.title | escape
+    assign intro = ''
+    assign support = ''
+    assign faq_1_q = 'How should I choose from this collection?'
+    assign faq_1_a = 'Start with the product type, then compare the visible design, available options, product images, price, and policy links before ordering.'
+    assign faq_2_q = 'Can I compare related BestPrintsCo collections?'
+    assign faq_2_a = 'Yes. Use the related collection links below to move between nearby product families and matching gift ideas.'
+
+    case collection.handle
+      when 'vegan-leather-boots'
+        assign intro = 'Shop expressive vegan leather boot designs from BestPrintsCo, organized for buyers comparing statement footwear, motifs, and available size options.'
+        assign support = 'This collection is best for shoppers who want bold printed boots and clear paths to related footwear collections without mixing shoes, slippers, and apparel into one landing page.'
+      when 'running-shoes'
+        assign intro = 'Explore printed running shoe designs from BestPrintsCo, with product cards that help compare visible artwork, available options, and pricing.'
+        assign support = 'Use this page when you want sneaker-style footwear designs and a cleaner path to related footwear collections.'
+      when 'high-top-shoes'
+        assign intro = 'Browse high-top shoe designs with artwork-forward product cards and links to nearby footwear categories.'
+        assign support = 'High-top shoes should stay distinct from boots, running shoes, and casual slip-ons so shoppers can compare the right silhouette.'
+      when 'footwear'
+        assign intro = 'Shop BestPrintsCo footwear collections, including boots, running shoes, high-top shoes, slippers, and other printed styles.'
+        assign support = 'This hub helps shoppers move from broad footwear browsing into the most relevant product family before comparing individual designs.'
+      when 'slippers-flip-flops'
+        assign intro = 'Browse relaxed footwear styles such as slippers and flip-flops from the BestPrintsCo catalog.'
+        assign support = 'Use the product images and available options to compare visible design, style, and price before ordering.'
+      when 'car-seat-covers'
+        assign intro = 'Shop printed car seat cover designs from BestPrintsCo, built around visual style, theme matching, and car-interior gift intent.'
+        assign support = 'Because exact vehicle fit details must be verified from the product page or policies, this page focuses on design discovery and related car accessory navigation.'
+        assign faq_1_q = 'How do I check whether a car seat cover is right for me?'
+        assign faq_1_a = 'Review the product images, selected options, and any visible product-page details before ordering. Do not assume vehicle compatibility unless it is stated on the product page.'
+      when 'car-accessories'
+        assign intro = 'Explore BestPrintsCo car accessories, including car-seat-cover and interior-accessory designs for shoppers building a coordinated look.'
+        assign support = 'This hub keeps car products together while still letting shoppers narrow into seat covers and other interior accessory pages.'
+      when 'bedding-sets'
+        assign intro = 'Shop printed bedding set designs from BestPrintsCo for bedroom refreshes, themed rooms, and gift browsing.'
+        assign support = 'Compare the visible artwork, available options, product images, and price. Set contents and sizing should be confirmed on the product page before ordering.'
+      when 'hooded-blankets'
+        assign intro = 'Browse hooded blanket designs from BestPrintsCo, organized for cozy gift shopping and motif-led discovery.'
+        assign support = 'Hooded blankets are kept separate from bedding and standard blankets so shoppers can compare the right product type.'
+      when 'blankets'
+        assign intro = 'Explore printed blanket designs from BestPrintsCo for home decor, gifting, and theme-led browsing.'
+        assign support = 'Use this collection to compare artwork and options, then review individual product pages for product-specific details.'
+      when 'beach-blankets'
+        assign intro = 'Shop beach blanket designs from BestPrintsCo for outdoor, travel, and gift-oriented browsing.'
+        assign support = 'Compare visible artwork and available options on product cards before reviewing product-page details.'
+      when 'all-home-products'
+        assign intro = 'Browse BestPrintsCo home products across bedding, blankets, wall decor, and related home-gift collections.'
+        assign support = 'This home hub helps shoppers move from broad inspiration into specific product families such as bedding sets, hooded blankets, and wall tapestries.'
+      when 'wall-tapestry'
+        assign intro = 'Explore printed wall tapestry designs from BestPrintsCo for room decor, dorm decor, and gift discovery.'
+        assign support = 'Use product images to compare visible artwork and review the product page for any item-specific details before ordering.'
+      when 'hoodies'
+        assign intro = 'Shop printed hoodie designs from BestPrintsCo, organized for apparel buyers comparing artwork, color, and size options.'
+        assign support = 'This collection keeps hoodie shopping focused and links to nearby apparel collections where relevant.'
+      when 'womens-hoodie-dresses'
+        assign intro = 'Browse women’s hoodie dress designs from BestPrintsCo for statement apparel and gift discovery.'
+        assign support = 'Hoodie dresses should stay separate from standard hoodies and T-shirts so shoppers compare the right garment type.'
+      when 't-shirts'
+        assign intro = 'Explore printed T-shirt designs from BestPrintsCo, with product cards focused on artwork, available options, and price.'
+        assign support = 'Use this page for motif-led apparel discovery, then confirm size and product-specific details on the product page.'
+      when 'kids-clothing'
+        assign intro = 'Browse kids clothing designs from BestPrintsCo, organized for gift shopping and family-friendly motif discovery.'
+        assign support = 'Review size and product-page details carefully before ordering, especially for youth apparel.'
+      when 'bags'
+        assign intro = 'Shop printed bag designs from BestPrintsCo, including giftable styles and motif-led accessories.'
+        assign support = 'Compare visible design, style, product images, and available options before choosing a bag.'
+      else
+        assign intro = 'Explore ' | append: title | append: ' from BestPrintsCo. Use the collection filters and product cards to compare available designs, styles, and options.'
+        assign support = 'Review product images, available options, pricing, and policy links before ordering.'
+    endcase
+  -%}
+
   <section class="bls__section seo-collection-foundation">
     <div class="container">
       <div class="seo-collection-foundation__inner">
@@ -6,25 +78,78 @@
           <h2>{{ section.settings.heading }}</h2>
         {%- endif -%}
 
-        {%- if collection.description != blank -%}
-          <div class="rte">{{ collection.description }}</div>
-        {%- else -%}
-          <p>
-            Explore {{ collection.title | escape }} from BestPrintsCo. Use the collection filters and product cards to compare available designs, styles, and options.
-          </p>
-        {%- endif -%}
+        <div class="seo-collection-foundation__copy rte">
+          <p>{{ intro }}</p>
+          <p>{{ support }}</p>
+        </div>
 
-        <nav class="seo-collection-foundation__links" aria-label="Related collections">
+        <nav class="seo-collection-foundation__links" aria-label="Related BestPrintsCo collections">
+          <a href="/collections/footwear">Footwear</a>
           <a href="/collections/vegan-leather-boots">Vegan Leather Boots</a>
           <a href="/collections/running-shoes">Running Shoes</a>
+          <a href="/collections/car-accessories">Car Accessories</a>
           <a href="/collections/car-seat-covers">Car Seat Covers</a>
+          <a href="/collections/all-home-products">Home Products</a>
           <a href="/collections/bedding-sets">Bedding Sets</a>
-          <a href="/collections/womens-hoodie-dresses">Hoodie Dresses</a>
           <a href="/collections/hooded-blankets">Hooded Blankets</a>
+          <a href="/collections/hoodies">Hoodies</a>
+          <a href="/collections/womens-hoodie-dresses">Hoodie Dresses</a>
+          <a href="/collections/bags">Bags</a>
         </nav>
+
+        <div class="seo-collection-foundation__faq">
+          <h3>Helpful shopping notes</h3>
+          <details>
+            <summary>{{ faq_1_q }}</summary>
+            <p>{{ faq_1_a }}</p>
+          </details>
+          <details>
+            <summary>{{ faq_2_q }}</summary>
+            <p>{{ faq_2_a }}</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .seo-collection-foundation {
+      padding: 32px 0 48px;
+    }
+
+    .seo-collection-foundation__inner {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .seo-collection-foundation__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0;
+    }
+
+    .seo-collection-foundation__links a {
+      border: 1px solid rgba(17, 17, 17, 0.16);
+      border-radius: 999px;
+      padding: 8px 14px;
+      text-decoration: none;
+    }
+
+    .seo-collection-foundation__faq details {
+      border-top: 1px solid rgba(17, 17, 17, 0.12);
+      padding: 14px 0;
+    }
+
+    .seo-collection-foundation__faq details:last-child {
+      border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+    }
+
+    .seo-collection-foundation__faq summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+  </style>
 {%- endif -%}
 
 {% schema %}

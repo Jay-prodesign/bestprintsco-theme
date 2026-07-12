@@ -11,13 +11,56 @@
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
+    {%- liquid
+      assign seo_description = page_description
+      if template.name == 'collection' and collection != blank
+        case collection.handle
+          when 'vegan-leather-boots'
+            assign seo_description = 'Shop expressive vegan leather boot designs from BestPrintsCo and compare artwork, available options, product images, and related footwear collections.'
+          when 'running-shoes'
+            assign seo_description = 'Explore printed running shoe designs from BestPrintsCo with clear paths to related footwear collections and product pages.'
+          when 'high-top-shoes'
+            assign seo_description = 'Browse high-top shoe designs from BestPrintsCo and compare visible artwork, available options, and related footwear styles.'
+          when 'footwear'
+            assign seo_description = 'Shop BestPrintsCo footwear collections, including boots, running shoes, high-top shoes, slippers, and other printed styles.'
+          when 'slippers-flip-flops'
+            assign seo_description = 'Browse relaxed footwear styles such as slippers and flip-flops from the BestPrintsCo catalog.'
+          when 'car-seat-covers'
+            assign seo_description = 'Shop printed car seat cover designs from BestPrintsCo and compare visible artwork, available options, and related car accessory collections.'
+          when 'car-accessories'
+            assign seo_description = 'Explore BestPrintsCo car accessories, including car seat cover and interior accessory designs for coordinated style browsing.'
+          when 'bedding-sets'
+            assign seo_description = 'Shop printed bedding set designs from BestPrintsCo for bedroom refreshes, themed rooms, and gift browsing.'
+          when 'hooded-blankets'
+            assign seo_description = 'Browse hooded blanket designs from BestPrintsCo for cozy gift shopping and motif-led discovery.'
+          when 'blankets'
+            assign seo_description = 'Explore printed blanket designs from BestPrintsCo for home decor, gifting, and theme-led browsing.'
+          when 'beach-blankets'
+            assign seo_description = 'Shop beach blanket designs from BestPrintsCo for outdoor, travel, and gift-oriented browsing.'
+          when 'all-home-products'
+            assign seo_description = 'Browse BestPrintsCo home products across bedding, blankets, wall decor, and related home-gift collections.'
+          when 'wall-tapestry'
+            assign seo_description = 'Explore printed wall tapestry designs from BestPrintsCo for room decor, dorm decor, and gift discovery.'
+          when 'hoodies'
+            assign seo_description = 'Shop printed hoodie designs from BestPrintsCo and compare artwork, color, available sizes, and related apparel collections.'
+          when 'womens-hoodie-dresses'
+            assign seo_description = 'Browse women’s hoodie dress designs from BestPrintsCo for statement apparel and gift discovery.'
+          when 't-shirts'
+            assign seo_description = 'Explore printed T-shirt designs from BestPrintsCo with artwork-led product cards and related apparel navigation.'
+          when 'kids-clothing'
+            assign seo_description = 'Browse kids clothing designs from BestPrintsCo for gift shopping and family-friendly motif discovery.'
+          when 'bags'
+            assign seo_description = 'Shop printed bag designs from BestPrintsCo, including giftable styles and motif-led accessories.'
+        endcase
+      endif
+    -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
-    <meta name="description" content="{{ page_description | default: shop.description | default: shop.name | escape }}">
+    <meta name="description" content="{{ seo_description | default: shop.description | default: shop.name | escape }}">
     {% render 'meta-tags' %}
     {{ content_for_header }}
     <script>
