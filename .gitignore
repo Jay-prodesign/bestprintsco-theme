@@ -9,6 +9,8 @@ node_modules/
 data/shopify/exports/
 data/shopify/raw/
 data/shopify/downloads/
+data/shopify/snapshots/*
+!data/shopify/snapshots/README.md
 *.shopify.csv
 *.shopify.json
 

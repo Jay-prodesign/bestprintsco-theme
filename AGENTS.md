@@ -30,6 +30,14 @@
 - Generate image alt text only after product titles and page meaning are approved.
 - Do not create keyword-stuffed, duplicate, thin, or doorway pages.
 
+## Cost Control and Reporting
+
+- Use the lowest-cost suitable model and low reasoning for simple work; use normal speed and never use Fast mode unless the owner explicitly asks.
+- Read only task-relevant files, reuse verified context, and do not start repo-wide scans, full-catalog analysis, or broad SEO audits without explicit owner approval.
+- Do not launch review agents, critic agents, subagents, or multi-agent work unless the owner explicitly asks and the task materially benefits.
+- Do not create or update handoffs, state reports, audit reports, inventory reports, or similar status artifacts unless explicitly requested or required by the selected task workflow.
+- After a task, report at most six short bullets: changed files, validation, and any blocker. Do not create follow-on tasks or advance a phase without instruction.
+
 ## Required workflow
 
 1. Read the required governance and state files.
