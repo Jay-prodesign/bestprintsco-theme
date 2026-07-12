@@ -14,6 +14,13 @@ Last updated: 2026-07-12
 | Last verified commit | `e4ff2cd` (DISC-103 implementation commit) |
 | Last preview URL | https://bestprintsco.com/?preview_theme_id=130287665232 |
 
+## BLOCK-201 current status
+
+- BLOCK-201 is in progress on `task/BLOCK-201-purchase-foundation`.
+- Baseline: `/products/black-music-notes-design-shoes-womens-boots` passed selected-variant, Add to Cart, cart-line, and standard checkout-handoff checks at 1440x900 and 390x844.
+- The branch disables generated sold, visitor, stock-countdown, and cart-countdown claims. No product, catalog, live-theme, or Shopify setting has changed.
+- Shopify CLI authentication is expired, so development theme `130287665232` has not received these changes. Deploy and repeat the two viewport checks before closing the task.
+
 ## Phase gate
 
 Phase 0 is recorded as `passed_with_documented_debt` under DEC-014. DEC-008 assigns routine reversible approvals, DEC-012 approves the ordered read-only access method, and GOV-003 records the owner, due conditions, risks, and rollback posture for deferred business facts.

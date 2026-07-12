@@ -346,20 +346,20 @@ tasks:
     phase: 2
     title: Verify and fix critical trust and purchase blockers
     description: Address misleading trust/sales/scarcity and broken product forms, variants, cart, accelerated checkout, size guidance, or serious mobile purchase issues proven active.
-    status: backlog
+    status: in_progress
     priority: P0
     type: trust_conversion
     risk: high
     approval_required: true
     dependencies: [DISC-101, DISC-102]
-    affected_files: [docs/seo/reports, sections, snippets, templates]
+    affected_files: [config/settings_data.json, templates/product.json, docs/seo/reports]
     affected_urls: []
     acceptance_criteria: [Critical pilot purchase journeys pass and claims are verified]
     validation: [Mobile/desktop product, variant, cart, Buy Now and checkout tests]
     rollback: Revert task commit and restore approved development theme.
     branch: task/BLOCK-201-purchase-foundation
-    worktree: null
-    commit: null
+    worktree: C:\Projects\bestprintsco-theme-worktrees\BLOCK-201
+    commit: pending
     preview_url: null
     notes: Classification — Active commercial blocker and Trust/conversion issue.
 

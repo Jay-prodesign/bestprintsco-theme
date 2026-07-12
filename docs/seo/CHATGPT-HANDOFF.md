@@ -14,3 +14,9 @@
 | Required business-owner decisions | GOV-003 tracks brand positioning, priority markets, verified review source, and PillowProfits/source records at their stated due conditions |
 | Next recommended task | Cluster SEO Generation: choose one active verified cluster, build source-backed proposals and before snapshots, then apply no changes until the existing validation and rollback workflow is satisfied |
 | Repository files ChatGPT should inspect before advising | `AGENTS.md`; `docs/seo/CHATGPT-HANDOFF.md`; `docs/seo/PROJECT-STATE.md`; `docs/seo/TASKS.yaml`; `docs/seo/DECISIONS.md`; relevant phase reports |
+
+## BLOCK-201 current status
+
+- In progress on `task/BLOCK-201-purchase-foundation`; deployment is blocked until Shopify CLI authentication is renewed.
+- Baseline purchase path passed on the representative boot product at desktop and mobile sizes. Generated sold, visitor, stock, and cart countdown claims are disabled in the branch.
+- Development theme `130287665232` and the live theme remain unchanged. Resume by deploying only to development theme, then re-run the recorded journey before closing the task.

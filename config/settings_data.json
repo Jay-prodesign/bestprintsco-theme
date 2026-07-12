@@ -62,7 +62,7 @@
     "enable_search_input": false,
     "free_shipping_progress_bar": true,
     "shipping_rate": "10",
-    "cart_countdown": true,
+    "cart_countdown": false,
     "cart_countdown_duration": 4,
     "cart_note": false,
     "cart_gift_wrap": false,
