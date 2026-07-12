@@ -70,10 +70,10 @@
         "c772ce81-4aa5-415d-8939-631c6d4897ff": {
           "type": "delivery_return",
           "settings": {
-            "show_delivery": false,
-            "delivery_text": "<p>Estimate delivery times: <strong>12-26 days</strong> (International), <strong>3-6 days</strong> (United States).</p>",
-            "show_return": false,
-            "return_text": "<p>Return within <strong>45 days</strong> of purchase. Duties & taxes are non-refundable.</p>"
+            "show_delivery": true,
+            "delivery_text": "<p>Shipping options, delivery timing, taxes, and any applicable charges are shown at checkout and in store policies.</p>",
+            "show_return": true,
+            "return_text": "<p>Review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> before ordering. Contact us if you have questions about a product.</p>"
           }
         },
         "e3c98e10-4e94-4a55-bf4e-364e68cbe829": {
@@ -179,6 +179,24 @@
             "title": "Review"
           }
         },
+        "sprint306-shipping-returns": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Shipping & Returns",
+            "tab_content": "content",
+            "content": "<p>Shipping options, delivery timing, taxes, and any applicable charges are shown at checkout and in store policies.</p><p>For return questions, review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> or contact BestPrintsCo before ordering.</p>",
+            "page": ""
+          }
+        },
+        "sprint306-size-guidance": {
+          "type": "custom_tab",
+          "settings": {
+            "title": "Size & Product Guidance",
+            "tab_content": "content",
+            "content": "<p>Select available product options carefully before adding to cart. If a product includes size choices, compare the selected size, product images, and any visible product-page details before checkout.</p><p>If you are unsure about a product option, contact BestPrintsCo before ordering.</p>",
+            "page": ""
+          }
+        },
         "de7d437d-d088-49b0-9426-0e78b2a44fd7": {
           "type": "custom_tab",
           "disabled": true,
@@ -203,6 +221,8 @@
       "block_order": [
         "5ff6a4f5-c591-4a3f-bb68-b1efa1c91ab5",
         "f15df867-a65f-4fc0-8fe3-51d2180492be",
+        "sprint306-shipping-returns",
+        "sprint306-size-guidance",
         "de7d437d-d088-49b0-9426-0e78b2a44fd7",
         "cc1f49b6-1977-4f1f-9ab8-719556bd5832"
       ],
