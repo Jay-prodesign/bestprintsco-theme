@@ -28,11 +28,11 @@
             "text_alignment": "center",
             "text_alignment_on_mobile": "center",
             "text_color": "text-dark",
-            "subheading": "CUSTOM PRINT FAVORITES",
-            "title": "Custom Gifts, Shoes & Home Decor",
-            "description": "",
+            "subheading": "VEGAN MADE-TO-ORDER FAVORITES",
+            "title": "Printed Boots, Sneakers & Custom Gifts",
+            "description": "<p>Shop artwork-led shoes, cozy home pieces, car accessories, and giftable designs made for bold everyday style.</p>",
             "image_link": "https://bestprintsco.com/collections/vegan-leather-boots",
-            "button_text": "Shop Best Sellers",
+            "button_text": "Shop Vegan Boots",
             "button_type": "primary"
           }
         }
@@ -136,8 +136,8 @@
         "e4994be4-f22c-437f-87a5-5826812d3f36"
       ],
       "settings": {
-        "heading": "Featured Collections",
-        "description": "",
+        "heading": "Shop by Product Family",
+        "description": "<p>Start with the product type you want: vegan boots, sneakers, car seat covers, bedding, hooded blankets, hoodie dresses, and kids clothing.</p>",
         "text_alignment": "text-center",
         "container": "full-width",
         "background_color": "",
@@ -167,7 +167,7 @@
       "type": "products-grid",
       "settings": {
         "heading": "Custom Vegan Boots",
-        "description": "<p>Browse expressive boot designs from the BestPrintsCo catalog.</p>",
+        "description": "<p>Shop vegan made-to-order boot designs with double-sided artwork, lace-up styling, rounded toe construction, textile lining, and bold gift-ready motifs.</p>",
         "text_alignment": "text-center",
         "container": "container-fluid",
         "product_grid_background_color": "",
@@ -202,7 +202,7 @@
         "17692b41-f06e-4d9c-9b67-6e5aae793ecb": {
           "type": "subheading",
           "settings": {
-            "sub_title": "CUSTOM PRINT GIFTS",
+            "sub_title": "HANDCRAFTED PRINT STYLE",
             "subheading_color": "#111111",
             "subheading_fs": 12,
             "subheading_fw": 500,
@@ -214,7 +214,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-0": {
           "type": "heading",
           "settings": {
-            "title": "Custom Made for You",
+            "title": "Made to Order, Designed to Stand Out",
             "heading_color": "#111111",
             "heading_fs": 50,
             "heading_fw": 500,
@@ -226,7 +226,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>Explore expressive designs for footwear, home, car accessories, and gifts.</p>",
+            "txt_content": "<p>BestPrintsCo focuses on vegan footwear, printed home decor, car accessories, and giftable designs that feel more personal than ordinary store-bought basics.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -303,7 +303,7 @@
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-0": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>Custom print styles for shoes, home, car, and gifts</p>",
+            "content": "<p>Vegan made-to-order shoes, boots, sneakers, home decor, car accessories, and gifts</p>",
             "text_link": ""
           }
         },
