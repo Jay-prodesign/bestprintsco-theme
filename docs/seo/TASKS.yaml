@@ -149,7 +149,7 @@ tasks:
     rollback: Revert discovery report.
     branch: task/DISC-102-product-clusters
     worktree: C:\Projects\bestprintsco-theme-worktrees\DISC-102
-    commit: pending
+    commit: b404caa
     preview_url: null
     notes: Completed structural candidate clustering from the immutable DISC-101 snapshot. Thirty top signatures cover 4,324 products and record collection, vendor, variants, prices, options, SKU family, media pattern, status, confidence, unknowns, representative stable IDs, and required validation. Fourteen main images were sampled. No authoritative PillowProfits/source document was found, so no product specification or factual base-product identity was approved. No Shopify or theme write occurred.
 
