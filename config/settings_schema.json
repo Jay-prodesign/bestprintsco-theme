@@ -142,7 +142,7 @@
         "type": "text",
         "id": "secondary_notification",
         "label": "Secondary notification",
-        "default": "⚡ Hurry We are selling out Fast!",
+        "default": "Explore new BestPrintsCo designs",
         "info": "Leave blank to use your original page titile"
       }
     ]
