@@ -62,9 +62,9 @@
     promotionPopup: {{ show_promotion }}
   }
   window.flashingBrowseTab = {
-    enable: {{ th_st.flashing_browser }},
-    firstNotification: `{{ th_st.first_notification }}`,
-    secondaryNotification: `{{ th_st.secondary_notification }}`
+    enable: false,
+    firstNotification: `{{ th_st.first_notification | default: shop.name }}`,
+    secondaryNotification: `Explore new BestPrintsCo designs`
   }
 </script>
 {%- if th_st.page_terms_conditions != blank -%}
