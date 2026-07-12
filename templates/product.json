@@ -182,18 +182,18 @@
         "sprint306-shipping-returns": {
           "type": "custom_tab",
           "settings": {
-            "title": "Shipping & Returns",
+            "title": "Shipping Time",
             "tab_content": "content",
-            "content": "<p>Orders ship within 7 business days max according to our shipping policy. Checkout shows the final delivery options, taxes, and any applicable charges for your order.</p><p>If you have a return question, review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> or contact BestPrintsCo before ordering.</p>",
+            "content": "<p>Orders ship within 7 business days max according to our shipping policy. Checkout shows the final delivery options, taxes, and any applicable charges for your order.</p><p>After ordering, use your order details and tracking updates to follow the shipment. For return questions, review the <a href=\"/pages/return-refund-policy\" title=\"Return and refund policy\">return and refund policy</a> or contact BestPrintsCo before ordering.</p>",
             "page": ""
           }
         },
         "sprint306-size-guidance": {
           "type": "custom_tab",
           "settings": {
-            "title": "Size & Product Guidance",
+            "title": "Fit & Size Notes",
             "tab_content": "content",
-            "content": "<p>Choose your style, color, and size carefully before adding to cart. For footwear and apparel, compare the selected size with the product images and any visible size information before checkout.</p><p>If you are between sizes, have wide feet, or are unsure which option to choose, contact BestPrintsCo before ordering.</p>",
+            "content": "<p>Choose your style, color, and size carefully before adding to cart. For footwear and apparel, compare the selected size with the product images and any visible size information before checkout.</p><p>If you are between sizes, have wide feet, or are unsure which option to choose, contact BestPrintsCo before ordering so you can buy with more confidence.</p>",
             "page": ""
           }
         },
