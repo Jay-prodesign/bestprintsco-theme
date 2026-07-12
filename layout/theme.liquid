@@ -13,7 +13,9 @@
     {%- endif -%}
     {%- liquid
       assign seo_description = page_description
-      if template.name == 'collection' and collection != blank
+      if template.name == 'list-collections'
+        assign seo_description = 'Explore BestPrintsCo collections by product family, including printed footwear, apparel, home decor, bedding, car accessories, bags, and giftable designs.'
+      elsif template.name == 'collection' and collection != blank
         case collection.handle
           when 'vegan-leather-boots'
             assign seo_description = 'Shop expressive vegan leather boot designs from BestPrintsCo and compare artwork, available options, product images, and related footwear collections.'
@@ -61,7 +63,7 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
     <meta name="description" content="{{ seo_description | default: shop.description | default: shop.name | escape }}">
-    {% render 'meta-tags' %}
+    {% render 'meta-tags', seo_description: seo_description %}
     {{ content_for_header }}
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
