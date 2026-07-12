@@ -109,6 +109,13 @@
                         </li>
                       {%- endfor -%}
                     </ul>
+                  {%- elsif block.settings.title == 'Customer Service' -%}
+                    <ul class="pl-0 list-none mt-0">
+                      <li class="mb-10"><a href="/pages/contact">Contact Us</a></li>
+                      <li class="mb-10"><a href="/pages/return-refund-policy">Returns & Refunds</a></li>
+                      <li class="mb-10"><a href="/pages/privacy-policy">Privacy Policy</a></li>
+                      <li class="mb-10"><a href="/collections">Shop Collections</a></li>
+                    </ul>
                   {%- endif -%}
                 {%- when 'about_us' -%}
                   {%- if block.settings.description != blank -%}
@@ -308,7 +315,7 @@
       "type": "richtext",
       "id": "copyright",
       "label": "Copyright text",
-      "default": "<p>Copyright © Uminex all rights reserved. Powered by Blueskytechco.</p>"
+      "default": "<p>© 2026 BestPrintsCo. All rights reserved.</p>"
     },
     {
       "type": "checkbox",
