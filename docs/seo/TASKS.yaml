@@ -359,7 +359,7 @@ tasks:
     rollback: Revert task commit and restore approved development theme.
     branch: task/BLOCK-201-purchase-foundation
     worktree: C:\Projects\bestprintsco-theme-worktrees\BLOCK-201
-    commit: pending
+    commit: d11d2f1
     preview_url: null
     notes: Classification — Active commercial blocker and Trust/conversion issue.
 
