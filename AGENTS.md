@@ -2,12 +2,21 @@
 
 ## Non-negotiable safety
 
-- Never run `shopify theme publish` or `shopify theme push --publish`.
-- Never modify, overwrite, or push to live theme `122053689424`.
-- Shopify theme work may target only unpublished development theme `130287665232` on `cute-sneakers.myshopify.com`.
-- Never commit credentials, tokens, customer/order data, or private raw exports.
-- Never fabricate product facts, reviews, activity, sales, scarcity, guarantees, or business claims.
-- Never copy competitor content or treat competitor listings as authoritative product evidence.
+* Never run `shopify theme publish` or `shopify theme push --publish`.
+* Never publish or replace the entire development theme as the live theme.
+* Initial implementation and validation must target unpublished development theme `130287665232` on `cute-sneakers.myshopify.com`.
+* After a completed task passes proportionate validation, Codex may automatically deploy only that task's isolated files to live theme `122053689424`.
+* Never include unrelated files in a live deployment.
+* Use `--nodelete` for isolated theme-file deployments.
+* Preserve a practical rollback method before live deployment.
+* Use risk-proportionate validation:
+
+  * Minor, isolated, reversible changes require one focused live check.
+  * Product forms, variants, cart, checkout entry, pricing, inventory, URLs, navigation, schema, sitewide JavaScript, or bulk changes require deeper desktop/mobile validation.
+* Do not repeat checks that already passed unless code changes, validation fails, or new evidence indicates a risk.
+* Never commit credentials, tokens, customer/order data, or private raw exports.
+* Never fabricate product facts, reviews, activity, sales, scarcity, guarantees, or business claims.
+* Never copy competitor content or treat competitor listings as authoritative product evidence.
 
 ## Task and Git controls
 
