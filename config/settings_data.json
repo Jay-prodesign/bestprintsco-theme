@@ -289,7 +289,7 @@
           "show_language": true,
           "show_store_page": true,
           "show_message": true,
-          "message": "<p>Sign up for discounts & coupon codes: <a href=\"/account/\" title=\"/account/\"><span style=\"text-decoration:underline\"><strong>Sign Up</strong></span></a></p>"
+          "message": "<p>Create an account for faster checkout and order access: <a href=\"/account/\" title=\"/account/\"><span style=\"text-decoration:underline\"><strong>Sign Up</strong></span></a></p>"
         }
       },
       "horizontal-menu": {
@@ -335,7 +335,7 @@
           "7a0c3f4d-2c91-4c22-9260-c8674a51833f": {
             "type": "link",
             "settings": {
-              "title": "All Shoes",
+              "title": "All Footwear",
               "url": "https://bestprintsco.com/collections/footwear",
               "open_link": false,
               "menu": "footwear",
@@ -345,7 +345,7 @@
           "09d35fdd-e85e-4a42-b0b9-43552f90971f": {
             "type": "menu_item",
             "settings": {
-              "title": "Home",
+              "title": "Home & Decor",
               "url": "",
               "open_link": false,
               "label": "",
@@ -507,7 +507,7 @@
           "89b90c3f-dec1-4fb5-b2f5-5cce0546d0d2": {
             "type": "menu_item",
             "settings": {
-              "title": "Mega Menu",
+              "title": "Shop Collections",
               "url": "",
               "open_link": false,
               "label": "",
@@ -524,7 +524,7 @@
           "252da4e8-bd66-490f-87a3-67833453329d": {
             "type": "link",
             "settings": {
-              "title": "Heading",
+              "title": "Customer Service",
               "url": "",
               "open_link": false,
               "menu": "footer",
@@ -534,9 +534,9 @@
           "d3e68680-5a0b-45d8-999c-417a401a9790": {
             "type": "banner",
             "settings": {
-              "title": "Heading",
-              "button_title": "Button Text",
-              "banner_link": "shopify://collections/collections1",
+              "title": "Featured Collections",
+              "button_title": "Shop Collections",
+              "banner_link": "shopify://collections/all",
               "open_link": false,
               "col": "4"
             }
@@ -544,7 +544,7 @@
           "7889d16a-634c-48df-aa5f-7ecfa481f818": {
             "type": "dropdown",
             "settings": {
-              "title": "Dropdown",
+              "title": "All Categories",
               "url": "",
               "menu": "main-menu",
               "open_link": false,
