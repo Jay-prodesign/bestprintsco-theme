@@ -19,7 +19,7 @@
         "4096cbca-6b77-4dcb-b60a-66290398b018": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>Welcome to umino</p>",
+            "txt_content": "<p>Welcome to BestPrintsCo</p>",
             "txt_color": "#ffffff",
             "txt_fs": 14,
             "txt_fw": 600,
@@ -31,7 +31,7 @@
         "7b5b40e5-4ea1-4974-acf9-71bebc1d86cf": {
           "type": "heading",
           "settings": {
-            "title": "Our Perfect Store",
+            "title": "Custom Print Gifts, Footwear & Home Decor",
             "heading_color": "#ffffff",
             "heading_fs": 45,
             "heading_fw": 400,
@@ -43,7 +43,7 @@
         "template--16584037925111__507aafc1-1757-4f5b-a2e3-88035abcecf8-1665450078ece10545-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>Over 20 years of experience, we have crafted thousands of strategic </p>",
+            "txt_content": "<p>BestPrintsCo helps shoppers discover expressive printed products across footwear, apparel, home decor, car accessories, bags, and gifts.</p>",
             "txt_color": "#ffffff",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -55,7 +55,7 @@
         "a5653366-79b8-435f-a283-d9bb99e72391": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>discovery process that enables us to peel back the layers which enable us to understand, connect</p>",
+            "txt_content": "<p>We organize the catalog by product family so it is easier to compare designs, options, and related collections.</p>",
             "txt_color": "#ffffff",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -67,7 +67,7 @@
         "ede78487-3140-4172-acda-6cd6aef45f6d": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>understand, connect.</p>",
+            "txt_content": "<p>Questions before ordering? Contact us and review product details, size choices, and policies before checkout.</p>",
             "txt_color": "#ffffff",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -132,7 +132,7 @@
         "template--16584037925111__ce9234d5-6cd4-465a-85fd-01377e10f037-1665563953d6e64dbe-0": {
           "type": "heading",
           "settings": {
-            "title": "Story About Us",
+            "title": "What We’re Building",
             "heading_color": "#111111",
             "heading_fs": 40,
             "heading_fw": 400,
@@ -144,7 +144,7 @@
         "template--16584037925111__ce9234d5-6cd4-465a-85fd-01377e10f037-1665563953d6e64dbe-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>We have crafted thousands of manufacturing processes, strategy that allows us to understand our customers like never before. We are present up to this point due to the trust and appreciation of our customers. </p>",
+            "txt_content": "<p>BestPrintsCo is being improved as a clearer, easier-to-shop catalog for expressive custom print products and giftable designs.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -156,7 +156,7 @@
         "53ab94f5-0edc-4a2f-9398-f7520031b381": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>To help stem the flow of plastic into the ocean, we have committed to eliminating single-use plastic from th product range and food outlets by 2023.</p>",
+            "txt_content": "<p>Our current focus is practical: clearer collection navigation, safer product information, useful internal links, and a smoother path from browsing to checkout.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -220,7 +220,7 @@
         "template--16584037925111__de27bbae-8b57-4758-bfe7-5ac9b1179505-1665713233cd3512b4-1": {
           "type": "heading",
           "settings": {
-            "heading": "Our Unique Things",
+            "heading": "How to Shop BestPrintsCo",
             "heading_color": "#111111",
             "heading_fs": 40,
             "heading_fw": 400,
@@ -232,7 +232,7 @@
         "template--16584037925111__de27bbae-8b57-4758-bfe7-5ac9b1179505-1665713233cd3512b4-2": {
           "type": "desc",
           "settings": {
-            "desc": "<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra per inceptos vel pretium</p>",
+            "desc": "<p>Start with a product family, compare the visible design and available options, then review product-page details before ordering.</p>",
             "desc_color": "#555555",
             "desc_fs": 16,
             "desc_fw": 400,
@@ -244,7 +244,7 @@
         "182f37f5-6a43-491b-96b0-b064a7a24418": {
           "type": "desc",
           "settings": {
-            "desc": "<p> lectus qua. Nunc id cursus metus ididunt ut labore metus episcing.</p>",
+            "desc": "<p>Use collection links, product images, size choices, and policy pages to make a confident purchase decision.</p>",
             "desc_color": "#555555",
             "desc_fs": 16,
             "desc_fw": 400,
@@ -287,8 +287,8 @@
             "text_size": "large",
             "h_text_weight": 400,
             "title": "",
-            "subtext": "Unique for Women’s",
-            "content": "<p>Our collections dress a unique and feminine woman. The pieces showcase a timeless style while keeping in mind fashion aesthetics and trends.</p>",
+            "subtext": "Printed Footwear",
+            "content": "<p>Browse expressive footwear designs and compare available options before checkout.</p>",
             "button_type": "link",
             "btn_content": ""
           }
@@ -308,8 +308,8 @@
             "text_size": "large",
             "h_text_weight": 400,
             "title": "",
-            "subtext": "Elegant for Men’s",
-            "content": "<p>From traditional tailoring to the most informal pieces. Our Umino Man collections feature the latest trends with the maximum comfort.</p>",
+            "subtext": "Home & Gift Ideas",
+            "content": "<p>Explore printed home products, bedding, blankets, wall decor, and giftable designs.</p>",
             "button_type": "primary",
             "btn_content": ""
           }
@@ -330,7 +330,7 @@
             "h_text_weight": 400,
             "title": "",
             "subtext": "Freedom for Everyone",
-            "content": "<p>The designs have been created adopting the current trends, while leaving room for personal expression among young people.</p>",
+            "content": "<p>Move between related collections to find products by theme, style, and visible design.</p>",
             "button_type": "primary",
             "btn_content": ""
           }
@@ -360,7 +360,7 @@
         "template--16584037925111__2dc0f1df-4f5b-4b3c-869a-2e69745ae766-16667479252899c4f1-2": {
           "type": "desc",
           "settings": {
-            "desc": "<p>“ Umino will become an example of the responsible business model by doing business</p>",
+            "desc": "<p>BestPrintsCo is focused on clearer product discovery, safer product information, and easier collection navigation.</p>",
             "desc_color": "#ffdb77",
             "desc_fs": 20,
             "desc_fw": 400,
@@ -372,7 +372,7 @@
         "a7729639-85be-4c47-a122-0a9b5481e9f2": {
           "type": "desc",
           "settings": {
-            "desc": "<p>with kindness, profit and bringing practical and long-term values to customers, employees,</p>",
+            "desc": "<p>We avoid unsupported product claims and encourage shoppers to review product details, selected options, and policy pages before ordering.</p>",
             "desc_color": "#ffdb77",
             "desc_fs": 20,
             "desc_fw": 400,
@@ -384,7 +384,7 @@
         "a1a3c57a-7dfe-4c13-bb19-d22d3166f94c": {
           "type": "desc",
           "settings": {
-            "desc": "<p> partners, the community for the environment and for shareholders ”</p>",
+            "desc": "<p>As the store improves, each change should make shopping more useful, measurable, and reversible.</p>",
             "desc_color": "#ffdb77",
             "desc_fs": 20,
             "desc_fw": 400,
@@ -396,7 +396,7 @@
         "b0e61b32-183d-4465-971b-d860a9f66a1b": {
           "type": "desc",
           "settings": {
-            "desc": "<p>Michael Anthony, CEO & Founder Umino</p>",
+            "desc": "<p>BestPrintsCo</p>",
             "desc_color": "#ffffff",
             "desc_fs": 14,
             "desc_fw": 400,
@@ -427,7 +427,7 @@
         "7037bd9d-7ccb-4b05-b7b9-0a3b718156b1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>OUR FACTORIES</p>",
+            "txt_content": "<p>OUR CATALOG</p>",
             "txt_color": "#999999",
             "txt_fs": 12,
             "txt_fw": 500,
@@ -439,7 +439,7 @@
         "template--16584037925111__26c21a87-4e2f-4f70-a443-ad63d4341ac2-16655668072faff6b4-0": {
           "type": "heading",
           "settings": {
-            "title": "The Best Product",
+            "title": "Product Families",
             "heading_color": "#111111",
             "heading_fs": 40,
             "heading_fw": 400,
@@ -451,7 +451,7 @@
         "template--16584037925111__26c21a87-4e2f-4f70-a443-ad63d4341ac2-16655668072faff6b4-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>We spend months finding the best factories around the world—the same ones that produce your favorite designer labels. We visit them often and build strong personal relationships with the owners. Each factory is given a compliance audit to evaluate factors like fair wages.</p>",
+            "txt_content": "<p>BestPrintsCo organizes products into clear families such as footwear, apparel, home decor, bedding, car accessories, bags, and gifts.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -512,7 +512,7 @@
         "53472d49-ff77-4644-b112-81f458396685": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>OUR QUALITY</p>",
+            "txt_content": "<p>SHOPPING CLARITY</p>",
             "txt_color": "#999999",
             "txt_fs": 12,
             "txt_fw": 500,
@@ -524,7 +524,7 @@
         "template--16584037925111__c3ebe82c-835b-4f82-b2f6-b38befcf6797-16655668072faff6b4-0": {
           "type": "heading",
           "settings": {
-            "title": "Timeless Products",
+            "title": "Clear Product Details",
             "heading_color": "#111111",
             "heading_fs": 40,
             "heading_fw": 400,
@@ -536,7 +536,7 @@
         "template--16584037925111__c3ebe82c-835b-4f82-b2f6-b38befcf6797-16655668072faff6b4-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>At Umino, we’re not big on trends. We want you to wear our pieces for years, even decades, to come. That’s why we source the finest materials and factories for our timeless products— like our Grade-A cashmere sweaters, Italian shoes, and Peruvian Pima tees.</p>",
+            "txt_content": "<p>Product pages should help shoppers compare visible design, available options, price, policy links, and checkout information without unsupported claims.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -597,7 +597,7 @@
         "814c06a1-ed35-4980-b197-4c0a87f623b7": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>RULE THE WAVES</p>",
+            "txt_content": "<p>EXPLORE COLLECTIONS</p>",
             "txt_color": "#fafafa",
             "txt_fs": 12,
             "txt_fw": 500,
@@ -609,7 +609,7 @@
         "template--16584037925111__bade50e4-4785-43a3-b8a7-6104eaba6db6-16655668072faff6b4-0": {
           "type": "heading",
           "settings": {
-            "title": "Autumn Lookbook",
+            "title": "Find Your Next Design",
             "heading_color": "#fafafa",
             "heading_fs": 40,
             "heading_fw": 600,
@@ -621,7 +621,7 @@
         "template--16584037925111__bade50e4-4785-43a3-b8a7-6104eaba6db6-16655668072faff6b4-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>Our latest fall and winter collection.</p>",
+            "txt_content": "<p>Browse BestPrintsCo collections by product family and visible design.</p>",
             "txt_color": "#ffffff",
             "txt_fs": 16,
             "txt_fw": 400,
