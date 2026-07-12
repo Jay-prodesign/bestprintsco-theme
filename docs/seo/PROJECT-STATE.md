@@ -32,3 +32,12 @@ Phase 0 is recorded as `passed_with_documented_debt` under DEC-014. DEC-008 assi
 - DISC-101 produced an immutable external snapshot with 7,469 products, 91,170 variants, 35,211 media records, and 38 collections. Exact counts, hashes, unique IDs, and read-only boundaries passed.
 - DISC-102 identified 30 high-volume structural candidate clusters covering 4,324 products, validated all aggregate counts against the immutable snapshot, and sampled 14 main images. No supplier specification was approved.
 - DISC-103 created reusable cluster intelligence without generating copy or changing Shopify. Cluster SEO Generation is proposed but not started; it requires an active verified cluster and existing proposal, validation, and rollback controls.
+
+## BLOCK-201 final status
+
+- Status: complete on `task/BLOCK-201-purchase-foundation`.
+- Preview URL: `https://cute-sneakers.myshopify.com?preview_theme_id=130287665232`.
+- Deployment: pushed only `templates/product.json` and `config/settings_data.json` to unpublished development theme `130287665232` with `--nodelete`; live theme `122053689424` was not targeted.
+- Validation: representative boot product passed product, Add to Cart, cart, and checkout-entry checks at 1440x900 and 390x844 after deployment.
+- Boundaries: no product data, catalog data, prices, URLs, inventory, supplier information, checkout settings, or live theme settings changed.
+- Debt: Theme Check still reports pre-existing repository-wide schema, asset, and locale issues outside the BLOCK-201 change.

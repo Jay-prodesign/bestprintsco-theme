@@ -346,7 +346,7 @@ tasks:
     phase: 2
     title: Verify and fix critical trust and purchase blockers
     description: Address misleading trust/sales/scarcity and broken product forms, variants, cart, accelerated checkout, size guidance, or serious mobile purchase issues proven active.
-    status: in_progress
+    status: done
     priority: P0
     type: trust_conversion
     risk: high
@@ -360,8 +360,8 @@ tasks:
     branch: task/BLOCK-201-purchase-foundation
     worktree: C:\Projects\bestprintsco-theme-worktrees\BLOCK-201
     commit: d11d2f1
-    preview_url: null
-    notes: Classification — Active commercial blocker and Trust/conversion issue.
+    preview_url: https://cute-sneakers.myshopify.com?preview_theme_id=130287665232
+    notes: Completed purchase-foundation pilot on representative boot product. Only config/settings_data.json and templates/product.json were pushed to unpublished development theme 130287665232 with --nodelete; live theme 122053689424, products, catalog data, prices, URLs, inventory, supplier information, and checkout settings were not changed. Desktop 1440x900 and mobile 390x844 product, Add to Cart, cart, and checkout-entry checks passed after disabling unsupported sold, visitor, stock-countdown, and cart-countdown claims. Theme Check still fails on pre-existing repository-wide schema, asset, and locale issues outside the BLOCK-201 change.
 
   - id: BLOCK-202
     phase: 2
