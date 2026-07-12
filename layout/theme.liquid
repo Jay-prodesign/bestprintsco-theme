@@ -15,6 +15,10 @@
       assign seo_description = page_description
       if template.name == 'list-collections'
         assign seo_description = 'Explore BestPrintsCo collections by product family, including printed footwear, apparel, home decor, bedding, car accessories, bags, and giftable designs.'
+      elsif template.name == '404'
+        assign seo_description = 'The page could not be found. Continue shopping BestPrintsCo collections for printed footwear, apparel, home decor, car accessories, bags, and gifts.'
+      elsif template.name == 'search'
+        assign seo_description = 'Search BestPrintsCo for printed footwear, apparel, home decor, car accessories, bags, and giftable designs.'
       elsif template.name == 'collection' and collection != blank
         case collection.handle
           when 'vegan-leather-boots'
