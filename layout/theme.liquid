@@ -13,7 +13,9 @@
     {%- endif -%}
     {%- liquid
       assign seo_description = page_description
-      if template.name == 'list-collections'
+      if template.name == 'index'
+        assign seo_description = 'Shop BestPrintsCo vegan made-to-order shoes, boots, sneakers, hooded blankets, bedding, car accessories, bags, and giftable printed designs.'
+      elsif template.name == 'list-collections'
         assign seo_description = 'Explore BestPrintsCo collections by product family, including printed footwear, apparel, home decor, bedding, car accessories, bags, and giftable designs.'
       elsif template.name == '404'
         assign seo_description = 'The page could not be found. Continue shopping BestPrintsCo collections for printed footwear, apparel, home decor, car accessories, bags, and gifts.'
