@@ -58,7 +58,7 @@
         "35c81196-1f20-4b1d-98e4-1bea284fe6d7": {
           "type": "categories",
           "settings": {
-            "title": "Category",
+            "title": "Shop Categories",
             "menu": "main-menu"
           }
         },
@@ -69,7 +69,7 @@
         "2039056a-3cc3-4534-a522-d35bdfbaef6c": {
           "type": "popular_product",
           "settings": {
-            "title": "Featured Product",
+            "title": "Featured Vegan Boots",
             "collection": "vegan-leather-boots",
             "type_product": "list",
             "maximum": 3
