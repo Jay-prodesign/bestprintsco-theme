@@ -212,6 +212,21 @@
       {{ settings.social_youtube_link | json }},
       {{ settings.social_vimeo_link | json }}
     ],
-    "url": {{ request.origin | append: page.url | json }}
+    "url": {{ request.origin | json }}
+  }
+</script>
+
+<script type="application/ld+json">
+  {%- assign search_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' -%}
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": {{ shop.name | json }},
+    "url": {{ request.origin | json }},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {{ search_action_target | json }},
+      "query-input": "required name=search_term_string"
+    }
   }
 </script>
