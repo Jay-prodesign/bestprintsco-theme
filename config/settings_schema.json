@@ -1563,13 +1563,13 @@
       },
       {
         "type": "header",
-        "content": "Fake Sold Product"
+        "content": "Sold product message"
       },
       {
         "type": "checkbox",
         "id": "show_qv_sold_product",
         "label": "Show Sold Product",
-        "default": true
+        "default": false
       },
       {
         "type": "textarea",
@@ -1593,13 +1593,13 @@
         "type": "checkbox",
         "id": "show_qv_countdown_timer",
         "label": "Show Countdown Timer",
-        "default": true
+        "default": false
       },
       {
         "type": "textarea",
         "id": "message_qv_countdown_timer",
         "label": "Message",
-        "default": "Hurry Up! Sale ends in:"
+        "default": "Offer details are shown at checkout."
       }
     ]
   },
