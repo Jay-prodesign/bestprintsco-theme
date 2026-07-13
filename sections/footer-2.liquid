@@ -151,7 +151,11 @@
                     {%- render 'social-media-links', custom_class: '' -%}
                   {%- endif -%}
                 {%- when 'newsletter' -%}
-                  {{ block.settings.description }}
+                  {%- if block.settings.description contains 'Newsletter description' -%}
+                    <p>Subscribe for BestPrintsCo updates, new collection alerts, and product news.</p>
+                  {%- else -%}
+                    {{ block.settings.description }}
+                  {%- endif -%}
                   <div class="bls__newsletter-form mt-30 {% if block.settings.style_light %}style-light{% endif %}">
                     {%- form 'customer' -%}
                       <input
