@@ -164,10 +164,14 @@
                           class="slide__block-subtitle heading-color">{{ bk_st.subheading }}</div>
                       {% endif %}
                       {% if bk_st.title != blank %}
-                        <h2
+                        {%- assign slideshow_heading_tag = 'h2' -%}
+                        {%- if request.page_type == 'index' and forloop.first -%}
+                          {%- assign slideshow_heading_tag = 'h1' -%}
+                        {%- endif -%}
+                        <{{ slideshow_heading_tag }}
                           class="slide__block-title  mb-15">
                           {{ bk_st.title }}
-                        </h2>
+                        </{{ slideshow_heading_tag }}>
                       {% endif %}
                       {% if bk_st.description != blank %}
                         <div

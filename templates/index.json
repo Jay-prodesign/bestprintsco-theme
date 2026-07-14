@@ -25,14 +25,14 @@
             "horizontal_position": "left_position",
             "vertical_position": "middle_position",
             "slider_effect": "effect_fadeinleft",
-            "text_alignment": "center",
+            "text_alignment": "left",
             "text_alignment_on_mobile": "center",
             "text_color": "text-dark",
-            "subheading": "SAVE 50% IN THE WEEK",
-            "title": "Top Sale<br>\nOnline Exclusive",
-            "description": "",
+            "subheading": "BOLD PRINTS. DISTINCTIVE STYLE.",
+            "title": "Unique Printed Boots, Shoes & Gifts",
+            "description": "<p>Explore distinctive designs across footwear, home products and car accessories.</p>",
             "image_link": "https://bestprintsco.com/collections/vegan-leather-boots",
-            "button_text": "Explore Now",
+            "button_text": "Shop Vegan Boots",
             "button_type": "primary"
           }
         }
@@ -42,11 +42,11 @@
       ],
       "settings": {
         "container": "full-width",
-        "slide_height": "full_screen",
-        "height_dk": 850,
-        "height_tb": 650,
+        "slide_height": "custom",
+        "height_dk": 680,
+        "height_tb": 540,
         "height_mb": 400,
-        "heading_font_size": "80",
+        "heading_font_size": "60",
         "heading_font_weight": "400",
         "subheading_font_size": "14",
         "subheading_font_weight": "500",
@@ -83,28 +83,28 @@
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1": {
           "type": "collection_item",
           "settings": {
-            "title_collection": "",
+            "title_collection": "Shoes & Sneakers",
             "collection": "running-shoes"
           }
         },
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2": {
           "type": "collection_item",
           "settings": {
-            "title_collection": "",
+            "title_collection": "Car Seat Covers",
             "collection": "car-seat-covers"
           }
         },
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3": {
           "type": "collection_item",
           "settings": {
-            "title_collection": "",
+            "title_collection": "Bedding Sets",
             "collection": "bedding-sets"
           }
         },
         "9e4b029d-3843-4d03-9d59-405cf781f204": {
           "type": "collection_item",
           "settings": {
-            "title_collection": "Hoodie Dress",
+            "title_collection": "Hoodie Dresses",
             "collection": "womens-hoodie-dresses",
             "image": "shopify://shop_images/hooded-dress-bestprintsco.webp"
           }
@@ -112,7 +112,7 @@
         "bba02ac4-097d-482e-82eb-f08c5745d044": {
           "type": "collection_item",
           "settings": {
-            "title_collection": "",
+            "title_collection": "Hooded Blankets",
             "collection": "hooded-blankets",
             "image": "shopify://shop_images/hooded-blanket-bestprintsco.webp"
           }
@@ -129,15 +129,15 @@
       "block_order": [
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-0",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-1",
-        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2",
         "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-3",
-        "9e4b029d-3843-4d03-9d59-405cf781f204",
         "bba02ac4-097d-482e-82eb-f08c5745d044",
+        "template--16567751082231__48263d1a-f37b-4715-893a-ac5dfd296a1a-1666406556386d69e7-2",
+        "9e4b029d-3843-4d03-9d59-405cf781f204",
         "e4994be4-f22c-437f-87a5-5826812d3f36"
       ],
       "settings": {
-        "heading": "Hoodies",
-        "description": "",
+        "heading": "Shop by Category",
+        "description": "<p>Explore our main product collections.</p>",
         "text_alignment": "text-center",
         "container": "full-width",
         "background_color": "",
@@ -152,10 +152,10 @@
         "custom_ratio": "476:450",
         "custom_column": 4,
         "column_gap": 5,
-        "autoplay": true,
-        "loop": true,
+        "autoplay": false,
+        "loop": false,
         "show_arrow": true,
-        "show_bullet": true,
+        "show_bullet": false,
         "show_bullet_mobile": false,
         "reveal_on_scroll": false,
         "padding_top": 0,
@@ -166,13 +166,13 @@
     "d6197aaf-d094-4a47-b691-9a16a4490f7c": {
       "type": "products-grid",
       "settings": {
-        "heading": "New Arrivals",
-        "description": "<p>Offering the most unique items</p>",
+        "heading": "Featured Vegan Boots",
+        "description": "<p>Explore bold printed boot designs.</p>",
         "text_alignment": "text-center",
         "container": "container-fluid",
         "product_grid_background_color": "",
         "collection": "vegan-leather-boots",
-        "limit_products": 12,
+        "limit_products": 8,
         "item_desktop": 4,
         "column_gap": 30,
         "enable_banner": false,
@@ -184,9 +184,9 @@
         "banner_position": "position-left",
         "banner_link": "",
         "banner_width": 30,
-        "view_all_enable": false,
-        "text_view_all": "View All",
-        "load_more_button_enable": true,
+        "view_all_enable": true,
+        "text_view_all": "Shop All Vegan Boots",
+        "load_more_button_enable": false,
         "number_of_rows": 2,
         "button_action": "load",
         "button_label": "Load more",
@@ -202,7 +202,7 @@
         "17692b41-f06e-4d9c-9b67-6e5aae793ecb": {
           "type": "subheading",
           "settings": {
-            "sub_title": "DEAL OF THE WEEK",
+            "sub_title": "FEATURED COLLECTION",
             "subheading_color": "#111111",
             "subheading_fs": 12,
             "subheading_fw": 500,
@@ -214,7 +214,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-0": {
           "type": "heading",
           "settings": {
-            "title": "Custom Made for You",
+            "title": "Printed Vegan Boots",
             "heading_color": "#111111",
             "heading_fs": 50,
             "heading_fw": 500,
@@ -226,7 +226,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-1": {
           "type": "text",
           "settings": {
-            "txt_content": "<p>We offer a huge discount on one product each week !</p>",
+            "txt_content": "<p>Explore bold printed designs from our vegan boots collection.</p>",
             "txt_color": "",
             "txt_fs": 16,
             "txt_fw": 400,
@@ -252,7 +252,7 @@
         "template--16567751082231__6974547b-ad71-482a-b14c-f6b4c1b74363-1676106240ff35c35a-2": {
           "type": "buttons",
           "settings": {
-            "btn_content": "Get At Only $65",
+            "btn_content": "Shop Vegan Boots",
             "button_type": "primary",
             "b_mt": 1,
             "b_mb": 15
@@ -274,7 +274,7 @@
         "image_mobile": "shopify://shop_images/skull-roses-women-s-boots-vegan-friendly-leather-women-s-leather-boots-1-1040x1040.jpg",
         "video_options": "local",
         "video_url": "",
-        "link": "https://bestprintsco.com/products/black-skull-boots",
+        "link": "shopify://collections/vegan-leather-boots",
         "hover_effect": "none",
         "bn_design": "text_overlay",
         "banner_height": "custom-height",
@@ -303,22 +303,22 @@
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-0": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>FREE DELIVERY WORLDWIDE</p>",
-            "text_link": ""
+            "content": "<p>BOOTS & SHOES</p>",
+            "text_link": "shopify://collections/footwear"
           }
         },
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-2": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>FREE SIZE EXCHANGE FOR ALL ORDERS</p>",
-            "text_link": ""
+            "content": "<p>HOME & LIVING</p>",
+            "text_link": "shopify://collections/all-home-products"
           }
         },
         "template--16567751082231__7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359-1676108232fe9d3b1e-1": {
           "type": "scrolling_text",
           "settings": {
-            "content": "<p>MID-SEASON SALE UP TO 50% OFF</p>",
-            "text_link": ""
+            "content": "<p>CAR ACCESSORIES</p>",
+            "text_link": "shopify://collections/car-accessories"
           }
         }
       },
@@ -340,67 +340,6 @@
         "padding_bottom": 30,
         "reset_spacing": true
       }
-    },
-    "4bab0105-14e5-4ec7-912e-c3c5e1a4391a": {
-      "type": "divider",
-      "settings": {
-        "container": "full-width",
-        "border_height": 1,
-        "border_color": "#ebebeb",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
-    "0e27f320-599b-4c22-b9e2-e337ae787780": {
-      "type": "testimonial",
-      "blocks": {
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0": {
-          "type": "testimonials",
-          "settings": {
-            "description": "<p>\"One of the best stores i found online. If  you are looking for unique designs and great qualit,  you will be addicted to this store. Thanks to all those who created this products.\"</p>",
-            "author": "",
-            "job": "Emilyx38",
-            "testimonial_width": 100
-          }
-        }
-      },
-      "block_order": [
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0"
-      ],
-      "settings": {
-        "heading": "",
-        "description": "",
-        "text_align": "text-center",
-        "container": "container",
-        "background_color": "",
-        "content_width": 78,
-        "testi_text_size": "bigger",
-        "show_rating": true,
-        "img_view": "default",
-        "img_position": "position-top",
-        "car_gap": 30,
-        "carousel_item_desktop": 1,
-        "autoplay": false,
-        "loop": false,
-        "show_arrow": true,
-        "show_bullet": false,
-        "show_bullet_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
-    "f9c7e765-f9d1-490f-8725-6ea45c90df67": {
-      "type": "divider",
-      "settings": {
-        "container": "container-fluid",
-        "border_height": 1,
-        "border_color": "#ebebeb",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
     }
   },
   "order": [
@@ -409,9 +348,6 @@
     "48263d1a-f37b-4715-893a-ac5dfd296a1a",
     "d6197aaf-d094-4a47-b691-9a16a4490f7c",
     "6974547b-ad71-482a-b14c-f6b4c1b74363",
-    "7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359",
-    "4bab0105-14e5-4ec7-912e-c3c5e1a4391a",
-    "0e27f320-599b-4c22-b9e2-e337ae787780",
-    "f9c7e765-f9d1-490f-8725-6ea45c90df67"
+    "7ed4f4f0-d0fa-4f12-b4f6-49013d5e4359"
   ]
 }

@@ -11,7 +11,7 @@
 -%}
 <div class="header__logo logo-center">
   {% if request.page_type == 'index' %}
-    <h1 class="mb-0">
+    <div class="mb-0">
     {%- endif -%}
     <a
       class="logo-img d-block"
@@ -101,6 +101,6 @@
       {%- endif -%}
     </a>
     {% if request.page_type == 'index' %}
-    </h1>
+    </div>
   {%- endif -%}
 </div>

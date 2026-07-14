@@ -346,22 +346,22 @@ tasks:
     phase: 2
     title: Verify and fix critical trust and purchase blockers
     description: Address misleading trust/sales/scarcity and broken product forms, variants, cart, accelerated checkout, size guidance, or serious mobile purchase issues proven active.
-    status: backlog
+    status: done
     priority: P0
     type: trust_conversion
     risk: high
     approval_required: true
     dependencies: [DISC-101, DISC-102]
-    affected_files: [docs/seo/reports, sections, snippets, templates]
+    affected_files: [config/settings_data.json, templates/product.json, docs/seo/reports]
     affected_urls: []
     acceptance_criteria: [Critical pilot purchase journeys pass and claims are verified]
     validation: [Mobile/desktop product, variant, cart, Buy Now and checkout tests]
     rollback: Revert task commit and restore approved development theme.
     branch: task/BLOCK-201-purchase-foundation
-    worktree: null
-    commit: null
-    preview_url: null
-    notes: Classification — Active commercial blocker and Trust/conversion issue.
+    worktree: C:\Projects\bestprintsco-theme-worktrees\BLOCK-201
+    commit: d11d2f1
+    preview_url: https://cute-sneakers.myshopify.com?preview_theme_id=130287665232
+    notes: Completed purchase-foundation pilot on representative boot product. Only config/settings_data.json and templates/product.json were pushed to unpublished development theme 130287665232 with --nodelete; live theme 122053689424, products, catalog data, prices, URLs, inventory, supplier information, and checkout settings were not changed. Desktop 1440x900 and mobile 390x844 product, Add to Cart, cart, and checkout-entry checks passed after disabling unsupported sold, visitor, stock-countdown, and cart-countdown claims. Theme Check still fails on pre-existing repository-wide schema, asset, and locale issues outside the BLOCK-201 change.
 
   - id: BLOCK-202
     phase: 2

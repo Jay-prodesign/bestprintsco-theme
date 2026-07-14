@@ -34,7 +34,7 @@
           "type": "review_sold",
           "settings": {
             "show_review": true,
-            "show_sold_product": true,
+            "show_sold_product": false,
             "sold": "1,4,3,1,5,2,1,6,7,,2,1,6",
             "hours": "10,12,15,16,17,18,20,24"
           }
@@ -49,32 +49,16 @@
             "length": 31
           }
         },
-        "66e6994c-2a75-4723-a6a4-d69ac368f716": {
-          "type": "visitors",
-          "settings": {
-            "count_text": "[count_number] people are viewing this right now",
-            "count_range_max": 20,
-            "count_range_min": 5,
-            "view_duration": 10
-          }
-        },
         "39f14f5e-3cc5-4645-a921-f071b109d244": {
           "type": "countdown_timer",
           "settings": {
-            "show_countdown_timer": true,
+            "show_countdown_timer": false,
             "message": "Hurry Up! Sale ends in:"
           }
         },
         "3870a5bb-fec0-4b82-9405-e324077ed947": {
           "type": "product_swatch",
           "settings": {}
-        },
-        "f98b666a-7c37-41ed-be7b-4a28f4a1e8b4": {
-          "type": "stock_countdown",
-          "settings": {
-            "message": "Hurry Up! Only [count] left in stock!",
-            "qty": 35
-          }
         },
         "37f20969-8bae-47ff-89e1-b0be3169e19a": {
           "type": "product_form",
@@ -108,10 +92,8 @@
         "836d9723-358d-4023-88a8-2d3b5907093e",
         "7d760b32-e8e4-42d9-8998-91d6fb23aaef",
         "dbd063d5-9b87-45d4-9984-deb077fa0e85",
-        "66e6994c-2a75-4723-a6a4-d69ac368f716",
         "39f14f5e-3cc5-4645-a921-f071b109d244",
         "3870a5bb-fec0-4b82-9405-e324077ed947",
-        "f98b666a-7c37-41ed-be7b-4a28f4a1e8b4",
         "37f20969-8bae-47ff-89e1-b0be3169e19a",
         "c772ce81-4aa5-415d-8939-631c6d4897ff",
         "e3c98e10-4e94-4a55-bf4e-364e68cbe829"
