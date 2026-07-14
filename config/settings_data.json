@@ -22,9 +22,9 @@
     "store_email": "info@bestprintsco.com",
     "store_address": "",
     "link_store_page": "our-stores",
-    "social_twitter_link": "#",
-    "social_facebook_link": "#",
-    "social_pinterest_link": "#",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
     "social_instagram_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
@@ -246,8 +246,8 @@
           "fd8c507a-a402-4ccc-b440-8e60e259f0f1": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Summer Sale ! 50% Off for Boots! No code needed:</p>",
-              "countdown_deadline": "12-30-2025"
+              "text": "",
+              "countdown_deadline": ""
             }
           }
         },
@@ -288,8 +288,8 @@
           "show_country": true,
           "show_language": true,
           "show_store_page": true,
-          "show_message": true,
-          "message": "<p>Sign up for discounts & coupon codes: <a href=\"/account/\" title=\"/account/\"><span style=\"text-decoration:underline\"><strong>Sign Up</strong></span></a></p>"
+          "show_message": false,
+          "message": ""
         }
       },
       "horizontal-menu": {
@@ -310,7 +310,7 @@
           "88f9c7e2-4cb9-4dea-8acd-2eba84e34cf4": {
             "type": "menu_item",
             "settings": {
-              "title": "Footwear",
+              "title": "Boots & Shoes",
               "url": "",
               "open_link": false,
               "label": "",
@@ -345,7 +345,7 @@
           "09d35fdd-e85e-4a42-b0b9-43552f90971f": {
             "type": "menu_item",
             "settings": {
-              "title": "Home",
+              "title": "Home & Living",
               "url": "",
               "open_link": false,
               "label": "",
@@ -462,7 +462,7 @@
               "show_address": false,
               "show_phone": false,
               "show_email": true,
-              "show_socials_link": true,
+              "show_socials_link": false,
               "width": "33%"
             }
           },
