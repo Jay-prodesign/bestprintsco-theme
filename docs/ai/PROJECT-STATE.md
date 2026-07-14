@@ -8,13 +8,17 @@ Last updated: 2026-07-14
 
 ## Current state
 
-- AI coordination documents are being established so ChatGPT can review Codex work directly through GitHub.
+- AI coordination documents are established so ChatGPT can review Codex work directly through GitHub.
 - Future completed or blocked tasks must update `docs/ai/CHATGPT-HANDOFF.md`, `docs/ai/PROJECT-STATE.md`, `docs/ai/DECISION-LOG.md`, and `docs/ai/NEXT-TASKS.yaml`.
 - No Shopify data, theme, catalog, product, collection, price, inventory, customer, or order data is changed by this coordination task.
 
 ## Active branch
 
 - `codex/ai-coordination-system`
+
+## Latest coordination commit
+
+- `dd503906139d9d6fd2d0d247c7b3199643bdda35`
 
 ## Deployment state
 
