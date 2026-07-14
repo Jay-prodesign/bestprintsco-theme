@@ -228,7 +228,13 @@
         {%- endif -%}
         {%- if copyright != blank -%}
           <div class="bls__footer-bottom-left footer_bottom-block mb-10 mb-lg-0 text-center-mb px-15 col-12 col-md-auto d-md-inline-flex align-items-center">
-            <div class="copyright">{{ copyright }}</div>
+            <div class="copyright">
+              {%- if copyright contains '© 2022 BestPrintsCo' or copyright contains 'Uminex' or copyright contains 'Blueskytechco' -%}
+                <p>© {{ 'now' | date: '%Y' }} BestPrintsCo. All Rights Reserved</p>
+              {%- else -%}
+                {{ copyright }}
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
         <div class="bls__footer-bottom-right flex align-items-center col-md{{ payment_positon }}">

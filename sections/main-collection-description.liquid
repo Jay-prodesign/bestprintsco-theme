@@ -1,0 +1,71 @@
+{%- liquid
+  assign description_parts = collection.description | split: '<!--more-->'
+  assign description_position = section.settings.position
+  assign description_content = ''
+
+  if description_position == 'before'
+    assign description_content = description_parts | first
+  elsif description_parts.size > 1
+    assign description_content = description_parts[1]
+  endif
+-%}
+
+{%- if description_content != blank -%}
+  <div class="section-{{ section.id }} collection-description collection-description--{{ description_position }}">
+    <div class="{{ section.settings.layout }}">
+      <div class="collection-description__content rte">
+        {{ description_content }}
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection description",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Description position",
+      "default": "before",
+      "options": [
+        {
+          "value": "before",
+          "label": "Before product grid"
+        },
+        {
+          "value": "after",
+          "label": "After product grid"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "container-fluid",
+      "options": [
+        {
+          "value": "container",
+          "label": "Default"
+        },
+        {
+          "value": "container-fluid",
+          "label": "Fluid container"
+        },
+        {
+          "value": "full-width",
+          "label": "Full width"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection description"
+    }
+  ]
+}
+{% endschema %}

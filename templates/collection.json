@@ -44,55 +44,53 @@
         "spacing_moible": 10
       }
     },
+    "collection-description-top": {
+      "type": "main-collection-description",
+      "settings": {
+        "position": "before",
+        "layout": "container-fluid"
+      }
+    },
     "product-grid": {
       "type": "main-collection-product",
       "blocks": {
-        "35c81196-1f20-4b1d-98e4-1bea284fe6d7": {
-          "type": "categories",
-          "settings": {
-            "title": "Category",
-            "menu": "main-menu"
-          }
-        },
         "3b46edaf-55ef-46a8-b8fe-a6eb39ade3a8": {
           "type": "filter_by_dynamic",
           "settings": {}
-        },
-        "2039056a-3cc3-4534-a522-d35bdfbaef6c": {
-          "type": "popular_product",
-          "settings": {
-            "title": "Featured Product",
-            "collection": "vegan-leather-boots",
-            "type_product": "list",
-            "maximum": 3
-          }
         }
       },
       "block_order": [
-        "35c81196-1f20-4b1d-98e4-1bea284fe6d7",
-        "3b46edaf-55ef-46a8-b8fe-a6eb39ade3a8",
-        "2039056a-3cc3-4534-a522-d35bdfbaef6c"
+        "3b46edaf-55ef-46a8-b8fe-a6eb39ade3a8"
       ],
       "settings": {
         "layout": "container-fluid",
-        "products_column": 3,
-        "number_products_grid": 12,
+        "products_column": 4,
+        "number_products_grid": 16,
         "number_products_list": 4,
-        "pagination": "infinit_scrolling",
+        "pagination": "default",
         "product_page_count": true,
         "product_sort_options": true,
-        "progress_bar": true,
+        "progress_bar": false,
         "enable_sidebar": true,
         "sidebar_position": "left_sidebar",
         "variant_color": "Color,",
         "variant_size": "Color, Size",
         "show_count": true
       }
+    },
+    "collection-description-bottom": {
+      "type": "main-collection-description",
+      "settings": {
+        "position": "after",
+        "layout": "container-fluid"
+      }
     }
   },
   "order": [
     "main-collection-heading",
     "439e38df-206c-40a8-9cd5-fc0e5f00f9d3",
-    "product-grid"
+    "collection-description-top",
+    "product-grid",
+    "collection-description-bottom"
   ]
 }

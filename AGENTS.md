@@ -1,54 +1,95 @@
-# BestPrintsCo Repository Operating Rules
+# BestPrintsCo Codex Operating Rules
 
-## Non-negotiable safety
+## Role
 
-- Never run `shopify theme publish` or `shopify theme push --publish`.
-- Never modify, overwrite, or push to live theme `122053689424`.
-- Shopify theme work may target only unpublished development theme `130287665232` on `cute-sneakers.myshopify.com`.
-- Never commit credentials, tokens, customer/order data, or private raw exports.
-- Never fabricate product facts, reviews, activity, sales, scarcity, guarantees, or business claims.
-- Never copy competitor content or treat competitor listings as authoritative product evidence.
+Codex is the implementation executor.
 
-## Task and Git controls
+ChatGPT and the owner handle strategy, SEO planning, copy decisions, progress tracking, review, and selection of the next batch.
 
-- Read `AGENTS.md`, `docs/seo/PROJECT-STATE.md`, `docs/seo/TASKS.yaml`, and `docs/seo/CHATGPT-HANDOFF.md` before work.
-- Never implement directly on `main`; use a task branch or Codex-managed worktree.
-- Keep `main` as the last approved, tested development-theme state.
-- Execute only one `ready` task in the current phase with completed dependencies.
-- Only one theme-code task may be `in_progress`, and only one task may deploy to the development theme at a time.
-- Do not mix phases, implement unrelated discoveries, or advance phases without a recorded gate outcome of `passed` or `passed_with_documented_debt`.
-- Add unrelated findings to `TASKS.yaml` instead of implementing them.
-- Do not remove apps, widgets, integrations, or suspected legacy code without source, purpose, usage, and regression evidence.
+Implement only the exact approved batch.
 
-## Catalog and content controls
+Do not choose or begin follow-up work.
 
-- Follow the evidence hierarchy in `docs/seo/CONTENT-STANDARDS.md`; unknown facts remain unknown.
-- Do not bulk rewrite products or collections without an immutable snapshot, before/after proposal, validation, approval, controlled batch, post-update verification, and rollback.
-- Preserve handles, prices, variants, inventory, and publication status during pilots unless a later task explicitly authorizes otherwise.
-- Do not change product handles during the initial pilot.
-- Inspect at least the main image of every product before approving its final title.
-- Generate image alt text only after product titles and page meaning are approved.
-- Do not create keyword-stuffed, duplicate, thin, or doorway pages.
+## Cost control
 
-## Cost Control and Reporting
+- Read only files directly needed for the approved batch.
+- Do not perform broad audits, catalog scans, competitor research, or repeated discovery.
+- Do not use subagents, critic agents, parallel agents, or Fast mode.
+- Do not create reports, roadmaps, decision logs, handoffs, or status documents unless the current prompt explicitly requires one.
+- Do not rerun successful checks.
+- Stop after two failures with the same cause.
+- Keep the final response concise.
 
-- Use the lowest-cost suitable model and low reasoning for simple work; use normal speed and never use Fast mode unless the owner explicitly asks.
-- Read only task-relevant files, reuse verified context, and do not start repo-wide scans, full-catalog analysis, or broad SEO audits without explicit owner approval.
-- Do not launch review agents, critic agents, subagents, or multi-agent work unless the owner explicitly asks and the task materially benefits.
-- Do not create or update handoffs, state reports, audit reports, inventory reports, or similar status artifacts unless explicitly requested or required by the selected task workflow.
-- After a task, report at most six short bullets: changed files, validation, and any blocker. Do not create follow-on tasks or advance a phase without instruction.
+## Shopify safety
 
-## Required workflow
+- Never run `shopify theme publish`.
+- Never run `shopify theme push --publish`.
+- Never perform a full-theme push.
+- Never overwrite live theme `122053689424`.
+- Deploy only explicitly authorized files and use `--nodelete`.
+- New batches deploy to development theme `130287665232` unless the current prompt explicitly authorizes a live selective deployment.
 
-1. Read the required governance and state files.
-2. Confirm the current phase, gate, selected task, dependencies, approval, and risk.
-3. Create a task-specific branch or worktree from the approved base.
-4. Confirm clean status and record relevant baseline tests.
-5. Implement only the selected task.
-6. Run task validation, including Theme Check and affected-page tests for theme work.
-7. Review the complete diff and confirm Shopify/live-theme boundaries.
-8. Update `TASKS.yaml` and `PROJECT-STATE.md` with evidence, acceptance results, rollback, and commit/preview fields.
-9. Update `CHATGPT-HANDOFF.md` when a task completes or a phase gate is reviewed.
-10. Commit with the task ID; merge only after acceptance criteria pass.
-11. Deploy only clean, approved `main` to development theme `130287665232` when explicitly authorized.
-12. Record changed files, tests, commit, deployment status, and preview URL; run a gate review before changing phase.
+## Protected catalog data
+
+Never change unless explicitly authorized:
+
+- product handles or URLs;
+- SKUs or variant SKUs;
+- prices or compare-at prices;
+- inventory;
+- variants or options;
+- publication status;
+- customer or order data;
+- checkout settings;
+- supplier data.
+
+## Content integrity
+
+- Never fabricate sales, visitors, stock, scarcity, reviews, ratings, guarantees, shipping, delivery, returns, exchanges, materials, fit, comfort, compatibility, safety, or performance claims.
+- Do not copy competitor content.
+- Unknown facts remain unknown.
+- Prefer removing misleading copy over adding generic marketing copy.
+
+## Validation levels
+
+Low-risk text/settings change:
+- `git diff --check`
+- changed-file syntax validation
+- one affected-page check
+
+Medium-risk layout/navigation change:
+- low-risk checks
+- affected page on desktop and mobile
+- affected links and controls
+- new browser-console errors
+
+High-risk product/cart/variant JavaScript change:
+- medium-risk checks
+- variant selection
+- Add to Cart
+- cart line
+- checkout handoff
+
+Do not run high-risk validation for low- or medium-risk changes.
+
+## Git and reporting
+
+- Use one focused branch and reversible commit per commercial batch.
+- Do not update historical or duplicate project-management documents. Update only the canonical commercial plan when explicitly required and the latest ChatGPT handoff after completed or blocked tasks.
+- Git commits are the implementation history.
+- Return only the commit, branch, deployment result, and blocker.
+
+## GitHub handoff to ChatGPT
+
+- The canonical strategy and progress source is `docs/COMMERCIAL-OPERATING-PLAN.md`.
+- `docs/ai/CHATGPT-HANDOFF.md` is only the latest Codex execution handoff for ChatGPT review.
+- At the end of every completed or blocked approved task, overwrite `docs/ai/CHATGPT-HANDOFF.md` with the latest task result.
+- Do not maintain duplicate project-state, decision-log, roadmap, or task-queue files.
+- Codex may update only the current approved task status and evidence in the canonical plan.
+- Codex must not select or create the next task.
+- Record: task ID, objective, status, branch, worktree, approved starting commit, implementation commits, exact repository files changed, Shopify resources changed, validation, development/live deployment, evidence, blockers, risks, and rollback.
+- Do not require the handoff file to contain the SHA of its own commit. ChatGPT will resolve the final handoff commit from GitHub.
+- Use the final commit-message format: `AI-HANDOFF <TASK-ID> <STATUS>`.
+- Keep the handoff concise, factual, machine-readable, and GitHub-safe.
+- Never expose secrets, tokens, credentials, authorization headers, customer/order data, or private catalog exports.
+- Never leave authoritative execution evidence only in a Codex chat response.

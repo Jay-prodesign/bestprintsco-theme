@@ -22,9 +22,9 @@
     "store_email": "info@bestprintsco.com",
     "store_address": "",
     "link_store_page": "our-stores",
-    "social_twitter_link": "#",
-    "social_facebook_link": "#",
-    "social_pinterest_link": "#",
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
     "social_instagram_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
@@ -60,9 +60,9 @@
     "quick_search": "boots,shoes,shirt,blanket,",
     "search_suggest": "blazers",
     "enable_search_input": false,
-    "free_shipping_progress_bar": true,
+    "free_shipping_progress_bar": false,
     "shipping_rate": "10",
-    "cart_countdown": true,
+    "cart_countdown": false,
     "cart_countdown_duration": 4,
     "cart_note": false,
     "cart_gift_wrap": false,
@@ -92,10 +92,10 @@
     "show_qv_product_collection": false,
     "show_qv_product_description": true,
     "show_qv_product_review": true,
-    "show_fake_order": true,
+    "show_fake_order": false,
     "fake_user": "Jonson (California) | Tony (Texas) | Bruno (New York) | Eren (Ohio) | Lauren (Washington) | Flortino (California) | Blue (Ohio) | Jayson (Washington) | Amy (California)  Robert (New York)",
     "newsletter_width": 530,
-    "newsletter_sub_title": "<p>Subscribe to the BestPrintsCo get notified about exclusive offers every week!</p>",
+    "newsletter_sub_title": "<p>Subscribe for new designs, product updates and occasional offers.</p>",
     "show_promotion": false,
     "show_promotion_mobile": false,
     "promotion_code": "UMINO50",
@@ -246,8 +246,8 @@
           "fd8c507a-a402-4ccc-b440-8e60e259f0f1": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Summer Sale ! 50% Off for Boots! No code needed:</p>",
-              "countdown_deadline": "12-30-2025"
+              "text": "",
+              "countdown_deadline": ""
             }
           }
         },
@@ -256,7 +256,7 @@
         ],
         "settings": {
           "container": "full-width",
-          "show_announcement": true,
+          "show_announcement": false,
           "homepage_only": true,
           "show_close": true,
           "show_mobile": true,
@@ -288,8 +288,8 @@
           "show_country": true,
           "show_language": true,
           "show_store_page": true,
-          "show_message": true,
-          "message": "<p>Sign up for discounts & coupon codes: <a href=\"/account/\" title=\"/account/\"><span style=\"text-decoration:underline\"><strong>Sign Up</strong></span></a></p>"
+          "show_message": false,
+          "message": ""
         }
       },
       "horizontal-menu": {
@@ -310,7 +310,7 @@
           "88f9c7e2-4cb9-4dea-8acd-2eba84e34cf4": {
             "type": "menu_item",
             "settings": {
-              "title": "Footwear",
+              "title": "Boots & Shoes",
               "url": "",
               "open_link": false,
               "label": "",
@@ -345,7 +345,7 @@
           "09d35fdd-e85e-4a42-b0b9-43552f90971f": {
             "type": "menu_item",
             "settings": {
-              "title": "Home",
+              "title": "Home & Living",
               "url": "",
               "open_link": false,
               "label": "",
@@ -456,13 +456,13 @@
             "type": "about_us",
             "settings": {
               "title": "BestPrintsCo",
-              "description": "<p>Offering the most colorful hand-made gifts ! Shop for cutest merchandise and cute shoes on Best Prints Co !</p><p>Find the latest designs for women, men and kids</p>",
+              "description": "<p>Shop printed boots, shoes, bedding, car accessories and more in bold, distinctive designs.</p>",
               "logo_width": 90,
               "about_description": "",
               "show_address": false,
               "show_phone": false,
               "show_email": true,
-              "show_socials_link": true,
+              "show_socials_link": false,
               "width": "33%"
             }
           },
