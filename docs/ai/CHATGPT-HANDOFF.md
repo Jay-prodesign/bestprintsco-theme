@@ -1,59 +1,74 @@
 # ChatGPT Handoff
 
-Task ID: W1-B4-PREP2
-Objective: Resolve a revised eligible product candidate set from current `vegan-leather-boots` collection members.
+Task ID: W1-B4
+Objective: Apply Priority Product SEO Pilot 1 to six approved `vegan-leather-boots` products.
 Status: review
 Branch: `sprint/week-1-product-pilot-1`
 Worktree: `C:\Projects\bestprintsco-theme-worktrees\commercial-sprint`
-Starting commit: `c07678465307cd4a0b5a3ae6ba5f126ac57c78e7`
-Candidate commit: `2d3b0d7eccfae17b0ac9cb4b38526ffc58e629b0`
+Starting commit: `1957bfd06c046cc523514dbe2191896f29e47b2e`
+Implementation commit: `4d076b30fc504d10c5d35de0c95014e1f2797152`
 
-## Files changed
+## Repository files changed
 
 - `docs/COMMERCIAL-OPERATING-PLAN.md`
-- `docs/commerce/W1-B4-PRODUCT-CANDIDATES.md`
+- `docs/commerce/W1-B4-APPROVED-COPY.md`
 - `docs/ai/CHATGPT-HANDOFF.md`
 
-## Shopify resources changed
+## Shopify products changed
 
-None. No product, collection, theme, image, alt text, price, SKU, variant, inventory, publication, URL, or live-theme resource was changed.
+- `gid://shopify/Product/6568164884560` — `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
+- `gid://shopify/Product/6742622863440` — `black-music-notes-design-shoes-womens-boots`
+- `gid://shopify/Product/6840931385424` — `steampunk-purple-womens-leather-boots`
+- `gid://shopify/Product/6836086145104` — `aquarius-zodiac-boots`
+- `gid://shopify/Product/6827352293456` — `peace-hippie-van-handcrafted-boots`
+- `gid://shopify/Product/6826919952464` — `camouflage-womens-leather-boots-2`
 
-## Collection evidence
+## Exact Shopify fields changed
 
-- Collection handle: `vegan-leather-boots`
-- Collection resolution: exactly one collection matched
-- Collection products queried: first 20 in current Shopify order
-- Primary images reviewed: 7
-- Admin GraphQL API version: `2026-07`
+- Product title
+- `descriptionHtml`
+- SEO title
+- SEO description
 
-## Selected eligible handles
+No handle, URL, redirect, status, publication, collection, vendor, product type, tag, template suffix, option, variant, SKU, price, compare-at price, inventory, image/media, media order, image alt text, metafield, or selling-plan change was made.
 
-1. `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
-2. `black-music-notes-design-shoes-womens-boots`
-3. `steampunk-purple-womens-leather-boots`
-4. `aquarius-zodiac-boots`
-5. `peace-hippie-van-handcrafted-boots`
-6. `camouflage-womens-leather-boots-2`
+## Snapshot
 
-## Excluded reviewed products
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260714-163728\W1-B4-product-seo-pilot-1.json`
 
-- `elephant-mandala-2-handcrafted-boots` — visually eligible, but not selected because the first six eligible distinct products had already been selected in collection order.
+## Validation
 
-## Validation performed
+- Pre-mutation identity and eligibility checks passed for all six exact product IDs.
+- All six `productUpdate` mutations returned no `userErrors`.
+- Admin GraphQL validation passed: title, `descriptionHtml`, SEO title, and SEO description matched approved copy for all six products.
+- Protected-field comparison passed against the rollback snapshot.
+- `git diff --check` passed.
+- Anonymous live validation passed for all six cache-busted product URLs:
+  - `https://bestprintsco.com/products/skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
+  - `https://bestprintsco.com/products/black-music-notes-design-shoes-womens-boots`
+  - `https://bestprintsco.com/products/steampunk-purple-womens-leather-boots`
+  - `https://bestprintsco.com/products/aquarius-zodiac-boots`
+  - `https://bestprintsco.com/products/peace-hippie-van-handcrafted-boots`
+  - `https://bestprintsco.com/products/camouflage-womens-leather-boots-2`
+- Live checks confirmed HTTP render, updated visible product title, updated design-specific description, absence of old supplier-style claims, `/collections/vegan-leather-boots` link, original-handle canonical URL, variant selector, Add to Cart control, updated product name in structured data, and no Liquid-error text.
 
-- Confirmed clean worktree, branch `sprint/week-1-product-pilot-1`, and expected starting HEAD before changes.
-- Confirmed `vegan-leather-boots` resolved exactly once.
-- Reviewed only the first 20 collection products.
-- Downloaded and reviewed primary images only for the seven products passing basic status, Online Store publication, image, and SKU-family checks.
-- Confirmed selected products are active, Online Store published, current collection members, have usable primary images, use `PP.*` SKU-family variants, and have distinct visible designs.
-- Ran `git diff --check`.
+## Deferred primary-image alt recommendations
 
-## Blockers and risks
+- `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`: `Black lace-up boots with blue skull and octopus tentacle artwork`
+- `black-music-notes-design-shoes-womens-boots`: `Black lace-up boots with white music notes and treble clefs`
+- `steampunk-purple-womens-leather-boots`: `Purple lace-up boots with abstract gears and cog pattern`
+- `aquarius-zodiac-boots`: `Black lace-up boots with gold Aquarius zodiac artwork`
+- `peace-hippie-van-handcrafted-boots`: `Colorful lace-up boots with hippie van and peace sign artwork`
+- `camouflage-womens-leather-boots-2`: `Purple lace-up boots with camouflage pattern`
+
+Image alt text was not mutated because file/media mutation was not approved.
+
+## Rollback instructions
+
+Use the rollback snapshot to restore only each product's previous title, `descriptionHtml`, SEO title, and SEO description with `productUpdate`. Do not include handles or protected fields in rollback mutation input. After rollback, query all six products and confirm the restored four fields match the snapshot and protected fields remain unchanged.
+
+## Blocker / next action
 
 Blocker: none.
 
-Risk: existing product descriptions contain unverified supplier-style operational and product claims. ChatGPT should write new copy using only verified visible design evidence and owner-approved operational facts.
-
-## Next action
-
-ChatGPT writes and approves exact product titles, descriptions, SEO metadata, and image-alt guidance for the six selected handles before any Shopify product mutation occurs.
+Next action: ChatGPT reviews PR #2 and the six live product pages, then decides whether W1-B4 can move from `review` to `done`.
