@@ -2,41 +2,38 @@
 
 Task ID: SHOPIFY-AUTH-001
 Objective: Configure catalog Admin API authentication for BestPrintsCo.
-Status: blocked
+Status: ready
 Branch: `sprint/week-1-priority-collections`
 Worktree: `C:\Projects\bestprintsco-theme-worktrees\commercial-sprint`
 Approved starting commit: `c5ddc13b88cf3b0b3e678be86b476da2498207bf`
 
-Implementation commits: none
+Implementation commits: pending handoff commit
 Repository files changed for W1-B3 implementation: none
 Shopify resources changed: none
 Development deployment: not attempted
 Live deployment: not attempted
-Rollback: not required
+Rollback: remove the Windows user environment variables `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` if catalog API access should be disabled locally.
 
 Validation:
-- Chrome Dev Dashboard inspection completed.
-- Existing organization app `BestPrintsCo Catalog Operation` was found.
-- Active version had scopes `read_inventory`, `write_products`, and `read_publications`.
-- App install on `cute-sneakers.myshopify.com` was already visible from prior setup.
-- Required environment variables `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` were absent.
+- Existing approved app title accepted: `BestPrintsCo Catalog Operation`.
+- Windows user environment variable `SHOPIFY_CATALOG_CLIENT_ID` configured; value not recorded.
+- Windows user environment variable `SHOPIFY_CATALOG_CLIENT_SECRET` configured; value not recorded.
+- Temporary client-credentials token acquired in memory only.
+- Admin GraphQL `appInstallation` checked against API version `2026-07`.
+- No collection mutations were run.
+- No theme deployment was run.
 
 Evidence:
-- Requested exact app name `BestPrintsCo Catalog Operations` is 31 characters.
-- Shopify Dev Dashboard app-name field showed `31 / 30`.
-- Existing app title is singular: `BestPrintsCo Catalog Operation`.
-- The required authentication verification demands app title `BestPrintsCo Catalog Operations`, so the current app cannot satisfy the requested exact-title check.
+- Authenticated app title: `BestPrintsCo Catalog Operation`.
+- Authenticated app ID: `gid://shopify/App/397430194177`.
+- App installation ID: `gid://shopify/AppInstallation/442928726096`.
+- Granted scopes: `read_inventory`, `write_products`, `read_publications`, `read_products`.
+- `write_products` confirmed: yes.
 
-Blocker:
-- Exact requested app title exceeds Shopify's 30-character app-name limit.
-- `SHOPIFY_CATALOG_CLIENT_ID` is absent.
-- `SHOPIFY_CATALOG_CLIENT_SECRET` is absent.
-- Owner must approve a 30-character-or-shorter app title or confirm that the existing singular title is acceptable.
-
-Risk:
-- Releasing or verifying with a title different from the requested exact app title would fail the specified authentication acceptance criteria.
+Blockers: none
+Risks:
+- Local authentication depends on the two Windows user environment variables remaining configured and secret.
+- Client secret should never be committed, printed, or pasted into chat.
 
 Recommended next action:
-- Owner approves either `BestPrintsCo Catalog Operation` as the accepted app title or a different title of 30 characters or fewer.
-- Owner enters the client secret directly when the approved app title is finalized.
-- Resume only the authentication verification task; do not resume W1-B3 until `write_products` is verified with the approved catalog app authentication.
+- W1-B3 is ready to resume using `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` for client-credentials Admin GraphQL authentication.
