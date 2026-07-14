@@ -130,7 +130,7 @@ Live: successful
 
 ### W1-B1 — Header, navigation, footer, and announcement cleanup
 
-Status: reconciliation_required
+Status: ready_for_chatgpt_completion
 Head commit: f85686a62f8ba7bb10a115e96fc6c1ba18e8801b
 Development: successful
 Reported live deployment: successful
@@ -139,18 +139,19 @@ Reason: external live HTML still showed old promotion, header/menu, and footer o
 
 ### W1-B2 — Homepage commercial hierarchy, trust cleanup, and W1-B1 reconciliation
 
-Status: blocked
+Status: review
 Branch: sprint/week-1-homepage-commercial-pass
 Plan commit: ad4e7ca2e19e5218ce70ffc1b86d13f80fa96a11
 Implementation commit: adde7d216ad7ce864af7ac0471ae48d4eb38977d
-Modified files: `templates/index.json`, `sections/slideshow.liquid`, `config/settings_data.json`
-Deployed files: `templates/index.json`, `sections/slideshow.liquid`, `config/settings_data.json`, `sections/footer-1.liquid`, `sections/footer-2.liquid`
-Development: successful
-Development HTML check: failed
-Live: not attempted
-Live HTML check: not attempted
-W1-B1 reconciliation result: failed
-Blocker: homepage rendered two `<h1>` elements after development deployment; the extra H1 is the existing header text-logo in `snippets/logo.liquid`, which is outside the approved modification scope.
+Correction commit: 4a8af70ab9646a1fd7dc8bd54d6102f6b7006833
+Modified files: `templates/index.json`, `sections/slideshow.liquid`, `snippets/logo.liquid`, `config/settings_data.json`
+Development deployment result: successful
+Development HTML result: passed
+Live deployment result: successful
+Live HTML result: passed
+Live deployed files: `templates/index.json`, `sections/slideshow.liquid`, `snippets/logo.liquid`, `config/settings_data.json`, `sections/footer-1.liquid`, `sections/footer-2.liquid`
+W1-B1 reconciliation result: passed
+Blocker: none
 
 ### W1-B3 — Priority collection package
 
