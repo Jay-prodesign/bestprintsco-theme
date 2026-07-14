@@ -176,17 +176,16 @@ Blocker: none
 
 Status: in_progress — candidate verification
 Pilot collection: `vegan-leather-boots`
-Candidate families: C04/C06
-Exact candidate IDs inspected:
-* `gid://shopify/Product/4469692563536`
-* `gid://shopify/Product/4469692596304`
-* `gid://shopify/Product/4469692825680`
-* `gid://shopify/Product/4866798420048`
-* `gid://shopify/Product/6777648480336`
-* `gid://shopify/Product/6825831923792`
+Revised selected product IDs and handles:
+* `gid://shopify/Product/6568164884560` — `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
+* `gid://shopify/Product/6742622863440` — `black-music-notes-design-shoes-womens-boots`
+* `gid://shopify/Product/6840931385424` — `steampunk-purple-womens-leather-boots`
+* `gid://shopify/Product/6836086145104` — `aquarius-zodiac-boots`
+* `gid://shopify/Product/6827352293456` — `peace-hippie-van-handcrafted-boots`
+* `gid://shopify/Product/6826919952464` — `camouflage-womens-leather-boots-2`
 Candidate evidence: `docs/commerce/W1-B4-PRODUCT-CANDIDATES.md`
 Shopify mutations: none
-Current result: blocked for copywriting because fewer than five approved candidate IDs are eligible; all six inspected products are not currently members of `vegan-leather-boots`, and two are not Online Store published.
+Current result: review-ready candidate set; six active, Online Store published, current `vegan-leather-boots` products were selected from the first 20 collection products in Shopify order. Product copy has not been written.
 
 ### W1-B5 — Remaining priority product packages
 
