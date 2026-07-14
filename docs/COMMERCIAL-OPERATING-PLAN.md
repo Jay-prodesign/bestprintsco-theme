@@ -156,7 +156,7 @@ Blocker: none
 
 ### W1-B3 — Priority collection package
 
-Status: review
+Status: done
 Branch: sprint/week-1-priority-collections
 Approved starting commit: 4cd11eb7e49c4eff1400fad1050011a511e11f48
 Implementation commit: d9de180ed51964cca37012ac50e0fd45e5c5ceda
@@ -169,12 +169,24 @@ Development deployment result: successful
 Live deployment result: successful
 Validation: five development and five live collection pages passed H1, split description, 16-product grid, numbered pagination, four-column desktop grid, dynamic filters, no hardcoded Category sidebar, no Featured Product block, internal-link, and Liquid-error checks.
 Live reconciliation: passed on 2026-07-14T13:07:38Z using anonymous uncached canonical live URLs. Published theme `122053689424` was confirmed live; remote live `templates/collection.json` and `sections/main-collection-description.liquid` matched implementation commit `d9de180ed51964cca37012ac50e0fd45e5c5ceda`; Admin collection fields matched approved copy.
+Completion basis: ChatGPT approved the `review` to `done` transition in the W1-B4-PREP prompt after live reconciliation passed.
 Blocker: none
 
 ### W1-B4 — Priority product package 1
 
-Status: queued
-Scope: first 5–10 products from one verified commercial cluster
+Status: in_progress — candidate verification
+Pilot collection: `vegan-leather-boots`
+Candidate families: C04/C06
+Exact candidate IDs inspected:
+* `gid://shopify/Product/4469692563536`
+* `gid://shopify/Product/4469692596304`
+* `gid://shopify/Product/4469692825680`
+* `gid://shopify/Product/4866798420048`
+* `gid://shopify/Product/6777648480336`
+* `gid://shopify/Product/6825831923792`
+Candidate evidence: `docs/commerce/W1-B4-PRODUCT-CANDIDATES.md`
+Shopify mutations: none
+Current result: blocked for copywriting because fewer than five approved candidate IDs are eligible; all six inspected products are not currently members of `vegan-leather-boots`, and two are not Online Store published.
 
 ### W1-B5 — Remaining priority product packages
 
