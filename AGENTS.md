@@ -78,3 +78,18 @@ Do not run high-risk validation for low- or medium-risk changes.
 - Do not update project-management documents during normal batches.
 - Git commits are the implementation history.
 - Return only the commit, branch, deployment result, and blocker.
+
+## AI coordination documents
+
+- Treat `docs/ai/` as the GitHub communication layer between Codex and ChatGPT.
+- At the end of every completed or blocked task, update:
+  - `docs/ai/CHATGPT-HANDOFF.md`
+  - `docs/ai/PROJECT-STATE.md`
+  - `docs/ai/DECISION-LOG.md`
+  - `docs/ai/NEXT-TASKS.yaml`
+- Record the task ID/objective, branch/worktree, start/final commits, repository-relative files changed, Shopify resources changed, validation, deployment status, evidence, blockers, risks, rollback procedure, and recommended next action.
+- Keep entries concise, factual, machine-readable, and safe for GitHub review.
+- Include commit SHAs and repository-relative paths.
+- Never expose secrets, tokens, credentials, private customer data, or authorization headers.
+- Commit and push AI coordination updates with the related implementation commit or as a clearly labelled evidence commit.
+- Never leave authoritative project state only in a Codex chat response.

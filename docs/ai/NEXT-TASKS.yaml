@@ -1,0 +1,25 @@
+version: 1
+last_updated: "2026-07-14"
+source_of_truth: "docs/ai"
+tasks:
+  - id: AI-COORD-001
+    title: "Create persistent AI coordination system"
+    status: in_progress
+    branch: "codex/ai-coordination-system"
+    worktree: "C:\\Projects\\bestprintsco-theme"
+    dependencies: []
+    files:
+      - "AGENTS.md"
+      - "docs/ai/CHATGPT-HANDOFF.md"
+      - "docs/ai/PROJECT-STATE.md"
+      - "docs/ai/DECISION-LOG.md"
+      - "docs/ai/NEXT-TASKS.yaml"
+    next_action: "Commit and push coordination docs for ChatGPT review."
+  - id: W1-B3
+    title: "Priority Collection Package"
+    status: blocked
+    branch: "sprint/week-1-priority-collections"
+    worktree: "C:\\Projects\\bestprintsco-theme-worktrees\\commercial-sprint"
+    dependencies:
+      - "Confirm Shopify Admin API write_products scope via custom Admin token or reauthorized app."
+    next_action: "Resume only after write_products is confirmed."
