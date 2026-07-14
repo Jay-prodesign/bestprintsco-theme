@@ -174,7 +174,7 @@ Blocker: none
 
 ### W1-B4 — Priority product package 1
 
-Status: in_progress — candidate verification
+Status: review
 Pilot collection: `vegan-leather-boots`
 Revised selected product IDs and handles:
 * `gid://shopify/Product/6568164884560` — `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
@@ -184,8 +184,16 @@ Revised selected product IDs and handles:
 * `gid://shopify/Product/6827352293456` — `peace-hippie-van-handcrafted-boots`
 * `gid://shopify/Product/6826919952464` — `camouflage-womens-leather-boots-2`
 Candidate evidence: `docs/commerce/W1-B4-PRODUCT-CANDIDATES.md`
-Shopify mutations: none
-Current result: review-ready candidate set; six active, Online Store published, current `vegan-leather-boots` products were selected from the first 20 collection products in Shopify order. Product copy has not been written.
+Candidate verification commits: `2d3b0d7eccfae17b0ac9cb4b38526ffc58e629b0`, `1957bfd06c046cc523514dbe2191896f29e47b2e`
+Approved copy artifact: `docs/commerce/W1-B4-APPROVED-COPY.md`
+Shopify fields changed: product title, `descriptionHtml`, SEO title, SEO description
+Protected fields unchanged: handles, URLs, redirects, status, publication status, collections and collection position, vendor, product type, tags, template suffix, options, variants, variant IDs, SKUs, prices, compare-at prices, inventory, images/media, media order, image alt text, metafields, selling plans
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260714-163728\W1-B4-product-seo-pilot-1.json`
+Admin GraphQL validation: passed; all six products matched approved title, `descriptionHtml`, SEO title and SEO description after mutation.
+Protected-field comparison: passed against rollback snapshot.
+Anonymous live validation: passed for six cache-busted live product URLs; each page rendered, showed the updated title and design-specific description, omitted old supplier-style claims, linked to `/collections/vegan-leather-boots`, retained original-handle canonicals, rendered variant selector and Add to Cart controls, included updated product name in structured data, and showed no Liquid-error text.
+Image alt recommendations: deferred because no file/media mutation was approved.
+Blocker: none
 
 ### W1-B5 — Remaining priority product packages
 
