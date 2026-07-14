@@ -256,7 +256,7 @@
         ],
         "settings": {
           "container": "full-width",
-          "show_announcement": true,
+          "show_announcement": false,
           "homepage_only": true,
           "show_close": true,
           "show_mobile": true,
