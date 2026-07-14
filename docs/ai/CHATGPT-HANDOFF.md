@@ -61,6 +61,18 @@ Validation evidence:
 - Shopify CLI did not support per-file Theme Check in this environment; changed-file JSON/schema validation was used as equivalent targeted validation.
 - All five development collection pages passed H1, intro, lower description, 16-product grid, numbered pagination, four-column grid class, dynamic filter/sidebar presence, internal-link, no hardcoded Category sidebar, no Featured Product block, no Load More behavior, no Liquid-error text, and no obvious broken text checks.
 - All five live collection pages passed the same checks.
+- W1-B3 live reconciliation passed on 2026-07-14T13:07:38Z.
+- Current published theme ID confirmed: `122053689424`.
+- Remote live `templates/collection.json` matched implementation commit `d9de180ed51964cca37012ac50e0fd45e5c5ceda`.
+- Remote live `sections/main-collection-description.liquid` matched implementation commit `d9de180ed51964cca37012ac50e0fd45e5c5ceda`.
+- Admin GraphQL confirmed all five collection titles, `descriptionHtml`, SEO titles, and SEO descriptions match approved W1-B3 copy.
+- Anonymous uncached live HTML checks passed for:
+  - `https://bestprintsco.com/collections/vegan-leather-boots?w1b3_reconcile=4f0a079829f6415d9e216cb35c10cf9f`
+  - `https://bestprintsco.com/collections/running-shoes?w1b3_reconcile=e64bc035c07f4b8f9d35e5a5cc380f93`
+  - `https://bestprintsco.com/collections/car-seat-covers?w1b3_reconcile=256a7312bd7f41cfab38fb649b1c7245`
+  - `https://bestprintsco.com/collections/bedding-sets?w1b3_reconcile=2c67987d2e3c4b6fbd1facb27dc863ab`
+  - `https://bestprintsco.com/collections/hooded-blankets?w1b3_reconcile=f82105c6a07f47d39c7088a47f3c8918`
+- Each anonymous check confirmed approved H1, intro, lower description, 16 products, numbered pagination, no Load More, no hardcoded Category sidebar, no Featured Product block, dynamic Availability/Price filters, internal links, and no Liquid errors.
 
 Rollback instructions:
 1. Restore the five Shopify collections from `C:\Projects\bestprintsco-backups\20260714-155207\W1-B3-priority-collections.json` using `collectionUpdate` for title, `descriptionHtml`, SEO title, and SEO description.
