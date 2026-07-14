@@ -193,7 +193,11 @@ Admin GraphQL validation: passed; all six products matched approved title, `desc
 Protected-field comparison: passed against rollback snapshot.
 Anonymous live validation: passed for six cache-busted live product URLs; each page rendered, showed the updated title and design-specific description, omitted old supplier-style claims, linked to `/collections/vegan-leather-boots`, retained original-handle canonicals, rendered variant selector and Add to Cart controls, included updated product name in structured data, and showed no Liquid-error text.
 Image alt recommendations: deferred because no file/media mutation was approved.
-Blocker: none
+Live reconciliation on 2026-07-14: passed. Admin fields matched approved copy; product reapplication was not required. Six fresh anonymous live product pages passed approved-title, design-description, supplier-claim-removal, canonical, variant selector, Add to Cart, structured-data name, and Liquid-error checks.
+Google Search Console verification check: repository, live theme, and anonymous homepage source each contain one `google-site-verification` tag with token `OCYluzAcFSmIG_J2W1jY6tmQmHb3wq46RFVk00TA_0s`, but the tag is rendered as a self-closing variant rather than the exact expected HTML string.
+Current published theme ID: `122053689424`.
+`layout/theme.liquid` deployment: not performed. The live theme file has unrelated differences from the repository file beyond the verification line, so the prompt's safety rule blocks overwriting it.
+Blocker: exact GSC tag normalization is blocked because live `layout/theme.liquid` differs from the repository file beyond the verification line.
 
 ### W1-B5 — Remaining priority product packages
 
@@ -203,6 +207,8 @@ Target: 20–30 optimized products in total
 ### W1-B6 — Internal links, indexing, feeds, and measurement
 
 Status: queued
+
+Google Search Console HTML verification tag: present and live-source verified
 
 ## Homepage SEO preference proposal
 
