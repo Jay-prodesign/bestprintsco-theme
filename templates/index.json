@@ -340,67 +340,6 @@
         "padding_bottom": 30,
         "reset_spacing": true
       }
-    },
-    "4bab0105-14e5-4ec7-912e-c3c5e1a4391a": {
-      "type": "divider",
-      "settings": {
-        "container": "full-width",
-        "border_height": 1,
-        "border_color": "#ebebeb",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
-    "0e27f320-599b-4c22-b9e2-e337ae787780": {
-      "type": "testimonial",
-      "blocks": {
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0": {
-          "type": "testimonials",
-          "settings": {
-            "description": "<p>\"One of the best stores i found online. If  you are looking for unique designs and great qualit,  you will be addicted to this store. Thanks to all those who created this products.\"</p>",
-            "author": "",
-            "job": "Emilyx38",
-            "testimonial_width": 100
-          }
-        }
-      },
-      "block_order": [
-        "template--16567751082231__0e27f320-599b-4c22-b9e2-e337ae787780-16761083396ad2ca48-0"
-      ],
-      "settings": {
-        "heading": "",
-        "description": "",
-        "text_align": "text-center",
-        "container": "container",
-        "background_color": "",
-        "content_width": 78,
-        "testi_text_size": "bigger",
-        "show_rating": true,
-        "img_view": "default",
-        "img_position": "position-top",
-        "car_gap": 30,
-        "carousel_item_desktop": 1,
-        "autoplay": false,
-        "loop": false,
-        "show_arrow": true,
-        "show_bullet": false,
-        "show_bullet_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
-    },
-    "f9c7e765-f9d1-490f-8725-6ea45c90df67": {
-      "type": "divider",
-      "settings": {
-        "container": "container-fluid",
-        "border_height": 1,
-        "border_color": "#ebebeb",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "reset_spacing": false
-      }
     }
   },
   "order": [
