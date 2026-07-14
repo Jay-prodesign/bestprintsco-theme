@@ -130,16 +130,17 @@ Live: successful
 
 ### W1-B1 — Header, navigation, footer, and announcement cleanup
 
-Status: ready_for_chatgpt_completion
+Status: done
 Head commit: f85686a62f8ba7bb10a115e96fc6c1ba18e8801b
 Development: successful
 Reported live deployment: successful
 Independent live reconciliation on 2026-07-14: failed
 Reason: external live HTML still showed old promotion, header/menu, and footer output.
+Completion basis: W1-B2 reconciliation passed and corrected the live storefront state.
 
 ### W1-B2 — Homepage commercial hierarchy, trust cleanup, and W1-B1 reconciliation
 
-Status: review
+Status: done
 Branch: sprint/week-1-homepage-commercial-pass
 Plan commit: ad4e7ca2e19e5218ce70ffc1b86d13f80fa96a11
 Implementation commit: adde7d216ad7ce864af7ac0471ae48d4eb38977d
@@ -155,8 +156,18 @@ Blocker: none
 
 ### W1-B3 — Priority collection package
 
-Status: queued
-Scope: strongest 3–5 collections
+Status: review
+Branch: sprint/week-1-priority-collections
+Approved starting commit: 4cd11eb7e49c4eff1400fad1050011a511e11f48
+Implementation commit: pending
+Scope: five priority collections — vegan-leather-boots, running-shoes, car-seat-covers, bedding-sets, hooded-blankets
+Modified files: `templates/collection.json`, `sections/main-collection-description.liquid`, `docs/COMMERCIAL-OPERATING-PLAN.md`
+Shopify fields changed: collection title, descriptionHtml, SEO title, SEO description
+Protected fields unchanged: handles, rules, products, sort order, images, publication status, template suffix, product data, variants, SKUs, prices, inventory
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260714-155207\W1-B3-priority-collections.json`
+Development deployment result: pending
+Live deployment result: pending
+Blocker: none
 
 ### W1-B4 — Priority product package 1
 
