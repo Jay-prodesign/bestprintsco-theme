@@ -75,21 +75,21 @@ Do not run high-risk validation for low- or medium-risk changes.
 ## Git and reporting
 
 - Use one focused branch and reversible commit per commercial batch.
-- Do not update project-management documents during normal batches.
+- Do not update historical or duplicate project-management documents. Update only the canonical commercial plan when explicitly required and the latest ChatGPT handoff after completed or blocked tasks.
 - Git commits are the implementation history.
 - Return only the commit, branch, deployment result, and blocker.
 
-## AI coordination documents
+## GitHub handoff to ChatGPT
 
-- Treat `docs/ai/` as the GitHub communication layer between Codex and ChatGPT.
-- At the end of every completed or blocked task, update:
-  - `docs/ai/CHATGPT-HANDOFF.md`
-  - `docs/ai/PROJECT-STATE.md`
-  - `docs/ai/DECISION-LOG.md`
-  - `docs/ai/NEXT-TASKS.yaml`
-- Record the task ID/objective, branch/worktree, start/final commits, repository-relative files changed, Shopify resources changed, validation, deployment status, evidence, blockers, risks, rollback procedure, and recommended next action.
-- Keep entries concise, factual, machine-readable, and safe for GitHub review.
-- Include commit SHAs and repository-relative paths.
-- Never expose secrets, tokens, credentials, private customer data, or authorization headers.
-- Commit and push AI coordination updates with the related implementation commit or as a clearly labelled evidence commit.
-- Never leave authoritative project state only in a Codex chat response.
+- The canonical strategy and progress source is `docs/COMMERCIAL-OPERATING-PLAN.md`.
+- `docs/ai/CHATGPT-HANDOFF.md` is only the latest Codex execution handoff for ChatGPT review.
+- At the end of every completed or blocked approved task, overwrite `docs/ai/CHATGPT-HANDOFF.md` with the latest task result.
+- Do not maintain duplicate project-state, decision-log, roadmap, or task-queue files.
+- Codex may update only the current approved task status and evidence in the canonical plan.
+- Codex must not select or create the next task.
+- Record: task ID, objective, status, branch, worktree, approved starting commit, implementation commits, exact repository files changed, Shopify resources changed, validation, development/live deployment, evidence, blockers, risks, and rollback.
+- Do not require the handoff file to contain the SHA of its own commit. ChatGPT will resolve the final handoff commit from GitHub.
+- Use the final commit-message format: `AI-HANDOFF <TASK-ID> <STATUS>`.
+- Keep the handoff concise, factual, machine-readable, and GitHub-safe.
+- Never expose secrets, tokens, credentials, authorization headers, customer/order data, or private catalog exports.
+- Never leave authoritative execution evidence only in a Codex chat response.

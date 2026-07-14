@@ -1,35 +1,36 @@
 # ChatGPT Handoff
 
-Purpose: concise task handoff for ChatGPT review through GitHub.
+Task ID: W1-B3
+Objective: Optimize the five approved priority collections.
+Status: blocked
+Branch: `sprint/week-1-priority-collections`
+Worktree: `C:\Projects\bestprintsco-theme-worktrees\commercial-sprint`
+Approved starting commit: `c5ddc13b88cf3b0b3e678be86b476da2498207bf`
 
-## Latest task
-
-Task ID: AI-COORD-001
-Objective: Create persistent AI coordination documents and add maintenance requirements to `AGENTS.md`.
-Branch: `codex/ai-coordination-system`
-Worktree: `C:\Projects\bestprintsco-theme`
-Starting commit: `f85686a62f8ba7bb10a115e96fc6c1ba18e8801b`
-Final commit: `dd503906139d9d6fd2d0d247c7b3199643bdda35`
-Files changed:
-- `AGENTS.md`
-- `docs/ai/CHATGPT-HANDOFF.md`
-- `docs/ai/PROJECT-STATE.md`
-- `docs/ai/DECISION-LOG.md`
-- `docs/ai/NEXT-TASKS.yaml`
+Implementation commits: none
+Repository files changed for W1-B3 implementation: none
 Shopify resources changed: none
-Validation performed:
-- `git diff --check`
-- documentation scope review
-Development deployment: not applicable
-Live deployment: not applicable
+Development deployment: not attempted
+Live deployment: not attempted
+Rollback: not required
+
+Validation:
+- Worktree and branch preflight completed.
+- Shopify Admin authentication diagnostic completed.
+
 Evidence:
-- New `docs/ai/` communication layer created for GitHub-based ChatGPT review.
-- Top-level `AGENTS.md` updated so future Codex sessions maintain these files after completed or blocked tasks.
-Blockers: none
-Risks: future task state must be kept in sync with implementation commits to avoid stale project status.
-Rollback procedure: revert the coordination commit.
-Recommended next action: ChatGPT should review this branch and then use `docs/ai/NEXT-TASKS.yaml` as the task queue.
+- Admin GraphQL was authenticated through Shopify CLI Connector App.
+- Granted scopes were `read_products`, `read_inventory`, `read_publications`, `write_themes`, and `read_themes`.
+- No separate custom Admin API token was available.
 
-## Task history
+Blocker:
+- `write_products` is not available.
+- `SHOPIFY_ADMIN_API_TOKEN` was absent.
+- W1-B3 must not resume until an approved catalog Admin API authentication method provides `write_products`.
 
-- AI-COORD-001: completed at `dd503906139d9d6fd2d0d247c7b3199643bdda35`
+Risk:
+- Attempting collection mutations through the current Shopify CLI Connector App would fail or exceed granted permissions.
+
+Recommended next action:
+- Owner configures an approved BestPrintsCo catalog Admin API credential with `write_products`.
+- ChatGPT then authorizes resuming the existing W1-B3 specification.
