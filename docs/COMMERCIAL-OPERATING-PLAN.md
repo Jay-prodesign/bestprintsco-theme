@@ -159,14 +159,15 @@ Blocker: none
 Status: review
 Branch: sprint/week-1-priority-collections
 Approved starting commit: 4cd11eb7e49c4eff1400fad1050011a511e11f48
-Implementation commit: pending
+Implementation commit: d9de180ed51964cca37012ac50e0fd45e5c5ceda
 Scope: five priority collections — vegan-leather-boots, running-shoes, car-seat-covers, bedding-sets, hooded-blankets
 Modified files: `templates/collection.json`, `sections/main-collection-description.liquid`, `docs/COMMERCIAL-OPERATING-PLAN.md`
 Shopify fields changed: collection title, descriptionHtml, SEO title, SEO description
 Protected fields unchanged: handles, rules, products, sort order, images, publication status, template suffix, product data, variants, SKUs, prices, inventory
 Rollback snapshot: `C:\Projects\bestprintsco-backups\20260714-155207\W1-B3-priority-collections.json`
-Development deployment result: pending
-Live deployment result: pending
+Development deployment result: successful
+Live deployment result: successful
+Validation: five development and five live collection pages passed H1, split description, 16-product grid, numbered pagination, four-column desktop grid, dynamic filters, no hardcoded Category sidebar, no Featured Product block, internal-link, and Liquid-error checks.
 Blocker: none
 
 ### W1-B4 — Priority product package 1

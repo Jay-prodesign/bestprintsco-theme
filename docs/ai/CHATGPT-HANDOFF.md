@@ -1,39 +1,72 @@
 # ChatGPT Handoff
 
-Task ID: SHOPIFY-AUTH-001
-Objective: Configure catalog Admin API authentication for BestPrintsCo.
-Status: ready
+Task ID: W1-B3
+Objective: Priority Collection Package for five commercial collections.
+Status: review
 Branch: `sprint/week-1-priority-collections`
 Worktree: `C:\Projects\bestprintsco-theme-worktrees\commercial-sprint`
-Approved starting commit: `c5ddc13b88cf3b0b3e678be86b476da2498207bf`
+Approved starting commit: `4cd11eb7e49c4eff1400fad1050011a511e11f48`
+Implementation commit: `d9de180ed51964cca37012ac50e0fd45e5c5ceda`
 
-Implementation commits: pending handoff commit
-Repository files changed for W1-B3 implementation: none
-Shopify resources changed: none
-Development deployment: not attempted
-Live deployment: not attempted
-Rollback: remove the Windows user environment variables `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` if catalog API access should be disabled locally.
+Repository files changed:
+- `templates/collection.json`
+- `sections/main-collection-description.liquid`
+- `docs/COMMERCIAL-OPERATING-PLAN.md`
+- `docs/ai/CHATGPT-HANDOFF.md`
 
-Validation:
-- Existing approved app title accepted: `BestPrintsCo Catalog Operation`.
-- Windows user environment variable `SHOPIFY_CATALOG_CLIENT_ID` configured; value not recorded.
-- Windows user environment variable `SHOPIFY_CATALOG_CLIENT_SECRET` configured; value not recorded.
-- Temporary client-credentials token acquired in memory only.
-- Admin GraphQL `appInstallation` checked against API version `2026-07`.
-- No collection mutations were run.
-- No theme deployment was run.
+Shopify collections changed:
+- `vegan-leather-boots`
+- `running-shoes`
+- `car-seat-covers`
+- `bedding-sets`
+- `hooded-blankets`
 
-Evidence:
-- Authenticated app title: `BestPrintsCo Catalog Operation`.
-- Authenticated app ID: `gid://shopify/App/397430194177`.
-- App installation ID: `gid://shopify/AppInstallation/442928726096`.
-- Granted scopes: `read_inventory`, `write_products`, `read_publications`, `read_products`.
-- `write_products` confirmed: yes.
+Shopify fields changed:
+- collection title
+- `descriptionHtml`
+- SEO title
+- SEO description
 
-Blockers: none
-Risks:
-- Local authentication depends on the two Windows user environment variables remaining configured and secret.
-- Client secret should never be committed, printed, or pasted into chat.
+Protected fields unchanged:
+- handles and URLs
+- collection rules
+- included products
+- sort order
+- collection images
+- publication status
+- template suffix
+- products, variants, SKUs, prices, and inventory
 
+Rollback snapshot:
+- `C:\Projects\bestprintsco-backups\20260714-155207\W1-B3-priority-collections.json`
+
+Development deployment:
+- Result: passed
+- Theme: `130287665232`
+- Files deployed with `--nodelete`:
+  - `templates/collection.json`
+  - `sections/main-collection-description.liquid`
+
+Live deployment:
+- Result: passed
+- Theme: `122053689424`
+- Files deployed with `--allow-live --nodelete`:
+  - `templates/collection.json`
+  - `sections/main-collection-description.liquid`
+
+Validation evidence:
+- `git diff --check` passed.
+- `templates/collection.json` parsed successfully after Shopify header-comment removal.
+- `sections/main-collection-description.liquid` schema parsed successfully.
+- Shopify CLI did not support per-file Theme Check in this environment; changed-file JSON/schema validation was used as equivalent targeted validation.
+- All five development collection pages passed H1, intro, lower description, 16-product grid, numbered pagination, four-column grid class, dynamic filter/sidebar presence, internal-link, no hardcoded Category sidebar, no Featured Product block, no Load More behavior, no Liquid-error text, and no obvious broken text checks.
+- All five live collection pages passed the same checks.
+
+Rollback instructions:
+1. Restore the five Shopify collections from `C:\Projects\bestprintsco-backups\20260714-155207\W1-B3-priority-collections.json` using `collectionUpdate` for title, `descriptionHtml`, SEO title, and SEO description.
+2. Revert theme files with `git revert d9de180ed51964cca37012ac50e0fd45e5c5ceda`.
+3. Selectively push only `templates/collection.json` and `sections/main-collection-description.liquid` to the affected theme with `--nodelete`; delete the new section from the remote only if reverting to a commit that no longer references it.
+
+Blocker: none
 Recommended next action:
-- W1-B3 is ready to resume using `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` for client-credentials Admin GraphQL authentication.
+- ChatGPT reviews PR #1 diff and live pages, then decides whether W1-B3 can move from `review` to `done`.
