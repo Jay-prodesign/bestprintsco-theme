@@ -1,7 +1,7 @@
-# BestPrintsCo Canonical Commercial Operating Plan
+﻿# BestPrintsCo Canonical Commercial Operating Plan
 
 Last updated: 2026-07-14
-Status: ACTIVE — canonical strategy and progress source
+Status: ACTIVE â€” canonical strategy and progress source
 
 This file supersedes older roadmap, project-state, task, audit, report, and handoff documents whenever they conflict with current GitHub commits, deployment evidence, or this plan.
 
@@ -11,7 +11,7 @@ Make BestPrintsCo attract qualified traffic and generate sales as quickly as rea
 
 Priority formula:
 
-`Expected SEO/conversion impact × confidence × speed ÷ Codex cost`
+`Expected SEO/conversion impact Ã— confidence Ã— speed Ã· Codex cost`
 
 ## Source-of-truth order
 
@@ -63,7 +63,7 @@ Codex may move the current batch from `in_progress` to `review` after successful
 
 Codex must never move its current batch directly to `done`.
 
-After ChatGPT reviews the GitHub diff and deployment evidence, the next approved Codex batch may apply ChatGPT’s explicit `review` → `done` transition.
+After ChatGPT reviews the GitHub diff and deployment evidence, the next approved Codex batch may apply ChatGPTâ€™s explicit `review` â†’ `done` transition.
 
 Do not create a separate documentation-only run for routine transitions.
 
@@ -78,8 +78,8 @@ The worktree directory is persistent. Every batch uses a fresh branch. Dirty sta
 1. Remove misleading promotions, fake urgency, and unsupported trust claims.
 2. Header, navigation, and footer.
 3. Homepage commercial and SEO hierarchy.
-4. Strongest 3–5 collections.
-5. Strongest 20–30 products in coherent batches.
+4. Strongest 3â€“5 collections.
+5. Strongest 20â€“30 products in coherent batches.
 6. Keyword-to-page mapping and internal links.
 7. Sitemap, canonicals, Search Console, analytics, Merchant Center, and feeds.
 8. Justified landing pages.
@@ -121,14 +121,14 @@ Never fabricate:
 
 ## Progress Ledger
 
-### W1-B0 — Purchase-path fake urgency cleanup
+### W1-B0 â€” Purchase-path fake urgency cleanup
 
 Status: done
 Commit: 5303b67
 Development: successful
 Live: successful
 
-### W1-B1 — Header, navigation, footer, and announcement cleanup
+### W1-B1 â€” Header, navigation, footer, and announcement cleanup
 
 Status: done
 Head commit: f85686a62f8ba7bb10a115e96fc6c1ba18e8801b
@@ -138,7 +138,7 @@ Independent live reconciliation on 2026-07-14: failed
 Reason: external live HTML still showed old promotion, header/menu, and footer output.
 Completion basis: W1-B2 reconciliation passed and corrected the live storefront state.
 
-### W1-B2 — Homepage commercial hierarchy, trust cleanup, and W1-B1 reconciliation
+### W1-B2 â€” Homepage commercial hierarchy, trust cleanup, and W1-B1 reconciliation
 
 Status: done
 Branch: sprint/week-1-homepage-commercial-pass
@@ -154,13 +154,13 @@ Live deployed files: `templates/index.json`, `sections/slideshow.liquid`, `snipp
 W1-B1 reconciliation result: passed
 Blocker: none
 
-### W1-B3 — Priority collection package
+### W1-B3 â€” Priority collection package
 
 Status: done
 Branch: sprint/week-1-priority-collections
 Approved starting commit: 4cd11eb7e49c4eff1400fad1050011a511e11f48
 Implementation commit: d9de180ed51964cca37012ac50e0fd45e5c5ceda
-Scope: five priority collections — vegan-leather-boots, running-shoes, car-seat-covers, bedding-sets, hooded-blankets
+Scope: five priority collections â€” vegan-leather-boots, running-shoes, car-seat-covers, bedding-sets, hooded-blankets
 Modified files: `templates/collection.json`, `sections/main-collection-description.liquid`, `docs/COMMERCIAL-OPERATING-PLAN.md`
 Shopify fields changed: collection title, descriptionHtml, SEO title, SEO description
 Protected fields unchanged: handles, rules, products, sort order, images, publication status, template suffix, product data, variants, SKUs, prices, inventory
@@ -172,17 +172,17 @@ Live reconciliation: passed on 2026-07-14T13:07:38Z using anonymous uncached can
 Completion basis: ChatGPT approved the `review` to `done` transition in the W1-B4-PREP prompt after live reconciliation passed.
 Blocker: none
 
-### W1-B4 — Priority product package 1
+### W1-B4 â€” Priority product package 1
 
 Status: review
 Pilot collection: `vegan-leather-boots`
 Revised selected product IDs and handles:
-* `gid://shopify/Product/6568164884560` — `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
-* `gid://shopify/Product/6742622863440` — `black-music-notes-design-shoes-womens-boots`
-* `gid://shopify/Product/6840931385424` — `steampunk-purple-womens-leather-boots`
-* `gid://shopify/Product/6836086145104` — `aquarius-zodiac-boots`
-* `gid://shopify/Product/6827352293456` — `peace-hippie-van-handcrafted-boots`
-* `gid://shopify/Product/6826919952464` — `camouflage-womens-leather-boots-2`
+* `gid://shopify/Product/6568164884560` â€” `skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
+* `gid://shopify/Product/6742622863440` â€” `black-music-notes-design-shoes-womens-boots`
+* `gid://shopify/Product/6840931385424` â€” `steampunk-purple-womens-leather-boots`
+* `gid://shopify/Product/6836086145104` â€” `aquarius-zodiac-boots`
+* `gid://shopify/Product/6827352293456` â€” `peace-hippie-van-handcrafted-boots`
+* `gid://shopify/Product/6826919952464` â€” `camouflage-womens-leather-boots-2`
 Candidate evidence: `docs/commerce/W1-B4-PRODUCT-CANDIDATES.md`
 Candidate verification commits: `2d3b0d7eccfae17b0ac9cb4b38526ffc58e629b0`, `1957bfd06c046cc523514dbe2191896f29e47b2e`
 Approved copy artifact: `docs/commerce/W1-B4-APPROVED-COPY.md`
@@ -199,12 +199,12 @@ Current published theme ID: `122053689424`.
 `layout/theme.liquid` deployment: not performed. The live theme file has unrelated differences from the repository file beyond the verification line, so the prompt's safety rule blocks overwriting it.
 Blocker: exact GSC tag normalization is blocked because live `layout/theme.liquid` differs from the repository file beyond the verification line.
 
-### W1-B5 — Remaining priority product packages
+### W1-B5 â€” Remaining priority product packages
 
 Status: queued
-Target: 20–30 optimized products in total
+Target: 20â€“30 optimized products in total
 
-### W1-B6 — Internal links, indexing, feeds, and measurement
+### W1-B6 â€” Internal links, indexing, feeds, and measurement
 
 Status: queued
 
@@ -224,9 +224,22 @@ Meta-description proposal:
 
 Do not hardcode the homepage title or meta description into `layout/theme.liquid`.
 
-## Current implementation status — 2026-07-15
+## Current implementation status â€” 2026-07-15
 
 - W1-B4: done. Completion basis: Admin validation, protected-field comparison, and six anonymous live-page validations passed.
 - Google Search Console HTML verification tag: ready and live-source verified. The existing self-closing verification meta tag is valid; the previous exact-string-format blocker is closed as nonmaterial.
 - SEO-FALLBACK-FOUNDATION: done. Category-aware fallback rendering was implemented, corrected, and deployed without Shopify data mutation.
 - W1-B5: review. A second 15-product published `vegan-leather-boots` batch was optimized with title, descriptionHtml, SEO title, and SEO description only.
+
+### COMMERCIAL-GROWTH-SPRINT-2 — Priority product SEO expansion and internal linking
+
+Status: review
+Starting commit: `020ae5cc7adfc69bcbbb3fae86da5e7e8006929c`
+Scope completed: 30 eligible products optimized across `car-seat-covers`, `bedding-sets`, and `hooded-blankets`; no eligible published, unoptimized `running-shoes` products existed in the approved first-50 selection window.
+Shopify product fields changed only: title, `descriptionHtml`, SEO title, SEO description.
+Collection descriptions changed: `car-seat-covers` received one crawlable link to `/collections/all`; existing collection copy preserved.
+Homepage internal-link change: none; all five priority collection links were already present.
+Theme deployment: not required.
+Snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T12-49-24-443Z\COMMERCIAL-GROWTH-SPRINT-2-snapshot.json`
+Validation: Admin validation passed for all changed product fields, protected handle/status checks, and collection description; indexing readiness passed for homepage, five priority collections, and representative products; representative live product and collection checks passed with no Liquid errors.
+Blocker: none.
