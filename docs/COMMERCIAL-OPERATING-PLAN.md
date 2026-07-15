@@ -273,7 +273,7 @@ Blocker: none.
 
 ### GUIDES-EDITORIAL-REDESIGN — Visual shopping guide implementation
 
-Status: review
+Status: done
 Starting commit: `ef2a642f558fba0a77f78081a2757c162f40d08b`
 Branch: `sprint/seo-fallback-foundation`
 Live theme: `122053689424`
@@ -286,4 +286,35 @@ Redesigned existing published Guides articles only:
 Shopify records changed: two existing article body HTML fields and summaries; footer menu `Gift Guides` link added to `/blogs/guides`; collection contextual links added to `vegan-leather-boots` and `bedding-sets`.
 Theme files changed and selectively deployed to live: `sections/main-article.liquid`, `assets/bpc-guides.css`.
 Validation: `git diff --check` passed; targeted changed-file syntax validation passed; live guide URLs returned HTTP 200 with one H1, canonical, meta description, guide hero, unique product cards, descriptive image alt text, no old inline gallery, no broken sampled CDN images, and no Liquid errors. Unrelated `/blogs/news` render did not receive guide-specific hero markup.
+Completion basis: approved as done based on ChatGPT review before `VEGAN-BOOTS-PRODUCT-BATCH-02`.
+Blocker: none.
+
+### VEGAN-BOOTS-PRODUCT-BATCH-02 — Live product SEO batch
+
+Status: review
+Starting commit: `3f583548f20a5cabc6842eda8cab8d4ccbb152ac`
+Branch: `sprint/seo-fallback-foundation`
+Collection: `vegan-leather-boots`
+
+Selected live storefront products:
+
+- `purple-peace-handcrafted-boots`
+- `purple-dream-catcher-handcrafted-boots`
+- `purple-dream-catcher-handcrafted-boots-1`
+- `magical-butterflies-handcrafted-boots`
+- `peace-tiedye-womens-leather-boots`
+- `om-mandala-womens-leather-boots`
+- `womens-leather-boots-murky-depths`
+- `live-love-laugh-womens-leather-boots`
+- `colorful-lion-womens-leather-boots`
+- `beige-elephant-womens-leather-boots`
+- `colorful-womens-leather-boots`
+- `elephant-mandala-womens-leather-boots-2`
+
+Fields changed: product title, `descriptionHtml`, SEO title, SEO description, primary image alt text where blank.
+Skipped: non-live storefront products, the completed six-product pilot, already optimized products, `rainbow-pride-faux-leather-boots-1`, `purple-peace-mandala-handcrafted-boots-1`, and `dragonfly-mandala-womens-leather-boots-1` as duplicate or near-duplicate records.
+Rollback snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T14-18-44-702Z-VEGAN-BOOTS-PRODUCT-BATCH-02-LIVE\snapshot.json`
+Admin validation: passed for all changed titles, descriptions, SEO fields and primary image alt text.
+Protected-field comparison: passed; handles, URLs, status, vendor, product type, tags, template suffix, options, variants, SKUs, prices, compare-at prices, inventory, collection membership, media files, image URLs and media order were unchanged.
+Representative live validation: passed for `purple-peace-handcrafted-boots`, `womens-leather-boots-murky-depths`, and `elephant-mandala-womens-leather-boots-2`; each returned HTTP 200, one H1, canonical, SEO meta, updated title/description, working internal links, no unsupported claims, no Liquid errors and sampled images returned 200.
 Blocker: none.

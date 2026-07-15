@@ -1,57 +1,61 @@
 # ChatGPT Handoff
 
-Task ID: GUIDES-EDITORIAL-REDESIGN
+Task ID: VEGAN-BOOTS-PRODUCT-BATCH-02
 Status: review
 Branch: sprint/seo-fallback-foundation
-Starting commit: ef2a642f558fba0a77f78081a2757c162f40d08b
+Starting commit: 3f583548f20a5cabc6842eda8cab8d4ccbb152ac
 Final commit: this commit
 
-## Completed
+## Prior approval recorded
 
-- Redesigned the two existing published Guides articles as visual editorial shopping guides; no duplicate blog or article was created.
-- Added Guides-only split hero rendering guarded by `blog.handle == 'guides'`.
-- Added reusable scoped `bpc-guide-` CSS for editorial sections, cards, CTAs and collection links.
-- Updated only the two existing article body HTML fields and summaries.
-- Added one footer `Gift Guides` link to `/blogs/guides`.
-- Added one contextual guide link to `vegan-leather-boots` and one to `bedding-sets`.
+GUIDES-EDITORIAL-REDESIGN is recorded as done based on ChatGPT review.
 
-## Redesigned URLs
+## Shopify product records changed
 
-- `https://bestprintsco.com/blogs/guides/printed-boots-style-guide` — 18 unique product cards across six motif sections.
-- `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas` — 16 unique product cards across five category sections.
+Updated 12 live storefront products in `vegan-leather-boots`:
 
-## Files changed and deployed
+- `purple-peace-handcrafted-boots`
+- `purple-dream-catcher-handcrafted-boots`
+- `purple-dream-catcher-handcrafted-boots-1`
+- `magical-butterflies-handcrafted-boots`
+- `peace-tiedye-womens-leather-boots`
+- `om-mandala-womens-leather-boots`
+- `womens-leather-boots-murky-depths`
+- `live-love-laugh-womens-leather-boots`
+- `colorful-lion-womens-leather-boots`
+- `beige-elephant-womens-leather-boots`
+- `colorful-womens-leather-boots`
+- `elephant-mandala-womens-leather-boots-2`
 
-- `sections/main-article.liquid`
-- `assets/bpc-guides.css`
+Fields changed: product title, `descriptionHtml`, SEO title, SEO description, and primary image alt text where blank.
 
-Selective live deployment: passed to theme `122053689424` with `--allow-live --nodelete`.
+## Selection notes
 
-## Shopify resources changed
+- Used collection order and skipped the completed six-product pilot.
+- Rolled back an initial non-live candidate set after representative live validation showed those records resolved to the homepage instead of product pages.
+- Final selected products all had live storefront URLs and clear visual evidence.
+- Skipped duplicate or near-duplicate records: `rainbow-pride-faux-leather-boots-1`, `purple-peace-mandala-handcrafted-boots-1`, `dragonfly-mandala-womens-leather-boots-1`.
 
-- Articles:
-  - `printed-boots-style-guide` body HTML and summary.
-  - `unique-printed-gift-ideas` body HTML and summary.
-- Navigation:
-  - Footer menu gained `Gift Guides` → `/blogs/guides`.
-- Collections:
-  - `vegan-leather-boots` gained one contextual link to the printed boots guide.
-  - `bedding-sets` gained one contextual link to the gift ideas guide.
+## Snapshot and rollback
+
+Rollback snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T14-18-44-702Z-VEGAN-BOOTS-PRODUCT-BATCH-02-LIVE\snapshot.json`
+
+Rollback method: restore product title, `descriptionHtml`, SEO title, SEO description and primary image alt values from the snapshot through Admin GraphQL. No theme rollback is required.
 
 ## Validation
 
-- `git diff --check`: passed.
-- Targeted changed-file syntax validation: passed.
-- Live guide validation: passed for HTTP 200, one H1, canonical, meta description, guide hero, unique product cards, descriptive image alt text, sampled CDN images, and no Liquid errors.
-- Unrelated blog validation: `/blogs/news` rendered without Guides-specific hero markup.
+- Admin GraphQL validation: passed for all changed fields.
+- Protected-field comparison: passed; handles, URLs, status, vendor, product type, tags, template suffix, options, variants, SKUs, prices, compare-at prices, inventory, collection membership, media files, image URLs and media order were unchanged.
+- Representative live validation passed:
+  - `https://bestprintsco.com/products/purple-peace-handcrafted-boots`
+  - `https://bestprintsco.com/products/womens-leather-boots-murky-depths`
+  - `https://bestprintsco.com/products/elephant-mandala-womens-leather-boots-2`
+- Live checks confirmed HTTP 200, one H1, canonical, SEO meta, updated title/description, working internal links, no unsupported claims, no Liquid errors and sampled images returned 200.
 
-## Not changed
+## Files changed
 
-- No product fields, product media, image files, handles, URLs, variants, SKUs, prices, inventory, Product JSON-LD, GA4, Search Console, feed readiness, or completed product/collection SEO records were changed.
+- `docs/COMMERCIAL-OPERATING-PLAN.md`
+- `docs/ai/CHATGPT-HANDOFF.md`
 
-## Rollback
-
-- Git rollback for theme files: revert this commit and selectively deploy `sections/main-article.liquid` and remove `assets/bpc-guides.css` from the live theme if needed.
-- Shopify rollback: restore the two article bodies/summaries, footer menu, and two collection descriptions from the lightweight snapshot created at `C:\Projects\bestprintsco-backups\2026-07-15T13-52-24-263Z-GUIDES-EDITORIAL-REDESIGN\snapshot.json`.
-
+Theme deployment: not required.
 Blocker: none.
