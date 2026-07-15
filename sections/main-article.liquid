@@ -1,5 +1,8 @@
 {{ 'blog-template.css' | asset_url | stylesheet_tag }}
 {{ 'blog-item.css' | asset_url | stylesheet_tag }}
+{%- if blog.handle == 'guides' -%}
+  {{ 'bpc-guides.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 {%- liquid
   assign st = section.settings
   assign show_author = st.post_show_author
@@ -16,7 +19,60 @@
     <div class="row">
       <div class="col-blog-contents">
         <article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
-          {%- if article.image -%}
+          {%- if blog.handle == 'guides' and article.image -%}
+            <div class="bpc-guide-hero" {{ block.shopify_attributes }}>
+              <div class="bpc-guide-hero__image" itemprop="image">
+                <img
+                  srcset="
+                    {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                    {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                    {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                    {{ article.image | image_url }} {{ article.image.width }}w
+                  "
+                  sizes="(min-width: 990px) 40vw, 100vw"
+                  src="{{ article.image | image_url: width: 900 }}"
+                  loading="eager"
+                  width="{{ article.image.width }}"
+                  height="{{ article.image.height }}"
+                  alt="{{ article.image.alt | default: article.title | escape }}"
+                >
+              </div>
+              <div class="bpc-guide-hero__copy">
+                <a href="{{ blog.url }}" class="bpc-guide-hero__label">{{ blog.title }}</a>
+                <h1 class="article-template__title bpc-guide-hero__title" itemprop="headline">
+                  {{ article.title | escape }}
+                </h1>
+                {%- if article.excerpt != blank -%}
+                  <p class="bpc-guide-hero__summary">{{ article.excerpt | strip_html }}</p>
+                {%- endif -%}
+                <div class="article-metas bpc-guide-hero__meta">
+                  {%- if show_author -%}
+                    <span
+                      class="caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
+                      itemprop="author"
+                      itemscope
+                      itemtype="http://schema.org/Person"
+                    >
+                      <span itemprop="name">{{ article.author }}</span>
+                    </span>
+                  {%- endif -%}
+                  {%- if show_date -%}
+                    <span
+                      class="circle-divider caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
+                      itemprop="dateCreated pubdate datePublished"
+                    >
+                      {{- article.published_at | date: '%b %d %Y' -}}
+                    </span>
+                  {%- endif -%}
+                  {%- if blog.comments_enabled? -%}
+                    <span class="article-comments mt-5 mr-15 fw-500 fs-12 uppercase">
+                      {{- 'blogs.article.comments' | t: count: article.comments_count -}}
+                    </span>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- elsif article.image -%}
             <div class="article-template__hero-container" {{ block.shopify_attributes }}>
               <div
                 class="article-template__hero-{{ block.settings.image_height }} media"
@@ -47,41 +103,43 @@
           {%- endif -%}
           <div class="blog-content-wap">
             <div class="blog-article-contents blog-section">
-              <div class="page-width mb-20" {{ block.shopify_attributes }}>
-                <div class="article-template__back fw-500 fs-12 uppercase mb-5">
-                  <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
-                    {{ blog.title }}
-                  </a>
+              {%- unless blog.handle == 'guides' -%}
+                <div class="page-width mb-20" {{ block.shopify_attributes }}>
+                  <div class="article-template__back fw-500 fs-12 uppercase mb-5">
+                    <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
+                      {{ blog.title }}
+                    </a>
+                  </div>
+                  <h1 class="article-template__title mb-5" itemprop="headline">{{ article.title | escape }}</h1>
+                  <div class="article-metas">
+                    {%- if show_author -%}
+                      <span
+                        class="caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
+                        itemprop="author"
+                        itemscope
+                        itemtype="http://schema.org/Person"
+                      >
+                        <span itemprop="name">{{ article.author }}</span>
+                      </span>
+                    {%- endif -%}
+                    {%- if show_date -%}
+                      <span
+                        class="circle-divider caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
+                        itemprop="dateCreated pubdate datePublished"
+                      >
+                        {{- article.published_at | date: '%b %d %Y' -}}
+                      </span>
+                    {%- endif -%}
+                    {%- if blog.comments_enabled? -%}
+                      <span class="article-comments mt-5 mr-15 fw-500 fs-12 uppercase">
+                        {{- 'blogs.article.comments' | t: count: article.comments_count -}}
+                      </span>
+                    {%- endif -%}
+                  </div>
                 </div>
-                <h1 class="article-template__title mb-5" itemprop="headline">{{ article.title | escape }}</h1>
-                <div class="article-metas">
-                  {%- if show_author -%}
-                    <span
-                      class="caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
-                      itemprop="author"
-                      itemscope
-                      itemtype="http://schema.org/Person"
-                    >
-                      <span itemprop="name">{{ article.author }}</span>
-                    </span>
-                  {%- endif -%}
-                  {%- if show_date -%}
-                    <span
-                      class="circle-divider caption-with-letter-spacing mt-5 mr-15 fw-500 fs-12 uppercase"
-                      itemprop="dateCreated pubdate datePublished"
-                    >
-                      {{- article.published_at | date: '%b %d %Y' -}}
-                    </span>
-                  {%- endif -%}
-                  {%- if blog.comments_enabled? -%}
-                    <span class="article-comments mt-5 mr-15 fw-500 fs-12 uppercase">
-                      {{- 'blogs.article.comments' | t: count: article.comments_count -}}
-                    </span>
-                  {%- endif -%}
-                </div>
-              </div>
+              {%- endunless -%}
               <div
-                class="article-template__content page-width page-width--narrow rte"
+                class="article-template__content page-width {% if blog.handle == 'guides' %}bpc-guide-content{% else %}page-width--narrow{% endif %} rte"
                 itemprop="articleBody"
                 {{ block.shopify_attributes }}
               >

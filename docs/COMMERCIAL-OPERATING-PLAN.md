@@ -270,3 +270,20 @@ Granted scopes verified: `read_analytics`, `read_channels`, `read_content`, `rea
 Merchant Center / Google channel: owner action remains required to verify Google & YouTube channel and Merchant Center sync inside Shopify/Google admin.
 Next approved focused task: guide visual/editorial redesign review, without duplicating articles or changing product SEO/feed work.
 Blocker: none.
+
+### GUIDES-EDITORIAL-REDESIGN — Visual shopping guide implementation
+
+Status: review
+Starting commit: `ef2a642f558fba0a77f78081a2757c162f40d08b`
+Branch: `sprint/seo-fallback-foundation`
+Live theme: `122053689424`
+
+Redesigned existing published Guides articles only:
+
+- `https://bestprintsco.com/blogs/guides/printed-boots-style-guide` — 18 unique product cards across six motif sections: skull/dark artwork, celestial/galaxy, mandala/ornamental, floral/nature, animal artwork, steampunk/expressive symbols.
+- `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas` — 16 unique product cards across five category sections: printed boots, bedding sets, hooded blankets, car seat covers, printed running shoes.
+
+Shopify records changed: two existing article body HTML fields and summaries; footer menu `Gift Guides` link added to `/blogs/guides`; collection contextual links added to `vegan-leather-boots` and `bedding-sets`.
+Theme files changed and selectively deployed to live: `sections/main-article.liquid`, `assets/bpc-guides.css`.
+Validation: `git diff --check` passed; targeted changed-file syntax validation passed; live guide URLs returned HTTP 200 with one H1, canonical, meta description, guide hero, unique product cards, descriptive image alt text, no old inline gallery, no broken sampled CDN images, and no Liquid errors. Unrelated `/blogs/news` render did not receive guide-specific hero markup.
+Blocker: none.

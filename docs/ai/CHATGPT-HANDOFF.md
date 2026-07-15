@@ -1,57 +1,57 @@
 # ChatGPT Handoff
 
-Task ID: CONTENT-MEDIA-RECONCILIATION
+Task ID: GUIDES-EDITORIAL-REDESIGN
 Status: review
 Branch: sprint/seo-fallback-foundation
-Starting commit: 712e9024e782115fc6028581dddc8b52eee6ddc2
+Starting commit: ef2a642f558fba0a77f78081a2757c162f40d08b
 Final commit: this commit
 
 ## Completed
 
-- Performed one focused read-only reconciliation of Shopify content and media state.
-- Verified the `Guides` blog exists exactly once.
-- Verified both guide articles exist once, are published, and are inside the `Guides` blog:
-  - `printed-boots-style-guide`
-  - `unique-printed-gift-ideas`
-- Verified live article URLs return HTTP 200, render canonical tags, render one meta description, and show no Liquid errors.
-- Verified the app’s currently granted scopes.
-- Queried all 52 approved priority products and primary media records.
-- Confirmed 52/52 approved priority products already have populated primary-image alt text.
-- Updated 0 media records in this Codex reconciliation because no blank primary-image alt fields remained.
-- Confirmed no duplicate target articles and no duplicate `Guides` blogs.
-- Confirmed no missing products, handle mismatches, inactive products, or Online Store publication gaps among the 52 approved priority products.
+- Redesigned the two existing published Guides articles as visual editorial shopping guides; no duplicate blog or article was created.
+- Added Guides-only split hero rendering guarded by `blog.handle == 'guides'`.
+- Added reusable scoped `bpc-guide-` CSS for editorial sections, cards, CTAs and collection links.
+- Updated only the two existing article body HTML fields and summaries.
+- Added one footer `Gift Guides` link to `/blogs/guides`.
+- Added one contextual guide link to `vegan-leather-boots` and one to `bedding-sets`.
 
-## Verified scopes
+## Redesigned URLs
 
-`read_analytics`, `read_channels`, `read_content`, `read_customer_events`, `read_files`, `read_inventory`, `read_markets`, `read_online_store_navigation`, `read_online_store_pages`, `read_pixels`, `read_product_feeds`, `read_product_listings`, `read_products`, `read_publications`, `read_reports`, `read_themes`, `write_content`, `write_files`, `write_online_store_navigation`, `write_online_store_pages`, `write_product_feeds`, `write_product_listings`, `write_products`, `write_theme_code`, `write_themes`
+- `https://bestprintsco.com/blogs/guides/printed-boots-style-guide` — 18 unique product cards across six motif sections.
+- `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas` — 16 unique product cards across five category sections.
 
-## Guide URLs
+## Files changed and deployed
 
-- `https://bestprintsco.com/blogs/guides/printed-boots-style-guide` — published, unique handle, HTTP 200, canonical present, one meta description.
-- `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas` — published, unique handle, HTTP 200, canonical present, one meta description.
+- `sections/main-article.liquid`
+- `assets/bpc-guides.css`
 
-## Media alt reconciliation
+Selective live deployment: passed to theme `122053689424` with `--allow-live --nodelete`.
 
-- Approved priority products checked: 52
-- Primary-image alt already present: 52
-- Newly updated in this reconciliation: 0
-- Skipped already complete: 52
-- Blank remaining: 0
+## Shopify resources changed
 
-## Not changed in this reconciliation
+- Articles:
+  - `printed-boots-style-guide` body HTML and summary.
+  - `unique-printed-gift-ideas` body HTML and summary.
+- Navigation:
+  - Footer menu gained `Gift Guides` → `/blogs/guides`.
+- Collections:
+  - `vegan-leather-boots` gained one contextual link to the printed boots guide.
+  - `bedding-sets` gained one contextual link to the gift ideas guide.
 
-- No Shopify product fields were changed.
-- No image files, URLs, filenames, image order, media associations, product handles, URLs, redirects, SKUs, prices, inventory, variants, options, or publication status were changed.
-- No duplicate blogs or articles were created.
-- No guide layout, hero image, gallery, CSS, or visual-content redesign was performed.
-- No completed product SEO, Product JSON-LD, GA4, Search Console, or feed work was repeated.
+## Validation
 
-## Remaining owner actions
+- `git diff --check`: passed.
+- Targeted changed-file syntax validation: passed.
+- Live guide validation: passed for HTTP 200, one H1, canonical, meta description, guide hero, unique product cards, descriptive image alt text, sampled CDN images, and no Liquid errors.
+- Unrelated blog validation: `/blogs/news` rendered without Guides-specific hero markup.
 
-- Merchant Center / Google & YouTube channel: owner must verify product sync and account status inside Shopify/Google admin.
+## Not changed
 
-## Recommended next focused task
+- No product fields, product media, image files, handles, URLs, variants, SKUs, prices, inventory, Product JSON-LD, GA4, Search Console, feed readiness, or completed product/collection SEO records were changed.
 
-Guide visual/editorial redesign review for the two existing published guide articles. Do not duplicate articles; edit only after owner approves the visual/content direction.
+## Rollback
+
+- Git rollback for theme files: revert this commit and selectively deploy `sections/main-article.liquid` and remove `assets/bpc-guides.css` from the live theme if needed.
+- Shopify rollback: restore the two article bodies/summaries, footer menu, and two collection descriptions from the lightweight snapshot created at `C:\Projects\bestprintsco-backups\2026-07-15T13-52-24-263Z-GUIDES-EDITORIAL-REDESIGN\snapshot.json`.
 
 Blocker: none.
