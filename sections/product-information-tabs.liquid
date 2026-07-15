@@ -34,6 +34,7 @@
     endif
   endif
   assign product_description_plain = product.description | strip_html | strip_newlines | replace: '  ', ' ' | strip
+  assign product_description_markers = product_description_plain | downcase
   assign has_supplier_operational_marker = false
   assign has_unsupported_claim_marker = false
   assign use_safe_product_description_fallback = false

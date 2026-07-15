@@ -60,7 +60,6 @@
   if resolved_image_alt == blank and article != blank
     assign resolved_image_alt = article.title
   endif
-  assign resolved_image_alt = resolved_image_alt | default: shop.name
 -%}
 <div
   class="bls__responsive-image bls-image-js {% if image != blank %}bls-loading-image{% endif %} {{ cls }}"

@@ -228,5 +228,5 @@ Do not hardcode the homepage title or meta description into `layout/theme.liquid
 
 - W1-B4: done. Completion basis: Admin validation, protected-field comparison, and six anonymous live-page validations passed.
 - Google Search Console HTML verification tag: ready and live-source verified. The existing self-closing verification meta tag is valid; the previous exact-string-format blocker is closed as nonmaterial.
-- SEO-FALLBACK-FOUNDATION: done. Category-aware fallback rendering was implemented and deployed without Shopify data mutation.
-- W1-B5: review. Fifteen published `vegan-leather-boots` products were optimized with title, descriptionHtml, SEO title, and SEO description only.
+- SEO-FALLBACK-FOUNDATION: done. Category-aware fallback rendering was implemented, corrected, and deployed without Shopify data mutation.
+- W1-B5: review. A second 15-product published `vegan-leather-boots` batch was optimized with title, descriptionHtml, SEO title, and SEO description only.
