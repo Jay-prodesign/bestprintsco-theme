@@ -19,6 +19,15 @@
   else
     assign media_wrapper_id = media.id | append: '-wrapper'
   endif
+  assign resolved_media_alt = media.alt | default: media.preview_image.alt
+  if resolved_media_alt == blank and product != blank
+    if media_position != blank and media_position != 1
+      assign resolved_media_alt = product.title | append: ' - alternate view ' | append: media_position
+    else
+      assign resolved_media_alt = product.title
+    endif
+  endif
+  assign resolved_media_alt = resolved_media_alt | default: shop.name
 -%}
 {% capture image_size_model %}{{ media.preview_image.width }}x{{ media.preview_image.height }}{% endcapture %}
 {%- if gallery -%}
@@ -54,7 +63,7 @@
           class="bls__responsive-image product-single__media bls-image-js product-single__media--video product-single__media--{{ media.id }}"
           style="--aspect-ratio: {{ ratio }}"
         >
-          {{ media | video_tag: class: 'media-video', image_size: image_size_model, alt: media.alt }}
+          {{ media | video_tag: class: 'media-video', image_size: image_size_model, alt: resolved_media_alt }}
         </div>
       {% when 'model' %}
         <div class="bls__responsive-image product-single__media bls-image-js" style="--aspect-ratio: {{ ratio }}">
@@ -89,7 +98,7 @@
             loading="lazy"
             width="1000"
             height="{{ 1000 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-            alt="{{ media.preview_image.alt | escape }}"
+            alt="{{ resolved_media_alt | escape }}"
           >
         </div>
     {% endcase %}
@@ -152,7 +161,7 @@
         loading="lazy"
         width="1000"
         height="{{ 1000 | divided_by: media.preview_image.aspect_ratio | ceil }}"
-        alt="{{ media.alt | escape }}"
+        alt="{{ resolved_media_alt | escape }}"
       >
     </div>
   </div>

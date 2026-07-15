@@ -50,6 +50,17 @@
   if width
     assign width_default = width
   endif
+  assign resolved_image_alt = image.alt | default: fallback_alt
+  if resolved_image_alt == blank and type == 'product' and product != blank
+    assign resolved_image_alt = product.title
+  endif
+  if resolved_image_alt == blank and collection != blank
+    assign resolved_image_alt = collection.title
+  endif
+  if resolved_image_alt == blank and article != blank
+    assign resolved_image_alt = article.title
+  endif
+  assign resolved_image_alt = resolved_image_alt | default: shop.name
 -%}
 <div
   class="bls__responsive-image bls-image-js {% if image != blank %}bls-loading-image{% endif %} {{ cls }}"
@@ -70,7 +81,7 @@
       "
       src="{{ image | image_url: width: 533 }}"
       sizes="(min-width: {{ container_width }}px) {{ width_default }}, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-      alt="{{ image.alt | escape }}"
+      alt="{{ resolved_image_alt | escape }}"
       class="motion-reduce"
       loading="lazy"
       width="{{ image.width }}"

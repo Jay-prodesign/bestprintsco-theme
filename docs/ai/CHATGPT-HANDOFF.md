@@ -1,50 +1,48 @@
 # ChatGPT Handoff
 
-Task ID: W1-B4-RECONCILE-GSC
-Status: blocked
-Branch: `sprint/week-1-product-pilot-1`
-Worktree: `C:\Projects\bestprintsco-theme-worktrees\commercial-sprint`
-Starting commit: `51fa69c2877f33ad8024022293db6705a03ce173`
+Task ID: SEO-FALLBACK-FOUNDATION
+Status: review
+Branch: sprint/seo-fallback-foundation
+Implementation commit: this commit
+Live theme: 122053689424
 
-## Product Admin-field result
+## Scope
 
-Matched. Admin GraphQL API `2026-07` confirmed all six W1-B4 products still match the approved title, `descriptionHtml`, SEO title, SEO description, handle, status, and Online Store publication.
+Implemented safe storefront-rendered SEO fallbacks only. No Shopify product, collection, media, filename, tag, handle, URL, price, variant, SKU, inventory, publication, checkout, or Google verification data changed.
 
-Product reapplication: not required.
+## Theme files deployed
 
-## Six anonymous live-page results
+- layout/theme.liquid
+- sections/main-article.liquid
+- sections/main-product.liquid
+- sections/product-information-tabs.liquid
+- snippets/article-card.liquid
+- snippets/list-collection-item-2.liquid
+- snippets/list-collection-item.liquid
+- snippets/logo.liquid
+- snippets/meta-tags.liquid
+- snippets/product-item.liquid
+- snippets/product-list-item.liquid
+- snippets/product-media.liquid
+- snippets/product-popular-list-item.liquid
+- snippets/product-thumbnail.liquid
+- snippets/responsive-image.liquid
+- snippets/seo-product-description-fallback.liquid
 
-UTC verification time: 2026-07-14T13:57:32.6762329Z
+## Validation
 
-All six cache-busted live URLs passed:
+- `git diff --check`: passed.
+- Selective live deployment with `--allow-live --nodelete`: passed.
+- Anonymous live check, explicit SEO product: `https://bestprintsco.com/products/skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2` preserved explicit meta/social description and rendered one Product JSON-LD block.
+- Anonymous live check, fallback product: `https://bestprintsco.com/products/elephant-mandala-2-handcrafted-boots` rendered safe product meta/social fallback, visible safe fallback description, product-title image alt fallback, and no Liquid errors.
 
-- `https://bestprintsco.com/products/skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2?w1b4_reconcile=1784037452` — observed title: `Blue Skull & Octopus Printed Boots`; old claims present: none; passed.
-- `https://bestprintsco.com/products/black-music-notes-design-shoes-womens-boots?w1b4_reconcile=1784037452` — observed title: `Black Music Notes Printed Boots`; old claims present: none; passed.
-- `https://bestprintsco.com/products/steampunk-purple-womens-leather-boots?w1b4_reconcile=1784037452` — observed title: `Purple Steampunk Gear Printed Boots`; old claims present: none; passed.
-- `https://bestprintsco.com/products/aquarius-zodiac-boots?w1b4_reconcile=1784037452` — observed title: `Black & Gold Aquarius Zodiac Boots`; old claims present: none; passed.
-- `https://bestprintsco.com/products/peace-hippie-van-handcrafted-boots?w1b4_reconcile=1784037452` — observed title: `Colorful Hippie Van & Peace Sign Boots`; old claims present: none; passed.
-- `https://bestprintsco.com/products/camouflage-womens-leather-boots-2?w1b4_reconcile=1784037452` — observed title: `Purple Camouflage Printed Boots`; old claims present: none; passed.
+## Current status
 
-Observed result for each page: updated short approved title visible, design-specific description visible, old supplier-style description claims absent, original-handle canonical retained, variant selector rendered, Add to Cart rendered, structured product data used the updated title, and no Liquid-error text appeared.
+- W1-B4: done.
+- GSC HTML verification tag: ready/live-source verified; self-closing format is nonmaterial.
+- SEO-FALLBACK-FOUNDATION: review.
+- W1-B5: queued.
 
-## Google Search Console tag result
+## Rollback
 
-Expected exact tag:
-
-```html
-<meta name="google-site-verification" content="OCYluzAcFSmIG_J2W1jY6tmQmHb3wq46RFVk00TA_0s">
-```
-
-- Repository `layout/theme.liquid`: failed exact-string check; one verification tag exists, but it is self-closing.
-- Published theme ID: `122053689424`.
-- Live theme `layout/theme.liquid`: failed exact-string check; one verification tag exists, but it is self-closing.
-- Anonymous homepage raw source: failed exact-string check; one verification tag renders, but it is self-closing.
-- Theme files deployed: none.
-
-## Blocker
-
-Exact GSC tag normalization is blocked by the prompt safety rule because live `layout/theme.liquid` differs from repository `layout/theme.liquid` beyond the verification line. First unrelated difference: the live file has a Liquid SEO-description block beginning near the title area where the repository file has the older `<title>` block.
-
-## Next action
-
-ChatGPT/owner should approve a narrow live-layout reconciliation strategy before Codex changes `layout/theme.liquid`. No W1-B5 work should start from this task.
+Use Git to revert the implementation commit and selectively push the reverted theme files to live theme `122053689424` with `--allow-live --nodelete`.

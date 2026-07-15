@@ -223,3 +223,10 @@ Meta-description proposal:
 `Explore bold printed boots, shoes, bedding, car accessories and distinctive gifts from BestPrintsCo. Shop unique designs across footwear, home and more.`
 
 Do not hardcode the homepage title or meta description into `layout/theme.liquid`.
+
+## Current implementation status — 2026-07-15
+
+- W1-B4: done. Completion basis: Admin validation, protected-field comparison, and six anonymous live-page validations passed.
+- Google Search Console HTML verification tag: ready and live-source verified. The existing self-closing verification meta tag is valid; the previous exact-string-format blocker is closed as nonmaterial.
+- SEO-FALLBACK-FOUNDATION: review. Category-aware fallback rendering has been implemented without Shopify data mutation.
+- W1-B5: queued. Do not restart interrupted W1-B5 candidate documentation; preserved backup remains external.

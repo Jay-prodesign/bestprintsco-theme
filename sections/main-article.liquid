@@ -40,7 +40,7 @@
                   loading="lazy"
                   width="{{ article.image.width }}"
                   height="{{ article.image.height }}"
-                  alt="{{ article.image.alt | escape }}"
+                  alt="{{ article.image.alt | default: article.title | escape }}"
                 >
               </div>
             </div>

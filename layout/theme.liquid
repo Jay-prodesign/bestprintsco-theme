@@ -11,14 +11,105 @@
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
+    {%- liquid
+      assign seo_description = page_description | strip_html | strip_newlines | replace: '  ', ' ' | strip
+      assign use_product_meta_fallback = false
+      if template.name == 'product' and product != blank
+        assign page_description_markers = seo_description | downcase
+        assign has_supplier_operational_marker = false
+        assign has_unsupported_claim_marker = false
+        if page_description_markers contains 'tracking number'
+          assign has_supplier_operational_marker = true
+        elsif page_description_markers contains 'working days'
+          assign has_supplier_operational_marker = true
+        elsif page_description_markers contains 'delivery time'
+          assign has_supplier_operational_marker = true
+        elsif page_description_markers contains 'custom-made-to-order'
+          assign has_supplier_operational_marker = true
+        endif
+        if page_description_markers contains 'premium pu leather'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'vegan-friendly leather'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'comfort'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'durability'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'lining'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'outsole'
+          assign has_unsupported_claim_marker = true
+        elsif page_description_markers contains 'quality standard'
+          assign has_unsupported_claim_marker = true
+        endif
+        if seo_description == blank or has_supplier_operational_marker and has_unsupported_claim_marker
+          assign use_product_meta_fallback = true
+        endif
+      endif
+      if use_product_meta_fallback
+        assign category_singular_phrase = 'distinctive product design'
+        for product_collection in product.collections
+          case product_collection.handle
+            when 'vegan-leather-boots'
+              assign category_singular_phrase = 'printed lace-up boot design'
+              break
+            when 'running-shoes'
+              assign category_singular_phrase = 'printed running shoe design'
+              break
+            when 'car-seat-covers'
+              assign category_singular_phrase = 'printed car seat cover design'
+              break
+            when 'bedding-sets'
+              assign category_singular_phrase = 'printed bedding design'
+              break
+            when 'hooded-blankets'
+              assign category_singular_phrase = 'hooded blanket design'
+              break
+          endcase
+        endfor
+        assign seo_description = 'Explore ' | append: product.title | append: ', a ' | append: category_singular_phrase | append: ' from BestPrintsCo. View the artwork, product images and available options.'
+      elsif seo_description == blank
+        if template.name == 'collection' and collection != blank
+          case collection.handle
+            when 'vegan-leather-boots', 'running-shoes', 'car-seat-covers', 'bedding-sets', 'hooded-blankets'
+              assign seo_description = 'Browse ' | append: collection.title | append: ' at BestPrintsCo. Explore distinctive designs and products currently available in this collection.'
+            else
+              assign seo_description = 'Browse ' | append: collection.title | append: ' at BestPrintsCo. Explore distinctive products, designs and available options in this collection.'
+          endcase
+        elsif template.name == 'page' and page != blank
+          assign seo_description = page.content | strip_html | strip_newlines | replace: '  ', ' ' | strip
+          if seo_description == blank
+            assign seo_description = 'Learn more about ' | append: page.title | append: ' at BestPrintsCo.'
+          endif
+        elsif template.name == 'article' and article != blank
+          assign seo_description = article.excerpt_or_content | strip_html | strip_newlines | replace: '  ', ' ' | strip
+          if seo_description == blank
+            assign seo_description = 'Read ' | append: article.title | append: ' from BestPrintsCo.'
+          endif
+        elsif template.name == 'blog' and blog != blank
+          assign seo_description = 'Explore ' | append: blog.title | append: ' articles, ideas and updates from BestPrintsCo.'
+        elsif template.name == 'list-collections'
+          assign seo_description = 'Explore BestPrintsCo collections by product family and browse currently available designs.'
+        elsif template.name == 'search'
+          assign seo_description = 'Search BestPrintsCo for products, collections and designs.'
+        elsif template.name == '404'
+          assign seo_description = 'This page could not be found. Continue shopping BestPrintsCo collections and products.'
+        elsif template.name == 'index'
+          assign seo_description = shop.description | default: 'Explore distinctive printed products and designs from BestPrintsCo.'
+        else
+          assign seo_description = shop.description | default: shop.name
+        endif
+      endif
+      assign seo_description = seo_description | strip_html | strip_newlines | replace: '  ', ' ' | strip | truncate: 160
+    -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
-    <meta name="description" content="{{ page_description | default: shop.description | default: shop.name | escape }}">
-    {% render 'meta-tags' %}
+    <meta name="description" content="{{ seo_description | default: shop.description | default: shop.name | escape }}">
+    {% render 'meta-tags', seo_description: seo_description %}
     {{ content_for_header }}
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -61,7 +152,7 @@
             var pfEdt = {{ shop.metafields.printful.is_edt_enabled | json }};
             var pfEdtTextColor = {{ shop.metafields.printful.edt_text_color | json }};
             var pfEdtBackgroundColor = {{ shop.metafields.printful.edt_background_color | json }};
-            var pfEdtBorderColor = {{ shop.metafields.printful.edt_border_color | json }};  
+            var pfEdtBorderColor = {{ shop.metafields.printful.edt_border_color | json }};
             var pfEdtUseDefaultStyling = {{ shop.metafields.printful.edt_default_style | json }};
             var pfEdtTextAlignment = {{ shop.metafields.printful.edt_text_alignment | json }};
             var pfEdtFlags = {

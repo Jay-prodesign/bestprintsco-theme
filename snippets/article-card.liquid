@@ -26,7 +26,7 @@
 >
   <div class="bls__blog-posts-image hover-effect hover-{{ hover_effect }}">
     <a href="{{ article.url }}">
-      {% render 'responsive-image', image: article.image, aspect_ratio: aspect_ratio, custom_ratio: custom_ratio %}
+      {% render 'responsive-image', image: article.image, fallback_alt: article.title, aspect_ratio: aspect_ratio, custom_ratio: custom_ratio %}
     </a>
   </div>
   <div class="blos__blog-posts-info">

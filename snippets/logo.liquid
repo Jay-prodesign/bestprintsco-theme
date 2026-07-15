@@ -51,7 +51,7 @@
           class="header__normal-logo none-sticky"
           width="{{ logo_width }}"
           height="{{ logo_height }}"
-          alt="{{ logo_height.alt | default: shop.name | escape }}"
+          alt="{{ logo_image.alt | default: shop.name | escape }}"
           style="width: {{ logo_width }}px">
           {%- if isTransparent and template.name == 'index' -%}
             <img
@@ -70,7 +70,7 @@
             class="header__normal-logo d-none block-sticky"
             width="{{ logo_width }}"
             height="{{ logo_height }}"
-            alt="{{ logo_height.alt | default: shop.name | escape }}"
+            alt="{{ logo_image.alt | default: shop.name | escape }}"
             style="width: {{ logo_width }}px">
           {%- endif -%}
         </span>

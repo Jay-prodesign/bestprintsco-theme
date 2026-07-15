@@ -33,6 +33,39 @@
       assign position = '2'
     endif
   endif
+  assign product_description_plain = product.description | strip_html | strip_newlines | replace: '  ', ' ' | strip
+  assign has_supplier_operational_marker = false
+  assign has_unsupported_claim_marker = false
+  assign use_safe_product_description_fallback = false
+  if product_description_markers contains 'tracking number'
+    assign has_supplier_operational_marker = true
+  elsif product_description_markers contains 'working days'
+    assign has_supplier_operational_marker = true
+  elsif product_description_markers contains 'delivery time'
+    assign has_supplier_operational_marker = true
+  elsif product_description_markers contains 'custom-made-to-order'
+    assign has_supplier_operational_marker = true
+  endif
+  if product_description_markers contains 'premium pu leather'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'vegan-friendly leather'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'comfort'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'durability'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'lining'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'outsole'
+    assign has_unsupported_claim_marker = true
+  elsif product_description_markers contains 'quality standard'
+    assign has_unsupported_claim_marker = true
+  endif
+  if product_description_plain == blank
+    assign use_safe_product_description_fallback = true
+  elsif has_supplier_operational_marker and has_unsupported_claim_marker
+    assign use_safe_product_description_fallback = true
+  endif
 -%}
 {%- if section.blocks.size > 0 -%}
   <div
@@ -100,7 +133,11 @@
                   >
                     {%- case block.type -%}
                       {%- when 'description' -%}
-                        {{ product.description }}
+                        {%- if use_safe_product_description_fallback -%}
+                          {% render 'seo-product-description-fallback', product: product %}
+                        {%- else -%}
+                          {{ product.description }}
+                        {%- endif -%}
                       {%- when 'review' -%}
                         <div id="shopify-product-reviews" data-id="{{ product.id }}">
                           {{ product.metafields.spr.reviews }}
@@ -138,7 +175,11 @@
                 <div class="tab-panel">
                   {%- case block.type -%}
                     {%- when 'description' -%}
-                      {{ product.description }}
+                      {%- if use_safe_product_description_fallback -%}
+                        {% render 'seo-product-description-fallback', product: product %}
+                      {%- else -%}
+                        {{ product.description }}
+                      {%- endif -%}
                     {%- when 'review' -%}
                       <div id="shopify-product-reviews" data-id="{{ product.id }}">
                         {{ product.metafields.spr.reviews }}

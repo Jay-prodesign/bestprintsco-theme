@@ -1,0 +1,39 @@
+{%- liquid
+  assign category_singular_phrase = 'distinctive product design'
+  assign category_plural_label = 'printed designs'
+  assign category_collection_url = '/collections/all'
+
+  if product != blank
+    for product_collection in product.collections
+      case product_collection.handle
+        when 'vegan-leather-boots'
+          assign category_singular_phrase = 'printed lace-up boot design'
+          assign category_plural_label = 'printed boots'
+          assign category_collection_url = '/collections/vegan-leather-boots'
+          break
+        when 'running-shoes'
+          assign category_singular_phrase = 'printed running shoe design'
+          assign category_plural_label = 'printed running shoes'
+          assign category_collection_url = '/collections/running-shoes'
+          break
+        when 'car-seat-covers'
+          assign category_singular_phrase = 'printed car seat cover design'
+          assign category_plural_label = 'car seat covers'
+          assign category_collection_url = '/collections/car-seat-covers'
+          break
+        when 'bedding-sets'
+          assign category_singular_phrase = 'printed bedding design'
+          assign category_plural_label = 'bedding sets'
+          assign category_collection_url = '/collections/bedding-sets'
+          break
+        when 'hooded-blankets'
+          assign category_singular_phrase = 'hooded blanket design'
+          assign category_plural_label = 'hooded blankets'
+          assign category_collection_url = '/collections/hooded-blankets'
+          break
+      endcase
+    endfor
+  endif
+-%}
+<p>Explore {{ product.title | escape }}, a {{ category_singular_phrase }} from BestPrintsCo.</p>
+<p>View the artwork, product images and available options, or browse more <a href="{{ category_collection_url }}">{{ category_plural_label }}</a>.</p>

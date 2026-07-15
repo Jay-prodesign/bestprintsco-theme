@@ -17,7 +17,7 @@
               data-position="1"
             >
               {%- assign media_position = 1 -%}
-              {% render 'product-thumbnail', media: featured_media, layout: 'desktop', gallery: true %}
+              {% render 'product-thumbnail', media: featured_media, media_position: media_position, layout: 'desktop', gallery: true %}
             </div>
           {%- endif -%}
           {%- for media in product.media -%}
@@ -29,7 +29,7 @@
                 class="gallery-img {{ media.media_type }}{% if st.show_zoom_button %} bls__zoom-image{% endif %}"
                 data-position="{{ media_position }}"
               >
-                {%- render 'product-thumbnail', media: media, layout: 'desktop', gallery: true -%}
+                {%- render 'product-thumbnail', media: media, media_position: media_position, layout: 'desktop', gallery: true -%}
               </div>
             {%- endunless -%}
           {%- endfor -%}
@@ -68,7 +68,7 @@
                     data-position="1"
                   >
                     {%- assign media_position = 1 -%}
-                    {% render 'product-thumbnail', media: featured_media, layout: 'desktop', gallery: true %}
+                    {% render 'product-thumbnail', media: featured_media, media_position: media_position, layout: 'desktop', gallery: true %}
                   </div>
                 </div>
               {%- endif -%}
@@ -82,7 +82,7 @@
                       class="gallery-img {{ media.media_type }}{% if st.show_zoom_button %} bls__zoom-image{% endif %}"
                       data-position="{{ media_position }}"
                     >
-                      {%- render 'product-thumbnail', media: media, layout: 'desktop', gallery: true -%}
+                      {%- render 'product-thumbnail', media: media, media_position: media_position, layout: 'desktop', gallery: true -%}
                     </div>
                   </div>
                 {%- endunless -%}
@@ -126,7 +126,7 @@
                       data-position="1"
                     >
                       {%- assign media_position = 1 -%}
-                      {% render 'product-thumbnail', media: featured_media, layout: 'desktop', gallery: true %}
+                      {% render 'product-thumbnail', media: featured_media, media_position: media_position, layout: 'desktop', gallery: true %}
                     </div>
                   </div>
                 {%- endif -%}
@@ -141,7 +141,7 @@
                         class="gallery-img {{ media.media_type }}{% if st.show_zoom_button %} bls__zoom-image{% endif %}"
                         data-position="{{ media_position }}"
                       >
-                        {%- render 'product-thumbnail', media: media, layout: 'desktop', gallery: true -%}
+                        {%- render 'product-thumbnail', media: media, media_position: media_position, layout: 'desktop', gallery: true -%}
                       </div>
                     </div>
                   {%- endunless -%}
@@ -183,7 +183,7 @@
                     <div class="swiper-slide" data-media-id="{{ featured_media.id }}" data-position="1">
                       <div class="gallery-img" data-position="1">
                         {%- assign media_position = 1 -%}
-                        {% render 'product-thumbnail', media: featured_media, gallery: false %}
+                        {% render 'product-thumbnail', media: featured_media, media_position: media_position, gallery: false %}
                       </div>
                     </div>
                   {%- endif -%}
@@ -194,7 +194,7 @@
                       -%}
                       <div class="swiper-slide" data-media-id="{{ media.id }}" data-position="{{ media_position }}">
                         <div class="gallery-img" data-position="{{ media_position }}">
-                          {%- render 'product-thumbnail', media: media, gallery: false -%}
+                          {%- render 'product-thumbnail', media: media, media_position: media_position, gallery: false -%}
                         </div>
                       </div>
                     {%- endunless -%}
@@ -231,7 +231,7 @@
                     data-position="1"
                   >
                     {%- assign media_position_m = 1 -%}
-                    {% render 'product-thumbnail', media: featured_media, layout: 'mobile', gallery: true %}
+                    {% render 'product-thumbnail', media: featured_media, media_position: media_position_m, layout: 'mobile', gallery: true %}
                   </div>
                 </div>
               {%- endif -%}
@@ -246,7 +246,7 @@
                       class="gallery-img {{ media.media_type }}{% if st.show_zoom_button %} bls__zoom-image{% endif %}"
                       data-position="{{ media_position_m }}"
                     >
-                      {%- render 'product-thumbnail', media: media, layout: 'mobile', gallery: true -%}
+                      {%- render 'product-thumbnail', media: media, media_position: media_position_m, layout: 'mobile', gallery: true -%}
                     </div>
                   </div>
                 {%- endunless -%}
@@ -294,7 +294,7 @@
                   <div class="swiper-slide" data-media-id="{{ featured_media.id }}" data-position="1">
                     <div class="gallery-img" data-position="1">
                       {%- assign media_position_m = 1 -%}
-                      {% render 'product-thumbnail', media: featured_media, gallery: false %}
+                      {% render 'product-thumbnail', media: featured_media, media_position: media_position_m, gallery: false %}
                     </div>
                   </div>
                 {%- endif -%}
@@ -305,7 +305,7 @@
                     -%}
                     <div class="swiper-slide" data-media-id="{{ media.id }}" data-position="{{ media_position_m }}">
                       <div class="gallery-img" data-position="{{ media_position_m }}">
-                        {%- render 'product-thumbnail', media: media, gallery: false -%}
+                        {%- render 'product-thumbnail', media: media, media_position: media_position_m, gallery: false -%}
                       </div>
                     </div>
                   {%- endunless -%}

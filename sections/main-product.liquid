@@ -1367,6 +1367,59 @@ data-type: 'add-to-cart-form'
     {{ product.media | where: 'media_type', 'model' | json }}
   </script>
 {% endunless %}
+{%- liquid
+  assign structured_product_description = page_description | strip_html | strip_newlines | replace: '  ', ' ' | strip
+  assign structured_description_markers = structured_product_description | downcase
+  assign has_structured_operational_marker = false
+  assign has_structured_claim_marker = false
+  if structured_description_markers contains 'tracking number'
+    assign has_structured_operational_marker = true
+  elsif structured_description_markers contains 'working days'
+    assign has_structured_operational_marker = true
+  elsif structured_description_markers contains 'delivery time'
+    assign has_structured_operational_marker = true
+  elsif structured_description_markers contains 'custom-made-to-order'
+    assign has_structured_operational_marker = true
+  endif
+  if structured_description_markers contains 'premium pu leather'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'vegan-friendly leather'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'comfort'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'durability'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'lining'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'outsole'
+    assign has_structured_claim_marker = true
+  elsif structured_description_markers contains 'quality standard'
+    assign has_structured_claim_marker = true
+  endif
+  if structured_product_description == blank or has_structured_operational_marker and has_structured_claim_marker
+    assign structured_category_singular_phrase = 'distinctive product design'
+    for product_collection in product.collections
+      case product_collection.handle
+        when 'vegan-leather-boots'
+          assign structured_category_singular_phrase = 'printed lace-up boot design'
+          break
+        when 'running-shoes'
+          assign structured_category_singular_phrase = 'printed running shoe design'
+          break
+        when 'car-seat-covers'
+          assign structured_category_singular_phrase = 'printed car seat cover design'
+          break
+        when 'bedding-sets'
+          assign structured_category_singular_phrase = 'printed bedding design'
+          break
+        when 'hooded-blankets'
+          assign structured_category_singular_phrase = 'hooded blanket design'
+          break
+      endcase
+    endfor
+    assign structured_product_description = 'Explore ' | append: product.title | append: ', a ' | append: structured_category_singular_phrase | append: ' from BestPrintsCo. View the artwork, product images and available options.'
+  endif
+-%}
 <script
   type="application/ld+json">
   {
@@ -1379,7 +1432,7 @@ data-type: 'add-to-cart-form'
         {{ seo_media | image_url: width: seo_media.preview_image.width | prepend: "https:" | json }}
       ],
     {%- endif %}
-    "description": {{ product.description | strip_html | json }},
+    "description": {{ structured_product_description | strip_html | json }},
     "brand": {
       "@type": "Brand",
       "name": {{ product.vendor | json }}
@@ -1391,7 +1444,7 @@ data-type: 'add-to-cart-form'
           {%- if variant.sku != blank -%}
             "sku": {{ variant.sku | json }},
           {%- endif -%}
-          "availability" : "http://schema.org/{% if variant.available %}{{ 'products.product.instock' | t }}{% else %}{{ 'products.product.outstock' | t }}{% endif %}",
+          "availability" : "https://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
           "price" : {{ variant.price | divided_by: 100.00 | json }},
           "priceCurrency" : {{ cart.currency.iso_code | json }},
           "url" : {{ request.origin | append: variant.url | json }}
@@ -1606,7 +1659,7 @@ data-type: 'add-to-cart-form'
         },
         {
           "type": "header",
-          "content": "Fake Sold Product"
+          "content": "Sold product message"
         },
         {
           "type": "checkbox",
@@ -1653,7 +1706,7 @@ data-type: 'add-to-cart-form'
           "type": "textarea",
           "id": "message",
           "label": "Message",
-          "default": "Hurry Up! Sale ends in:"
+          "default": "Offer details are shown at checkout."
         }
       ]
     },
@@ -1949,7 +2002,7 @@ data-type: 'add-to-cart-form'
           "type": "text",
           "id": "message",
           "label": "Message",
-          "default": "Hurry Up! Only [count] items left in stock!"
+          "default": "Availability may vary by selected option."
         },
         {
           "type": "range",
