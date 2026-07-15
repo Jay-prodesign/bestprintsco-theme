@@ -1368,7 +1368,7 @@ data-type: 'add-to-cart-form'
   </script>
 {% endunless %}
 {%- liquid
-  assign structured_product_description = page_description | strip_html | strip_newlines | replace: '  ', ' ' | strip
+  assign structured_product_description = product.description | strip_html | strip_newlines | replace: '  ', ' ' | strip
   assign structured_description_markers = structured_product_description | downcase
   assign has_structured_operational_marker = false
   assign has_structured_claim_marker = false

@@ -201,12 +201,12 @@ Blocker: exact GSC tag normalization is blocked because live `layout/theme.liqui
 
 ### W1-B5 â€” Remaining priority product packages
 
-Status: queued
-Target: 20â€“30 optimized products in total
+Status: done
+Completion basis: previous boot batches plus COMMERCIAL-GROWTH-SPRINT-2 and COMMERCIAL-GROWTH-SPRINT-3 expanded priority product optimization across boots, car seat covers, bedding sets, hooded blankets, and the one eligible published running-shoe representative.
 
 ### W1-B6 â€” Internal links, indexing, feeds, and measurement
 
-Status: queued
+Status: review
 
 Google Search Console HTML verification tag: present and live-source verified
 
@@ -243,3 +243,17 @@ Theme deployment: not required.
 Snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T12-49-24-443Z\COMMERCIAL-GROWTH-SPRINT-2-snapshot.json`
 Validation: Admin validation passed for all changed product fields, protected handle/status checks, and collection description; indexing readiness passed for homepage, five priority collections, and representative products; representative live product and collection checks passed with no Liquid errors.
 Blocker: none.
+
+### COMMERCIAL-GROWTH-SPRINT-3 — Google growth readiness, JSON-LD consistency, and executable content scope
+
+Status: review
+Previous sprint final commit: `fbc1b47b3cfdf9da0e8e5771a058c33971d2937f`
+Theme file deployed: `sections/main-product.liquid` to live theme `122053689424` with selective `--allow-live --nodelete`.
+Product JSON-LD correction: Product structured-data descriptions now use the visible product description before falling back to safe category-aware text; representative feed validation passed for title, canonical URL, primary image, price, currency, availability, brand/vendor, product description, and no Liquid errors across five priority collections.
+Product optimized: `colorful-sneakers-6` in `running-shoes`; changed only title, `descriptionHtml`, SEO title, and SEO description. Snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T13-00-22-919Z\COMMERCIAL-GROWTH-SPRINT-3-running-shoe-snapshot.json`.
+Measurement: Search Console verification tag remains present; GA4 `G-JFC5ERBRYC` is present once on the live homepage.
+Merchant Center / Google channel: owner action remains required because the current Admin app cannot inspect the Google & YouTube channel or Merchant Center sync state.
+Buying guides: partially blocked; `blogCreate` is denied and requires `write_content` or `write_online_store_pages`. No theme-coded fake guide pages were created.
+Real media alt optimization: partially blocked; `fileUpdate` is denied and requires `write_files` or `write_themes` plus edit-files permission. No media files or media order were changed.
+Homepage SEO proposal: owner/admin action remains required; current Admin app exposes no safe shop SEO update mutation.
+Blocker: none for executable approved work; remaining items require owner-granted Shopify scopes or external Google account access.
