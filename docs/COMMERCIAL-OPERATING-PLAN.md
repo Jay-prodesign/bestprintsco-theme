@@ -291,7 +291,7 @@ Blocker: none.
 
 ### VEGAN-BOOTS-PRODUCT-BATCH-02 — Live product SEO batch
 
-Status: review
+Status: done
 Starting commit: `3f583548f20a5cabc6842eda8cab8d4ccbb152ac`
 Branch: `sprint/seo-fallback-foundation`
 Collection: `vegan-leather-boots`
@@ -317,4 +317,28 @@ Rollback snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T14-18-44-702Z-VE
 Admin validation: passed for all changed titles, descriptions, SEO fields and primary image alt text.
 Protected-field comparison: passed; handles, URLs, status, vendor, product type, tags, template suffix, options, variants, SKUs, prices, compare-at prices, inventory, collection membership, media files, image URLs and media order were unchanged.
 Representative live validation: passed for `purple-peace-handcrafted-boots`, `womens-leather-boots-murky-depths`, and `elephant-mandala-womens-leather-boots-2`; each returned HTTP 200, one H1, canonical, SEO meta, updated title/description, working internal links, no unsupported claims, no Liquid errors and sampled images returned 200.
+Completion basis: approved as done based on ChatGPT review before `HOMEPAGE-COMMERCIAL-REDESIGN-01`.
+Blocker: none.
+
+### HOMEPAGE-COMMERCIAL-REDESIGN-01 — Commercial homepage journey
+
+Status: review
+Starting commit: `a1e4a0a368d506138fc9ee8a5c0b8c26fa0703e3`
+Branch: `sprint/seo-fallback-foundation`
+Live theme: `122053689424`
+
+Homepage structure changed to a single purpose-built BestPrintsCo commercial journey:
+
+- hero with one brand promise, primary printed-boots CTA, gift-guide CTA and verified live product image;
+- category discovery for printed boots, shoes, bedding, hooded blankets and car seat covers;
+- design-world discovery for celestial/cosmic, gothic/dark, mandala/bohemian, nature/floral, animals and psychedelic/tie-dye motifs;
+- neutral featured-products section titled `Explore distinctive designs`;
+- short artwork-first brand-philosophy section;
+- links to the two published Guides articles;
+- factual trust/help links to Contact Us, Order Tracking, Shipping Policy and Refund Policy.
+
+Theme files changed and selectively deployed to live: `templates/index.json`, `sections/bpc-homepage-commercial.liquid`, `assets/bpc-homepage-commercial.css`.
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260715-173617-HOMEPAGE-COMMERCIAL-REDESIGN-01`.
+Validation: `git diff --check` passed; JSONC, CSS brace, Liquid schema-marker checks passed; Shopify Theme Check showed no offenses for the three changed files. Live desktop and mobile Chrome checks returned HTTP 200, one H1, the new homepage sections, no Liquid errors, no unsupported promotion/sales/scarcity language, no horizontal mobile overflow, no broken homepage images after scroll, and no broken homepage links. Representative collection and product destinations returned HTTP 200 with one H1 and no Liquid errors.
+Console note: live browser validation still shows external Shop Pay, analytics and Printful resource/CSP blocks unrelated to the new homepage theme files.
 Blocker: none.
