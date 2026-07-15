@@ -1,49 +1,57 @@
 # ChatGPT Handoff
 
-Task ID: COMMERCIAL-GROWTH-SPRINT-3
+Task ID: CONTENT-MEDIA-RECONCILIATION
 Status: review
 Branch: sprint/seo-fallback-foundation
-Previous sprint final commit: fbc1b47b3cfdf9da0e8e5771a058c33971d2937f
+Starting commit: 712e9024e782115fc6028581dddc8b52eee6ddc2
 Final commit: this commit
 
 ## Completed
 
-- COMMERCIAL-GROWTH-SPRINT-2 is done: 30 priority products were optimized, `car-seat-covers` gained the missing `/collections/all` internal link, homepage priority collection links were already present, and indexing readiness passed.
-- Corrected Product JSON-LD description source in `sections/main-product.liquid`; selectively deployed that file to live theme `122053689424` with `--allow-live --nodelete`.
-- Optimized the one eligible published running-shoe representative: `colorful-sneakers-6`.
-- Feed readiness now passes on representative products from all five priority collections: title, canonical, primary image, price, currency, availability, brand/vendor, product description, Product JSON-LD, and no Liquid errors.
-- Search Console verification tag remains present; GA4 `G-JFC5ERBRYC` is present on the live homepage.
+- Performed one focused read-only reconciliation of Shopify content and media state.
+- Verified the `Guides` blog exists exactly once.
+- Verified both guide articles exist once, are published, and are inside the `Guides` blog:
+  - `printed-boots-style-guide`
+  - `unique-printed-gift-ideas`
+- Verified live article URLs return HTTP 200, render canonical tags, render one meta description, and show no Liquid errors.
+- Verified the app’s currently granted scopes.
+- Queried all 52 approved priority products and primary media records.
+- Confirmed 52/52 approved priority products already have populated primary-image alt text.
+- Updated 0 media records in this Codex reconciliation because no blank primary-image alt fields remained.
+- Confirmed no duplicate target articles and no duplicate `Guides` blogs.
+- Confirmed no missing products, handle mismatches, inactive products, or Online Store publication gaps among the 52 approved priority products.
 
-## Shopify records changed
+## Verified scopes
 
-- Product `colorful-sneakers-6`: title, descriptionHtml, SEO title, SEO description only.
-- No handles, URLs, redirects, tags, collections, media, media order, filenames, vendor, product type, template, publication status, variants, options, SKUs, prices, compare-at prices, inventory, checkout, customer, order, or supplier data changed.
+`read_analytics`, `read_channels`, `read_content`, `read_customer_events`, `read_files`, `read_inventory`, `read_markets`, `read_online_store_navigation`, `read_online_store_pages`, `read_pixels`, `read_product_feeds`, `read_product_listings`, `read_products`, `read_publications`, `read_reports`, `read_themes`, `write_content`, `write_files`, `write_online_store_navigation`, `write_online_store_pages`, `write_product_feeds`, `write_product_listings`, `write_products`, `write_theme_code`, `write_themes`
 
-## Theme files changed and deployed
+## Guide URLs
 
-- `sections/main-product.liquid`: deployed live to theme `122053689424`.
+- `https://bestprintsco.com/blogs/guides/printed-boots-style-guide` — published, unique handle, HTTP 200, canonical present, one meta description.
+- `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas` — published, unique handle, HTTP 200, canonical present, one meta description.
 
-## Evidence
+## Media alt reconciliation
 
-- Running-shoe rollback snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T13-00-22-919Z\COMMERCIAL-GROWTH-SPRINT-3-running-shoe-snapshot.json`
-- Product JSON-LD live validation passed on:
-  - `https://bestprintsco.com/products/skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2`
-  - `https://bestprintsco.com/products/colorful-sneakers-6`
-  - `https://bestprintsco.com/products/snake-skin-pattern-car-seat-covers`
-  - `https://bestprintsco.com/products/pink-purple-dream-catcher-bedding-set`
-  - `https://bestprintsco.com/products/purple-camouflage-hooded-blanket-1`
-- Theme Check was attempted once; it failed only on pre-existing theme-wide settings/schema/locales/password asset issues, not the one-line Product JSON-LD change.
+- Approved priority products checked: 52
+- Primary-image alt already present: 52
+- Newly updated in this reconciliation: 0
+- Skipped already complete: 52
+- Blank remaining: 0
 
-## Partial blockers / owner actions
+## Not changed in this reconciliation
 
-- Buying guides: Shopify Admin API denied `blogs` read and `blogCreate`; owner must grant `write_content` or `write_online_store_pages` to create/publish Guides blog articles through Admin API.
-- Real media alt optimization: Shopify Admin API denied `fileUpdate`; owner must grant `write_files` or `write_themes` plus edit-files permission before Codex can update media alt text directly.
-- Merchant Center / Google channel: owner must verify Google & YouTube channel and Merchant Center sync in Shopify admin because the current app cannot inspect that external connection.
-- Homepage SEO proposal: owner must set homepage SEO title/meta in Shopify admin or provide an approved API path; the current Admin app has no safe shop SEO update mutation.
+- No Shopify product fields were changed.
+- No image files, URLs, filenames, image order, media associations, product handles, URLs, redirects, SKUs, prices, inventory, variants, options, or publication status were changed.
+- No duplicate blogs or articles were created.
+- No guide layout, hero image, gallery, CSS, or visual-content redesign was performed.
+- No completed product SEO, Product JSON-LD, GA4, Search Console, or feed work was repeated.
 
-## Rollback
+## Remaining owner actions
 
-- Revert this commit and selectively push `sections/main-product.liquid` to live if the JSON-LD theme change needs rollback.
-- Restore `colorful-sneakers-6` from the running-shoe snapshot using Admin GraphQL for title, descriptionHtml, SEO title, and SEO description only.
+- Merchant Center / Google & YouTube channel: owner must verify product sync and account status inside Shopify/Google admin.
 
-Blocker: none for remaining executable approved work; remaining items require owner-granted scopes or external Google account access.
+## Recommended next focused task
+
+Guide visual/editorial redesign review for the two existing published guide articles. Do not duplicate articles; edit only after owner approves the visual/content direction.
+
+Blocker: none.

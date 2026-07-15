@@ -253,7 +253,20 @@ Product JSON-LD correction: Product structured-data descriptions now use the vis
 Product optimized: `colorful-sneakers-6` in `running-shoes`; changed only title, `descriptionHtml`, SEO title, and SEO description. Snapshot: `C:\Projects\bestprintsco-backups\2026-07-15T13-00-22-919Z\COMMERCIAL-GROWTH-SPRINT-3-running-shoe-snapshot.json`.
 Measurement: Search Console verification tag remains present; GA4 `G-JFC5ERBRYC` is present once on the live homepage.
 Merchant Center / Google channel: owner action remains required because the current Admin app cannot inspect the Google & YouTube channel or Merchant Center sync state.
-Buying guides: partially blocked; `blogCreate` is denied and requires `write_content` or `write_online_store_pages`. No theme-coded fake guide pages were created.
-Real media alt optimization: partially blocked; `fileUpdate` is denied and requires `write_files` or `write_themes` plus edit-files permission. No media files or media order were changed.
+Buying guides: done after expanded app scopes and owner-created `Guides` blog. The existing published articles `printed-boots-style-guide` and `unique-printed-gift-ideas` were reconciled as unique, published, canonical live pages with one meta description each. Guide visual/editorial redesign is queued for separate owner review; no further article layout, hero image, gallery, CSS, or visual-content changes are approved in the current reconciliation.
+Real media alt optimization: done by authorized Shopify connection and reconciled against live state. All 52 approved priority products have populated primary-image alt text; no image files, URLs, filenames, media order, media associations, or product fields were modified during reconciliation.
 Homepage SEO proposal: owner/admin action remains required; current Admin app exposes no safe shop SEO update mutation.
 Blocker: none for executable approved work; remaining items require owner-granted Shopify scopes or external Google account access.
+
+### CONTENT-MEDIA-RECONCILIATION — Guides and primary media alt
+
+Status: review
+Starting commit: `712e9024e782115fc6028581dddc8b52eee6ddc2`
+Guides blog: existing as `guides`.
+Guide articles: `printed-boots-style-guide` and `unique-printed-gift-ideas` each exist once, are published inside the `Guides` blog, return HTTP 200, render a canonical tag, and render one meta description.
+Media alt reconciliation: 52 approved priority products checked; 52 already had primary-image alt text populated; 0 newly updated in this Codex reconciliation; 0 blank remaining.
+Protected product fields: reconciliation found no missing products, handle mismatches, inactive products, or Online Store publication gaps among the 52 approved priority products.
+Granted scopes verified: `read_analytics`, `read_channels`, `read_content`, `read_customer_events`, `read_files`, `read_inventory`, `read_markets`, `read_online_store_navigation`, `read_online_store_pages`, `read_pixels`, `read_product_feeds`, `read_product_listings`, `read_products`, `read_publications`, `read_reports`, `read_themes`, `write_content`, `write_files`, `write_online_store_navigation`, `write_online_store_pages`, `write_product_feeds`, `write_product_listings`, `write_products`, `write_theme_code`, `write_themes`.
+Merchant Center / Google channel: owner action remains required to verify Google & YouTube channel and Merchant Center sync inside Shopify/Google admin.
+Next approved focused task: guide visual/editorial redesign review, without duplicating articles or changing product SEO/feed work.
+Blocker: none.
