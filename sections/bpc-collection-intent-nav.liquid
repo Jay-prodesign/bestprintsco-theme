@@ -1,0 +1,56 @@
+{%- liquid
+  assign product_links = 'vegan-leather-boots|Printed Boots,running-shoes|Shoes,bags|Bags,bedding-sets|Bedding,all-home-products|Home,car-accessories|Car' | split: ','
+  assign design_links = 'elephant-designs-gifts|Elephant,dragonfly-designs-gifts|Dragonfly,skull-dark-art-designs|Skull,hippie-peace-tie-dye-designs|Hippie,floral-botanical-designs|Floral' | split: ','
+-%}
+<section class="bpc-intent-nav" aria-label="Explore related collections">
+  <div class="container-fluid">
+    <div class="bpc-intent-row">
+      <div class="bpc-intent-head">
+        <span class="bpc-intent-kicker">Browse faster</span>
+        <h2>Shop by product</h2>
+      </div>
+      <div class="bpc-intent-track" role="list">
+        {%- for item in product_links -%}
+          {%- assign parts = item | split: '|' -%}
+          {%- assign target = collections[parts[0]] -%}
+          {%- if target != blank -%}
+            {%- assign image = target.image | default: target.products.first.featured_image -%}
+            <a role="listitem" class="bpc-intent-card{% if collection.handle == target.handle %} is-active{% endif %}" href="{{ target.url }}">
+              <span class="bpc-intent-image">
+                {%- if image != blank -%}{{ image | image_url: width: 180 | image_tag: loading: 'lazy', widths: '90,180', alt: parts[1] }}{%- endif -%}
+              </span>
+              <span class="bpc-intent-label">{{ parts[1] }}</span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+    <div class="bpc-intent-row">
+      <div class="bpc-intent-head">
+        <span class="bpc-intent-kicker">Choose your world</span>
+        <h2>Explore designs</h2>
+      </div>
+      <div class="bpc-intent-track" role="list">
+        {%- for item in design_links -%}
+          {%- assign parts = item | split: '|' -%}
+          {%- assign target = collections[parts[0]] -%}
+          {%- if target != blank -%}
+            {%- assign image = target.image | default: target.products.first.featured_image -%}
+            <a role="listitem" class="bpc-intent-card{% if collection.handle == target.handle %} is-active{% endif %}" href="{{ target.url }}">
+              <span class="bpc-intent-image">
+                {%- if image != blank -%}{{ image | image_url: width: 180 | image_tag: loading: 'lazy', widths: '90,180', alt: parts[1] }}{%- endif -%}
+              </span>
+              <span class="bpc-intent-label">{{ parts[1] }}</span>
+            </a>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+.bpc-intent-nav{padding:18px 0 34px;background:#fffdfb;border-bottom:1px solid #eadfe5}.bpc-intent-row+.bpc-intent-row{margin-top:26px}.bpc-intent-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:12px}.bpc-intent-head h2{margin:0;color:#3a2030;font-size:24px;line-height:1.15}.bpc-intent-kicker{color:#8f416b;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}.bpc-intent-track{display:flex;gap:14px;overflow-x:auto;padding:2px 2px 8px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin}.bpc-intent-card{flex:0 0 116px;scroll-snap-align:start;text-align:center;color:#3a2030}.bpc-intent-image{display:block;width:82px;height:82px;margin:0 auto 8px;border-radius:50%;overflow:hidden;background:#f3ecef;border:2px solid transparent;box-shadow:0 6px 18px rgba(58,32,48,.08);transition:transform .2s ease,border-color .2s ease}.bpc-intent-image img{width:100%;height:100%;object-fit:cover}.bpc-intent-label{display:block;font-size:14px;font-weight:650;line-height:1.25}.bpc-intent-card:hover .bpc-intent-image{transform:translateY(-2px);border-color:#c39a5b}.bpc-intent-card.is-active .bpc-intent-image{border-color:#641a45}.bpc-intent-card.is-active .bpc-intent-label{color:#641a45}.bpc-intent-track:focus-visible{outline:2px solid #641a45;outline-offset:3px}@media(max-width:767px){.bpc-intent-nav{padding:14px 0 26px}.bpc-intent-head{display:block;margin-bottom:10px}.bpc-intent-head h2{font-size:20px;margin-top:3px}.bpc-intent-track{margin-right:-15px;padding-right:15px}.bpc-intent-card{flex-basis:94px}.bpc-intent-image{width:70px;height:70px}.bpc-intent-label{font-size:13px}}
+</style>
+{% schema %}
+{"name":"BPC intent navigation","settings":[],"presets":[{"name":"BPC intent navigation"}]}
+{% endschema %}

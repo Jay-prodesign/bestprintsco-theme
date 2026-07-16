@@ -365,3 +365,38 @@ Validation: `git diff --check` passed; `templates/article.json` JSONC syntax pas
 Rollback snapshot: `C:\Projects\bestprintsco-backups\20260716-110937-GIFT-FINDER-LIVE-ROLLBACK`.
 Rollback method: restore `sections/bpc-gift-finder.liquid` and `templates/article.json` from the rollback snapshot and selectively deploy them to live with `--allow-live --nodelete`.
 Blocker: none.
+
+### COMMERCIAL-THEME-RECONCILIATION-01 — ChatGPT theme API sync
+
+Status: review
+Starting commit: `8a5fdd4a911fd2c4e1c30cfb2f558fa95057dfc5`
+Branch: `sprint/seo-fallback-foundation`
+Origin: ChatGPT-updated unpublished Shopify theme `130320695376` through Shopify Admin API.
+Live theme: `122053689424`
+
+Files reconciled from unpublished theme and selectively deployed to live:
+
+- `assets/bpc-brand-system.css`
+- `sections/announcement.liquid`
+- `sections/bpc-homepage-commercial.liquid`
+- `templates/index.json`
+- `sections/bpc-collection-discovery.liquid`
+- `sections/bpc-collection-intent-nav.liquid`
+- `templates/collection.json`
+- `sections/horizontal-menu.liquid`
+- `snippets/bpc-menu-branch.liquid`
+- `sections/bpc-product-discovery.liquid`
+- `templates/product.json`
+- `sections/bpc-gift-finder.liquid`
+- `templates/article.json`
+
+Scope: synchronized ChatGPT-authored commercial theme updates from unpublished theme `130320695376` into GitHub and live theme `122053689424`; no Shopify product, collection, price, inventory, variant, checkout, customer, or order data changed.
+
+Snapshot and rollback evidence: `C:\Projects\bestprintsco-backups\20260716-112112-COMMERCIAL-RECONCILE` contains unpublished-theme, live-theme, and repository copies of all reconciled paths plus a manifest. Rollback method: restore the affected path copies from `live-122053689424` and selectively deploy those files to live with `--allow-live --nodelete`.
+
+Validation: clean worktree/branch/remote confirmed before reconciliation; `git diff --check` passed; changed JSON templates parsed as JSONC; CSS brace validation passed; Liquid section schema checks passed; Shopify Theme Check reported no offenses for the reconciled files; referenced collection handles resolved; unpublished-theme desktop/mobile preview checks passed for homepage, a product-type collection, a design-world collection, a product page, the Unique Printed Gift Ideas guide, and the Printed Boots Style Guide; selective live deployment passed; live desktop/mobile checks passed for the same representative pages with HTTP 200, one H1, no Liquid errors, no horizontal overflow, working representative links, Gift Finder target-only behavior, collection discovery, product discovery, and no visibly broken sampled images.
+
+Harmless warnings: live browser validation still reports external Shop Pay, analytics, and third-party resource/CSP blocks unrelated to the reconciled theme files. Shopify serializes JSON template assets differently from the repository, so JSON templates were compared semantically rather than by raw byte hash.
+
+Repository, unpublished theme, and live theme synchronization: passed for the reconciled paths after selective live deployment.
+Blocker: none.

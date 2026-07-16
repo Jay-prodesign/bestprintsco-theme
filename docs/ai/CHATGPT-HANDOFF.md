@@ -1,71 +1,66 @@
 # ChatGPT Handoff
 
-Task ID: GIFT-FINDER-RECONCILIATION
+Task ID: COMMERCIAL-THEME-RECONCILIATION-01
 Status: review
 Branch: sprint/seo-fallback-foundation
-Starting commit: 6d41dc8c7317654ec61f137f9390bcd71088444e
+Starting commit: 8a5fdd4a911fd2c4e1c30cfb2f558fa95057dfc5
 Final commit: this commit
 
 ## Origin
 
-ChatGPT directly updated unpublished Shopify theme `130320695376` through the Shopify Admin API.
+ChatGPT directly created or updated commercial theme files in unpublished Shopify theme `130320695376` through the Shopify Admin API.
 
-Reconciled files:
+Repository reconciliation source: unpublished theme `130320695376`.
+Live deployment target: live theme `122053689424`.
 
+## Files reconciled and deployed
+
+- `assets/bpc-brand-system.css`
+- `sections/announcement.liquid`
+- `sections/bpc-homepage-commercial.liquid`
+- `templates/index.json`
+- `sections/bpc-collection-discovery.liquid`
+- `sections/bpc-collection-intent-nav.liquid`
+- `templates/collection.json`
+- `sections/horizontal-menu.liquid`
+- `snippets/bpc-menu-branch.liquid`
+- `sections/bpc-product-discovery.liquid`
+- `templates/product.json`
 - `sections/bpc-gift-finder.liquid`
 - `templates/article.json`
 
-## Implementation
+No Shopify product, collection, price, inventory, variant, checkout, customer, or order data was changed.
 
-The Gift Finder section is now synchronized into the repository, unpublished theme `130320695376`, and live theme `122053689424`.
+## Snapshot and rollback
 
-The section renders only for `/blogs/guides/unique-printed-gift-ideas` and adds:
+Snapshot location: `C:\Projects\bestprintsco-backups\20260716-112112-COMMERCIAL-RECONCILE`
 
-- Shop by Design links: Elephant, Dragonfly, Dark Art, Hippie, Floral.
-- Shop by Product links: Printed Boots, Shoes, Bags, Bedding, Hooded Blankets, Car, All Products.
-- Mobile horizontal scrolling for the design cards and product pills.
-- Gift-guide-specific hiding of author/date metadata, article tags/share controls, previous/next posts and related-article elements.
+Snapshot contents:
 
-Existing article body content and product cards were preserved.
+- unpublished theme `130320695376` copies for all reconciled paths;
+- live theme `122053689424` copies for available paths;
+- repository copies from before reconciliation;
+- `manifest.json`.
 
-## Correction made during reconciliation
-
-The pulled section originally checked only `article.handle == 'unique-printed-gift-ideas'`, which left an empty section placeholder in preview. The guard now also supports the full Guides article handle and article URL, preserving target-only rendering.
-
-## Deployment
-
-Selective deployment passed:
-
-- unpublished theme `130320695376`: `sections/bpc-gift-finder.liquid`, `templates/article.json`
-- live theme `122053689424`: `sections/bpc-gift-finder.liquid`, `templates/article.json`
-
-No full-theme push or theme publish was performed.
-
-## Rollback
-
-Rollback snapshot: `C:\Projects\bestprintsco-backups\20260716-110937-GIFT-FINDER-LIVE-ROLLBACK`
-
-Rollback method: restore `sections/bpc-gift-finder.liquid` and `templates/article.json` from the snapshot and selectively deploy those two files to live with `--allow-live --nodelete`.
+Rollback method: restore affected files from the snapshot's `live-122053689424` copies and selectively deploy only those paths to live theme `122053689424` with `--allow-live --nodelete`.
 
 ## Validation
 
-- Clean worktree, expected branch/base and remote confirmed before reconciliation.
+- Worktree, branch, remote, and starting commit confirmed before reconciliation.
 - `git diff --check`: passed.
-- `templates/article.json` JSONC syntax: passed.
-- `sections/bpc-gift-finder.liquid` guard/schema validation: passed.
-- Shopify Theme Check: no errors for the changed files; one non-blocking `HardcodedRoutes` warning remains for `/collections/all`.
-- All referenced collection handles resolved.
-- Preview target page checked:
-  - `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas?preview_theme_id=130320695376`
-- Preview unaffected page checked:
-  - `https://bestprintsco.com/blogs/guides/printed-boots-style-guide?preview_theme_id=130320695376`
-- Live target page checked:
-  - `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas`
-- Live unaffected page checked:
-  - `https://bestprintsco.com/blogs/guides/printed-boots-style-guide`
+- JSON templates parsed as JSONC: passed.
+- CSS brace validation for `assets/bpc-brand-system.css`: passed.
+- Liquid section/schema marker checks: passed.
+- Shopify Theme Check for reconciled files: no offenses.
+- Referenced collection handles resolved.
+- Unpublished preview checks on theme `130320695376`: passed for homepage, one product-type collection, one design-world collection, one product page, `/blogs/guides/unique-printed-gift-ideas`, and `/blogs/guides/printed-boots-style-guide`.
+- Selective live deploy to theme `122053689424`: passed.
+- Live checks: passed for the same representative pages with HTTP 200, one H1, no Liquid errors, no horizontal overflow, working representative links, Gift Finder target-only behavior, collection discovery, product discovery, and no visibly broken sampled images.
 
-Live validation passed: target guide returned HTTP 200, one H1, Gift Finder rendered on desktop/mobile, mobile horizontal scrolling worked, Gift Finder links resolved, Gift Finder images loaded, no Liquid errors, no horizontal overflow, target-only hide rules applied, and the unaffected printed-boots guide did not render the Gift Finder.
+Harmless warnings: Chrome reported external Shop Pay, analytics, and third-party resource/CSP blocks unrelated to the reconciled theme files. Shopify serializes JSON template assets differently than the repository, so JSON templates were compared semantically rather than by raw byte hash.
 
-Console note: Chrome reported external Shop Pay/analytics resource blocks unrelated to the changed theme files.
+## Synchronization result
+
+Repository, unpublished theme `130320695376`, and live theme `122053689424` are synchronized for the reconciled commercial theme paths.
 
 Blocker: none.

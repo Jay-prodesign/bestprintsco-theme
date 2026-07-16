@@ -1,0 +1,65 @@
+{% liquid
+  assign design_handles = 'elephant-designs-gifts|dragonfly-designs-gifts|skull-dark-art-designs|hippie-peace-tie-dye-designs|floral-botanical-designs' | split: '|'
+  assign is_design_hub = false
+  if design_handles contains collection.handle
+    assign is_design_hub = true
+  endif
+%}
+{% if is_design_hub %}
+<section class="bpc-collection-discovery" aria-labelledby="bpc-discovery-title">
+  <div class="bpc-cd-wrap">
+    <header class="bpc-cd-heading">
+      <p>Continue exploring</p>
+      <h2 id="bpc-discovery-title">Find another way into the artwork.</h2>
+      <span>Browse a related design world, switch product type, or use a guide to narrow your choice.</span>
+    </header>
+    <div class="bpc-cd-designs">
+      {% assign shown = 0 %}
+      {% for handle in design_handles %}
+        {% if handle != collection.handle and shown < 3 %}
+          {% assign related = collections[handle] %}
+          {% if related != blank %}
+            <a class="bpc-cd-card" href="{{ related.url }}">
+              <div class="bpc-cd-media">
+                {% if related.image %}
+                  {{ related.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360,600,900', sizes: '(min-width: 900px) 33vw, 100vw', alt: related.title }}
+                {% elsif related.products.first.featured_image %}
+                  {{ related.products.first.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360,600,900', sizes: '(min-width: 900px) 33vw, 100vw', alt: related.title }}
+                {% endif %}
+              </div>
+              <span><small>Related design world</small><strong>{{ related.title }}</strong><em>Explore collection →</em></span>
+            </a>
+            {% assign shown = shown | plus: 1 %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    </div>
+    <div class="bpc-cd-paths">
+      <div class="bpc-cd-panel">
+        <p>Shop by product</p><h3>Prefer a specific product type?</h3>
+        <div class="bpc-cd-links">
+          <a href="/collections/vegan-leather-boots">Printed boots</a><a href="/collections/running-shoes">Printed shoes</a>
+          {% unless collection.handle == 'floral-botanical-designs' %}<a href="/collections/bags">Bags</a><a href="/collections/bedding-sets">Bedding</a><a href="/collections/car-accessories">Car accessories</a><a href="/collections/all-home-products">Home products</a>{% endunless %}
+        </div>
+      </div>
+      <div class="bpc-cd-panel bpc-cd-panel-dark">
+        <p>Guides and gift ideas</p><h3>Need a clearer starting point?</h3>
+        <a class="bpc-cd-guide" href="/blogs/guides/unique-printed-gift-ideas">Explore unique printed gift ideas <span>→</span></a>
+        <a class="bpc-cd-guide" href="/blogs/guides/printed-boots-style-guide">Read the printed boots style guide <span>→</span></a>
+      </div>
+    </div>
+    <div class="bpc-cd-faq">
+      <header><p>Helpful answers</p><h2>Before you continue browsing.</h2></header>
+      <div>
+        <details><summary>What products are included in this collection?</summary><div>{% if collection.handle == 'floral-botanical-designs' %}This collection is intentionally focused on floral and botanical footwear, including printed boots, high tops, low tops, casual shoes and running shoes.{% else %}This curated design collection brings together the same broad artwork theme across several available product formats. The product cards show the current format, imagery and available options for each item.{% endif %}</div></details>
+        <details><summary>Can I browse the catalog by product type instead?</summary><div>Yes. Use the product links above to move directly into printed boots, shoes, bags, bedding, home products or car accessories without browsing the entire catalog.</div></details>
+        <details><summary>How can I compare the available designs?</summary><div>Use the collection filters and sorting controls, then open individual product pages to compare the artwork, product images and currently available options.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+<style>
+.bpc-collection-discovery{padding:88px 0;background:#f7f3ee;color:#1b1519}.bpc-cd-wrap{width:min(1280px,calc(100% - 40px));margin:auto}.bpc-cd-heading{max-width:760px;margin-bottom:34px}.bpc-cd-heading p,.bpc-cd-panel>p,.bpc-cd-faq header p{margin:0;color:#8f416b;font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}.bpc-cd-heading h2,.bpc-cd-faq h2{margin:9px 0 12px;font-size:clamp(34px,4vw,54px);line-height:1.04;letter-spacing:-.04em}.bpc-cd-heading span{color:#746a70;font-size:17px;line-height:1.65}.bpc-cd-designs{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.bpc-cd-card{position:relative;min-height:430px;overflow:hidden;border-radius:22px;color:#fff;text-decoration:none}.bpc-cd-media,.bpc-cd-media img{width:100%;height:100%}.bpc-cd-media img{object-fit:cover;transition:transform .4s}.bpc-cd-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(22,11,18,.92),transparent 68%)}.bpc-cd-card>span{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}.bpc-cd-card small,.bpc-cd-card strong,.bpc-cd-card em{display:block}.bpc-cd-card small{color:#e5c28e;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.bpc-cd-card strong{margin-top:5px;font-size:25px;line-height:1.08}.bpc-cd-card em{margin-top:9px;color:#e5dce1;font-size:13px;font-style:normal;font-weight:700}.bpc-cd-card:hover img{transform:scale(1.04)}.bpc-cd-paths{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.bpc-cd-panel{padding:34px;border:1px solid #e3d8d1;border-radius:22px;background:#fffdfb}.bpc-cd-panel h3{margin:8px 0 22px;font-size:28px}.bpc-cd-links{display:flex;gap:9px;flex-wrap:wrap}.bpc-cd-links a{padding:10px 15px;border:1px solid #dfd2ca;border-radius:99px;color:#641a45;text-decoration:none;font-weight:750}.bpc-cd-panel-dark{background:#3a2030;color:#fff;border-color:#3a2030}.bpc-cd-panel-dark>p{color:#d4ad75}.bpc-cd-guide{display:flex;justify-content:space-between;padding:14px 0;border-top:1px solid #ffffff24;color:#fff;text-decoration:none;font-weight:750}.bpc-cd-faq{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;margin-top:76px}.bpc-cd-faq details{border-top:1px solid #d9ccc5}.bpc-cd-faq summary{padding:20px 30px 20px 0;cursor:pointer;font-size:17px;font-weight:800}.bpc-cd-faq details div{padding:0 30px 20px 0;color:#746a70;line-height:1.65}.bpc-cd-faq details:last-child{border-bottom:1px solid #d9ccc5}@media(max-width:800px){.bpc-collection-discovery{padding:62px 0}.bpc-cd-wrap{width:calc(100% - 24px)}.bpc-cd-designs{grid-template-columns:1fr}.bpc-cd-card{min-height:390px}.bpc-cd-paths,.bpc-cd-faq{grid-template-columns:1fr}.bpc-cd-faq{gap:20px;margin-top:56px}.bpc-cd-panel{padding:25px}}
+</style>
+{% schema %}{"name":"BPC collection discovery","settings":[],"presets":[{"name":"BPC collection discovery"}]}{% endschema %}

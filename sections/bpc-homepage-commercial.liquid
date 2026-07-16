@@ -1,235 +1,72 @@
-{{ 'bpc-homepage-commercial.css' | asset_url | stylesheet_tag }}
-
-{%- liquid
-  assign hero_product = all_products['skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2']
-  assign hero_image = hero_product.featured_image
-  assign boots_collection = collections['vegan-leather-boots']
-  assign shoes_collection = collections['running-shoes']
-  assign bedding_collection = collections['bedding-sets']
-  assign blankets_collection = collections['hooded-blankets']
-  assign car_collection = collections['car-seat-covers']
-  assign galaxy_product = all_products['eco-leather-galaxy-womens-leather-boots']
-  assign gothic_product = all_products['skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2']
-  assign mandala_product = all_products['elephant-mandala-2-handcrafted-boots']
-  assign butterfly_product = all_products['magical-butterflies-handcrafted-boots']
-  assign lion_product = all_products['colorful-lion-womens-leather-boots']
-  assign peace_product = all_products['peace-tiedye-womens-leather-boots']
-  assign sneaker_product = all_products['colorful-sneakers-6']
--%}
-
-<main class="bpc-home" aria-label="BestPrintsCo homepage">
-  <section class="bpc-home__wrap bpc-home__hero">
-    <div class="bpc-home__hero-copyblock">
-      <p class="bpc-home__eyebrow">Expressive printed products</p>
-      <h1>Wear it, gift it, live with it — in artwork that feels personal.</h1>
-      <p class="bpc-home__hero-copy">
-        BestPrintsCo brings bold visual designs to printed boots, shoes, bedding, blankets and everyday statement pieces, so shoppers can start with a style they love and move quickly to the right collection.
-      </p>
-      <div class="bpc-home__actions">
-        <a class="bpc-home__button bpc-home__button--primary" href="{{ boots_collection.url | default: '/collections/vegan-leather-boots' }}">Shop printed boots</a>
-        <a class="bpc-home__button" href="/blogs/guides/unique-printed-gift-ideas">Browse gift ideas</a>
+{% liquid
+assign elephant = collections['elephant-designs-gifts']
+assign boots = collections['vegan-leather-boots']
+assign bedding = collections['bedding-sets']
+assign products = 'vegan-leather-boots|running-shoes|bags|bedding-sets|all-home-products|car-accessories' | split: '|'
+assign designs = 'elephant-designs-gifts|dragonfly-designs-gifts|skull-dark-art-designs|hippie-peace-tie-dye-designs|floral-botanical-designs' | split: '|'
+%}
+<section class="bpc" data-bpc-homepage-v2>
+  <div class="bpc-hero">
+    <div class="bpc-wrap bpc-hero-grid">
+      <div class="bpc-hero-copy">
+        <p class="bpc-kicker">Art for every part of your world</p>
+        <h1>Discover printed designs that feel unmistakably you.</h1>
+        <p>Explore expressive artwork across boots, shoes, bags, home pieces and car accessories. Start with the product you need—or the design you already love.</p>
+        <div class="bpc-actions">
+          <a class="bpc-button bpc-button-light" href="/collections/elephant-designs-gifts">Explore design worlds</a>
+          <a class="bpc-button bpc-button-line" href="/collections/vegan-leather-boots">Shop printed boots</a>
+        </div>
+        <div class="bpc-quick"><a href="/collections/running-shoes">Printed shoes</a><a href="/collections/bedding-sets">Bedding</a><a href="/collections/bags">Bags</a><a href="/collections/car-accessories">Car accessories</a></div>
       </div>
-    </div>
-    <div class="bpc-home__hero-media">
-      <a class="bpc-home__hero-frame" href="{{ hero_product.url | default: '/collections/vegan-leather-boots' }}" aria-label="Shop skull and octopus printed boots">
-        {%- if hero_image != blank -%}
-          {{ hero_image | image_url: width: 1200 | image_tag: widths: '480, 720, 960, 1200', sizes: '(min-width: 900px) 44vw, 100vw', alt: 'Blue skull and octopus artwork printed boots' }}
-        {%- endif -%}
-      </a>
-      <div class="bpc-home__hero-note">Start with the artwork: dark, cosmic, floral, animal, mandala and expressive designs are organized below for faster discovery.</div>
-    </div>
-  </section>
-
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap">
-      <div class="bpc-home__section-heading">
-        <h2>Shop by product category</h2>
-        <p>Move from the homepage into the product families most likely to match the shopper’s intent.</p>
-      </div>
-      <div class="bpc-home__grid bpc-home__grid--categories">
-        <a class="bpc-home__card" href="{{ boots_collection.url | default: '/collections/vegan-leather-boots' }}">
-          <span class="bpc-home__card-image">
-            {%- if gothic_product.featured_image != blank -%}
-              {{ gothic_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed boots with blue skull and octopus artwork' }}
-            {%- endif -%}
-          </span>
-          <span class="bpc-home__card-body">
-            <h3>Printed boots</h3>
-            <p>Statement boot designs organized for visual shoppers.</p>
-            <span class="bpc-home__text-link">Shop boots</span>
-          </span>
+      <div class="bpc-collage">
+        <a class="bpc-tile bpc-tile-main" href="{{ elephant.url }}">
+          {% if elephant.image %}{{ elephant.image | image_url: width: 1500 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '700,1000,1500', sizes: '(min-width:990px) 50vw,100vw', alt: 'Elephant designs and gifts' }}{% elsif elephant.products.first.featured_image %}{{ elephant.products.first.featured_image | image_url: width: 1500 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '700,1000,1500', sizes: '(min-width:990px) 50vw,100vw', alt: elephant.products.first.title }}{% endif %}
+          <span><small>Featured design world</small><strong>Elephant designs</strong><em>Explore collection →</em></span>
         </a>
-        <a class="bpc-home__card" href="{{ shoes_collection.url | default: '/collections/running-shoes' }}">
-          <span class="bpc-home__card-image">
-            {%- if sneaker_product.featured_image != blank -%}
-              {{ sneaker_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Colorful abstract printed running shoes' }}
-            {%- endif -%}
-          </span>
-          <span class="bpc-home__card-body">
-            <h3>Shoes</h3>
-            <p>Printed footwear with color-forward artwork.</p>
-            <span class="bpc-home__text-link">Shop shoes</span>
-          </span>
+        <a class="bpc-tile" href="{{ boots.url }}">
+          {% if boots.image %}{{ boots.image | image_url: width: 800 | image_tag: loading: 'eager', widths: '420,600,800', sizes: '(min-width:990px) 22vw,45vw', alt: 'Printed boots collection' }}{% elsif boots.products.first.featured_image %}{{ boots.products.first.featured_image | image_url: width: 800 | image_tag: loading: 'eager', widths: '420,600,800', sizes: '(min-width:990px) 22vw,45vw', alt: boots.products.first.title }}{% endif %}<span><strong>Printed boots</strong></span>
         </a>
-        <a class="bpc-home__card" href="{{ bedding_collection.url | default: '/collections/bedding-sets' }}">
-          <span class="bpc-home__card-image">
-            {%- if bedding_collection.image != blank -%}
-              {{ bedding_collection.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed bedding collection' }}
-            {%- elsif bedding_collection.products.first.featured_image != blank -%}
-              {{ bedding_collection.products.first.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed bedding set' }}
-            {%- endif -%}
-          </span>
-          <span class="bpc-home__card-body">
-            <h3>Bedding</h3>
-            <p>Room-defining printed bedding designs.</p>
-            <span class="bpc-home__text-link">Shop bedding</span>
-          </span>
-        </a>
-        <a class="bpc-home__card" href="{{ blankets_collection.url | default: '/collections/hooded-blankets' }}">
-          <span class="bpc-home__card-image">
-            {%- if blankets_collection.image != blank -%}
-              {{ blankets_collection.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed hooded blankets collection' }}
-            {%- elsif blankets_collection.products.first.featured_image != blank -%}
-              {{ blankets_collection.products.first.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed hooded blanket' }}
-            {%- endif -%}
-          </span>
-          <span class="bpc-home__card-body">
-            <h3>Hooded blankets</h3>
-            <p>Wearable blanket designs for home gifting.</p>
-            <span class="bpc-home__text-link">Shop blankets</span>
-          </span>
-        </a>
-        <a class="bpc-home__card" href="{{ car_collection.url | default: '/collections/car-seat-covers' }}">
-          <span class="bpc-home__card-image">
-            {%- if car_collection.image != blank -%}
-              {{ car_collection.image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed car seat covers collection' }}
-            {%- elsif car_collection.products.first.featured_image != blank -%}
-              {{ car_collection.products.first.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 20vw, (min-width: 640px) 33vw, 100vw', alt: 'Printed car seat covers' }}
-            {%- endif -%}
-          </span>
-          <span class="bpc-home__card-body">
-            <h3>Car seat covers</h3>
-            <p>Printed car interiors with clear visual themes.</p>
-            <span class="bpc-home__text-link">Shop car covers</span>
-          </span>
+        <a class="bpc-tile" href="{{ bedding.url }}">
+          {% if bedding.image %}{{ bedding.image | image_url: width: 800 | image_tag: loading: 'eager', widths: '420,600,800', sizes: '(min-width:990px) 22vw,45vw', alt: 'Printed bedding collection' }}{% elsif bedding.products.first.featured_image %}{{ bedding.products.first.featured_image | image_url: width: 800 | image_tag: loading: 'eager', widths: '420,600,800', sizes: '(min-width:990px) 22vw,45vw', alt: bedding.products.first.title }}{% endif %}<span><strong>Printed home</strong></span>
         </a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap">
-      <div class="bpc-home__section-heading">
-        <h2>Shop by design world</h2>
-        <p>For shoppers who know the mood before they know the product, these visual paths point to real products and guides.</p>
-      </div>
-      <div class="bpc-home__grid bpc-home__grid--worlds">
-        <a class="bpc-home__card bpc-home__world" href="{{ galaxy_product.url }}">
-          <span class="bpc-home__card-image">{{ galaxy_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Blue galaxy artwork printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Celestial and cosmic</h3><p>Galaxy blues, starry artwork and zodiac-inspired designs.</p><span class="bpc-home__text-link">View cosmic design</span></span>
+  <nav class="bpc-help" aria-label="Customer help"><div class="bpc-wrap"><a href="/pages/contact-us"><b>Need help?</b><small>Contact our team</small></a><a href="/pages/track-order"><b>Track an order</b><small>View order progress</small></a><a href="/policies/shipping-policy"><b>Shipping details</b><small>Read the current policy</small></a><a href="/policies/refund-policy"><b>Refund policy</b><small>Review before ordering</small></a></div></nav>
+
+  <div class="bpc-dark"><div class="bpc-wrap bpc-section">
+    <header class="bpc-heading bpc-heading-split"><div><p class="bpc-kicker">Choose your world</p><h2>Start with the artwork you love.</h2></div><p>Explore focused design worlds without searching through the entire catalog.</p></header>
+    <div class="bpc-designs">
+      {% for handle in designs %}{% assign c = collections[handle] %}{% if c != blank %}
+        <a class="bpc-design{% if forloop.first %} bpc-design-featured{% endif %}" href="{{ c.url }}">
+          {% if c.image %}{{ c.image | image_url: width: 1300 | image_tag: loading: 'lazy', widths: '420,700,1000,1300', sizes: '(min-width:990px) 32vw,50vw', alt: c.title }}{% elsif c.products.first.featured_image %}{{ c.products.first.featured_image | image_url: width: 1100 | image_tag: loading: 'lazy', widths: '420,700,1000', sizes: '(min-width:990px) 32vw,50vw', alt: c.products.first.title }}{% endif %}
+          <span><small>Design world</small><strong>{{ c.title }}</strong><em>Explore designs →</em></span>
         </a>
-        <a class="bpc-home__card bpc-home__world" href="{{ gothic_product.url }}">
-          <span class="bpc-home__card-image">{{ gothic_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Skull and octopus dark artwork printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Gothic and dark artwork</h3><p>Skulls, deep blues and dramatic illustrated motifs.</p><span class="bpc-home__text-link">View dark artwork</span></span>
-        </a>
-        <a class="bpc-home__card bpc-home__world" href="{{ mandala_product.url }}">
-          <span class="bpc-home__card-image">{{ mandala_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Elephant mandala artwork printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Mandala and bohemian</h3><p>Ornamental patterns, elephant artwork and dreamcatcher visuals.</p><span class="bpc-home__text-link">View mandala design</span></span>
-        </a>
-        <a class="bpc-home__card bpc-home__world" href="{{ butterfly_product.url }}">
-          <span class="bpc-home__card-image">{{ butterfly_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Glowing butterfly artwork printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Nature and floral</h3><p>Butterflies, flowers and organic visual details.</p><span class="bpc-home__text-link">View nature design</span></span>
-        </a>
-        <a class="bpc-home__card bpc-home__world" href="{{ lion_product.url }}">
-          <span class="bpc-home__card-image">{{ lion_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Colorful lion artwork printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Animals</h3><p>Lion, elephant and creature-led artwork for expressive gifts.</p><span class="bpc-home__text-link">View animal design</span></span>
-        </a>
-        <a class="bpc-home__card bpc-home__world" href="{{ peace_product.url }}">
-          <span class="bpc-home__card-image">{{ peace_product.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '360, 520, 800', sizes: '(min-width: 900px) 33vw, 100vw', alt: 'Pink tie-dye peace sign printed boots' }}</span>
-          <span class="bpc-home__card-body"><h3>Psychedelic and tie-dye</h3><p>Bright color, peace symbols and art with movement.</p><span class="bpc-home__text-link">View tie-dye design</span></span>
-        </a>
-      </div>
+      {% endif %}{% endfor %}
     </div>
-  </section>
+  </div></div>
 
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap">
-      <div class="bpc-home__section-heading">
-        <h2>Explore distinctive designs</h2>
-        <p>A neutral selection of visually clear products for shoppers who want to compare artwork quickly.</p>
-      </div>
-      <div class="bpc-home__grid bpc-home__grid--products">
-        {%- assign featured_products = 'aquarius-zodiac-boots,steampunk-purple-womens-leather-boots,purple-dream-catcher-handcrafted-boots,black-music-notes-design-shoes-womens-boots,camouflage-womens-leather-boots-2,colorful-sneakers-6' | split: ',' -%}
-        {%- for product_handle in featured_products -%}
-          {%- assign featured_product = all_products[product_handle] -%}
-          {%- if featured_product != blank -%}
-            <a class="bpc-home__product" href="{{ featured_product.url }}">
-              <span class="bpc-home__product-image">
-                {%- if featured_product.featured_image != blank -%}
-                  {{ featured_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 1100px) 25vw, (min-width: 640px) 33vw, 100vw', alt: featured_product.title }}
-                {%- endif -%}
-              </span>
-              <span class="bpc-home__product-body">
-                <h3>{{ featured_product.title }}</h3>
-                <span class="bpc-home__text-link">View design</span>
-              </span>
-            </a>
-          {%- endif -%}
-        {%- endfor -%}
-      </div>
+  <div class="bpc-wrap bpc-section">
+    <header class="bpc-heading bpc-heading-center"><p class="bpc-kicker">Know what you need?</p><h2>Shop by product.</h2><p>Move directly into a focused product collection, then narrow the artwork.</p></header>
+    <div class="bpc-products">
+      {% for handle in products %}{% assign c = collections[handle] %}{% if c != blank %}
+        <a class="bpc-product" href="{{ c.url }}"><div>{% if c.image %}{{ c.image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360,600,900', sizes: '(min-width:990px) 16vw,50vw', alt: c.title }}{% elsif c.products.first.featured_image %}{{ c.products.first.featured_image | image_url: width: 900 | image_tag: loading: 'lazy', widths: '360,600,900', sizes: '(min-width:990px) 16vw,50vw', alt: c.products.first.title }}{% endif %}</div><span><strong>{{ c.title }}</strong><small>Shop collection →</small></span></a>
+      {% endif %}{% endfor %}
     </div>
-  </section>
+  </div>
 
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap bpc-home__brand">
-      <h2>Built around the artwork first.</h2>
-      <p>BestPrintsCo is organized for shoppers who choose products by visual identity: a cosmic print, a darker illustrated motif, a peaceful mandala, a bright animal design or a home piece that gives a room a different mood. The homepage now makes those paths easier to follow without unsupported claims or forced urgency.</p>
-    </div>
-  </section>
+  <div class="bpc-wrap bpc-stories">
+    <a class="bpc-story" href="/blogs/guides/unique-printed-gift-ideas">{% if elephant.image %}{{ elephant.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,900,1200', sizes: '(min-width:990px) 50vw,100vw', alt: 'Unique printed gift ideas' }}{% endif %}<span><small>Gift ideas</small><strong>Find gifts through the designs they already love.</strong><em>Explore the gift guide →</em></span></a>
+    <a class="bpc-story" href="/blogs/guides/printed-boots-style-guide">{% if boots.image %}{{ boots.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,900,1200', sizes: '(min-width:990px) 50vw,100vw', alt: 'Printed boots style guide' }}{% elsif boots.products.first.featured_image %}{{ boots.products.first.featured_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '600,900,1200', sizes: '(min-width:990px) 50vw,100vw', alt: boots.products.first.title }}{% endif %}<span><small>Style guide</small><strong>Choose printed boots with more confidence.</strong><em>Read the guide →</em></span></a>
+  </div>
 
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap">
-      <div class="bpc-home__section-heading">
-        <h2>Visual shopping guides</h2>
-        <p>Use the guides when you want to compare design styles before choosing a product.</p>
-      </div>
-      <div class="bpc-home__guides">
-        <a class="bpc-home__guide" href="/blogs/guides/printed-boots-style-guide">
-          <span class="bpc-home__guide-image">{{ gothic_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 900px) 28vw, 100vw', alt: 'Printed boots style guide with skull artwork boots' }}</span>
-          <span class="bpc-home__guide-body"><h3>Printed Boots Style Guide</h3><p>Compare boot motifs such as skull artwork, celestial designs, mandalas, animals and floral visuals.</p><span class="bpc-home__text-link">Read the guide</span></span>
-        </a>
-        <a class="bpc-home__guide" href="/blogs/guides/unique-printed-gift-ideas">
-          <span class="bpc-home__guide-image">{{ lion_product.featured_image | image_url: width: 700 | image_tag: loading: 'lazy', widths: '360, 520, 700', sizes: '(min-width: 900px) 28vw, 100vw', alt: 'Colorful lion printed boots for gift ideas guide' }}</span>
-          <span class="bpc-home__guide-body"><h3>Unique Printed Gift Ideas</h3><p>Browse category-based gift paths across boots, bedding, blankets, car accessories and shoes.</p><span class="bpc-home__text-link">Read gift ideas</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="bpc-home__section">
-    <div class="bpc-home__wrap">
-      <div class="bpc-home__section-heading">
-        <h2>Helpful store links</h2>
-        <p>Practical pages for shoppers who want to check policies or contact details before ordering.</p>
-      </div>
-      <div class="bpc-home__trust">
-        <a class="bpc-home__trust-link" href="/pages/contact-us">Contact BestPrintsCo<span>Reach the store with order or product questions.</span></a>
-        <a class="bpc-home__trust-link" href="/pages/order-tracking">Order tracking<span>Use the current order tracking page after purchase.</span></a>
-        <a class="bpc-home__trust-link" href="/policies/shipping-policy">Shipping policy<span>Review the current shipping information before checkout.</span></a>
-        <a class="bpc-home__trust-link" href="/policies/refund-policy">Refund policy<span>Read the current return and refund policy.</span></a>
-      </div>
-    </div>
-  </section>
-</main>
-
-{% schema %}
-{
-  "name": "BPC homepage commercial",
-  "settings": [],
-  "presets": [
-    {
-      "name": "BPC homepage commercial"
-    }
-  ]
-}
-{% endschema %}
+  <div class="bpc-wrap bpc-seo"><p class="bpc-kicker">Two simple ways to explore</p><h2>Browse by product. Discover by design.</h2><p>BestPrintsCo brings printed boots, shoes, bags, bedding, home décor and car accessories into a clearer discovery system. Shop by product when you know what you need, or enter a design world when the artwork comes first.</p><div><a href="/collections/vegan-leather-boots">Printed boots</a><a href="/collections/running-shoes">Printed shoes</a><a href="/collections/bedding-sets">Printed bedding</a><a href="/collections/car-accessories">Car accessories</a><a href="/collections/all">All products</a></div></div>
+</section>
+<style>
+.bpc{--ink:#181318;--cream:#f7f3ee;--wine:#641a45;--gold:#c39a5b;background:var(--cream);color:var(--ink);overflow:hidden}.bpc *{box-sizing:border-box}.bpc-wrap{width:min(1280px,calc(100% - 40px));margin:auto}.bpc-kicker{margin:0;color:#b77a9c;font-size:12px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}.bpc-hero{padding:42px 0;background:radial-gradient(circle at 90% 5%,#6b354b,transparent 30%),linear-gradient(135deg,#151015,#371428);color:#fff}.bpc-hero-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center;min-height:680px}.bpc-hero-copy h1{margin:14px 0 22px;font-size:clamp(46px,5.5vw,78px);line-height:.98;letter-spacing:-.05em}.bpc-hero-copy>p:last-of-type{max-width:620px;color:#d6cbd1;font-size:20px;line-height:1.6}.bpc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.bpc-button{display:inline-flex;min-height:53px;padding:0 24px;align-items:center;border-radius:99px;font-weight:800;text-decoration:none}.bpc-button-light{background:#fff;color:#49142f}.bpc-button-line{border:1px solid #ffffff99;color:#fff}.bpc-quick{display:flex;gap:17px;flex-wrap:wrap;margin-top:25px}.bpc-quick a{color:#d8cdd2;font-size:14px;font-weight:700}.bpc-collage{display:grid;grid-template-columns:1.22fr .78fr;grid-template-rows:1fr 1fr;gap:13px;height:580px}.bpc-tile{position:relative;overflow:hidden;border-radius:25px;color:#fff;box-shadow:0 25px 70px #0006}.bpc-tile-main{grid-row:1/3}.bpc-tile img,.bpc-design img,.bpc-story img{width:100%;height:100%;object-fit:cover;transition:.45s}.bpc-tile:after,.bpc-design:after,.bpc-story:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#120b10e8,transparent 65%)}.bpc-tile span,.bpc-design span,.bpc-story span{position:absolute;z-index:2;left:22px;right:22px;bottom:21px}.bpc-tile small,.bpc-tile strong,.bpc-tile em,.bpc-design small,.bpc-design strong,.bpc-design em,.bpc-story small,.bpc-story strong,.bpc-story em{display:block}.bpc-tile strong{font-size:21px}.bpc-tile-main strong{font-size:28px}.bpc-tile small,.bpc-design small,.bpc-story small{color:#e8c797;font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.bpc-tile em,.bpc-design em,.bpc-story em{margin-top:7px;color:#ddd1d7;font-size:12px;font-style:normal;font-weight:700}.bpc-help{background:#fff;border-bottom:1px solid #e5dbd4}.bpc-help>div{display:grid;grid-template-columns:repeat(4,1fr)}.bpc-help a{padding:21px;color:var(--ink);text-decoration:none;border-right:1px solid #e5dbd4}.bpc-help a:last-child{border:0}.bpc-help b,.bpc-help small{display:block}.bpc-help small{margin-top:4px;color:#776c75}.bpc-section{padding:92px 0}.bpc-dark{background:#21171f;color:#fff}.bpc-heading h2,.bpc-seo h2{margin:9px 0;font-size:clamp(35px,4.4vw,57px);line-height:1.02;letter-spacing:-.04em}.bpc-heading-split{display:grid;grid-template-columns:1fr .7fr;gap:50px;align-items:end;margin-bottom:35px}.bpc-heading-split>p{color:#cfc3ca;line-height:1.6}.bpc-heading-center{max-width:760px;margin:0 auto 34px;text-align:center}.bpc-heading-center>p:last-child,.bpc-seo>p{color:#5d535b;font-size:17px;line-height:1.65}.bpc-designs{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:290px;gap:14px}.bpc-design{position:relative;overflow:hidden;border-radius:21px;color:#fff}.bpc-design-featured{grid-column:span 2;grid-row:span 2}.bpc-design strong{font-size:23px}.bpc-design-featured strong{font-size:38px}.bpc-products{display:grid;grid-template-columns:repeat(6,1fr);gap:13px}.bpc-product{overflow:hidden;border:1px solid #e3d8d1;border-radius:17px;background:#fff;color:var(--ink);text-decoration:none}.bpc-product>div{aspect-ratio:4/5;overflow:hidden}.bpc-product img{width:100%;height:100%;object-fit:cover;transition:.4s}.bpc-product span{display:block;padding:16px}.bpc-product strong,.bpc-product small{display:block}.bpc-product small{margin-top:6px;color:var(--wine);font-weight:800}.bpc-product:hover img,.bpc-tile:hover img,.bpc-design:hover img,.bpc-story:hover img{transform:scale(1.045)}.bpc-stories{display:grid;grid-template-columns:1fr 1fr;gap:17px;padding-bottom:92px}.bpc-story{position:relative;min-height:560px;overflow:hidden;border-radius:25px;color:#fff}.bpc-story strong{font-size:clamp(30px,3.5vw,48px);line-height:1.04}.bpc-seo{max-width:900px;padding:0 0 92px;text-align:center}.bpc-seo>div{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:22px}.bpc-seo a{padding:9px 14px;border:1px solid #d9ccc3;border-radius:99px;background:#fff;color:var(--wine);text-decoration:none;font-weight:800}
+@media(max-width:1050px){.bpc-hero-grid{grid-template-columns:1fr}.bpc-collage{height:550px}.bpc-products{grid-template-columns:repeat(3,1fr)}.bpc-designs{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.bpc-wrap{width:calc(100% - 24px)}.bpc-hero-copy h1{font-size:43px}.bpc-actions{display:grid}.bpc-button{width:100%;justify-content:center}.bpc-collage{height:450px;gap:8px}.bpc-tile{border-radius:17px}.bpc-tile span{left:14px;bottom:14px}.bpc-tile-main strong{font-size:21px}.bpc-tile small,.bpc-tile em{display:none}.bpc-help>div{grid-template-columns:1fr 1fr}.bpc-help a{padding:16px 11px}.bpc-section{padding:66px 0}.bpc-heading-split{grid-template-columns:1fr;gap:12px}.bpc-designs{grid-template-columns:1fr 1fr;grid-auto-rows:230px;gap:8px}.bpc-design-featured{grid-column:span 2;grid-row:span 1}.bpc-design strong,.bpc-design-featured strong{font-size:18px}.bpc-design span{left:13px;bottom:13px}.bpc-products{grid-template-columns:1fr 1fr;gap:8px}.bpc-product span{padding:12px}.bpc-stories{grid-template-columns:1fr;padding-bottom:66px}.bpc-story{min-height:480px}.bpc-story strong{font-size:32px}.bpc-story span{left:20px;bottom:20px}.bpc-seo{padding-bottom:68px}}
+@media(prefers-reduced-motion:reduce){.bpc *{transition:none!important}}
+</style>
+{% schema %}{"name":"BPC homepage experience","settings":[],"presets":[{"name":"BPC homepage experience"}]}{% endschema %}

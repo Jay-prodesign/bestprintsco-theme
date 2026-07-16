@@ -1,0 +1,17 @@
+{%- for link in links -%}
+  <li class="relative level-{{ level }}{% if link.active or link.child_active %} active{% endif %}">
+    <a href="{{ link.url }}" class="site-nav level-{{ level }}">
+      <span>{{ link.title | split: '[label' | first }}</span>
+      {%- if link.links != blank -%}
+        <i class="absolute position-center-y right-15 ad icon-chevron-right" aria-hidden="true"></i>
+      {%- endif -%}
+    </a>
+    {%- if link.links != blank -%}
+      <div class="open-children-toggle"></div>
+      <ul class="subchildmenu subLinks p-0 list-none my-0{% if level == 1 %} absolute top-0 left-100{% else %} left-100 absolute top-0{% endif %}">
+        {%- assign next_level = level | plus: 1 -%}
+        {%- render 'bpc-menu-branch', links: link.links, level: next_level -%}
+      </ul>
+    {%- endif -%}
+  </li>
+{%- endfor -%}
