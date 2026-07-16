@@ -342,3 +342,26 @@ Rollback snapshot: `C:\Projects\bestprintsco-backups\20260715-173617-HOMEPAGE-CO
 Validation: `git diff --check` passed; JSONC, CSS brace, Liquid schema-marker checks passed; Shopify Theme Check showed no offenses for the three changed files. Live desktop and mobile Chrome checks returned HTTP 200, one H1, the new homepage sections, no Liquid errors, no unsupported promotion/sales/scarcity language, no horizontal mobile overflow, no broken homepage images after scroll, and no broken homepage links. Representative collection and product destinations returned HTTP 200 with one H1 and no Liquid errors.
 Console note: live browser validation still shows external Shop Pay, analytics and Printful resource/CSP blocks unrelated to the new homepage theme files.
 Blocker: none.
+
+### GIFT-FINDER-RECONCILIATION — Unique Gift Ideas guide navigation
+
+Status: review
+Starting commit: `6d41dc8c7317654ec61f137f9390bcd71088444e`
+Branch: `sprint/seo-fallback-foundation`
+Origin: ChatGPT-updated unpublished Shopify theme `130320695376` through Shopify Admin API.
+Live theme: `122053689424`
+
+Files reconciled from unpublished theme and selectively deployed:
+
+- `sections/bpc-gift-finder.liquid`
+- `templates/article.json`
+
+Scope: added a Gift Finder section to the article template that renders only for `/blogs/guides/unique-printed-gift-ideas`; added Shop by Design links for Elephant, Dragonfly, Dark Art, Hippie and Floral; added Shop by Product links for Printed Boots, Shoes, Bags, Bedding, Hooded Blankets, Car and All Products; preserved existing article body and product cards.
+
+Correction during reconciliation: the pulled section used the short article handle only, which rendered an empty section placeholder in preview. The guard was expanded to match the Guides article URL/full handle while preserving target-only behavior.
+
+Validation: `git diff --check` passed; `templates/article.json` JSONC syntax passed; section guard/schema check passed; Shopify Theme Check showed no errors for changed files. All referenced collection handles resolved. Preview validation on unpublished theme passed for target desktop/mobile and unaffected `printed-boots-style-guide`. Live validation passed after selective deploy: target guide returned HTTP 200, one H1, Gift Finder rendered on desktop/mobile, mobile horizontal scrolling worked, links resolved, no broken Gift Finder images, no Liquid errors, no horizontal overflow, legacy article controls hidden on the target, and the printed-boots guide did not render the Gift Finder.
+
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260716-110937-GIFT-FINDER-LIVE-ROLLBACK`.
+Rollback method: restore `sections/bpc-gift-finder.liquid` and `templates/article.json` from the rollback snapshot and selectively deploy them to live with `--allow-live --nodelete`.
+Blocker: none.

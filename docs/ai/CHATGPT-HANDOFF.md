@@ -1,67 +1,71 @@
 # ChatGPT Handoff
 
-Task ID: HOMEPAGE-COMMERCIAL-REDESIGN-01
+Task ID: GIFT-FINDER-RECONCILIATION
 Status: review
 Branch: sprint/seo-fallback-foundation
-Starting commit: a1e4a0a368d506138fc9ee8a5c0b8c26fa0703e3
+Starting commit: 6d41dc8c7317654ec61f137f9390bcd71088444e
 Final commit: this commit
 
-## Prior approval recorded
+## Origin
 
-VEGAN-BOOTS-PRODUCT-BATCH-02 is recorded as done based on ChatGPT review.
+ChatGPT directly updated unpublished Shopify theme `130320695376` through the Shopify Admin API.
 
-## Homepage implementation
+Reconciled files:
 
-Changed the live homepage from separate generic theme sections into one focused commercial shopping journey:
+- `sections/bpc-gift-finder.liquid`
+- `templates/article.json`
 
-- hero with one brand promise, a primary `Shop printed boots` CTA, a guide CTA and a verified live product image;
-- category discovery for printed boots, shoes, bedding, hooded blankets and car seat covers;
-- design-world paths for celestial/cosmic, gothic/dark, mandala/bohemian, nature/floral, animals and psychedelic/tie-dye;
-- neutral featured-product section titled `Explore distinctive designs`;
-- artwork-first brand-philosophy section;
-- two visual guide links;
-- factual trust/help links to Contact Us, Order Tracking, Shipping Policy and Refund Policy.
+## Implementation
 
-No product data, prices, inventory, variants, checkout settings, customer data, order data or Shopify catalog records were changed.
+The Gift Finder section is now synchronized into the repository, unpublished theme `130320695376`, and live theme `122053689424`.
 
-## Files changed
+The section renders only for `/blogs/guides/unique-printed-gift-ideas` and adds:
 
-- `templates/index.json`
-- `sections/bpc-homepage-commercial.liquid`
-- `assets/bpc-homepage-commercial.css`
-- `docs/COMMERCIAL-OPERATING-PLAN.md`
-- `docs/ai/CHATGPT-HANDOFF.md`
+- Shop by Design links: Elephant, Dragonfly, Dark Art, Hippie, Floral.
+- Shop by Product links: Printed Boots, Shoes, Bags, Bedding, Hooded Blankets, Car, All Products.
+- Mobile horizontal scrolling for the design cards and product pills.
+- Gift-guide-specific hiding of author/date metadata, article tags/share controls, previous/next posts and related-article elements.
+
+Existing article body content and product cards were preserved.
+
+## Correction made during reconciliation
+
+The pulled section originally checked only `article.handle == 'unique-printed-gift-ideas'`, which left an empty section placeholder in preview. The guard now also supports the full Guides article handle and article URL, preserving target-only rendering.
 
 ## Deployment
 
-Selective live deployment passed to theme `122053689424` with `--allow-live --nodelete` for:
+Selective deployment passed:
 
-- `templates/index.json`
-- `sections/bpc-homepage-commercial.liquid`
-- `assets/bpc-homepage-commercial.css`
+- unpublished theme `130320695376`: `sections/bpc-gift-finder.liquid`, `templates/article.json`
+- live theme `122053689424`: `sections/bpc-gift-finder.liquid`, `templates/article.json`
 
-No full-theme push or publish was performed.
+No full-theme push or theme publish was performed.
 
 ## Rollback
 
-Rollback snapshot: `C:\Projects\bestprintsco-backups\20260715-173617-HOMEPAGE-COMMERCIAL-REDESIGN-01`
+Rollback snapshot: `C:\Projects\bestprintsco-backups\20260716-110937-GIFT-FINDER-LIVE-ROLLBACK`
 
-Rollback method: restore the snapshot copies of `templates/index.json`; delete or revert the new `sections/bpc-homepage-commercial.liquid` and `assets/bpc-homepage-commercial.css`; then selectively deploy those homepage files to live with `--allow-live --nodelete`.
+Rollback method: restore `sections/bpc-gift-finder.liquid` and `templates/article.json` from the snapshot and selectively deploy those two files to live with `--allow-live --nodelete`.
 
 ## Validation
 
+- Clean worktree, expected branch/base and remote confirmed before reconciliation.
 - `git diff --check`: passed.
-- JSONC syntax for `templates/index.json`: passed.
-- CSS brace balance for `assets/bpc-homepage-commercial.css`: passed.
-- Liquid schema markers for `sections/bpc-homepage-commercial.liquid`: passed.
-- Shopify Theme Check: no offenses for the three changed homepage files; existing unrelated theme errors remain elsewhere.
-- Live desktop homepage check: passed.
-- Live mobile homepage check: passed.
-- Homepage links: passed after correcting `Contact` and `Order tracking` to verified live pages.
-- Homepage images: passed after scroll/lazy-load validation.
-- Representative collection: `https://bestprintsco.com/collections/vegan-leather-boots` returned HTTP 200, one H1 and no Liquid errors.
-- Representative product: `https://bestprintsco.com/products/skull-with-octopus-tentacles-womens-handcrafted-premium-boots-v2` returned HTTP 200, one H1 and no Liquid errors.
+- `templates/article.json` JSONC syntax: passed.
+- `sections/bpc-gift-finder.liquid` guard/schema validation: passed.
+- Shopify Theme Check: no errors for the changed files; one non-blocking `HardcodedRoutes` warning remains for `/collections/all`.
+- All referenced collection handles resolved.
+- Preview target page checked:
+  - `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas?preview_theme_id=130320695376`
+- Preview unaffected page checked:
+  - `https://bestprintsco.com/blogs/guides/printed-boots-style-guide?preview_theme_id=130320695376`
+- Live target page checked:
+  - `https://bestprintsco.com/blogs/guides/unique-printed-gift-ideas`
+- Live unaffected page checked:
+  - `https://bestprintsco.com/blogs/guides/printed-boots-style-guide`
 
-Console note: Chrome reported external Shop Pay, analytics and Printful resource/CSP blocks that are unrelated to the new homepage theme files.
+Live validation passed: target guide returned HTTP 200, one H1, Gift Finder rendered on desktop/mobile, mobile horizontal scrolling worked, Gift Finder links resolved, Gift Finder images loaded, no Liquid errors, no horizontal overflow, target-only hide rules applied, and the unaffected printed-boots guide did not render the Gift Finder.
+
+Console note: Chrome reported external Shop Pay/analytics resource blocks unrelated to the changed theme files.
 
 Blocker: none.

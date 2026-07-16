@@ -38,6 +38,10 @@
         "text_postion": "text-left"
       }
     },
+    "bpc-gift-finder": {
+      "type": "bpc-gift-finder",
+      "settings": {}
+    },
     "main": {
       "type": "main-article",
       "settings": {
@@ -57,6 +61,7 @@
   },
   "order": [
     "1e9494ce-85e4-407b-bad6-4b92914909c8",
+    "bpc-gift-finder",
     "main"
   ]
 }

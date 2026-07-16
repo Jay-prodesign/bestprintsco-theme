@@ -1,0 +1,68 @@
+{%- liquid
+  assign render_gift_finder = false
+  if article.handle == 'unique-printed-gift-ideas'
+    assign render_gift_finder = true
+  elsif article.handle == 'guides/unique-printed-gift-ideas'
+    assign render_gift_finder = true
+  elsif article.url contains '/blogs/guides/unique-printed-gift-ideas'
+    assign render_gift_finder = true
+  endif
+-%}
+{%- if render_gift_finder -%}
+  {%- liquid
+    assign product_links = 'vegan-leather-boots|Printed Boots,running-shoes|Shoes,bags|Bags,bedding-sets|Bedding,hooded-blankets|Hooded Blankets,car-seat-covers|Car' | split: ','
+    assign design_links = 'elephant-designs-gifts|Elephant,dragonfly-designs-gifts|Dragonfly,skull-dark-art-designs|Dark Art,hippie-peace-tie-dye-designs|Hippie,floral-botanical-designs|Floral' | split: ','
+  -%}
+  <section class="bpc-gift-finder" aria-labelledby="bpc-gift-finder-title">
+    <div class="container">
+      <div class="bpc-gift-finder__intro">
+        <span class="bpc-gift-finder__eyebrow">Gift Finder</span>
+        <h2 id="bpc-gift-finder-title">Find a gift faster</h2>
+        <p>Start with the artwork they love or the product they would use. Then compare the real designs in the guide below.</p>
+      </div>
+
+      <div class="bpc-gift-finder__group">
+        <h3>Shop by design</h3>
+        <div class="bpc-gift-finder__track" role="list">
+          {%- for item in design_links -%}
+            {%- assign parts = item | split: '|' -%}
+            {%- assign target = collections[parts[0]] -%}
+            {%- if target != blank -%}
+              {%- assign card_image = target.image | default: target.products.first.featured_image -%}
+              <a class="bpc-gift-finder__card" href="{{ target.url }}" role="listitem">
+                <span class="bpc-gift-finder__image">
+                  {%- if card_image != blank -%}
+                    {{ card_image | image_url: width: 220 | image_tag: loading: 'lazy', widths: '110,220', alt: parts[1] }}
+                  {%- endif -%}
+                </span>
+                <span>{{ parts[1] }}</span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+
+      <div class="bpc-gift-finder__group">
+        <h3>Shop by product</h3>
+        <div class="bpc-gift-finder__pills" role="list">
+          {%- for item in product_links -%}
+            {%- assign parts = item | split: '|' -%}
+            {%- assign target = collections[parts[0]] -%}
+            {%- if target != blank -%}
+              <a href="{{ target.url }}" role="listitem">{{ parts[1] }}</a>
+            {%- endif -%}
+          {%- endfor -%}
+          <a href="/collections/all" role="listitem">View All Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .bpc-gift-finder{padding:28px 0 34px;background:#f7f3ee;border-bottom:1px solid #eadfe5}.bpc-gift-finder__intro{max-width:760px;margin:0 auto 24px;text-align:center}.bpc-gift-finder__eyebrow{display:block;margin-bottom:5px;color:#8f416b;font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.bpc-gift-finder h2{margin:0 0 8px;color:#3a2030;font-size:clamp(28px,4vw,42px)}.bpc-gift-finder__intro p{margin:0;color:#5f4a56;font-size:16px;line-height:1.65}.bpc-gift-finder__group+.bpc-gift-finder__group{margin-top:24px}.bpc-gift-finder__group h3{margin:0 0 12px;color:#3a2030;font-size:18px}.bpc-gift-finder__track{display:flex;gap:16px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}.bpc-gift-finder__card{flex:0 0 132px;scroll-snap-align:start;color:#3a2030;text-align:center;font-size:14px;font-weight:700}.bpc-gift-finder__image{display:block;width:94px;height:94px;margin:0 auto 9px;overflow:hidden;border:2px solid transparent;border-radius:50%;background:#fff;box-shadow:0 7px 20px rgba(58,32,48,.09);transition:.2s ease}.bpc-gift-finder__image img{width:100%;height:100%;object-fit:cover}.bpc-gift-finder__card:hover .bpc-gift-finder__image{transform:translateY(-2px);border-color:#c39a5b}.bpc-gift-finder__pills{display:flex;flex-wrap:wrap;gap:10px}.bpc-gift-finder__pills a{display:inline-flex;min-height:42px;align-items:center;padding:9px 16px;border:1px solid #d9c6d0;border-radius:999px;background:#fffdfb;color:#3a2030;font-size:14px;font-weight:700}.bpc-gift-finder__pills a:hover{border-color:#641a45;color:#641a45}.article-template .bpc-guide-hero__meta,.article-template .blog-article-bottom,.article-template .blog-previous-next,.article-template .bls__blog-posts{display:none!important}@media(max-width:767px){.bpc-gift-finder{padding:22px 0 28px}.bpc-gift-finder__intro{text-align:left}.bpc-gift-finder__track{margin-right:-15px;padding-right:15px}.bpc-gift-finder__card{flex-basis:104px}.bpc-gift-finder__image{width:76px;height:76px}.bpc-gift-finder__pills{flex-wrap:nowrap;overflow-x:auto;padding-bottom:8px}.bpc-gift-finder__pills a{flex:0 0 auto}}
+  </style>
+{%- endif -%}
+
+{% schema %}
+{"name":"BPC gift finder","settings":[],"presets":[{"name":"BPC gift finder"}]}
+{% endschema %}
