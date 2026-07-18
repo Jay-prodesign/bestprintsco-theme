@@ -1,0 +1,710 @@
+{
+  "count": 3541,
+  "byIssue": {
+    "Ambiguous and requires review": 1456,
+    "Missing both": 1234,
+    "Missing Shopify category": 851
+  },
+  "sample": [
+    {
+      "handle": "black-unicorn-blanket",
+      "title": "Black Unicorn Blanket",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "paw-print-hot-pink-chunky-sneakers-white",
+      "title": "Paw Print Hot Pink Chunky Sneakers (White)",
+      "family": "Shoes",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "white-persian-cat-pattern-print-car-seat-covers-free-shipping",
+      "title": "White Persian Cat Pattern Print Car Seat Covers-Free Shipping",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "horse-night-car-seat-cover",
+      "title": "Horse - Night Car Seat Cover",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cutest-kitty-car-seat-covers",
+      "title": "Cutest Kitty Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "car-seat-covers-wolf-car-seat-cover-brothers-universal-fit",
+      "title": "Car Seat Covers - WOLF CAR SEAT COVER BROTHERS / Universal Fit",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "wolf-print-seat-covers-nightmare",
+      "title": "WOLF PRINT SEAT COVERS - NIGHTMARE",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "eye-of-providence-car-seat-covers",
+      "title": "Eye of Providence - Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "eagle-spirit-car-seat-covers",
+      "title": "Eagle Spirit Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "firefignters-car-seat-covers",
+      "title": "Firefignters Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "thin-blue-car-seat-covers",
+      "title": "Thin Blue Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "totem-wolf-car-seat-covers",
+      "title": "Totem Wolf Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "free-spirit-horse-car-seat-covers",
+      "title": "Free Spirit Horse Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "stunning-alaskan-malamute-car-seat-covers",
+      "title": "Stunning Alaskan Malamute Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "wolf-skulls-custom-car-seat-covers",
+      "title": "Wolf & Skulls Custom Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "summer-soltice-car-seat-covers",
+      "title": "Summer Soltice Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "unicorn-universe-car-seat-covers",
+      "title": "Unicorn Universe Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "border-collie-checkers-car-seat-covers",
+      "title": "Border Collie Checkers Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "zebra-print-custom-car-seat-covers",
+      "title": "Zebra Print Custom Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "blue-camouflage-car-seat-covers",
+      "title": "Blue Camouflage Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "tabby-cat-car-seat-covers",
+      "title": "Tabby Cat Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "tiger-eyes-car-seat-covers",
+      "title": "Tiger Eyes Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "buddha-car-seat-covers",
+      "title": "Buddha Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "buddha-car-seat-covers-1",
+      "title": "Buddha Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "chakra-car-seat-covers",
+      "title": "Chakra Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "car-seat-covers-thethian-garden",
+      "title": "Car Seat Covers - Thethian Garden",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "usa-flag-car-seat-covers",
+      "title": "USA Flag Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "dragonfly-mandala-car-seat-covers",
+      "title": "Dragonfly Mandala Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "chakra-mandala-car-seat-covers",
+      "title": "Chakra Mandala Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "yorkshire-terrier-car-seat-covers-set-of-2",
+      "title": "Yorkshire Terrier Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "german-shepherd-car-seat-covers-set-of-2",
+      "title": "German Shepherd Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "goldendoodle-car-seat-covers-set-of-2",
+      "title": "Goldendoodle Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "golden-retriever-car-seat-covers-set-of-2",
+      "title": "Golden Retriever Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "black-flag-car-seat-covers",
+      "title": "Black Flag CAR SEAT COVERS",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "schnauzer-car-seat-covers-set-of-2",
+      "title": "Schnauzer Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "border-collie-car-seat-covers-set-of-2",
+      "title": "Border Collie Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "shiba-inu-car-seat-covers-set-of-2",
+      "title": "Shiba Inu Car Seat Covers (Set of 2)",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "flamingo-car-seat-covers",
+      "title": "Flamingo Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "customized-car-seat-covers",
+      "title": "Customized Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "wolf-full-moon-car-seat-covers",
+      "title": "Wolf Full Moon Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "moonlight-unicorn-car-seat-covers",
+      "title": "Moonlight Unicorn Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "chakra-mandala-car-seat-covers-1",
+      "title": "Chakra Mandala Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "chakra-car-seat-covers-1",
+      "title": "Chakra Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "chakra-car-seat-covers-2",
+      "title": "Chakra Car Seat Covers",
+      "family": "Car Seat Covers",
+      "issue": "Missing both",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "baseball-front-and-back-car-mats-set-of-4",
+      "title": "Baseball Front And Back Car Mats (Set of 4)",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "black-baseball-front-and-back-car-mats-set-of-4",
+      "title": "Black Baseball Front And Back Car Mats (Set Of 4)",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "relax-and-enjoy-front-and-back-car-mats-set-of-4",
+      "title": "Relax and Enjoy Front And Back Car Mats (Set Of 4)",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "thin-blue-line-front-and-back-car-mats-set-of-4",
+      "title": "Thin Blue Line Front And Back Car Mats (Set Of 4)",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "soccer-pattern-front-and-back-car-mats-set-of-4",
+      "title": "Soccer Pattern Front And Back Car Mats (Set Of 4)",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "usa-flag-front-back-car-mats",
+      "title": "USA Flag Front/Back Car Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "front-back-dog-love-car-mats",
+      "title": "FRONT/BACK DOG LOVE CAR MATS",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "front-and-back-car-mats-set-of-4-kaleidoscope",
+      "title": "Front And Back Car Mats (Set Of 4) - Kaleidoscope",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "front-and-back-car-mats-set-of-4-leopard",
+      "title": "Front And Back Car Mats (Set Of 4) - Leopard",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "front-and-back-car-mats-set-of-4-money",
+      "title": "Front And Back Car Mats (Set Of 4) - Money",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "front-and-back-car-mats-set-of-4-route-66",
+      "title": "Front And Back Car Mats (Set Of 4) - Route 66",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "skulls-and-potion-car-floor-mats",
+      "title": "Skulls and Potion Car Floor Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "auto-floor-mat",
+      "title": "Auto Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "terrier-floor-mat",
+      "title": "Terrier Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "westie-floor-mat",
+      "title": "Westie Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "paws-bones-floor-mat",
+      "title": "Paws & Bones Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "boxer-floor-mat",
+      "title": "Boxer Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "retriever-floor-mat",
+      "title": "Retriever Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cat-eyes-car-floor-mat",
+      "title": "Cat eyes Car Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "yellow-cat-car-floor-mat",
+      "title": "Yellow cat Car Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "french-bulldog-car-floor-mat",
+      "title": "French Bulldog Car Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "corgi-auto-floor-mat",
+      "title": "Corgi Auto Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "colored-paws-car-floor-mats",
+      "title": "Colored paws CAR FLOOR MATS",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "corgi-auto-floor-mat-1",
+      "title": "Corgi Auto Floor Mat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "pink-camouflage-floor-mats",
+      "title": "Pink Camouflage Floor Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "grey-camouflage-floor-mats",
+      "title": "Grey Camouflage Floor Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cat",
+      "title": "Cat",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cam-front-and-back-car-mats",
+      "title": "Cam Front And Back Car Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cam-front-and-back-car-mats-1",
+      "title": "Cam Front And Back Car Mats",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "bones-and-paw-steering-wheel-cover",
+      "title": "Bones And Paw Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "yellow-steering-wheel-cover",
+      "title": "Yellow Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "purple-steering-wheel-cover",
+      "title": "Purple Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "pink-steering-wheel-cover",
+      "title": "Pink Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "pink-camouflage-steering-wheel-cover",
+      "title": "Pink Camouflage Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "orange-steering-wheel-cover",
+      "title": "Orange Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "lilac-steering-wheel-cover",
+      "title": "Lilac Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "light-pink-steering-wheel-cover",
+      "title": "Light Pink Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "light-green-steering-wheel-cover",
+      "title": "Light Green Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "green-steering-wheel-cover",
+      "title": "Green Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "grey-camouflage-steering-wheel-cover",
+      "title": "Grey Camouflage Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "light-blue-steering-wheel-cover",
+      "title": "Light Blue Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "blue-steering-wheel-cover",
+      "title": "Blue Steering Wheel Cover",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "7-chakras-sun-shade",
+      "title": "7 Chakras Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cam-car-sun-shade",
+      "title": "Cam Car sun shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "dont-leave-your-dog-in-your-hot-car-auto-sun-car-shades",
+      "title": "Don't Leave Your Dog in Your Hot Car Auto Sun Car Shades",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "auto-sun-shades-circus-dame",
+      "title": "Auto sun shades Circus dame",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "rainbow-shade",
+      "title": "Rainbow Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "in-god-we-trust",
+      "title": "In God We Trust",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cocker-spaniel-auto-sun-shade",
+      "title": "cocker spaniel Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "weimaraner-auto-sun-shade",
+      "title": "Weimaraner Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "brown-chihuahua-auto-sun-shade",
+      "title": "Brown chihuahua Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "american-stafford-auto-sun-shade",
+      "title": "American Stafford auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "australian-cattle-dog-auto-sun-shade",
+      "title": "Australian cattle dog Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "husky-auto-sun-shade",
+      "title": "Husky Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cute-kitten-auto-sun-shade",
+      "title": "Cute kitten Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    },
+    {
+      "handle": "cute-branch-auto-sun-shade",
+      "title": "Cute branch Auto Sun Shade",
+      "family": "Ambiguous",
+      "issue": "Ambiguous and requires review",
+      "reason": "not enough deterministic evidence or no dominant target category/type"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+[
+  {
+    "family": "Ambiguous",
+    "productCount": 1456,
+    "targetProductType": "Steering Wheel Cover",
+    "typeEvidenceCount": 347,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/vp-1-5-4-18",
+    "targetCategoryFullName": "Vehicles & Parts > Vehicle Parts & Accessories > Vehicle Maintenance, Care & Decor > Vehicle Decor > Vehicle Steering Wheel Covers",
+    "categoryEvidenceCount": 347
+  },
+  {
+    "family": "Bags",
+    "productCount": 448,
+    "targetProductType": "Backpack",
+    "typeEvidenceCount": 419,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/lb-1",
+    "targetCategoryFullName": "Luggage & Bags > Backpacks",
+    "categoryEvidenceCount": 448
+  },
+  {
+    "family": "Bedding Sets",
+    "productCount": 164,
+    "targetProductType": "Bedding Set",
+    "typeEvidenceCount": 164,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/hg-15-1-11",
+    "targetCategoryFullName": "Home & Garden > Linens & Bedding > Bedding > Bedding Sets",
+    "categoryEvidenceCount": 164
+  },
+  {
+    "family": "Car Seat Covers",
+    "productCount": 961,
+    "targetProductType": "Car Seat Covers",
+    "typeEvidenceCount": 31,
+    "targetCategoryId": "",
+    "targetCategoryFullName": "",
+    "categoryEvidenceCount": 0
+  },
+  {
+    "family": "High Top Shoes",
+    "productCount": 481,
+    "targetProductType": "High Top Shoes",
+    "typeEvidenceCount": 480,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-8",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Sneakers",
+    "categoryEvidenceCount": 481
+  },
+  {
+    "family": "Hooded Blankets",
+    "productCount": 166,
+    "targetProductType": "Hooded Blanket",
+    "typeEvidenceCount": 166,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-1-17-7",
+    "targetCategoryFullName": "Apparel & Accessories > Clothing > Sleepwear & Loungewear > Wearable Blankets & Sleep Sacks",
+    "categoryEvidenceCount": 166
+  },
+  {
+    "family": "Hoodies",
+    "productCount": 570,
+    "targetProductType": "Gildan Heavy Blend Adult Hoodie",
+    "typeEvidenceCount": 312,
+    "targetCategoryId": "",
+    "targetCategoryFullName": "",
+    "categoryEvidenceCount": 0
+  },
+  {
+    "family": "Kids High Top Shoes",
+    "productCount": 20,
+    "targetProductType": "Kids High Top Shoes",
+    "typeEvidenceCount": 20,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-11-5",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers",
+    "categoryEvidenceCount": 20
+  },
+  {
+    "family": "Kids Hoodies",
+    "productCount": 234,
+    "targetProductType": "Kids Hoodie",
+    "typeEvidenceCount": 234,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-1-25-9-11",
+    "targetCategoryFullName": "Apparel & Accessories > Clothing > Baby & Children's Clothing > Baby & Children's Tops > Hoodies",
+    "categoryEvidenceCount": 234
+  },
+  {
+    "family": "Kids Low Top Shoes",
+    "productCount": 24,
+    "targetProductType": "Kids Low Top Shoes",
+    "typeEvidenceCount": 24,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-11-5",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers",
+    "categoryEvidenceCount": 24
+  },
+  {
+    "family": "Kids Running Shoes",
+    "productCount": 53,
+    "targetProductType": "Running Shoes",
+    "typeEvidenceCount": 53,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-1",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Athletic Shoes",
+    "categoryEvidenceCount": 53
+  },
+  {
+    "family": "Kids Shoes",
+    "productCount": 64,
+    "targetProductType": "Women's Slip-On Shoes",
+    "typeEvidenceCount": 64,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-8",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Sneakers",
+    "categoryEvidenceCount": 64
+  },
+  {
+    "family": "Kids T-Shirts",
+    "productCount": 227,
+    "targetProductType": "Kids T-Shirts",
+    "typeEvidenceCount": 227,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-1-25-9-7",
+    "targetCategoryFullName": "Apparel & Accessories > Clothing > Baby & Children's Clothing > Baby & Children's Tops > T-Shirts",
+    "categoryEvidenceCount": 227
+  },
+  {
+    "family": "Leggings",
+    "productCount": 149,
+    "targetProductType": "Leggings",
+    "typeEvidenceCount": 77,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-1-12-8",
+    "targetCategoryFullName": "Apparel & Accessories > Clothing > Pants > Leggings",
+    "categoryEvidenceCount": 149
+  },
+  {
+    "family": "Low Top Shoes",
+    "productCount": 350,
+    "targetProductType": "Low Top Shoes",
+    "typeEvidenceCount": 347,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-8",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Sneakers",
+    "categoryEvidenceCount": 350
+  },
+  {
+    "family": "Pillows",
+    "productCount": 72,
+    "targetProductType": "Pillow Cover",
+    "typeEvidenceCount": 72,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/hg-15-1-8-2",
+    "targetCategoryFullName": "Home & Garden > Linens & Bedding > Bedding > Pillowcases & Shams > Pillowcases",
+    "categoryEvidenceCount": 72
+  },
+  {
+    "family": "Printed Boots",
+    "productCount": 913,
+    "targetProductType": "Vegan Leather Boots",
+    "typeEvidenceCount": 913,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-3",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Boots",
+    "categoryEvidenceCount": 913
+  },
+  {
+    "family": "Running Shoes",
+    "productCount": 78,
+    "targetProductType": "Running Shoes",
+    "typeEvidenceCount": 78,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-1",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Athletic Shoes",
+    "categoryEvidenceCount": 78
+  },
+  {
+    "family": "Shoes",
+    "productCount": 234,
+    "targetProductType": "Sneakers",
+    "typeEvidenceCount": 38,
+    "targetCategoryId": "",
+    "targetCategoryFullName": "",
+    "categoryEvidenceCount": 0
+  },
+  {
+    "family": "Slip-On Shoes",
+    "productCount": 239,
+    "targetProductType": "Women's Slip-On Shoes",
+    "typeEvidenceCount": 239,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/aa-8-8",
+    "targetCategoryFullName": "Apparel & Accessories > Shoes > Sneakers",
+    "categoryEvidenceCount": 239
+  },
+  {
+    "family": "T-Shirts",
+    "productCount": 320,
+    "targetProductType": "Unisex Jersey T-Shirt by Bella + Canvas",
+    "typeEvidenceCount": 316,
+    "targetCategoryId": "",
+    "targetCategoryFullName": "",
+    "categoryEvidenceCount": 0
+  },
+  {
+    "family": "Tote Bags",
+    "productCount": 246,
+    "targetProductType": "Leather Tote Bags",
+    "typeEvidenceCount": 189,
+    "targetCategoryId": "gid://shopify/TaxonomyCategory/lb-13",
+    "targetCategoryFullName": "Luggage & Bags > Tote Bags",
+    "categoryEvidenceCount": 246
+  }
+]

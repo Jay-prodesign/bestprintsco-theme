@@ -8,9 +8,14 @@ Last updated: 2026-07-18
 
 ## Current state
 
-- Current requested batch is `CATALOG-NORMALIZATION-001`: live-first catalog normalization for Product Type, Shopify standard product category, automated collections, and Online Store navigation.
-- The batch is blocked before snapshot or mutation because the only available Admin GraphQL session is the Shopify CLI Connector App with read catalog scopes and theme scopes, but no catalog write scopes.
-- No Shopify data, theme, catalog, product, collection, navigation, price, inventory, customer, or order data was changed.
+- `CATALOG-NORMALIZATION-001` is in review.
+- Shopify CLI store authorization was upgraded for the existing Shopify CLI Connector App and verified through Admin GraphQL.
+- Current live Shopify Admin data was used as the only catalog source of truth.
+- 7,469 live products were inspected.
+- 886 products were updated for Product Type and Shopify standard category only.
+- Protected-field comparison passed.
+- Collections and navigation were not changed.
+- No theme files, product titles, descriptions, SEO fields, tags, vendors, media, variants, SKUs, prices, inventory, publication status, customer/order data, checkout settings, or supplier data were changed.
 
 ## Active branch
 
@@ -23,8 +28,8 @@ Last updated: 2026-07-18
 ## Deployment state
 
 - Development theme deployment: not applicable.
-- Live theme deployment: not applicable.
+- Live theme deployment: not applicable; no theme work was performed.
 
 ## Known blocker
 
-- `CATALOG-NORMALIZATION-001` requires a usable custom Admin API credential/session with catalog write scopes before live product classification, automated collection, or navigation mutations can proceed.
+- Collection/navigation enhancement is unresolved. Collection creation was stopped after two local variable-file failures before any Shopify collection mutation executed.

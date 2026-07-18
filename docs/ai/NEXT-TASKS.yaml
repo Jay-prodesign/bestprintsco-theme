@@ -9,32 +9,37 @@ tasks:
     worktree: "C:\\Projects\\bestprintsco-theme"
     final_commit: "dd503906139d9d6fd2d0d247c7b3199643bdda35"
     dependencies: []
-    files:
-      - "AGENTS.md"
-      - "docs/ai/CHATGPT-HANDOFF.md"
-      - "docs/ai/PROJECT-STATE.md"
-      - "docs/ai/DECISION-LOG.md"
-      - "docs/ai/NEXT-TASKS.yaml"
     next_action: "Use docs/ai as the GitHub communication layer."
   - id: CATALOG-NORMALIZATION-001
     title: "Live-first catalog normalization"
-    status: blocked
+    status: review
     branch: "codex/ai-coordination-system"
     worktree: "C:\\Projects\\bestprintsco-theme"
-    starting_commit: "a7d763750d0a4b14a5ee375c9caac6986055624b"
-    dependencies:
-      - "Expose a custom Admin API credential/session with catalog write scopes."
-      - "Required for mutation: write_products and appropriate collection/navigation write scopes."
+    starting_commit: "b60d316b1a9bccf02956afec3bbf8bba60435d85"
     allowed_scope:
       - "Product Type"
       - "Shopify standard product category"
       - "Automated collections"
       - "Online Store navigation menus"
-    blocked_before_mutation: true
-    shopify_changes: []
-    repository_files:
-      - "docs/ai/CHATGPT-HANDOFF.md"
-      - "docs/ai/PROJECT-STATE.md"
-      - "docs/ai/DECISION-LOG.md"
-      - "docs/ai/NEXT-TASKS.yaml"
-    next_action: "Configure required Admin API write scopes, then rerun this exact live catalog normalization batch from current Shopify Admin data."
+    shopify_changes:
+      products_changed: 886
+      product_fields_changed:
+        - "productType"
+        - "category"
+      collections_changed: 0
+      navigation_changed: 0
+    protected_field_comparison: "passed"
+    before_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-151610-CATALOG-NORMALIZATION-001-LIVE"
+    after_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-153731-CATALOG-NORMALIZATION-001-AFTER"
+    artifacts:
+      - "scripts/catalog/live-catalog-normalization.mjs"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/summary.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/classification-mapping.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/mutation-log.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/rollback-product-classification.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/unresolved-summary.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/collection-navigation-report.json"
+    unresolved:
+      count: 3541
+      reason: "Ambiguous or incomplete records left unchanged instead of guessed."
+    next_action: "ChatGPT review. If needed, approve a narrow follow-up collection/navigation repair batch."

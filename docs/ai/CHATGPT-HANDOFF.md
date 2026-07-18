@@ -5,59 +5,121 @@ Purpose: concise task handoff for ChatGPT review through GitHub.
 ## Latest task
 
 Task ID: CATALOG-NORMALIZATION-001
-Objective: live-first catalog normalization for Product Type, Shopify standard product category, automated collections, and Online Store navigation.
-Status: blocked
+Objective: authorize Shopify Admin for BestPrintsCo operations, then normalize live catalog Product Type and Shopify standard category fields from current Shopify Admin data only.
+Status: review
 Repository: `Jay-prodesign/bestprintsco-theme`
 Store: `cute-sneakers.myshopify.com`
 Worktree: `C:\Projects\bestprintsco-theme`
 Branch: `codex/ai-coordination-system`
-Starting commit: `a7d763750d0a4b14a5ee375c9caac6986055624b`
+Starting commit: `b60d316b1a9bccf02956afec3bbf8bba60435d85`
 Final commit: this commit
 
-## Scope attempted
+## Authorization
 
-- Processed only the live catalog normalization prompt.
-- Did not continue DISC tasks or theme work.
-- Did not modify theme files.
-- Did not use development theme.
-- Did not mutate Shopify product, collection, navigation, price, inventory, variant, publication, customer, order, supplier, or checkout data.
-
-## Authentication evidence
-
-Admin GraphQL check used the current Shopify CLI store session.
-
-Authenticated app: `Shopify CLI Connector App`
+Authorization method: Shopify CLI `store auth` against `cute-sneakers.myshopify.com` using the existing Shopify CLI Connector App and the owner account.
 
 Granted scopes:
 
-- `read_products`
+- `read_analytics`
+- `read_content`
+- `read_customer_events`
+- `read_files`
 - `read_inventory`
+- `read_markets`
+- `read_online_store_navigation`
+- `read_online_store_pages`
+- `read_pixels`
+- `read_product_feeds`
+- `read_product_listings`
+- `read_products`
 - `read_publications`
-- `write_themes`
+- `read_reports`
 - `read_themes`
+- `write_content`
+- `write_files`
+- `write_online_store_navigation`
+- `write_online_store_pages`
+- `write_product_feeds`
+- `write_product_listings`
+- `write_products`
+- `write_publications`
+- `write_themes`
 
-Required catalog-normalization write scopes are not available through the inherited environment/session. `SHOPIFY_CATALOG_CLIENT_ID` and `SHOPIFY_CATALOG_CLIENT_SECRET` were not inherited by this Codex environment. Only `SHOPIFY_CLI_THEME_TOKEN` was present, and it is not an Admin catalog mutation credential.
+Missing scopes: none from the requested project scope that Shopify CLI accepted.
 
-## Blocker
+No theme, product, collection, navigation, or storefront data was modified during authorization.
 
-Cannot safely execute the approved live catalog normalization batch because the available Admin authentication source lacks product, collection, and navigation mutation scopes. At minimum, product classification changes require `write_products`; collection creation/repair and Online Store navigation updates require the appropriate Shopify Admin write scopes for collections/content/navigation.
+## Catalog normalization result
 
-## Validation performed
+Live product count inspected: 7,469
+Correct products left untouched before mutation: 3,044
+Products changed: 886
+Correct products after mutation: 3,928
+Unresolved ambiguous/incomplete products after mutation: 3,541
 
-- Clean worktree confirmed.
-- Branch, starting commit, and remote confirmed.
-- Admin GraphQL auth/scope query executed successfully.
-- No catalog snapshot or mutation was run after the missing write scopes were confirmed.
+Changed by issue type:
 
-## Rollback procedure
+- Missing both Product Type and Shopify category: 584
+- Product Type and Shopify category conflict: 217
+- Missing Shopify category: 85
 
-No Shopify mutation occurred. Rollback is not required for Shopify. Repository rollback: revert this blocked-task evidence commit if needed.
+Changed by product family:
 
-## Recommended next action
+- Bags: 288
+- Printed Boots: 276
+- Tote Bags: 111
+- Low Top Shoes: 99
+- Kids Shoes: 63
+- Kids Running Shoes: 22
+- Kids High Top Shoes: 8
+- Kids Low Top Shoes: 6
+- Slip-On Shoes: 6
+- Kids Hoodies: 3
+- Kids T-Shirts: 3
+- Leggings: 1
 
-Configure or expose a custom Admin API credential for BestPrintsCo catalog operations with the required write scopes, then rerun `CATALOG-NORMALIZATION-001` from the live Shopify Admin data source.
+Changed fields only:
 
-## Task history
+- Product Type
+- Shopify standard product category
 
-- AI-COORD-001: completed at `dd503906139d9d6fd2d0d247c7b3199643bdda35`
-- CATALOG-NORMALIZATION-001: blocked before mutation because the available Admin session lacks catalog write scopes.
+Protected-field comparison: passed. Handles, URLs, titles, descriptions, SEO fields, tags, vendors, media, variants, SKUs, prices, compare-at prices, inventory, publication status, customer/order data, checkout settings, supplier data, and theme files were not changed by the product normalization script.
+
+## Collections and navigation
+
+Collections created or repaired: none.
+Navigation items added, moved, or corrected: none.
+
+Reason: current live navigation already exposes the core product, design, guide, and all-products branches. Missing structural collection creation was stopped after two local variable-file failures before any Shopify collection mutation executed. No collection or navigation mutation reached Shopify execution.
+
+## Evidence and artifacts
+
+Before snapshot: `C:\Projects\bestprintsco-backups\20260718-151610-CATALOG-NORMALIZATION-001-LIVE`
+After snapshot: `C:\Projects\bestprintsco-backups\20260718-153731-CATALOG-NORMALIZATION-001-AFTER`
+Rollback data: `data/shopify/proposals/CATALOG-NORMALIZATION-001/rollback-product-classification.json`
+
+Committed artifacts:
+
+- `scripts/catalog/live-catalog-normalization.mjs`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/summary.json`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/classification-mapping.json`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/mutation-log.json`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/rollback-product-classification.json`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/unresolved-summary.json`
+- `data/shopify/proposals/CATALOG-NORMALIZATION-001/collection-navigation-report.json`
+
+Validation:
+
+- Shopify Admin scope verification passed after authorization.
+- Full before snapshot exported and count-validated before mutation.
+- 886 product updates completed through Admin GraphQL.
+- Changed products were read back through Admin GraphQL.
+- Protected-field comparison passed.
+- Full after snapshot exported and count-validated.
+- `git diff --check` passed.
+
+Rollback procedure: use `rollback-product-classification.json` to restore each changed product's previous Product Type and Shopify category via `productUpdate`, then read back and compare protected fields.
+
+Blocker: collection creation/navigation enhancement remained unresolved because the collection-create variable path failed locally twice before Shopify mutation. Product classification scope completed safely.
+
+Recommended next action: ChatGPT should review the mutation log and unresolved summary, then approve a narrow follow-up collection/navigation repair batch if the missing structural collections are still commercially required.
