@@ -43,3 +43,32 @@ tasks:
       count: 3541
       reason: "Ambiguous or incomplete records left unchanged instead of guessed."
     next_action: "ChatGPT review. If needed, approve a narrow follow-up collection/navigation repair batch."
+  - id: CATALOG-NORMALIZATION-001-CORRECTION
+    title: "Focused correction pass for prior catalog normalization"
+    status: review
+    branch: "codex/ai-coordination-system"
+    worktree: "C:\\Projects\\bestprintsco-theme"
+    starting_commit: "865e544ceaa490b66d39a07a56facb26cd6a4510"
+    scope:
+      - "Only the 886 products changed by CATALOG-NORMALIZATION-001"
+      - "Product Type"
+      - "Shopify standard product category"
+    shopify_changes:
+      products_rechecked: 886
+      products_corrected: 499
+      collections_changed: 0
+      navigation_changed: 0
+      theme_changed: false
+    protected_field_comparison: "passed"
+    artifacts:
+      - "scripts/catalog/catalog-normalization-correction.mjs"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/summary.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/planned-corrections.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/correction-readback.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/unresolved-correction-review.json"
+      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/representative-corrections.json"
+    unresolved:
+      count: 111
+      reason: "Left unchanged for later review rather than guessed."
+    next_action: "ChatGPT review correction evidence; do not start collection/navigation work without a new focused prompt."

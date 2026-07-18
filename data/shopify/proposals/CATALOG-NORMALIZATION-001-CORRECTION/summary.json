@@ -1,0 +1,25 @@
+{
+  "taskId": "CATALOG-NORMALIZATION-001-CORRECTION",
+  "status": "review",
+  "scopedProductsRechecked": 886,
+  "incorrectRecordsFound": 499,
+  "productsCorrected": 499,
+  "productsRestoredToOriginalValues": 53,
+  "productsAssignedDifferentVerifiedClassification": 446,
+  "productsLeftUnchangedAfterVerification": 775,
+  "unresolvedRecords": 111,
+  "correctionsByFamily": {
+    "Kids Shoes": 63,
+    "Kids Low Top Shoes": 6,
+    "Kids High Top Shoes": 8,
+    "Kids Running Shoes": 22,
+    "Bags": 288,
+    "Tote Bags": 111,
+    "Slip-On Shoes": 1
+  },
+  "protectedFieldComparison": "passed",
+  "targetReadback": "passed",
+  "beforeCorrectionSnapshot": "C:\\Projects\\bestprintsco-backups\\20260718-CATALOG-NORMALIZATION-001-CORRECTION-PLAN3",
+  "afterCorrectionSnapshot": "C:\\Projects\\bestprintsco-backups\\20260718-CATALOG-NORMALIZATION-001-CORRECTION-FINAL-CHECK",
+  "rollbackLocation": "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json"
+}
