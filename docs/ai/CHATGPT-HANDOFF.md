@@ -1,16 +1,18 @@
 # ChatGPT Handoff
 
-Task: CAT-BACKUP-001 publication correction and final reconciliation
-Status: CAT-BACKUP-001 DONE; autonomous catalog mutation not activated in this run
+Task: CAT-AUTO-001 activation and CAT-MEDIA-001 PILOT-001
+Status: PASS; bounded autonomy active; stopped after smallest pilot
 Branch: `task/CAT-000-catalog-governance`
-Implementation commits: `4a0a4ae`, `d568573`; reviewed coordination-state commit: `24a0d1f`; final coordination record: current PR/branch HEAD.
+Start commit: `8935359ccbc82262966862845c0de8cd53eadfd4`
+Final commit: current PR/branch HEAD (this coordination record is intentionally non-self-referential)
+Draft PR: #3
 
-Changed repository paths: `AGENTS.md`, `.gitignore`, `docs/catalog/`, `schemas/`, `scripts/catalog/governance/`, `tests/fixtures/catalog/`, `data/shopify/snapshots/README.md`, `docs/ai/`.
+Shopify change: one `productVariantDetachMedia` mutation removed association `gid://shopify/ProductVariant/40130542862416` → `gid://shopify/MediaImage/23339769135184` on product `gid://shopify/Product/6827404427344`. User errors: 0. No other Shopify resource or field changed.
 
-Shopify resource changes: none; exact resource mutation count 0. Corrective read-only bulk `5697086160976` completed with 7,461 product roots and 25,617 publication relationships. Private Drive artifact `1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd` passed native authenticated readback at 5,327,283 bytes and SHA-256 `104bdd7acaf35401c896dc4438167adfa356c3a1821b510d1ec2a5c5de552e67`. Raw data is absent from Git.
+Validation: fresh prepared scope is 16 ACTIVE products / 46 exact links, all present; exclusions 0; pagination complete. Full pilot readback passed. Product media membership/count/order/featured media, five publications, product fields, variant IDs/options/SKUs/prices/inventory/fulfillment values, collections and metafields are equal. Storefront desktop/mobile affected and unaffected variants, gallery, Add to Cart, console and horizontal overflow checks passed. Product `updatedAt` is the only expected system timestamp difference.
 
-Validation: all historical artifact hashes remain PASS. The omitted relationship is Microsoft Copilot publication `gid://shopify/Publication/113746903120`, active AppCatalog; sampled publish dates precede the snapshot. The original artifact remains immutable and the corrective artifact supplies the relationship for all 6,948 ACTIVE products. Identical fixed-seed sample PASS 17/17, pagination complete, unexplained differences 0. Recovery fixture PASS with rollback SHA-256 `8873e6f1339312e346544e618a7967bf44ccae6f9d20cfbf635798dd4796e8ff`.
+Private evidence: before Drive `1gBdUfHLBdRi_VKGBTwfawliJP21mP6gV` (5,378 bytes, SHA-256 `97f2a874f1bfe0532b54a4dc665e4cd85a2ab1fdd8c4d68fc7b0c6ab17725bc8`); after Drive `12_belDX6yrQxPDIXfcFBJ4AHmtwtD0PK` (2,386 bytes, SHA-256 `720d3679c3bf87981f7a74e61d9f9d3506032dd90b366f499b3e864362582b37`); rollback Drive `1SpjFxtyuWOXXX9SCowczup1nKr82uszp` (619 bytes, SHA-256 `90b90c1b89c522f9d91bb13db1f6472aa7dd34b6ab3037c67c49fb084aade4ab`). Raw catalog data remains outside Git.
 
-Rollback: revert all PR commits in reverse order, beginning with current PR/branch HEAD coordination changes, then continuation implementation changes, `24a0d1f`, `d568573`, and `4a0a4ae` as applicable; restore prior PCC/Current Project State revisions. No Shopify rollback.
+Rollback: not applied. If needed, execute the validated exact `productVariantAppendMedia` mapping in the private rollback artifact, then reread the full product and prove restoration.
 
-Recommended next action: before any first catalog write, record the separate bounded-autonomy activation checkpoint, lock, API version, branch/commit, manifest and rollback checkpoint.
+Next action: Continue CAT-MEDIA-001 with Terra at the next safe checkpoint using the exact same approved rule and all unchanged gates.

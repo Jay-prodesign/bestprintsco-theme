@@ -7,3 +7,5 @@
 | CAT-DEC-001 | 2026-07-22 | Resume duplicate scan only at SKU-STREAM-201 after PP.13849559. | Preserve completed work. | active |
 | CAT-DEC-002 | 2026-07-22 | Preserve the original publication artifact and append an immutable corrective artifact. | Microsoft Copilot publication existed before the snapshot but was omitted from historical evidence. | superseded-blocker-resolved |
 | CAT-DEC-003 | 2026-07-22 | Mark CAT-BACKUP-001 DONE; do not activate or start catalog mutation in this run. | Corrective artifact hash, 17/17 identical-seed sample, pagination and restore fixture all pass with zero unexplained differences. | active |
+| CAT-DEC-004 | 2026-07-22 | Activate bounded autonomy at 2026-07-22T14:25:22Z for the smallest Sol CAT-MEDIA pilot only. | Backup, locks, current scope, immutable prewrite evidence and exact rollback all passed before the first write. | active |
+| CAT-DEC-005 | 2026-07-22 | Accept PILOT-001 as PASS and stop before scaling; route later exact-rule checkpoints to Terra. | One association changed with zero user errors; complete protected-field/readback/storefront QA passed and unexplained differences were zero. | active |

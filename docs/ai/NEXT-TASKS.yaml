@@ -1,24 +1,29 @@
 version: 2
-last_updated: "2026-07-22T13:53:00Z"
+last_updated: "2026-07-22T14:29:30Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
-  - id: CAT-000
-    status: done
-    branch: task/CAT-000-catalog-governance
-    start_commit: 810b27ca87d520446da0c5d09c0c46de69ea2f32
-    commits: [4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d, d568573, 24a0d1f8a73a1ec3f3ab93c5d10e9b67f04ccf27]
-    shopify_mutations: 0
   - id: CAT-BACKUP-001
     status: done
-    drive_folder_id: 1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i
-    blockers: []
-    verified_new_artifact_hashes: 6
-    pending_new_artifact_hashes: 0
     corrective_publication_drive_id: 1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd
-    deterministic_sample: "PASS — 17 of 17; no pagination truncation; zero unexplained differences"
-    shopify_resource_mutations: 0
-    next_action: "Record separate bounded-autonomy activation checkpoint and locks before any first catalog write."
-  - id: LATER-CATALOG-JOBS
-    status: queued_not_activated
-    next_action: "Do not start until activation is recorded separately."
+    deterministic_sample: "PASS — 17 of 17; complete pagination; zero unexplained differences"
+  - id: CAT-AUTO-001
+    status: done_active
+    activated_utc: "2026-07-22T14:25:22Z"
+    api_version: "2026-07"
+    model: Sol
+  - id: CAT-MEDIA-001-PILOT-001
+    status: pass
+    product_id: 6827404427344
+    variant_id: 40130542862416
+    media_id: 23339769135184
+    shopify_mutations: 1
+    user_errors: 0
+    rollback_applied: false
+    scaling_started: false
+  - id: CAT-MEDIA-001-NEXT
+    status: ready_not_started
+    model: Terra
+    next_action: "Continue CAT-MEDIA-001 with Terra at the next safe checkpoint using the exact same approved rule and all unchanged gates."
+  - id: DOWNSTREAM-CATALOG-JOBS
+    status: not_started
