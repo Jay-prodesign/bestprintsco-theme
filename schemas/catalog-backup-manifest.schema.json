@@ -1,1 +1,21 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://bestprintsco.com/schemas/catalog-backup-manifest/v1.0.0","title":"BPC Catalog Backup Manifest","type":"object","required":["schemaVersion","snapshotUtc","apiVersion","store","exportCommit","artifacts","counts","fieldCoverage"],"properties":{"schemaVersion":{"const":"1.0.0"},"snapshotUtc":{"type":"string","format":"date-time"},"apiVersion":{"type":"string"},"store":{"type":"string"},"exportCommit":{"type":"string","pattern":"^[0-9a-f]{40}$"},"artifacts":{"type":"array","minItems":1,"items":{"type":"object","required":["name","sha256","bytes","driveFileId"],"properties":{"name":{"type":"string"},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"bytes":{"type":"integer","minimum":1},"driveFileId":{"type":"string"}},"additionalProperties":false}},"counts":{"type":"object","required":["products","variants","media","options","collectionMemberships","publications"],"additionalProperties":{"type":"integer","minimum":0}},"fieldCoverage":{"type":"string"}},"additionalProperties":false}
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://bestprintsco.com/schemas/catalog-backup-manifest/v1.0.0",
+  "title":"BPC Catalog Backup Manifest",
+  "type":"object",
+  "required":["schemaVersion","snapshotUtc","apiVersion","store","exportCommit","driveFolderId","bulkOperations","artifacts","counts","verification","fieldCoverage"],
+  "properties":{
+    "schemaVersion":{"const":"1.0.0"},
+    "snapshotUtc":{"type":"string","format":"date-time"},
+    "apiVersion":{"type":"string"},
+    "store":{"type":"string"},
+    "exportCommit":{"type":"string","pattern":"^[0-9a-f]{40}$"},
+    "driveFolderId":{"type":"string"},
+    "bulkOperations":{"type":"array","minItems":1,"items":{"type":"object"}},
+    "artifacts":{"type":"array","minItems":1,"items":{"type":"object","required":["name","sha256","bytes","driveFileId"],"properties":{"name":{"type":"string"},"sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"bytes":{"type":"integer","minimum":1},"driveFileId":{"type":"string"}},"additionalProperties":false}},
+    "counts":{"type":"object","required":["products","variants","media","options","collectionMemberships","publications"],"additionalProperties":{"type":"integer","minimum":0}},
+    "verification":{"type":"object"},
+    "fieldCoverage":{"type":"string"}
+  },
+  "additionalProperties":false
+}
