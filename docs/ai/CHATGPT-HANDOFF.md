@@ -15,4 +15,8 @@ Private evidence: before Drive `1gBdUfHLBdRi_VKGBTwfawliJP21mP6gV` (5,378 bytes,
 
 Rollback: not applied. If needed, execute the validated exact `productVariantAppendMedia` mapping in the private rollback artifact, then reread the full product and prove restoration.
 
-Next action: Continue CAT-MEDIA-001 with Terra at the next safe checkpoint using the exact same approved rule and all unchanged gates.
+Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped.
+
+## CAT-MEDIA-001 CHECKPOINT-010 — stopped before mutation
+
+Terra fresh-read six unambiguous ACTIVE/live products and nine still-present approved links.  The first detach call returned an incomplete connector payload, so `userErrors = 0` could not be objectively proven.  Immediate Shopify reread proved the target association remained present; no catalog mutation occurred in this checkpoint and no rollback was needed.  Private prewrite evidence: before Drive `1K_YxiLdUrrxmILNZ6N1V0Ch-PLYLz4Ow` (2,595 bytes, SHA-256 `d9b0e87c6ba7909dcfbf5f979ab7063291aaadcc5480ae7070c74d4d3f2fe588`) and rollback Drive `14YRXUQ7JhLDH_w6f9GrGJJnM1QOOd9qo` (1,218 bytes, SHA-256 `7474559187340aa41c28ec315fe91330c257ddc1f5243cf012bf3c3593467563`). Scaling is stopped; no downstream job started.

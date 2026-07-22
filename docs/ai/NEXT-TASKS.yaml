@@ -22,8 +22,8 @@ tasks:
     rollback_applied: false
     scaling_started: false
   - id: CAT-MEDIA-001-NEXT
-    status: ready_not_started
+    status: blocked
     model: Terra
-    next_action: "Continue CAT-MEDIA-001 with Terra at the next safe checkpoint using the exact same approved rule and all unchanged gates."
+    next_action: "Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped."
   - id: DOWNSTREAM-CATALOG-JOBS
     status: not_started
