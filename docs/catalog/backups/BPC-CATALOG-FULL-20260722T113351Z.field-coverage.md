@@ -1,6 +1,6 @@
 # Field Coverage — BPC-CATALOG-FULL-20260722T113351Z
 
-Status: **FIELD COVERAGE PASS / CAT-BACKUP-001 BLOCKED**. The supplemental inventory bulk operation completed and counts reconciled. Completion remains blocked only because new-file post-upload SHA-256 cannot be recalculated from connector-provided bytes, so the ordered deterministic sample gate was not started.
+Status: **FIELD COVERAGE PASS / CAT-BACKUP-001 BLOCKED**. Four of five supplemental artifacts passed independent post-upload SHA-256 from actual Drive byte streams. `normalized-inventory-levels.jsonl` remains unverified because its 66,458,524-byte raw response exceeds the connector's 67,108,864-byte IPC frame after base64 and metadata expansion. The ordered deterministic sample gate was not started.
 
 Covered: product GID/legacy ID/title/handle/status/timestamps; description HTML/SEO; vendor/type/category/tags; every returned product metafield; collection memberships; media IDs/types/URLs/alt/status/order-by-provider-output and featured-media ID; option IDs/names/positions/value IDs and names; variant GID/legacy ID/position/options/SKU/barcode/prices/taxable/inventory policy/quantity; inventory item ID/tracked/requires-shipping/unit cost/weight; publication IDs/names/isPublished/publishDate.
 
