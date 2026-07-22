@@ -1,13 +1,9 @@
 # Decision Log
 
-Purpose: concise record of decisions that future Codex and ChatGPT sessions should preserve.
-
 | ID | Date | Decision | Reason | Status |
 | --- | --- | --- | --- | --- |
-| AI-DEC-001 | 2026-07-14 | Use `docs/ai/` as the GitHub communication layer between Codex and ChatGPT. | Prevent project state from living only in chat transcripts. | active |
-| AI-DEC-002 | 2026-07-14 | Update AI coordination files after every completed or blocked task. | Enables ChatGPT to review branch state, evidence, blockers, and next actions without copy/paste. | active |
-| AI-DEC-003 | 2026-07-14 | Never store secrets, tokens, customer/order data, or authorization headers in coordination files. | Keeps GitHub-safe documentation. | active |
-| AI-DEC-004 | 2026-07-18 | Live catalog normalization must use current Shopify Admin data only and must stop before mutation when catalog write scopes are unavailable. | Prevents stale DISC assumptions and unsafe partial catalog mutations. | active |
-| AI-DEC-005 | 2026-07-18 | Apply only deterministic Product Type and Shopify category updates; leave ambiguous catalog records unresolved instead of guessing. | Protects catalog quality and avoids unsupported product-family inference. | active |
-| AI-DEC-006 | 2026-07-18 | Stop collection creation after two local variable-file failures and do not force navigation mutations. | Prevents malformed collection mutations; existing navigation already exposes core commercial branches. | active |
-| AI-DEC-007 | 2026-07-18 | Correct previous over-normalization by using product-specific title/variant evidence over dominant-family mapping for kids footwear and bags. | Kids records must not inherit adult categories, and bag forms must not be inferred from broad Product Type or collection membership. | active |
+| AI-DEC-001 | 2026-07-14 | Use `docs/ai/` as the GitHub communication layer. | Persistent review evidence. | active |
+| CAT-DEC-000 | 2026-07-22 | Shopify/live is runtime truth; PCC Codex Jobs is the shared queue. | Prevent stale IDs/counts and overlapping work. | active |
+| CAT-DEC-001 | 2026-07-22 | Resume duplicate scan only at SKU-STREAM-201 after PP.13849559. | Preserve completed work. | active |
+| CAT-DEC-002 | 2026-07-22 | Do not mark CAT-BACKUP-001 DONE. | Post-upload SHA-256 and essential inventory/fulfillment coverage are missing. | blocked |
+| CAT-DEC-003 | 2026-07-22 | Keep all later catalog jobs blocked/queued. | Immutable verified backup gate did not pass. | active |

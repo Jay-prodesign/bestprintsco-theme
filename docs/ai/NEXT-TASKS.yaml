@@ -1,74 +1,22 @@
-version: 1
-last_updated: "2026-07-18"
-source_of_truth: "docs/ai"
+version: 2
+last_updated: "2026-07-22T11:50:00Z"
+runtime_source_of_truth: "Shopify Admin and live storefront"
+shared_queue: "PCC Codex Jobs"
 tasks:
-  - id: AI-COORD-001
-    title: "Create persistent AI coordination system"
+  - id: CAT-000
     status: done
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    final_commit: "dd503906139d9d6fd2d0d247c7b3199643bdda35"
-    dependencies: []
-    next_action: "Use docs/ai as the GitHub communication layer."
-  - id: CATALOG-NORMALIZATION-001
-    title: "Live-first catalog normalization"
-    status: review
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    starting_commit: "b60d316b1a9bccf02956afec3bbf8bba60435d85"
-    allowed_scope:
-      - "Product Type"
-      - "Shopify standard product category"
-      - "Automated collections"
-      - "Online Store navigation menus"
-    shopify_changes:
-      products_changed: 886
-      product_fields_changed:
-        - "productType"
-        - "category"
-      collections_changed: 0
-      navigation_changed: 0
-    protected_field_comparison: "passed"
-    before_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-151610-CATALOG-NORMALIZATION-001-LIVE"
-    after_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-153731-CATALOG-NORMALIZATION-001-AFTER"
-    artifacts:
-      - "scripts/catalog/live-catalog-normalization.mjs"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/classification-mapping.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/mutation-log.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/rollback-product-classification.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/unresolved-summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/collection-navigation-report.json"
-    unresolved:
-      count: 3541
-      reason: "Ambiguous or incomplete records left unchanged instead of guessed."
-    next_action: "ChatGPT review. If needed, approve a narrow follow-up collection/navigation repair batch."
-  - id: CATALOG-NORMALIZATION-001-CORRECTION
-    title: "Focused correction pass for prior catalog normalization"
-    status: review
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    starting_commit: "865e544ceaa490b66d39a07a56facb26cd6a4510"
-    scope:
-      - "Only the 886 products changed by CATALOG-NORMALIZATION-001"
-      - "Product Type"
-      - "Shopify standard product category"
-    shopify_changes:
-      products_rechecked: 886
-      products_corrected: 499
-      collections_changed: 0
-      navigation_changed: 0
-      theme_changed: false
-    protected_field_comparison: "passed"
-    artifacts:
-      - "scripts/catalog/catalog-normalization-correction.mjs"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/planned-corrections.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/correction-readback.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/unresolved-correction-review.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/representative-corrections.json"
-    unresolved:
-      count: 111
-      reason: "Left unchanged for later review rather than guessed."
-    next_action: "ChatGPT review correction evidence; do not start collection/navigation work without a new focused prompt."
+    branch: task/CAT-000-catalog-governance
+    start_commit: 810b27ca87d520446da0c5d09c0c46de69ea2f32
+    commits: [4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d, d568573]
+    shopify_mutations: 0
+  - id: CAT-BACKUP-001
+    status: blocked
+    drive_folder_id: 1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i
+    blockers:
+      - post-upload SHA-256 byte readback unavailable
+      - location inventory and fulfillment identifiers absent
+      - random samples deferred after stop condition
+    next_action: "Resolve only these verification/coverage gaps; preserve completed bulk artifacts."
+  - id: LATER-CATALOG-JOBS
+    status: blocked_or_queued
+    next_action: "Do not start."
