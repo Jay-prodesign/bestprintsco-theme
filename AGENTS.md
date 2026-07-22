@@ -25,9 +25,17 @@ Do not choose or begin follow-up work.
 - Never run `shopify theme publish`.
 - Never run `shopify theme push --publish`.
 - Never perform a full-theme push.
-- Never overwrite live theme `122053689424`.
+- Never overwrite a live/MAIN theme. Resolve theme IDs and roles from Shopify at runtime; stored IDs are historical evidence only.
 - Deploy only explicitly authorized files and use `--nodelete`.
-- New batches deploy to development theme `130287665232` unless the current prompt explicitly authorizes a live selective deployment.
+- Never infer a development theme from a stored ID. A working theme must be freshly queried, explicitly approved, unpublished, and recorded in the active job.
+
+## Catalog authority and execution queue
+
+- Shopify Admin and the live storefront are current runtime truth; stored counts, IDs, roles, snapshots, and cursors are historical until freshly reconciled.
+- The canonical shared queue is the Project Control Center `Codex Jobs` tab. Acquire an exclusive scope/field lock before work and record executor, run reference, UTC start, branch, scope, cursor, and evidence.
+- Canonical Drive references: Project Control Center `15eOnBUER-rnkMSsniSx6-Yz8sQTg1cfzEyO8PaXmBS0`; Current Project State `1vDhkaF_tq4pnj4dzOnOcrfK_lwssbO1kL7RCB-rSN4M`; Catalog Plan v1.1 `1unCyC0zh_qZAYed8nlVRFtdC-8jIO_CZPW6hySCwAks`; Footwear Classification `1tZlNAky8GWtwAFTLYinnkQuSRaoEik7ZfzzmS-6gDq4`; private backup folder `1d2Y0LZhFZl6zEVTu8Pohs_dgWGn9TJKk`.
+- Duplicate continuation starts at `SKU-STREAM-201` after completed `SKU-STREAM-200` / `PP.13849559`; never restart completed ranges.
+- Raw catalog exports, supplier data, and row-level private evidence must never enter Git, PR diffs, logs, or public artifacts.
 
 ## Protected catalog data
 
