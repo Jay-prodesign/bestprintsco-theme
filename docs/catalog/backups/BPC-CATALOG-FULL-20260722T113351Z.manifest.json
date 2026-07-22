@@ -7,9 +7,10 @@
   "driveFolderId": "1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i",
   "bulkOperations": [
     {"id":"5696731447376","status":"COMPLETED","rootObjectCount":7461,"objectCount":177164},
-    {"id":"5696739410000","status":"COMPLETED","rootObjectCount":7461,"objectCount":26130}
+    {"id":"5696739410000","status":"COMPLETED","rootObjectCount":7461,"objectCount":26130},
+    {"id":"5696857374800","status":"COMPLETED","createdAt":"2026-07-22T12:15:39Z","completedAt":"2026-07-22T12:19:19Z","objectCount":273282}
   ],
-  "counts": {"products":7461,"activeProducts":6948,"activeOnlineStorePublished":6279,"activeOnlineStoreUnpublished":669,"variants":91094,"media":35218,"options":11074,"collectionMemberships":28803,"publications":18669,"metafields":14588},
+  "counts": {"products":7461,"activeProducts":6948,"activeOnlineStorePublished":6279,"activeOnlineStoreUnpublished":669,"variants":91094,"inventoryItems":91094,"trackedInventoryItems":2,"untrackedInventoryItems":91092,"inventoryLevels":91094,"uniqueLocations":11,"fulfillmentServices":8,"media":35218,"options":11074,"collectionMemberships":28803,"publications":18669,"metafields":14588},
   "artifacts": [
     {"name":"shopify-core-5696731447376.zip","driveFileId":"14VLZ1zGK1ePJqBPs4FiPDLHh_yZMcOJm","bytes":6623302,"sha256":"0c0a95b431548c3f880aa478fcf47221e466588b8aaffb9684f552860284d158"},
     {"name":"shopify-publications-5696739410000.jsonl","driveFileId":"1sPZsF458EVUCSZOBxmAE91LfUxAKM9W4","bytes":4293072,"sha256":"0fb634d46aabc0f1da27ac9d7ef432fc8685e4b4518ecb39fe47e3be084da4c8"},
@@ -17,8 +18,13 @@
     {"name":"normalized-variants.jsonl","driveFileId":"1edACsaRFAn48SbB8sQGnrStej0VSqbQ-","bytes":55867905,"sha256":"368733e210fb2a429ca59eeae6ec62b9ca023089839c9fe3f25529bb283372e8"},
     {"name":"normalized-media.jsonl","driveFileId":"12o7GV2G4L1-MYSvT2UrHApyuAoSprQhd","bytes":13442946,"sha256":"2815fdd90ad5023ab4aea2b92f885693b10ed272cd43c2ff16dc455d7301430b"},
     {"name":"normalized-metafields.jsonl","driveFileId":"11kXeI48ErVcXOLknIZPLFTOYGKMRp6pD","bytes":2816639,"sha256":"7729f2442e749aa5a51a407f4bce79e84a512dc274d7f9eb59979f55af0b7a11"},
-    {"name":"normalized-collectionMemberships.jsonl","driveFileId":"1UjOkjnzyOswz644eO7YBBCQmXEbYHk4X","bytes":2822694,"sha256":"65e30da483bfeb8e90a9faf960c5133fcba84d10b130a98fa5aa73c975bbe9c8"}
+    {"name":"normalized-collectionMemberships.jsonl","driveFileId":"1UjOkjnzyOswz644eO7YBBCQmXEbYHk4X","bytes":2822694,"sha256":"65e30da483bfeb8e90a9faf960c5133fcba84d10b130a98fa5aa73c975bbe9c8"},
+    {"name":"shopify-inventory-5696857374800.zip","driveFileId":"1MGOAywp8HHa7sPm3uW8pWi_Zs_p2Z4J1","bytes":3594390,"sha256":"8bcd5fc54b2c4be05edaaf2295921a251f29ac31f57f776762631207e63a1a13"},
+    {"name":"shopify-locations-20260722T121539Z.json","driveFileId":"1QZedLsX1rYTaZbApECgHnFXDr5dof_j7","bytes":4255,"sha256":"a9c12cb21b120cf88f50ee39e41adae092d725e5b299c801a544323ed2a7c763"},
+    {"name":"normalized-inventory-items.jsonl","driveFileId":"161zn5f38AHE159Dcy7t4gC9vBKbnWW3o","bytes":35842306,"sha256":"ada5033d41b59dd83fdf6a9eb1a151d351ae314e32fea26e5f0f0e92b6ad2ac7"},
+    {"name":"normalized-inventory-levels.jsonl","driveFileId":"1oO-OqO1-ZzIgC0aloGn935N3_ixPIahS","bytes":66458524,"sha256":"fad7f50b4da775fd2a56e8a2eceae5f8def53a9d6ef22f407b1dcfa2eca9197e"},
+    {"name":"normalized-locations.jsonl","driveFileId":"11yjWNI1ZyB6pJbCpIlFR9B43jpP0oseC","bytes":4253,"sha256":"20257f54617e391ae3c889fe837c5de31d0acbb88cbb2ac33520debad5925d96"}
   ],
-  "verification": {"bulkCompletion":"PASS","countReconciliation":"PASS","driveSizeReadback":"PASS","postUploadSha256":"BLOCKED_CONNECTOR_NO_CHECKSUM_OR_BYTE_STREAM","fieldCoverage":"FAIL","recoveryFixture":"PASS","randomSamples":"NOT_RUN_AFTER_STOP_CONDITION"},
+  "verification": {"bulkCompletion":"PASS","countReconciliation":"PASS","existingArtifactPostUploadSha256":"PASS_INDEPENDENT_BYTE_READBACK","newArtifactDriveSizeReadback":"PASS","newArtifactPostUploadSha256":"BLOCKED_CONNECTOR_SEDIMENT_REFERENCE_ONLY","inventoryFulfillmentFieldCoverage":"PASS","recoveryFixture":"PASS","deterministicSamples":"NOT_RUN_HASH_GATE_PRECONDITION_FAILED","rawCatalogAbsentFromGit":"PASS","shopifyResourceMutations":0,"readOnlyBulkOperationsCreated":1},
   "fieldCoverage": "docs/catalog/backups/BPC-CATALOG-FULL-20260722T113351Z.field-coverage.md"
 }

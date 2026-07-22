@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-07-22T11:50:00Z"
+last_updated: "2026-07-22T12:25:00Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -7,16 +7,15 @@ tasks:
     status: done
     branch: task/CAT-000-catalog-governance
     start_commit: 810b27ca87d520446da0c5d09c0c46de69ea2f32
-    commits: [4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d, d568573]
+    commits: [4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d, d568573, 24a0d1f8a73a1ec3f3ab93c5d10e9b67f04ccf27]
     shopify_mutations: 0
   - id: CAT-BACKUP-001
     status: blocked
     drive_folder_id: 1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i
     blockers:
-      - post-upload SHA-256 byte readback unavailable
-      - location inventory and fulfillment identifiers absent
-      - random samples deferred after stop condition
-    next_action: "Resolve only these verification/coverage gaps; preserve completed bulk artifacts."
+      - new artifact post-upload SHA-256 byte readback unavailable
+      - deterministic sample validation not run because hash prerequisite failed
+    next_action: "Independently byte-download and SHA-256 verify only the five new Drive artifacts."
   - id: LATER-CATALOG-JOBS
     status: blocked_or_queued
     next_action: "Do not start."

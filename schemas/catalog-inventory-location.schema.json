@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bestprintsco.example/schemas/catalog-inventory-location-1.0.0.json",
+  "title": "BestPrintsCo catalog inventory and location recovery record",
+  "version": "1.0.0",
+  "type": "object",
+  "required": ["id"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^gid://shopify/"},
+    "legacyResourceId": {"type": ["string", "integer"]},
+    "__parentId": {"type": "string"},
+    "tracked": {"type": "boolean"},
+    "product": {"type": "object", "properties": {"id": {"type": "string"}}, "required": ["id"]},
+    "location": {"$ref": "#/$defs/location"},
+    "quantities": {"type": "array", "items": {"type": "object", "required": ["name", "quantity"], "properties": {"name": {"type": "string"}, "quantity": {"type": "integer"}}}},
+    "name": {"type": "string"},
+    "isActive": {"type": "boolean"},
+    "fulfillsOnlineOrders": {"type": "boolean"},
+    "fulfillmentService": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/fulfillmentService"}]}
+  },
+  "$defs": {
+    "location": {"type": "object", "required": ["id", "legacyResourceId", "name", "isActive", "fulfillsOnlineOrders"], "properties": {"id": {"type": "string"}, "legacyResourceId": {"type": ["string", "integer"]}, "name": {"type": "string"}, "isActive": {"type": "boolean"}, "fulfillsOnlineOrders": {"type": "boolean"}, "isFulfillmentService": {"type": "boolean"}, "fulfillmentService": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/fulfillmentService"}]}}},
+    "fulfillmentService": {"type": "object", "required": ["id", "handle", "serviceName", "type"], "properties": {"id": {"type": "string"}, "handle": {"type": "string"}, "serviceName": {"type": "string"}, "type": {"type": "string"}, "inventoryManagement": {"type": "boolean"}, "requiresShippingMethod": {"type": "boolean"}, "trackingSupport": {"type": "boolean"}}}
+  },
+  "additionalProperties": true
+}
