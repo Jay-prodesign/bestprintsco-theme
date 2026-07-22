@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-07-22T13:27:59Z"
+last_updated: "2026-07-22T13:53:00Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -10,14 +10,15 @@ tasks:
     commits: [4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d, d568573, 24a0d1f8a73a1ec3f3ab93c5d10e9b67f04ccf27]
     shopify_mutations: 0
   - id: CAT-BACKUP-001
-    status: blocked
+    status: done
     drive_folder_id: 1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i
-    blockers:
-      - fixed-seed sample failed on one additional live publication relationship for 16 of 17 representatives
-    verified_new_artifact_hashes: 5
+    blockers: []
+    verified_new_artifact_hashes: 6
     pending_new_artifact_hashes: 0
-    deterministic_sample: "FAIL — 16 publication-only mismatches; 1 complete match; no pagination truncation"
-    next_action: "Reconcile the newly observed publication relationship, refresh and independently verify publication backup evidence if required, then rerun the same fixed-seed sample."
+    corrective_publication_drive_id: 1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd
+    deterministic_sample: "PASS — 17 of 17; no pagination truncation; zero unexplained differences"
+    shopify_resource_mutations: 0
+    next_action: "Record separate bounded-autonomy activation checkpoint and locks before any first catalog write."
   - id: LATER-CATALOG-JOBS
-    status: blocked_or_queued
-    next_action: "Do not start."
+    status: queued_not_activated
+    next_action: "Do not start until activation is recorded separately."

@@ -1,16 +1,16 @@
 # ChatGPT Handoff
 
-Task: CAT-000 + CAT-BACKUP-001 bootstrap
-Status: CAT-000 DONE; CAT-BACKUP-001 BLOCKED
+Task: CAT-BACKUP-001 publication correction and final reconciliation
+Status: CAT-BACKUP-001 DONE; autonomous catalog mutation not activated in this run
 Branch: `task/CAT-000-catalog-governance`
 Implementation commits: `4a0a4ae`, `d568573`; reviewed coordination-state commit: `24a0d1f`; final coordination record: current PR/branch HEAD.
 
 Changed repository paths: `AGENTS.md`, `.gitignore`, `docs/catalog/`, `schemas/`, `scripts/catalog/governance/`, `tests/fixtures/catalog/`, `data/shopify/snapshots/README.md`, `docs/ai/`.
 
-Shopify resource changes: none. Read-only bulk IDs `5696731447376`, `5696739410000`, and supplemental `5696857374800` completed. Private Drive folder `1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i` contains raw/normalized artifacts. Raw data is absent from Git.
+Shopify resource changes: none; exact resource mutation count 0. Corrective read-only bulk `5697086160976` completed with 7,461 product roots and 25,617 publication relationships. Private Drive artifact `1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd` passed native authenticated readback at 5,327,283 bytes and SHA-256 `104bdd7acaf35401c896dc4438167adfa356c3a1821b510d1ec2a5c5de552e67`. Raw data is absent from Git.
 
-Validation: all 12 artifact hashes PASS. Final file used authenticated Chrome native Drive download; 66,458,524 bytes and SHA-256 `fad7f50b4da775fd2a56e8a2eceae5f8def53a9d6ef22f407b1dcfa2eca9197e`. Recovery fixture reverified PASS. Fixed-seed fresh sample FAIL: 16/17 representatives have one additional live publication relationship; all other compared sections match.
+Validation: all historical artifact hashes remain PASS. The omitted relationship is Microsoft Copilot publication `gid://shopify/Publication/113746903120`, active AppCatalog; sampled publish dates precede the snapshot. The original artifact remains immutable and the corrective artifact supplies the relationship for all 6,948 ACTIVE products. Identical fixed-seed sample PASS 17/17, pagination complete, unexplained differences 0. Recovery fixture PASS with rollback SHA-256 `8873e6f1339312e346544e618a7967bf44ccae6f9d20cfbf635798dd4796e8ff`.
 
 Rollback: revert all PR commits in reverse order, beginning with current PR/branch HEAD coordination changes, then continuation implementation changes, `24a0d1f`, `d568573`, and `4a0a4ae` as applicable; restore prior PCC/Current Project State revisions. No Shopify rollback.
 
-Recommended next action: reconcile the newly observed publication relationship and refresh/reverify publication backup evidence before rerunning the same sample; do not start CAT-MEDIA-001.
+Recommended next action: before any first catalog write, record the separate bounded-autonomy activation checkpoint, lock, API version, branch/commit, manifest and rollback checkpoint.
