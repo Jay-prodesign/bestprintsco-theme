@@ -40,3 +40,7 @@ temp/
 *.log
 coverage/
 .cache/
+# Private Shopify catalog/recovery payloads
+BPC-CATALOG-FULL-*/
+*.jsonl
+data/shopify/backups/

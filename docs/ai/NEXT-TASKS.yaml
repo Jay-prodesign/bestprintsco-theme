@@ -1,74 +1,29 @@
-version: 1
-last_updated: "2026-07-18"
-source_of_truth: "docs/ai"
+version: 2
+last_updated: "2026-07-22T14:29:30Z"
+runtime_source_of_truth: "Shopify Admin and live storefront"
+shared_queue: "PCC Codex Jobs"
 tasks:
-  - id: AI-COORD-001
-    title: "Create persistent AI coordination system"
+  - id: CAT-BACKUP-001
     status: done
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    final_commit: "dd503906139d9d6fd2d0d247c7b3199643bdda35"
-    dependencies: []
-    next_action: "Use docs/ai as the GitHub communication layer."
-  - id: CATALOG-NORMALIZATION-001
-    title: "Live-first catalog normalization"
-    status: review
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    starting_commit: "b60d316b1a9bccf02956afec3bbf8bba60435d85"
-    allowed_scope:
-      - "Product Type"
-      - "Shopify standard product category"
-      - "Automated collections"
-      - "Online Store navigation menus"
-    shopify_changes:
-      products_changed: 886
-      product_fields_changed:
-        - "productType"
-        - "category"
-      collections_changed: 0
-      navigation_changed: 0
-    protected_field_comparison: "passed"
-    before_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-151610-CATALOG-NORMALIZATION-001-LIVE"
-    after_snapshot: "C:\\Projects\\bestprintsco-backups\\20260718-153731-CATALOG-NORMALIZATION-001-AFTER"
-    artifacts:
-      - "scripts/catalog/live-catalog-normalization.mjs"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/classification-mapping.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/mutation-log.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/rollback-product-classification.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/unresolved-summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001/collection-navigation-report.json"
-    unresolved:
-      count: 3541
-      reason: "Ambiguous or incomplete records left unchanged instead of guessed."
-    next_action: "ChatGPT review. If needed, approve a narrow follow-up collection/navigation repair batch."
-  - id: CATALOG-NORMALIZATION-001-CORRECTION
-    title: "Focused correction pass for prior catalog normalization"
-    status: review
-    branch: "codex/ai-coordination-system"
-    worktree: "C:\\Projects\\bestprintsco-theme"
-    starting_commit: "865e544ceaa490b66d39a07a56facb26cd6a4510"
-    scope:
-      - "Only the 886 products changed by CATALOG-NORMALIZATION-001"
-      - "Product Type"
-      - "Shopify standard product category"
-    shopify_changes:
-      products_rechecked: 886
-      products_corrected: 499
-      collections_changed: 0
-      navigation_changed: 0
-      theme_changed: false
-    protected_field_comparison: "passed"
-    artifacts:
-      - "scripts/catalog/catalog-normalization-correction.mjs"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/summary.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/planned-corrections.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/correction-readback.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/unresolved-correction-review.json"
-      - "data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/representative-corrections.json"
-    unresolved:
-      count: 111
-      reason: "Left unchanged for later review rather than guessed."
-    next_action: "ChatGPT review correction evidence; do not start collection/navigation work without a new focused prompt."
+    corrective_publication_drive_id: 1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd
+    deterministic_sample: "PASS — 17 of 17; complete pagination; zero unexplained differences"
+  - id: CAT-AUTO-001
+    status: done_active
+    activated_utc: "2026-07-22T14:25:22Z"
+    api_version: "2026-07"
+    model: Sol
+  - id: CAT-MEDIA-001-PILOT-001
+    status: pass
+    product_id: 6827404427344
+    variant_id: 40130542862416
+    media_id: 23339769135184
+    shopify_mutations: 1
+    user_errors: 0
+    rollback_applied: false
+    scaling_started: false
+  - id: CAT-MEDIA-001-NEXT
+    status: blocked
+    model: Terra
+    next_action: "Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped."
+  - id: DOWNSTREAM-CATALOG-JOBS
+    status: not_started

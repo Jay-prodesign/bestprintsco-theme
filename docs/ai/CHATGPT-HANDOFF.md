@@ -1,87 +1,22 @@
 # ChatGPT Handoff
 
-Purpose: concise task handoff for ChatGPT review through GitHub.
+Task: CAT-AUTO-001 activation and CAT-MEDIA-001 PILOT-001
+Status: PASS; bounded autonomy active; stopped after smallest pilot
+Branch: `task/CAT-000-catalog-governance`
+Start commit: `8935359ccbc82262966862845c0de8cd53eadfd4`
+Final commit: current PR/branch HEAD (this coordination record is intentionally non-self-referential)
+Draft PR: #3
 
-## Latest task
+Shopify change: one `productVariantDetachMedia` mutation removed association `gid://shopify/ProductVariant/40130542862416` → `gid://shopify/MediaImage/23339769135184` on product `gid://shopify/Product/6827404427344`. User errors: 0. No other Shopify resource or field changed.
 
-Task ID: CATALOG-NORMALIZATION-001-CORRECTION
-Objective: inspect and correct potentially wrong Product Type / Shopify category classifications among only the 886 products changed by `CATALOG-NORMALIZATION-001`.
-Status: review
-Repository: `Jay-prodesign/bestprintsco-theme`
-Store: `cute-sneakers.myshopify.com`
-Worktree: `C:\Projects\bestprintsco-theme`
-Branch: `codex/ai-coordination-system`
-Starting commit: `865e544ceaa490b66d39a07a56facb26cd6a4510`
-Final commit: this commit
+Validation: fresh prepared scope is 16 ACTIVE products / 46 exact links, all present; exclusions 0; pagination complete. Full pilot readback passed. Product media membership/count/order/featured media, five publications, product fields, variant IDs/options/SKUs/prices/inventory/fulfillment values, collections and metafields are equal. Storefront desktop/mobile affected and unaffected variants, gallery, Add to Cart, console and horizontal overflow checks passed. Product `updatedAt` is the only expected system timestamp difference.
 
-## Scope
+Private evidence: before Drive `1gBdUfHLBdRi_VKGBTwfawliJP21mP6gV` (5,378 bytes, SHA-256 `97f2a874f1bfe0532b54a4dc665e4cd85a2ab1fdd8c4d68fc7b0c6ab17725bc8`); after Drive `12_belDX6yrQxPDIXfcFBJ4AHmtwtD0PK` (2,386 bytes, SHA-256 `720d3679c3bf87981f7a74e61d9f9d3506032dd90b366f499b3e864362582b37`); rollback Drive `1SpjFxtyuWOXXX9SCowczup1nKr82uszp` (619 bytes, SHA-256 `90b90c1b89c522f9d91bb13db1f6472aa7dd34b6ab3037c67c49fb084aade4ab`). Raw catalog data remains outside Git.
 
-Inspected only products changed by the previous catalog normalization batch.
+Rollback: not applied. If needed, execute the validated exact `productVariantAppendMedia` mapping in the private rollback artifact, then reread the full product and prove restoration.
 
-No theme files, collections, navigation, product titles, descriptions, SEO fields, handles, tags, vendors, media, variants, SKUs, barcodes, prices, compare-at prices, inventory, publication status, customer/order data, supplier data, or checkout settings were changed.
+Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped.
 
-Changed fields only:
+## CAT-MEDIA-001 CHECKPOINT-010 — stopped before mutation
 
-- Product Type
-- Shopify standard product category
-
-## Correction result
-
-Scoped previous changes rechecked: 886
-Incorrect records found and corrected: 499
-Products restored to prior values: 53
-Products assigned a different verified classification: 446
-Products left unchanged after verification: 775
-Unresolved records left for review: 111
-
-Corrections by family:
-
-- Bags: 288
-- Tote Bags: 111
-- Kids Shoes: 63
-- Kids Running Shoes: 22
-- Kids High Top Shoes: 8
-- Kids Low Top Shoes: 6
-- Slip-On Shoes: 1
-
-Important corrected targets:
-
-- Kids Shoes / Slip-On Shoes: `Kids Slip-On Shoes`, category `Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers`
-- Kids Running Shoes: `Kids Running Shoes`, category `Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers`
-- Kids High Top Shoes: `Kids High Top Shoes`, category `Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers`
-- Kids Low Top Shoes: `Kids Low Top Shoes`, category `Apparel & Accessories > Shoes > Baby & Children's Shoes > Baby & Children's Sneakers`
-- Bags previously over-normalized to Backpack: corrected by title/variant evidence, primarily to `Travel Bag` with Shopify category `Luggage & Bags > Duffel Bags`
-- Tote Bags: verified by title/variant evidence as `Leather Tote Bags`, category `Luggage & Bags > Tote Bags`
-- Printed Boots: 276 reviewed and left unchanged; boot evidence supported the existing `Vegan Leather Boots` classification in current product data.
-
-## Evidence and artifacts
-
-Original baseline snapshot: `C:\Projects\bestprintsco-backups\20260718-151610-CATALOG-NORMALIZATION-001-LIVE`
-Original after snapshot: `C:\Projects\bestprintsco-backups\20260718-153731-CATALOG-NORMALIZATION-001-AFTER`
-Correction before/plan snapshot: `C:\Projects\bestprintsco-backups\20260718-CATALOG-NORMALIZATION-001-CORRECTION-PLAN3`
-Correction after/final check snapshot: `C:\Projects\bestprintsco-backups\20260718-CATALOG-NORMALIZATION-001-CORRECTION-FINAL-CHECK`
-
-Committed correction artifacts:
-
-- `scripts/catalog/catalog-normalization-correction.mjs`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/summary.json`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/planned-corrections.json`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/correction-readback.json`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/unresolved-correction-review.json`
-- `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/representative-corrections.json`
-
-Validation:
-
-- 886 scoped products fetched from live Shopify Admin before decision.
-- Correction mutations applied only to confirmed mistakes.
-- Final scoped recheck found 0 remaining correction candidates.
-- Target readback: passed.
-- Protected-field comparison: passed.
-- `git diff --check`: passed.
-
-Rollback procedure: use `data/shopify/proposals/CATALOG-NORMALIZATION-001-CORRECTION/rollback-correction.json` to restore each corrected product's pre-correction Product Type and Shopify category via `productUpdate`, then rerun the scoped readback/protected-field comparison.
-
-Blocker: none for this correction pass. The 111 unresolved records were intentionally left unchanged for later review.
-
-Recommended next action: ChatGPT review the correction evidence and then decide whether a separate narrow unresolved-record review is worth doing.
+Terra fresh-read six unambiguous ACTIVE/live products and nine still-present approved links.  The first detach call returned an incomplete connector payload, so `userErrors = 0` could not be objectively proven.  Immediate Shopify reread proved the target association remained present; no catalog mutation occurred in this checkpoint and no rollback was needed.  Private prewrite evidence: before Drive `1K_YxiLdUrrxmILNZ6N1V0Ch-PLYLz4Ow` (2,595 bytes, SHA-256 `d9b0e87c6ba7909dcfbf5f979ab7063291aaadcc5480ae7070c74d4d3f2fe588`) and rollback Drive `14YRXUQ7JhLDH_w6f9GrGJJnM1QOOd9qo` (1,218 bytes, SHA-256 `7474559187340aa41c28ec315fe91330c257ddc1f5243cf012bf3c3593467563`). Scaling is stopped; no downstream job started.

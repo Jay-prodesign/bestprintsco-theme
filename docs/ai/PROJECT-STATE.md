@@ -1,37 +1,20 @@
 # Project State
 
-Status: active
+Status: CAT-AUTO-001 active; CAT-MEDIA-001 CHECKPOINT-010 BLOCKED; scaling stopped
+Last updated: 2026-07-22T14:29:30Z
 Repository: `Jay-prodesign/bestprintsco-theme`
 Store: `cute-sneakers.myshopify.com`
-Authoritative coordination path: `docs/ai/`
-Last updated: 2026-07-18
+Branch: `task/CAT-000-catalog-governance`
+Start commit: `8935359ccbc82262966862845c0de8cd53eadfd4`
+Final commit: current PR/branch HEAD
+Draft PR: #3
 
-## Current state
-
-- `CATALOG-NORMALIZATION-001` remains in review after a focused correction pass.
-- Shopify CLI store authorization was upgraded for the existing Shopify CLI Connector App and verified through Admin GraphQL.
-- Current live Shopify Admin data was used as the only catalog source of truth.
-- 7,469 live products were inspected.
-- 886 products were updated for Product Type and Shopify standard category only in the original batch.
-- A correction pass rechecked all 886 changed products and corrected 499 unsafe or overly broad classifications.
-- Protected-field comparison passed after the original batch and after the correction pass.
-- Collections and navigation were not changed.
-- No theme files, product titles, descriptions, SEO fields, tags, vendors, media, variants, SKUs, prices, inventory, publication status, customer/order data, checkout settings, or supplier data were changed.
-
-## Active branch
-
-- `codex/ai-coordination-system`
-
-## Latest coordination commit
-
-- this commit
-
-## Deployment state
-
-- Development theme deployment: not applicable.
-- Live theme deployment: not applicable; no theme work was performed.
-
-## Known blocker
-
-- 111 correction-scope records remain unresolved and unchanged for later review.
-- Collection/navigation enhancement is unresolved. No collection or navigation mutation was performed in the correction pass.
+- Runtime themes verified read-only: `130378989648` MAIN/Active; `130374139984` UNPUBLISHED/Draft.
+- API version: `2026-07`; model: Sol; activation UTC: `2026-07-22T14:25:22Z`.
+- CAT-BACKUP-001 remains DONE. Corrective publication artifact `1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd`; 17/17 sample PASS; pagination complete; restore fixture PASS; unexplained differences 0.
+- Fresh CAT-MEDIA prepared scope: 16 ACTIVE products / 46 exact links, all present; 0 exclusions; complete pagination.
+- Pilot: product `6827404427344`, handle `mandala-handcrafted-white-sole-sneakers-2`; detached variant `40130542862416` from media `23339769135184`.
+- Shopify mutation count: 1; userErrors: 0. Only the approved association changed. Full protected-field, media, publication and storefront QA passed; unexplained differences 0.
+- Rollback validated and available; not applied. No scaling or downstream job started.
+- Checkpoint-010 blocker: the first authorized detach call produced no parseable mutation payload, so Shopify `userErrors = 0` cannot be proven. Immediate fresh read shows the requested link remains present; this checkpoint made zero catalog mutations and required no rollback.
+- Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped.
