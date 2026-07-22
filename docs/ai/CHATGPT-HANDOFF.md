@@ -9,8 +9,8 @@ Changed repository paths: `AGENTS.md`, `.gitignore`, `docs/catalog/`, `schemas/`
 
 Shopify resource changes: none. Read-only bulk IDs `5696731447376`, `5696739410000`, and supplemental `5696857374800` completed. Private Drive folder `1jW99qfYFjrP2LLSAp_qarsWMYdcAD20i` contains raw/normalized artifacts. Raw data is absent from Git.
 
-Validation: existing artifact post-upload SHA-256 PASS by independent byte readback; four of five new artifacts now independently PASS from Drive raw-byte base64 streams; inventory/fulfillment coverage and counts PASS; recovery fixture PASS. Blocked: `normalized-inventory-levels.jsonl` (66,458,524 bytes) exceeds the connector's 67,108,864-byte IPC response frame after transport expansion, so its post-upload hash is unverified; deterministic samples remain unrun.
+Validation: all 12 artifact hashes PASS. Final file used authenticated Chrome native Drive download; 66,458,524 bytes and SHA-256 `fad7f50b4da775fd2a56e8a2eceae5f8def53a9d6ef22f407b1dcfa2eca9197e`. Recovery fixture reverified PASS. Fixed-seed fresh sample FAIL: 16/17 representatives have one additional live publication relationship; all other compared sections match.
 
 Rollback: revert all PR commits in reverse order, beginning with current PR/branch HEAD coordination changes, then continuation implementation changes, `24a0d1f`, `d568573`, and `4a0a4ae` as applicable; restore prior PCC/Current Project State revisions. No Shopify rollback.
 
-Recommended next action: obtain a supported streaming/direct-byte download for `normalized-inventory-levels.jsonl`, verify its SHA-256, then run the fixed-seed live-versus-backup sample; do not start CAT-MEDIA-001.
+Recommended next action: reconcile the newly observed publication relationship and refresh/reverify publication backup evidence before rerunning the same sample; do not start CAT-MEDIA-001.

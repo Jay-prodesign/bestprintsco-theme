@@ -1,7 +1,7 @@
 # Project State
 
 Status: blocked
-Last updated: 2026-07-22T13:12:10Z
+Last updated: 2026-07-22T13:27:59Z
 Repository: `Jay-prodesign/bestprintsco-theme`
 Store: `cute-sneakers.myshopify.com`
 Branch: `task/CAT-000-catalog-governance`
@@ -10,8 +10,8 @@ Implementation commits: `4a0a4aef2e1a97818c757f03cdae1b9b1f7abf2d`, `d568573`; r
 
 - CAT-000: DONE. Fresh MAIN `130374139984`; 6,948 ACTIVE / 6,279 Online Store published / 669 unpublished.
 - CAT-BACKUP-001: BLOCKED. Supplemental read-only bulk `5696857374800` completed; 91,094 inventory items/variants/levels, 11 locations and 8 fulfillment services reconciled. Field coverage passed.
-- Hash verification: four of five new artifacts independently PASS from actual Drive raw-byte base64 streams. `normalized-inventory-levels.jsonl` remains unverified because its 66,458,524-byte response exceeds the connector's 67,108,864-byte IPC frame after transport expansion.
-- Blocker: one post-upload SHA-256 remains pending; deterministic samples were not started because the hash prerequisite failed.
+- Hash verification: all 12 artifacts PASS independent post-upload SHA-256. `normalized-inventory-levels.jsonl` passed authenticated native Drive download readback at 66,458,524 bytes and SHA-256 `fad7f50b4da775fd2a56e8a2eceae5f8def53a9d6ef22f407b1dcfa2eca9197e`.
+- Blocker: fixed-seed fresh sample failed for 16 of 17 major families on publication relationships only. Each mismatch had one additional live relationship (backup 4/live 5 or 1/live 2); product, variant/inventory, media, collection and metafield sections matched. Cause not inferred.
 - Shopify resource mutations: 0. Later catalog jobs remain blocked or queued.
 - Rollback: revert current PR/branch HEAD coordination commit(s), then continuation implementation commit(s), then `24a0d1f`, `d568573`, and `4a0a4ae` in reverse order as applicable; restore prior PCC/Doc revisions. No Shopify resource rollback.
-- Next action: obtain a supported streaming/direct-byte read for `normalized-inventory-levels.jsonl`, verify SHA-256, then run the fixed-seed live-versus-backup sample.
+- Next action: reconcile the newly observed publication relationship, refresh the publication backup if required, independently hash it, and rerun the same fixed-seed sample.
