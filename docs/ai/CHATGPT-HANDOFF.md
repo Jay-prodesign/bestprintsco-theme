@@ -1,5 +1,15 @@
 # ChatGPT Handoff
 
+## BPC-PRICING-STOREWIDE-COMPLETION — complete
+
+Run `BPC-PRICING-STOREWIDE-20260803` continued from PCC lane `BPC-PRICING-001` and packet `EXEC-PACKET-PRICING-SITEWIDE-005`. Owner transfer stopped the prior page/group executor; its clean cursor through product `6827256610896` was preserved. No manual-batch fallback was used.
+
+The controlling `Type Pricing Rollout 004` matrix was applied exactly: Running Shoes `$62.99`, High Top Shoes `$67.99`, and Vegan Leather Boots `$84.99`. Initial census was 7,461 products / 91,094 variants. JOB 1 mutation `5741642645584` cleared 67,359 compare-at values; JOB 2 mutation `5741655588944` updated 18,962 variants across 1,337 mapped products. Both result files contain zero row-level user errors and required zero retries.
+
+Fresh independent readbacks prove compare-at remaining 0, mapped incorrect prices 0, mapped-family price splits 0, missing/added catalog rows 0, and protected-field changes 0. Product Type corrections were not required. Separate rollback CSV and JSONL files are in the Git-ignored `tmp/bpc-pricing-storewide-20260803/artifacts/` folder. Canonical PCC, Pricing Workstream Log, and Current Project State are updated and the storewide pricing lock is released.
+
+Next action: return to the existing BPC-MASTER queue. LR-01 pricing is PASS; measurement and final customer-path validation remain separate controlled gates.
+
 Task: CAT-AUTO-001 activation and CAT-MEDIA-001 PILOT-001
 Status: PASS; bounded autonomy active; stopped after smallest pilot
 Branch: `task/CAT-000-catalog-governance`

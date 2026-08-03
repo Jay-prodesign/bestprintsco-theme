@@ -1,5 +1,18 @@
 # Project State
 
+## BPC-PRICING-STOREWIDE-COMPLETION — COMPLETE
+
+- Run: `BPC-PRICING-STOREWIDE-20260803`; branch: `task/BPC-PRICING-STOREWIDE-COMPLETION`; start commit: `199d3d712b49737ebc57f9bba07bbfb28715fe2e`.
+- Continuity: canonical PCC lane `BPC-PRICING-001`; packet `EXEC-PACKET-PRICING-SITEWIDE-005`; prior clean cursor through product `6827256610896` preserved. The previous page/group executor stopped before the storewide native bulk run.
+- Controlling source: `BPC-MARKETING — Pricing Implementation Readiness v4 / Type Pricing Rollout 004` (`17rduqrAg43iYJNAawdFwyo-TVcJz-tQhQ_xymwhY_z4`): Running Shoes `$62.99`, High Top Shoes `$67.99`, Vegan Leather Boots `$84.99`.
+- Initial census: 7,461 products; 91,094 variants; 67,359 variants with compare-at; 1,337 mapped products / 18,962 mapped variants. Product Type corrections: 0.
+- JOB 1 bulk mutation `gid://shopify/BulkOperation/5741642645584`: 67,359 compare-at values cleared; row user errors 0; retry rows 0. Fresh readback `5741651361872`: compare-at remaining 0; normal-price changes 0.
+- JOB 2 bulk mutation `gid://shopify/BulkOperation/5741655588944`: 18,962 mapped prices updated; row user errors 0; retry rows 0. Fresh final census `5741659816016`: mapped incorrect 0; mapped-family price splits 0.
+- Catalog equality: 7,461 products / 91,094 variants before and after; missing rows 0; added rows 0; protected-field changes 0.
+- Private rollback: `tmp/bpc-pricing-storewide-20260803/artifacts/compare-at-rollback.csv`, `compare-at-rollback.jsonl`, `price-rollback.csv`, and `price-rollback.jsonl`. Raw row evidence remains Git-ignored.
+- Scope classification: COMPLETE for the controlling released matrix. 5,610 active products / 63,880 variants outside the released three-family matrix were not guessed or mutated; no exact missing target exists inside mapped scope.
+- Canonical PCC lock is released. LR-01 pricing gate is PASS; the existing BPC-MASTER measurement/final customer-path gates remain independently controlled.
+
 Status: CAT-AUTO-001 active; CAT-MEDIA-001 CHECKPOINT-010 BLOCKED; scaling stopped
 Last updated: 2026-07-22T14:29:30Z
 Repository: `Jay-prodesign/bestprintsco-theme`

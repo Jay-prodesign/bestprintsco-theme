@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-07-22T14:29:30Z"
+last_updated: "2026-08-03T16:56:15Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -38,17 +38,28 @@ tasks:
     nstyled_writes: 0
     live_ad_spend: 0
   - id: BPC-PRICING-STOREWIDE-COMPLETION
-    status: blocked
+    status: complete
     run_id: BPC-PRICING-STOREWIDE-20260803
     canonical_lane: BPC-PRICING-001
     packet: EXEC-PACKET-PRICING-SITEWIDE-005
     branch: task/BPC-PRICING-STOREWIDE-COMPLETION
     start_commit: 199d3d712b49737ebc57f9bba07bbfb28715fe2e
-    blocker: "Conflicting ACTIVE pricing executor/write lock in PCC; no overlapping storewide lock acquired."
-    responsible_owner: "Active BPC-PRICING-001 executor / BPC-MASTER coordinator"
-    safe_fallback: "No duplicate write; use authenticated Shopify CLI store bulk execute after lock transfer."
-    review_condition: "Canonical lock released or explicitly transferred and final pricing cursor/readback reconciled."
-    shopify_writes: 0
+    controlling_matrix: "Type Pricing Rollout 004: Running Shoes 62.99; High Top Shoes 67.99; Vegan Leather Boots 84.99"
+    products_scanned: 7461
+    variants_scanned: 91094
+    compare_at_variants_cleared: 67359
+    mapped_products: 1337
+    mapped_variants_updated: 18962
+    compare_at_remaining: 0
+    incorrect_mapped_variants: 0
+    row_user_errors: 0
+    retry_rows: 0
+    product_type_corrections: 0
+    job1_bulk_operation: gid://shopify/BulkOperation/5741642645584
+    job2_bulk_operation: gid://shopify/BulkOperation/5741655588944
+    final_census_operation: gid://shopify/BulkOperation/5741659816016
+    rollback_dir: tmp/bpc-pricing-storewide-20260803/artifacts
+    shopify_writes: 86321
     protected_field_changes: 0
-    cli_bulk_status: "No operations found for the authenticated CLI app in the prior 7 days."
-    lock_authority: "PCC Workstreams & Locks row 25 remains controlling and ACTIVE."
+    lock_authority: "PCC Workstreams & Locks row 25 released after complete fresh readback."
+    next_action: "Return to the existing BPC-MASTER queue; LR-01 pricing PASS, measurement/final customer-path gates remain controlled separately."
