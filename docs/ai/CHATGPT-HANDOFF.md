@@ -21,14 +21,21 @@ Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scal
 
 Terra fresh-read six unambiguous ACTIVE/live products and nine still-present approved links.  The first detach call returned an incomplete connector payload, so `userErrors = 0` could not be objectively proven.  Immediate Shopify reread proved the target association remained present; no catalog mutation occurred in this checkpoint and no rollback was needed.  Private prewrite evidence: before Drive `1K_YxiLdUrrxmILNZ6N1V0Ch-PLYLz4Ow` (2,595 bytes, SHA-256 `d9b0e87c6ba7909dcfbf5f979ab7063291aaadcc5480ae7070c74d4d3f2fe588`) and rollback Drive `14YRXUQ7JhLDH_w6f9GrGJJnM1QOOd9qo` (1,218 bytes, SHA-256 `7474559187340aa41c28ec315fe91330c257ddc1f5243cf012bf3c3593467563`). Scaling is stopped; no downstream job started.
 
-## BPC-META-FOUNDATION-001 — owner authentication pause
+## BPC-META-FOUNDATION-001 — platform blocker after foundation implementation
 
-Status: PARTIAL — OWNER AUTHENTICATION REQUIRED
-Branch: `task/BPC-META-FOUNDATION-001`
+Status: BLOCKED — TECHNICAL OR PLATFORM BLOCKER
+Objective: separate BestPrintsCo from Nstyled, implement the safe Meta/Shopify foundation, prepare read-only measurement/organic automation, and bring the first US footwear campaign to the maximum truthful pre-publish state without spend.
+Branch/worktree: `task/BPC-META-FOUNDATION-001`, `C:\Projects\bestprintsco-theme`
 Start commit: `47f55f24340bc3407ebcbaee56f7c17b37f75318`
+Foundation-record commit: `1cab7381c4103e356d2802370bf1085c25e267f9`
+Separate automation commits: `87f6065`, `eee3faf` in `C:\Projects\bestprintsco-meta-automation`
 
-BestPrintsCo Page `1153511934521436` and Instagram `17841401039012650` legacy partial link was disconnected after explicit owner approval. Meta confirmed the disconnect. Direct portfolio claim into `913146750869963` is prepared and correctly identifies `@bestprintsco_`, but Meta requires the owner to click `bestprintsco_ olarak giriş yap`. A stale callback was diagnosed as `CSRF nonce is invalid`; stale authorization tabs were closed and one clean flow remains. Nstyled writes: 0. Spend: 0.
+Implemented resources: portfolio `913146750869963`; Page `1153511934521436`; new ad account `2258717414903571`; Dataset `2092696251642333`; catalog `1046542707869496`; Commerce Account `1995776851046152`; domain asset `1033409412946916`; official Shopify Meta channel. Page URL/CTA, domain record, dataset domain allowlist, dataset/ad-account assignment, portfolio homepage, support email, catalog country, and Ads MCP catalog permission were normalized. No product commercial data or theme file changed.
 
-Next action: owner clicks the existing Instagram authorization button once. Resume at `docs/bpc-meta/NEXT_TRIGGER.md`; verify the exact Instagram ID before reconnecting the Page and Commerce Account. Rollback for the disconnected Page link is to reconnect only the same allowlisted Page and Instagram after the portfolio claim succeeds.
+Exact blocker: Instagram `17841401039012650` is still attached to restricted Instagram-created account `cvtie-ad` `1104252943250335`. Permission assignment failed, Facebook OAuth could not expose the account, the Switch dialog was blank twice, and direct claim returns unknown/system-unavailable. Historical personal account `55495642` is separate and review-expired. Do not delete either historical account or create another bypass asset.
 
-Follow-up readback: portfolio `913146750869963` still contains no Instagram asset and no pending/sent claim request. Historical restricted ad account `55495642` does not list Best Prints Co Page `1153511934521436` in its Page assignments, so it is not proven to be the claim blocker. The only exact claim error observed is `CSRF nonce is invalid`. The stale tab was closed and one new `@bestprintsco_` owner-authorization tab is open; if it errors, preserve the exact screen without retrying.
+Validation: Nstyled writes/queries 0; live spend USD 0; dataset sources contain no Nstyled domain; automation config/queue/reconciliation tests PASS; JSON and Git diff checks PASS. Payment method remains blank by explicit owner decision. No appeal, ad draft, publish, or billing action occurred.
+
+Changed records: `docs/bpc-meta/*` including asset/protected manifests, change log, restriction state, Shopify integration, measurement bridge, organic automation, first-US-ad manifest, owner actions, next trigger, and machine-readable state.
+
+Rollback: every live change and its exact reversal is in `docs/bpc-meta/CHANGELOG.md`; historical assets must not be deleted. Recommended next action: resume only when Meta exposes a working switch/release flow or Support returns a case/reference result for `1104252943250335`, then continue at `docs/bpc-meta/NEXT_TRIGGER.md` without restarting the audit.

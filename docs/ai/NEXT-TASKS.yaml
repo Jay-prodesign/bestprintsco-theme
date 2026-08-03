@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-07-22T14:29:30Z"
+last_updated: "2026-08-03T17:06:43Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -28,12 +28,18 @@ tasks:
   - id: DOWNSTREAM-CATALOG-JOBS
     status: not_started
   - id: BPC-META-FOUNDATION-001
-    status: owner_authentication_required
+    status: blocked_platform
     branch: task/BPC-META-FOUNDATION-001
     portfolio_id: "913146750869963"
     page_id: "1153511934521436"
     instagram_id: "17841401039012650"
-    owner_action: "Click 'bestprintsco_ olarak giriş yap' once in the newly opened Instagram authorization tab; if an error appears, leave that exact screen open without retrying."
-    continuation: "Verify the exact Instagram ID in the portfolio, or read the preserved exact error; then reconnect the allowlisted Page and Commerce Account per docs/bpc-meta/NEXT_TRIGGER.md."
+    ad_account_id: "2258717414903571"
+    legacy_instagram_ad_account_id: "1104252943250335"
+    foundation_commit: "1cab7381c4103e356d2802370bf1085c25e267f9"
+    blocker: "Meta's legacy Instagram ad-account Switch dialog is blank after two attempts; permission assignment and Facebook OAuth exposure also failed."
+    owner_action: "None now. Payment setup is explicitly deferred. If Meta exposes a working review/support form, the authenticated owner reviews and submits the prepared release request."
+    continuation: "When Meta provides a working switch/release result or case/reference ID for 1104252943250335, resume at docs/bpc-meta/NEXT_TRIGGER.md without repeating the broad audit."
+    safe_fallback: "Keep the basic Page connection, both historical accounts preserved, the new account payment empty, and all ads unpublished."
     nstyled_writes: 0
+    nstyled_queries: 0
     live_ad_spend: 0

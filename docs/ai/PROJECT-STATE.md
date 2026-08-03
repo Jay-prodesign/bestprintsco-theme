@@ -21,12 +21,13 @@ Draft PR: #3
 
 ## BPC-META-FOUNDATION-001
 
-- Status: PARTIAL — OWNER AUTHENTICATION REQUIRED.
-- Branch: `task/BPC-META-FOUNDATION-001`; start commit `47f55f24340bc3407ebcbaee56f7c17b37f75318`.
-- BestPrintsCo portfolio `913146750869963`; Page `1153511934521436`; Instagram `17841401039012650`.
-- Legacy partial Page–Instagram link disconnected after explicit owner authorization.
-- Clean Instagram portfolio-claim flow is open at `bestprintsco_ olarak giriş yap`.
-- Exact continuation and fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
-- Nstyled writes: 0. Live ad spend: 0. Shopify/theme/catalog commercial data: unchanged.
-- Follow-up: no pending/sent Instagram claim exists; restricted ad account `55495642` does not list the Best Prints Co Page in its Page assignments.
-- Current exact blocker remains a single fresh owner OAuth confirmation; prior exact error was `CSRF nonce is invalid`.
+- Status: BLOCKED — TECHNICAL OR PLATFORM BLOCKER.
+- Branch: `task/BPC-META-FOUNDATION-001`; start `47f55f24340bc3407ebcbaee56f7c17b37f75318`; foundation records `1cab7381c4103e356d2802370bf1085c25e267f9`.
+- Portfolio `913146750869963`; Page `1153511934521436`; Instagram `17841401039012650`; new ad account `2258717414903571`; Dataset `2092696251642333`; catalog `1046542707869496`; Commerce Account `1995776851046152`; domain `1033409412946916`.
+- Foundation writes and Shopify integration QA are recorded under `docs/bpc-meta/`; no product commercial data or theme file changed.
+- Instagram remains attached to restricted Instagram-created account `1104252943250335`. Two blank Switch dialogs, failed permission assignment, failed Facebook OAuth exposure, and unknown direct-claim errors establish the platform blocker.
+- Historical personal account `55495642` is separate and review-expired. Both historical accounts remain preserved/read-only.
+- Read-only automation project validated at commits `87f6065` and `eee3faf`; live connector OAuth remains pending.
+- First-US-ad deployable manifest exists, but no Meta draft was created because Instagram, domain, Purchase/deduplication, creative, budget, and payment gates remain open.
+- Owner explicitly deferred payment setup. Nstyled writes/queries: 0. Live ad spend: USD 0.
+- Exact continuation and safe fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
