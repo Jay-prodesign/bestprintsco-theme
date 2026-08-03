@@ -2,7 +2,7 @@
 
 ## BPC-PRICING-STOREWIDE-COMPLETION — COMPLETE
 
-- Run: `BPC-PRICING-STOREWIDE-20260803`; branch: `task/BPC-PRICING-STOREWIDE-COMPLETION`; start commit: `199d3d712b49737ebc57f9bba07bbfb28715fe2e`.
+- Run: `BPC-PRICING-STOREWIDE-20260803`; branch: `task/BPC-PRICING-STOREWIDE-COMPLETION`; start commit: `199d3d712b49737ebc57f9bba07bbfb28715fe2e`; closeout evidence commit: `a90d050f2c8c7f64b0924674579e5202f5aa6945`.
 - Continuity: canonical PCC lane `BPC-PRICING-001`; packet `EXEC-PACKET-PRICING-SITEWIDE-005`; prior clean cursor through product `6827256610896` preserved. The previous page/group executor stopped before the storewide native bulk run.
 - Controlling source: `BPC-MARKETING — Pricing Implementation Readiness v4 / Type Pricing Rollout 004` (`17rduqrAg43iYJNAawdFwyo-TVcJz-tQhQ_xymwhY_z4`): Running Shoes `$62.99`, High Top Shoes `$67.99`, Vegan Leather Boots `$84.99`.
 - Initial census: 7,461 products; 91,094 variants; 67,359 variants with compare-at; 1,337 mapped products / 18,962 mapped variants. Product Type corrections: 0.
