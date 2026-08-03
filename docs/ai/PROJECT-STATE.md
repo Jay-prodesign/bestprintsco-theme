@@ -40,3 +40,4 @@ Draft PR: #3
 - Execution path verified: Shopify CLI `4.6.0`; stored auth for `cute-sneakers`; `shopify store bulk execute` supports JSONL variable files, `--allow-mutations`, `--watch`, and output files. Validated mutation requires `read_products` and `write_products`.
 - Safe fallback: no duplicate/direct writes. Resume only after the active executor releases the pricing lock and its final cursor/readback is reconciled; then use the native CLI bulk path, not manual product batches.
 - Responsible owner: active `BPC-PRICING-001` executor / BPC-MASTER coordinator. Review condition: canonical lock released or explicitly transferred with a fresh cursor.
+- Recheck `2026-08-03`: Shopify CLI reports no bulk operations for its authenticated app in the prior seven days; native mutation validation remains PASS. PCC row 25 nevertheless remains `ACTIVE` under the existing executor, so governance lock—not Shopify capacity—is the only execution blocker.

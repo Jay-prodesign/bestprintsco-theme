@@ -50,3 +50,5 @@ tasks:
     review_condition: "Canonical lock released or explicitly transferred and final pricing cursor/readback reconciled."
     shopify_writes: 0
     protected_field_changes: 0
+    cli_bulk_status: "No operations found for the authenticated CLI app in the prior 7 days."
+    lock_authority: "PCC Workstreams & Locks row 25 remains controlling and ACTIVE."
