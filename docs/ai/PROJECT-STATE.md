@@ -28,3 +28,5 @@ Draft PR: #3
 - Clean Instagram portfolio-claim flow is open at `bestprintsco_ olarak giriş yap`.
 - Exact continuation and fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
 - Nstyled writes: 0. Live ad spend: 0. Shopify/theme/catalog commercial data: unchanged.
+- Follow-up: no pending/sent Instagram claim exists; restricted ad account `55495642` does not list the Best Prints Co Page in its Page assignments.
+- Current exact blocker remains a single fresh owner OAuth confirmation; prior exact error was `CSRF nonce is invalid`.

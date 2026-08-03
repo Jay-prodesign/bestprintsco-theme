@@ -19,6 +19,9 @@ The current owner prompt controls this Meta implementation. It supersedes the ol
 - The Facebook Page website was normalized to `https://bestprintsco.com/` and its action button now points to the owner-approved footwear collection.
 - Meta confirmed `Hesabın Bağlantısı Kesildi`. The owner accepted Meta's displayed risk that some shared advertising insights, comments, and Inbox messages could be removed from Facebook.
 - A stale OAuth callback was diagnosed as `CSRF nonce is invalid`; stale authorization tabs were closed and a single clean authorization flow was created.
+- Owner reported another failed add attempt. Live readback still shows no Instagram asset, no pending request, and no sent request in portfolio `913146750869963`.
+- Historical ad account `55495642` is restricted. Its live Page-assignment list shows `Geeky Gift Ideas` and `AltPanties`, not Best Prints Co Page `1153511934521436`; therefore a link from that ad account to the current Page is not established as the Instagram-claim cause.
+- The failed/stale authorization tab was closed and one new owner-authentication tab was generated. It correctly identifies `@bestprintsco_` and remains unsubmitted.
 - No live ad publication, spend, payment change, or Nstyled write has occurred in this task.
 
 ## Protected concurrent work

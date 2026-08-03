@@ -33,7 +33,7 @@ tasks:
     portfolio_id: "913146750869963"
     page_id: "1153511934521436"
     instagram_id: "17841401039012650"
-    owner_action: "Click 'bestprintsco_ olarak giriş yap' once in the already-open Instagram authorization tab."
-    continuation: "Verify the exact Instagram ID in the portfolio, then reconnect the allowlisted Page and Commerce Account per docs/bpc-meta/NEXT_TRIGGER.md."
+    owner_action: "Click 'bestprintsco_ olarak giriş yap' once in the newly opened Instagram authorization tab; if an error appears, leave that exact screen open without retrying."
+    continuation: "Verify the exact Instagram ID in the portfolio, or read the preserved exact error; then reconnect the allowlisted Page and Commerce Account per docs/bpc-meta/NEXT_TRIGGER.md."
     nstyled_writes: 0
     live_ad_spend: 0
