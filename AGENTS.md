@@ -101,3 +101,15 @@ Do not run high-risk validation for low- or medium-risk changes.
 - Never expose secrets, tokens, credentials, private customer data, or authorization headers.
 - Commit and push AI coordination updates with the related implementation commit or as a clearly labelled evidence commit.
 - Never leave authoritative project state only in a Codex chat response.
+
+## BPC Meta governance
+
+- Nstyled assets are protected and must never be modified.
+- Historical Cvtie data must not be deleted merely because it is old.
+- BestPrintsCo Meta writes require exact asset-ID allowlisting.
+- Never publish a live ad or start spend without explicit owner approval.
+- Never store or expose plaintext passwords, access tokens, cookies, recovery codes, or other secrets.
+- Shopify MAIN theme and product/catalog commercial data remain outside scope except for exact Meta integration requirements.
+- Completion-first execution applies within the approved scope.
+- Unnecessary pilots, repeated broad audits, and cross-project duplication are prohibited.
+- Every WAIT or BLOCKED state must identify the exact trigger, responsible owner, safe fallback, and review or terminal condition.

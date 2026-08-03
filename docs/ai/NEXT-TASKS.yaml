@@ -27,3 +27,13 @@ tasks:
     next_action: "Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped."
   - id: DOWNSTREAM-CATALOG-JOBS
     status: not_started
+  - id: BPC-META-FOUNDATION-001
+    status: owner_authentication_required
+    branch: task/BPC-META-FOUNDATION-001
+    portfolio_id: "913146750869963"
+    page_id: "1153511934521436"
+    instagram_id: "17841401039012650"
+    owner_action: "Click 'bestprintsco_ olarak giriş yap' once in the already-open Instagram authorization tab."
+    continuation: "Verify the exact Instagram ID in the portfolio, then reconnect the allowlisted Page and Commerce Account per docs/bpc-meta/NEXT_TRIGGER.md."
+    nstyled_writes: 0
+    live_ad_spend: 0

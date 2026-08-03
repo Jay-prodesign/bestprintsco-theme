@@ -18,3 +18,13 @@ Draft PR: #3
 - Rollback validated and available; not applied. No scaling or downstream job started.
 - Checkpoint-010 blocker: the first authorized detach call produced no parseable mutation payload, so Shopify `userErrors = 0` cannot be proven. Immediate fresh read shows the requested link remains present; this checkpoint made zero catalog mutations and required no rollback.
 - Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scaling stopped.
+
+## BPC-META-FOUNDATION-001
+
+- Status: PARTIAL — OWNER AUTHENTICATION REQUIRED.
+- Branch: `task/BPC-META-FOUNDATION-001`; start commit `47f55f24340bc3407ebcbaee56f7c17b37f75318`.
+- BestPrintsCo portfolio `913146750869963`; Page `1153511934521436`; Instagram `17841401039012650`.
+- Legacy partial Page–Instagram link disconnected after explicit owner authorization.
+- Clean Instagram portfolio-claim flow is open at `bestprintsco_ olarak giriş yap`.
+- Exact continuation and fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
+- Nstyled writes: 0. Live ad spend: 0. Shopify/theme/catalog commercial data: unchanged.

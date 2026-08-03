@@ -20,3 +20,13 @@ Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scal
 ## CAT-MEDIA-001 CHECKPOINT-010 — stopped before mutation
 
 Terra fresh-read six unambiguous ACTIVE/live products and nine still-present approved links.  The first detach call returned an incomplete connector payload, so `userErrors = 0` could not be objectively proven.  Immediate Shopify reread proved the target association remained present; no catalog mutation occurred in this checkpoint and no rollback was needed.  Private prewrite evidence: before Drive `1K_YxiLdUrrxmILNZ6N1V0Ch-PLYLz4Ow` (2,595 bytes, SHA-256 `d9b0e87c6ba7909dcfbf5f979ab7063291aaadcc5480ae7070c74d4d3f2fe588`) and rollback Drive `14YRXUQ7JhLDH_w6f9GrGJJnM1QOOd9qo` (1,218 bytes, SHA-256 `7474559187340aa41c28ec315fe91330c257ddc1f5243cf012bf3c3593467563`). Scaling is stopped; no downstream job started.
+
+## BPC-META-FOUNDATION-001 — owner authentication pause
+
+Status: PARTIAL — OWNER AUTHENTICATION REQUIRED
+Branch: `task/BPC-META-FOUNDATION-001`
+Start commit: `47f55f24340bc3407ebcbaee56f7c17b37f75318`
+
+BestPrintsCo Page `1153511934521436` and Instagram `17841401039012650` legacy partial link was disconnected after explicit owner approval. Meta confirmed the disconnect. Direct portfolio claim into `913146750869963` is prepared and correctly identifies `@bestprintsco_`, but Meta requires the owner to click `bestprintsco_ olarak giriş yap`. A stale callback was diagnosed as `CSRF nonce is invalid`; stale authorization tabs were closed and one clean flow remains. Nstyled writes: 0. Spend: 0.
+
+Next action: owner clicks the existing Instagram authorization button once. Resume at `docs/bpc-meta/NEXT_TRIGGER.md`; verify the exact Instagram ID before reconnecting the Page and Commerce Account. Rollback for the disconnected Page link is to reconnect only the same allowlisted Page and Instagram after the portfolio claim succeeds.
