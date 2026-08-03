@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "task": "BPC-META-FOUNDATION-001",
+  "evidence_date": "2026-08-03",
+  "classification": "BLOCKED_TECHNICAL_OR_PLATFORM_BLOCKER",
+  "bestprintsco": {
+    "business_portfolio_id": "913146750869963",
+    "facebook_page_id": "1153511934521436",
+    "instagram_account_id": "17841401039012650",
+    "ad_account_id": "2258717414903571",
+    "dataset_id": "2092696251642333",
+    "catalog_id": "1046542707869496",
+    "commerce_account_id": "1995776851046152",
+    "domain_asset_id": "1033409412946916",
+    "shopify_store": "cute-sneakers.myshopify.com"
+  },
+  "historical": {
+    "instagram_ad_account_id": "1104252943250335",
+    "personal_ad_account_id": "55495642"
+  },
+  "gates": {
+    "instagram_portfolio_claim": "blocked_by_legacy_instagram_ad_account_and_broken_meta_switch_flow",
+    "domain_verification": "dns_propagation_pending",
+    "purchase_event": "not_verified",
+    "approved_creatives": "not_found",
+    "payment_method": "intentionally_deferred_by_owner",
+    "budget": "not_approved",
+    "publish": "owner_only_not_started"
+  },
+  "safety": {
+    "nstyled_writes": 0,
+    "nstyled_data_leakage": false,
+    "live_spend_usd": 0,
+    "secrets_persisted": false
+  },
+  "next_trigger": "Meta exposes a working switch or support release result for Instagram legacy ad account 1104252943250335"
+}

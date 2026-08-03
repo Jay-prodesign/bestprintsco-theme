@@ -31,3 +31,12 @@ Write count during BPC-META-FOUNDATION-001: `0`
 The portfolio exposes seven people/principals. The Page and Instagram account expose three full-control principals and one partial-access principal; the ad account also exposes an Instagram principal with full access. No permission, partner, audience, payment, ownership, connection, or sharing change is authorized.
 
 No rename, delete, archive, move, attach, detach, assign, permission change, ownership change, share, Shopify connection, Pixel/Dataset change, catalog change, domain change, advertising change, ad creation, or data export may target any asset in this manifest.
+
+## Final separation QA
+
+- Writes during `BPC-META-FOUNDATION-001`: `0`.
+- Measurement queries or exports: `0`.
+- Nstyled products found in the BestPrintsCo Shopify catalog: `0`.
+- Nstyled domains found in BestPrintsCo dataset sources: `0`.
+- Nstyled IDs are present only in the protected denylist and were not copied into BestPrintsCo reporting inputs.
+- No Nstyled payment, audience, partner, or user-permission detail was changed or exported.
