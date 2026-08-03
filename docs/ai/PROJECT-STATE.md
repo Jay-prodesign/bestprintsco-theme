@@ -30,3 +30,13 @@ Draft PR: #3
 - Nstyled writes: 0. Live ad spend: 0. Shopify/theme/catalog commercial data: unchanged.
 - Follow-up: no pending/sent Instagram claim exists; restricted ad account `55495642` does not list the Best Prints Co Page in its Page assignments.
 - Current exact blocker remains a single fresh owner OAuth confirmation; prior exact error was `CSRF nonce is invalid`.
+
+## BPC-PRICING-STOREWIDE-COMPLETION — BLOCKED PRE-WRITE
+
+- Run: `BPC-PRICING-STOREWIDE-20260803`; UTC: `2026-08-03T16:23:34Z`; branch: `task/BPC-PRICING-STOREWIDE-COMPLETION`; start commit: `199d3d712b49737ebc57f9bba07bbfb28715fe2e`.
+- Continuity: canonical PCC lane `BPC-PRICING-001`; packet `EXEC-PACKET-PRICING-SITEWIDE-005`; pricing source `BPC-MARKETING — Pricing Implementation Readiness v4` (`17rduqrAg43iYJNAawdFwyo-TVcJz-tQhQ_xymwhY_z4`).
+- Exact trigger: PCC `Workstreams & Locks` row 25 remains ACTIVE under another dedicated executor; pricing log records compare-at cleanup through product `6827256610896` and ongoing continuation. Overlapping storewide price/compare-at lock was not acquired.
+- Shopify writes: 0. Census/rollback manifests: not created because concurrent catalog mutation makes an exact storewide before-state unstable. Protected-field changes: 0.
+- Execution path verified: Shopify CLI `4.6.0`; stored auth for `cute-sneakers`; `shopify store bulk execute` supports JSONL variable files, `--allow-mutations`, `--watch`, and output files. Validated mutation requires `read_products` and `write_products`.
+- Safe fallback: no duplicate/direct writes. Resume only after the active executor releases the pricing lock and its final cursor/readback is reconciled; then use the native CLI bulk path, not manual product batches.
+- Responsible owner: active `BPC-PRICING-001` executor / BPC-MASTER coordinator. Review condition: canonical lock released or explicitly transferred with a fresh cursor.

@@ -32,3 +32,9 @@ BestPrintsCo Page `1153511934521436` and Instagram `17841401039012650` legacy pa
 Next action: owner clicks the existing Instagram authorization button once. Resume at `docs/bpc-meta/NEXT_TRIGGER.md`; verify the exact Instagram ID before reconnecting the Page and Commerce Account. Rollback for the disconnected Page link is to reconnect only the same allowlisted Page and Instagram after the portfolio claim succeeds.
 
 Follow-up readback: portfolio `913146750869963` still contains no Instagram asset and no pending/sent claim request. Historical restricted ad account `55495642` does not list Best Prints Co Page `1153511934521436` in its Page assignments, so it is not proven to be the claim blocker. The only exact claim error observed is `CSRF nonce is invalid`. The stale tab was closed and one new `@bestprintsco_` owner-authorization tab is open; if it errors, preserve the exact screen without retrying.
+
+## BPC-PRICING-STOREWIDE-COMPLETION — blocked before write
+
+Run `BPC-PRICING-STOREWIDE-20260803` continued from PCC lane `BPC-PRICING-001` and packet `EXEC-PACKET-PRICING-SITEWIDE-005`. The canonical row is still owned by another active pricing executor; the dedicated pricing log advanced compare-at cleanup through product `6827256610896`. No overlapping lock was acquired, so Shopify writes, census artifacts, rollback manifests, and bulk operations from this run are all zero.
+
+The fast path is available: Shopify CLI `4.6.0` has stored `cute-sneakers` auth and supports `store bulk execute` with JSONL variables, mutation enablement, watch, and result output. The `productVariantsBulkUpdate` operation validated with `read_products` and `write_products`. Resume only after canonical lock release/transfer and final cursor reconciliation; execute compare-at cleanup first, then separately authorized normal-price bulk work. Rollback for this blocked run: none required.

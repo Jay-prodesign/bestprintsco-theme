@@ -37,3 +37,16 @@ tasks:
     continuation: "Verify the exact Instagram ID in the portfolio, or read the preserved exact error; then reconnect the allowlisted Page and Commerce Account per docs/bpc-meta/NEXT_TRIGGER.md."
     nstyled_writes: 0
     live_ad_spend: 0
+  - id: BPC-PRICING-STOREWIDE-COMPLETION
+    status: blocked
+    run_id: BPC-PRICING-STOREWIDE-20260803
+    canonical_lane: BPC-PRICING-001
+    packet: EXEC-PACKET-PRICING-SITEWIDE-005
+    branch: task/BPC-PRICING-STOREWIDE-COMPLETION
+    start_commit: 199d3d712b49737ebc57f9bba07bbfb28715fe2e
+    blocker: "Conflicting ACTIVE pricing executor/write lock in PCC; no overlapping storewide lock acquired."
+    responsible_owner: "Active BPC-PRICING-001 executor / BPC-MASTER coordinator"
+    safe_fallback: "No duplicate write; use authenticated Shopify CLI store bulk execute after lock transfer."
+    review_condition: "Canonical lock released or explicitly transferred and final pricing cursor/readback reconciled."
+    shopify_writes: 0
+    protected_field_changes: 0
