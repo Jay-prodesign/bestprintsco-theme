@@ -25,9 +25,11 @@ Draft PR: #3
 - Branch: `task/BPC-META-FOUNDATION-001`; start `47f55f24340bc3407ebcbaee56f7c17b37f75318`; foundation records `1cab7381c4103e356d2802370bf1085c25e267f9`.
 - Portfolio `913146750869963`; Page `1153511934521436`; Instagram `17841401039012650`; new ad account `2258717414903571`; Dataset `2092696251642333`; catalog `1046542707869496`; Commerce Account `1995776851046152`; domain `1033409412946916`.
 - Foundation writes and Shopify integration QA are recorded under `docs/bpc-meta/`; no product commercial data or theme file changed.
-- Instagram remains attached to restricted Instagram-created account `1104252943250335`. Two blank Switch dialogs, failed permission assignment, failed Facebook OAuth exposure, and unknown direct-claim errors establish the platform blocker.
+- Meta confirmed Instagram `17841401039012650` itself has no active enforcement. Its controlling portfolio/shop claim remains blocked pending specialist release from disabled legacy Instagram-created account `1104252943250335`, which is not eligible for automated review.
+- Support case `1667557011016000` is active/received and routed to Meta asset-recovery/account-management specialists. This is a support release case, not a policy appeal.
 - Historical personal account `55495642` is separate and review-expired. Both historical accounts remain preserved/read-only.
 - Read-only automation project validated at commits `87f6065` and `eee3faf`; live connector OAuth remains pending.
-- First-US-ad deployable manifest exists, but no Meta draft was created because Instagram, domain, Purchase/deduplication, creative, budget, and payment gates remain open.
+- Domain asset `1033409412946916` is verified. First-US-ad deployable manifest exists, but no Meta draft was created because Instagram, Purchase/deduplication, creative, budget, and payment gates remain open.
+- Current Windows/Chrome is signed in only to `@bestprintsco_`; no Accounts Center profile or mobile session was logged out because exact owner recognition is required.
 - Owner explicitly deferred payment setup. Nstyled writes/queries: 0. Live ad spend: USD 0.
-- Exact continuation and safe fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
+- Exact continuation and safe fallback: wait for Meta to update case `1667557011016000` or release Instagram `17841401039012650`; then resume at the recorded cursor without repeating the broad audit. Keep the Page link, historical accounts, payment-empty ad account, and zero-spend state unchanged. See `docs/bpc-meta/NEXT_TRIGGER.md`.

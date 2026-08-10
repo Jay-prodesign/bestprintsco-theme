@@ -1,6 +1,6 @@
 # Shopify-Meta Integration Report
 
-Evidence date: 2026-08-03
+Evidence date: 2026-08-03 baseline plus 2026-08-10 live reconciliation
 Store: `cute-sneakers.myshopify.com`
 Live domain: `bestprintsco.com`
 
@@ -11,12 +11,23 @@ Live domain: `bestprintsco.com`
 | Official sales channel | Facebook & Instagram by Meta / Shopify by Facebook | Installed and active |
 | Business Portfolio | `913146750869963` | Connected BestPrintsCo portfolio |
 | Facebook Page | `1153511934521436` | Connected; Facebook Shop active |
-| Instagram | `17841401039012650` | Basic Page link only; full portfolio/shop claim blocked by legacy Instagram ad account |
+| Instagram | `17841401039012650` | Basic Page link only; full portfolio/shop claim pending Meta specialist case `1667557011016000` |
 | Ad Account | `2258717414903571` | Active, linked to the dataset, no payment method, no ads, no spend |
 | Catalog | `1046542707869496` | Controlling Shopify catalog; default country United States |
 | Commerce Account | `1995776851046152` | Facebook channel present; Instagram channel incomplete |
 | Dataset | `2092696251642333` | Shopify partner integration and Conversions API active |
-| Domain asset | `1033409412946916` | Added to the portfolio; verification pending public DNS propagation |
+| Domain asset | `1033409412946916` | Verified in portfolio `913146750869963` on 2026-08-10 |
+
+## Current official-channel readback
+
+- Facebook Shop is active for Best Prints Co.
+- Instagram Shop remains at `Connect Instagram profile / Start setup` while the specialist release case is open.
+- Ads setup is available, but no ad was created or published.
+- Shopify reports approximately 4.2K approved products and four products with issues.
+- Support email is `help@bestprintsco.com`.
+- Data sharing is set to Maximum with Dataset `2092696251642333`, Pixel, Advanced Matching, and Conversions API.
+- Three shipping options were present and last synced on 2026-08-10.
+- Connected shop Page is `1153511934521436`; Instagram is not connected at the Shopify channel level.
 
 ## Catalog QA
 
@@ -35,8 +46,8 @@ These product-data issues are reported only; they remain outside this task's wri
 
 ## Domain and support settings
 
-- Meta domain-verification TXT value was added through Shopify DNS.
-- Public DNS did not yet return the TXT record at the final check, so Meta still shows the domain as not verified.
+- Public DNS returns the Meta TXT value for `bestprintsco.com`.
+- Meta verified domain asset `1033409412946916` in portfolio `913146750869963` on 2026-08-10.
 - Shopify's Meta support email was corrected to `help@bestprintsco.com`.
 - Shopify domain-registration email verification is separately pending with the registrant; no password or mailbox data was accessed.
 
@@ -55,6 +66,7 @@ These product-data issues are reported only; they remain outside this task's wri
 - No active diagnostics errors were shown.
 - No manual second Pixel was added to the Shopify theme.
 - Browser/server Purchase deduplication cannot be certified until a safe test or real owner-authorized order produces the event.
+- No event-flow test was run on 2026-08-10 because the available Chrome storefront was a Shopify theme preview with an existing three-item cart. Altering it would disturb owner state and contaminate measurement with preview traffic.
 - Shopify preview traffic was identified as test traffic and blocked from future dataset intake by the production-domain allowlist.
 
 ## Consent and privacy

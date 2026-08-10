@@ -1,48 +1,48 @@
 # Restriction and Appeal State
 
-Audit date: 2026-08-03
-State: `TECHNICAL/PLATFORM BLOCKER - NO APPEAL SUBMITTED`
+Latest live audit: 2026-08-10
+State: `SUPPORT CASE SUBMITTED - META SPECIALIST REVIEW PENDING`
 
 ## Controlling diagnosis
 
 - Restricted asset: legacy Instagram-created ad account `cvtie-ad`
 - Exact asset ID: `1104252943250335`
 - Affected Instagram: `@bestprintsco_`, `17841401039012650`
-- Restriction type: ad account restricted/disabled; legacy Instagram ad-account attachment prevents a reliable portfolio claim/switch
-- Meta displayed reasons:
-  - account restricted because some activity did not comply with rules;
-  - ad account disabled for unusual activity;
-  - Instagram mobile shows a payment issue requiring review.
+- Restriction type: legacy ad account disabled; not eligible for review through Meta's automated support chat
+- Meta's live case readback:
+  - ad account `1104252943250335` is disabled;
+  - Instagram `@bestprintsco_` has no active restriction or enforcement;
+  - releasing or switching Instagram away from the disabled account requires specialized account-management steps outside automated support.
+- Owner-provided historical clue: a friend previously had access to the Instagram account and may have created ads. This is a hypothesis for the ownership chain, not a verified asset owner.
 - Billing readback: visible current balance USD 0 and no amount due. No payment details are recorded.
-- First observed date: not exposed for `1104252943250335`.
+- First observed date for `1104252943250335`: not exposed.
 
-## Remediation attempted
+## Remediation completed
 
 1. Audited and separated BestPrintsCo, historical Cvtie, Nstyled, and unknown assets by exact ID.
-2. Removed the stale partial Page link after owner approval, attempted a clean portfolio claim, and preserved both accounts.
-3. Owner reconnected the Page from mobile; Meta reports `Connected`, but the linked-account screen confirms only partial features.
-4. Created clean portfolio-owned ad account `2258717414903571` without bypassing the restriction or starting spend.
-5. Attempted exact owner self-access to `1104252943250335`; Meta returned `Unable to update permissions` and made no change.
-6. Attempted Facebook Ads Manager authentication; OAuth ended at `This Page Isn't Available`, and ordinary Ads Manager redirected to the new account.
-7. Attempted Instagram's `Switch` flow twice; the dialog was blank both times. Retries stopped after the second identical failure.
-8. Direct portfolio-add attempts returned unknown/system-unavailable errors and did not create a pending request.
+2. Preserved the Page/Instagram organic connection and all historical assets.
+3. Created clean portfolio-owned ad account `2258717414903571` without bypassing the restriction or starting spend.
+4. Attempted owner self-access, Facebook authentication, the Instagram `Switch` flow twice, and direct portfolio claim. Meta returned permission, blank-dialog, unavailable-page, or unknown/system errors; no legacy ownership write occurred.
+5. Submitted Meta support case `1667557011016000` on 2026-08-10 for `Devre dışı bırakılmış veya kısıtlanmış varlık`. Meta shows the case as active and `Alındı`.
+6. Sent the exact Instagram, legacy ad-account, target portfolio, and target ad-account IDs through the authenticated support flow.
+7. Added the possible prior-friend access context and explicit Nstyled exclusion to the case record.
+8. The direct case-chat reply channel remained stuck at `Sending` twice, including after one controlled reload. The functioning Meta AI case channel confirmed that the details were added to case `1667557011016000` for the asset-recovery/account-management specialists.
 
 ## Separate historical personal account
 
 - Asset: personal ad account `55495642`
-- State: disabled since 2020; review period expired; Best Prints Co Page is not assigned to it
-- Decision: preserve read-only and do not use or appeal as part of the Instagram release request
+- State: disabled since 2020; Meta says the review window expired and instructs use of another ad account
+- Relation to current issue: separate from `cvtie-ad`; deleting or appealing it would not release Instagram
+- Decision: preserve read-only and never use for BestPrintsCo spend
 
-## Review and appeal readiness
+## Review state and next trigger
 
-Review eligibility for `1104252943250335` cannot be reached through a functioning form at the current cursor. No appeal/reference ID exists. Payment is intentionally deferred and should not be presented as remediation for a balance that Meta shows as USD 0.
-
-Prepared support/review text (owner must review and submit if Meta exposes the form):
-
-> I own the professional Instagram account @bestprintsco_ (ID 17841401039012650). It was previously used under the Cvtie name and is still attached to the disabled Instagram-created ad account cvtie-ad (ID 1104252943250335). BestPrintsCo now uses Business Portfolio 913146750869963 and clean ad account 2258717414903571. We are not attempting to evade a restriction. Please review or release the legacy attachment so the same Instagram account can be claimed by the BestPrintsCo portfolio. Nstyled is a separate business and none of its assets are involved.
-
-- Owner action required now: none while the owner keeps this remediation deferred.
-- Correct owner if a review/support form appears: Gurkan Senel.
-- Expected next trigger: Meta exposes a nonblank switch/release form, or Meta Support returns a case/reference result for `1104252943250335`.
-- Success condition: portfolio `913146750869963` displays Instagram ID `17841401039012650` and Instagram selects ad account `2258717414903571`.
-- Safe fallback: retain the basic Page connection for organic continuity; do not disconnect again, create another account, add payment, or publish ads.
+- Appeal submitted: no. This is an asset-release/support case, not a policy appeal.
+- Support case: `1667557011016000`
+- Submitted: 2026-08-10, authenticated Meta Business Support
+- Current state: active / received; specialist response pending
+- Required remediation: release Instagram `17841401039012650` from disabled legacy ad account `1104252943250335`, verify any external controlling owner/business chain, and make it claimable by portfolio `913146750869963` and ad account `2258717414903571`.
+- Owner action required now: none. If Meta asks for login confirmation, 2FA, identity verification, document upload, or an ownership affirmation, Gurkan Senel must complete only that exact request.
+- Expected next trigger: a new message or status change in case `1667557011016000`, or the exact Instagram ID appearing in the controlling portfolio.
+- Continuation cursor: verify Instagram ID `17841401039012650` under portfolio `913146750869963`, assign only allowlisted BestPrintsCo assets, then re-read advertising eligibility without restarting the broad audit.
+- Safe fallback: keep the Page-level organic connection, preserve historical accounts, keep payment blank, and do not publish or spend.

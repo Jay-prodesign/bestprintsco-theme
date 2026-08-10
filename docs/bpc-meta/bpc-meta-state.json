@@ -1,7 +1,7 @@
 {
   "version": 1,
   "task": "BPC-META-FOUNDATION-001",
-  "evidence_date": "2026-08-03",
+  "evidence_date": "2026-08-10",
   "classification": "BLOCKED_TECHNICAL_OR_PLATFORM_BLOCKER",
   "bestprintsco": {
     "business_portfolio_id": "913146750869963",
@@ -18,9 +18,15 @@
     "instagram_ad_account_id": "1104252943250335",
     "personal_ad_account_id": "55495642"
   },
+  "support": {
+    "case_id": "1667557011016000",
+    "status": "active_received_specialist_review_pending",
+    "submitted_date": "2026-08-10",
+    "appeal_submitted": false
+  },
   "gates": {
-    "instagram_portfolio_claim": "blocked_by_legacy_instagram_ad_account_and_broken_meta_switch_flow",
-    "domain_verification": "dns_propagation_pending",
+    "instagram_portfolio_claim": "blocked_pending_meta_specialist_release_from_disabled_legacy_ad_account",
+    "domain_verification": "verified",
     "purchase_event": "not_verified",
     "approved_creatives": "not_found",
     "payment_method": "intentionally_deferred_by_owner",
@@ -33,5 +39,5 @@
     "live_spend_usd": 0,
     "secrets_persisted": false
   },
-  "next_trigger": "Meta exposes a working switch or support release result for Instagram legacy ad account 1104252943250335"
+  "next_trigger": "Meta updates case 1667557011016000 or releases Instagram 17841401039012650 from legacy ad account 1104252943250335"
 }

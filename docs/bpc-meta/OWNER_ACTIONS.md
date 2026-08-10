@@ -1,28 +1,27 @@
 # Owner Action List
 
-No action is requested now for a credit card or payment method. The owner explicitly chose to leave payment blank; spend remains USD 0.
+No credit-card or payment action is requested. Spend remains USD 0.
 
-## 1. Release or switch the legacy Instagram ad account - only when ready to resume
+## 1. Respond only if Meta case `1667557011016000` requests owner verification
 
-- Platform: Instagram Professional Dashboard / Meta Business Support Home
-- Exact asset: `@bestprintsco_` (`17841401039012650`), legacy `cvtie-ad` (`1104252943250335`)
-- Exact screen/button: Instagram Professional Dashboard -> Ad tools -> `cvtie-ad` -> `Gecis Yap`; if the dialog is blank again, open Meta Business Support Home for this exact asset and use the available support/review submission button.
-- Why owner is required: Meta requires the authenticated Instagram account holder for account release, review, identity, or final support submission.
-- Action: request release/switch away from the disabled legacy account. Do not add Nstyled or personal account `55495642`.
-- Continuation trigger: the dashboard shows `BestPrintsCo Ads` account `2258717414903571`, or Meta provides a case/reference ID or an exact new error screen.
+- Platform: Meta Business Support Home
+- Exact screen: Active support case `Devre dışı bırakılmış veya kısıtlanmış varlık`, reference `1667557011016000`
+- Why owner is required: Meta may require login confirmation, 2FA, identity verification, document upload, or an ownership affirmation that Codex cannot perform.
+- Action: complete only the exact Meta request. Do not close the case, delete historical accounts, add payment, select Nstyled, or create another account.
+- Continuation trigger: the requested owner step is completed or Meta releases Instagram `17841401039012650`.
 
-## 2. Verify domain-registration email - when the verification email is available
+## 2. Confirm the older `@bestprintsco_` iPhone session only if it is unfamiliar
 
-- Platform: the Shopify domain registrant's email inbox
-- Exact screen/button: Shopify domain-registration verification email -> `Verify email`.
-- Why owner is required: Codex must not access the owner's mailbox credential or affirm domain registrant identity.
-- Action: verify the registrant email once.
-- Continuation trigger: Shopify Admin no longer shows the domain-registration email warning; Codex can then recheck public DNS and Meta domain verification.
+- Platform: Instagram Accounts Center -> Password and security -> Where you're logged in -> `bestprintsco_`
+- Exact owner decision: determine whether the older iPhone session shown in the current-account device list belongs to you.
+- Why owner is required: only the owner can recognize a legitimate device/location.
+- Action: if it is not yours, tell Codex `the older iPhone session is not mine`; Codex can then log out only that exact session. Other Instagram profiles were not active in the current Windows browser and were not logged out.
+- Continuation trigger: owner confirms the session is trusted or explicitly identifies it as unauthorized.
 
-## 3. Budget, payment, and final publish - deliberately deferred
+## 3. Budget, payment, and final publish remain deliberately deferred
 
-- Platform: Meta Ads Manager -> ad account `2258717414903571` -> Billing & payments / Campaign review
-- Exact buttons: `Add payment method`, then later `Publish`.
+- Platform: Meta Ads Manager -> ad account `2258717414903571`
+- Exact buttons: later `Add payment method` and `Publish`
 - Why owner is required: financial details, exact budget approval, and live spend initiation are owner-only.
-- Action: none now. When the owner is ready, approve one documented budget scenario, enter the payment method personally, and perform the final publish confirmation only after all launch gates pass.
-- Continuation trigger: owner states the approved daily budget and confirms payment setup is complete. Codex must first revalidate Instagram, domain, Purchase/deduplication, creative approval, and USA-only targeting before the owner clicks Publish.
+- Action now: none. When ready, approve a documented budget scenario, enter payment privately, and perform final Publish only after all launch gates pass.
+- Continuation trigger: owner states the approved daily budget and confirms payment setup is complete.

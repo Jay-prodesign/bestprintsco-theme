@@ -59,12 +59,12 @@ These are proposals, not authorization. Meta recommends giving a budget at least
 
 ## Draft status and blockers
 
-A live Meta draft was not created because Instagram is not fully claimed, domain verification is pending, Purchase/deduplication is unverified, AddToCart EMQ is 0, approved creatives are absent, payment is intentionally blank, and no exact budget is approved. This manifest is the maximum safe deployable state.
+A live Meta draft was not created because Instagram is not fully claimed, Purchase/deduplication is unverified, AddToCart EMQ is 0, approved creatives are absent, payment is intentionally blank, and no exact budget is approved. Domain verification was completed on 2026-08-10. This manifest is the maximum safe deployable state.
 
 Exact future deployment order:
 
 1. Release and claim Instagram ID `17841401039012650` into portfolio `913146750869963`.
-2. Complete domain and Purchase/deduplication validation.
+2. Complete Purchase/deduplication validation from a clean, non-preview storefront path.
 3. Attach approved 4:5 and 9:16 creatives.
 4. Build the manifest in ad account `2258717414903571` and preview USA-only targeting, placements, URL, UTM, and event.
 5. Owner selects a budget and privately adds payment when ready.
