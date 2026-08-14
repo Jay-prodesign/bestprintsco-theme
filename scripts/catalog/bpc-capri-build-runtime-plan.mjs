@@ -6,8 +6,9 @@ const args = Object.fromEntries(process.argv.slice(2).reduce((pairs, value, inde
   if (value.startsWith('--')) pairs.push([value.slice(2), all[index + 1]]);
   return pairs;
 }, []));
-for (const required of ['authority', 'before', 'out']) if (!args[required]) throw new Error(`--${required} is required`);
+for (const required of ['authority', 'baseline-authority', 'before', 'out']) if (!args[required]) throw new Error(`--${required} is required`);
 const authority = JSON.parse(readFileSync(resolve(args.authority), 'utf8'));
+const baselineAuthority = JSON.parse(readFileSync(resolve(args['baseline-authority']), 'utf8'));
 const before = JSON.parse(readFileSync(resolve(args.before), 'utf8'));
 const outDir = resolve(args.out);
 mkdirSync(outDir, { recursive: true });
@@ -19,6 +20,7 @@ const eligible = authority.records.filter((row) =>
 );
 if (eligible.length !== 68 || before.length !== 68) throw new Error(JSON.stringify({ eligible: eligible.length, before: before.length }));
 const byId = new Map(before.map((product) => [product.id, product]));
+const baselineById = new Map(baselineAuthority.records.map((row) => [row['Exact Product GID'], row]));
 const text = (value) => value == null ? '' : String(value).trim();
 const html = (value) => text(value).replace(/>\s+</g, '><').replace(/\s+/g, ' ');
 const csv = (value) => `"${String(value ?? '').replaceAll('"', '""')}"`;
@@ -50,8 +52,13 @@ const baselines = [];
 for (const row of eligible) {
   const id = row['Exact Product GID'];
   const product = byId.get(id);
+  const baselineRow = baselineById.get(id);
   if (!product) {
     isolated.push({ id, state: 'SOURCE_CONFLICT', reasons: ['MISSING_RUNTIME_PRODUCT'] });
+    continue;
+  }
+  if (!baselineRow?.['Proposed DescriptionHtml']) {
+    isolated.push({ id, state: 'SOURCE_CONFLICT', reasons: ['MISSING_AUTHORIZED_PROPOSED_BASELINE'] });
     continue;
   }
   const authorityDrift = [];
@@ -74,17 +81,17 @@ for (const row of eligible) {
     metaDescription: text(product.seo?.description),
     descriptionHtml: html(product.descriptionHtml),
   };
-  const frozenCurrent = {
+  const authorizedRuntimeBaseline = {
     seoTitle: text(row['Current SEO Title']),
     metaDescription: text(row['Current Meta Description']),
-    descriptionHtml: html(row['Current DescriptionHtml']),
+    descriptionHtml: html(baselineRow['Proposed DescriptionHtml']),
   };
   const target = {
     seoTitle: text(row['Final SEO Title']),
     metaDescription: text(row['Final Meta Description']),
     descriptionHtml: html(row['Final DescriptionHtml']),
   };
-  const sourceConflicts = Object.keys(current).filter((field) => current[field] !== frozenCurrent[field] && current[field] !== target[field]);
+  const sourceConflicts = Object.keys(current).filter((field) => current[field] !== authorizedRuntimeBaseline[field] && current[field] !== target[field]);
   if (sourceConflicts.length) {
     isolated.push({ id, state: 'SOURCE_CONFLICT', reasons: sourceConflicts });
     continue;
