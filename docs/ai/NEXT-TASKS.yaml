@@ -72,3 +72,5 @@ tasks:
     latest_read_only_rerun: "PASS — 2026-08-14T12:07:47Z; A=68, B=0, C=0; protected equality 68/68; no-write exceptions 4/4; mutation_count=0"
     final_runtime_execution: "PASS — 68/68 frozen DescriptionHtml + native SEO; protected 68/68; userErrors 0; retries 0; NO_WRITE exceptions 4/4"
     rollback_path: "tmp/BPC-CAT-PI-FAST-CORE-001/capri-final-desc-seo-20260814T1220Z/plan-v2/rollback.{csv,json,jsonl}"
+    capri_pilot_primary_media_read: "PASS — exact 12/12 expected MediaImage IDs matched fresh primary MediaImage IDs; direct Shopify CDN byte SHA-256 captured; mutation_count=0"
+    capri_pilot_media_packet_sha256: "e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575"

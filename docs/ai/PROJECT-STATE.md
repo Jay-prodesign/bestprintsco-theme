@@ -77,3 +77,10 @@ Draft PR: #3
 - Fresh post-read: Final DescriptionHtml 68/68, native SEO title 68/68, native meta description 68/68, protected equality 68/68, ST-012 PASS_AUTHORIZED_BASELINE.
 - Four NO_WRITE products remained untouched 4/4. PI Completion Registry updated only for the proven 68 rows; Tags and Media remain NOT_STARTED.
 - Rollback/evidence: `tmp/BPC-CAT-PI-FAST-CORE-001/capri-final-desc-seo-20260814T1220Z/`; implementation commit `6f511d8`.
+
+### Capri pilot primary-media verification — 2026-08-14
+
+- Exact canonical pilot scope read: 12/12; expected-vs-observed primary MediaImage ID equality: 12/12.
+- Best Prints Co. identity PASS; current primary files are direct Shopify CDN references, 1000x1500 JPEG, byte-level SHA-256 captured.
+- Evidence packet hash: `e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575`; private evidence is Git-ignored under `tmp/BPC-CAT-PI-FAST-CORE-001/capri-pilot-media-20260814/`.
+- Shopify mutation count 0; media replace/reorder/upload and all catalog copy writes 0. Scope stopped after evidence capture.
