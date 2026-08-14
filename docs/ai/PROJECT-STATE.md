@@ -53,3 +53,10 @@ Draft PR: #3
 - Shopify identity PASS; read count 68/68; mutation count 0; four NO_WRITE products untouched 4/4.
 - Evidence tooling commit `5a7d6fd`; private result `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-reconciliation.json`.
 - No PCC global summary write. Tags, media, alt, title, and final Description/SEO mutation remain closed.
+
+### Canonical reissue check — 2026-08-14T11:23:50Z
+
+- Fresh-read Operating Manual v2.4, PCC `Workstreams & Locks` row 8, `Codex Jobs` row 41, Current Project State, Change Log row 1363, and CAT-PI registries.
+- No final Description/native SEO reissue exists: the lock still permits read-only exact-68 reconciliation only, and the job remains `BLOCKED — execution closed / CHANGES_REQUIRED`.
+- Codex cannot assume the BPC-MASTER planning/priority role or self-authorize the mutation. Shopify/Drive mutation count for this check: 0.
+- Terminal condition: BPC-MASTER/ChatGPT must record an explicit reissue of the same immutable exact-68 final Description/native SEO scope in the canonical queue; then Codex may re-accept and execute it.
