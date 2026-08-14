@@ -42,14 +42,14 @@ Rollback: every live change and its exact reversal is in `docs/bpc-meta/CHANGELO
 
 ## BPC-CAT-PI-FAST-CORE-001 — Capri Description/SEO runtime handoff
 
-Status: CHANGES_REQUIRED — SOURCE_CONFLICT / NO SHOPIFY WRITE
+Final status: DESCRIPTION_SEO_COMPLETE_RUNTIME_VERIFIED — exact 68 PASS
 Branch/worktree: `task/BPC-CAT-PI-FAST-CORE-001`, `C:\Projects\bestprintsco-cat-pi-fast-core`
 Start commit: `fb63136`
 Implementation/evidence tooling commit: `d8b7f2f`
 
 Shopify CLI identity passed for `gid://shopify/Shop/25581027408`, `Best Prints Co.`, `cute-sneakers.myshopify.com`, primary domain `bestprintsco.com`. The connected AKILTA surface was identified separately and received no write. The existing immutable job was accepted without a new job, cursor reset, or family wave.
 
-Exact 68 Capri title-PASS products were fresh-read. Title, vendor, Product Type, status, taxonomy category, variant count, first PP-SKU, and size scope matched authority; protected drift was zero. Live `descriptionHtml` differed from both frozen Current DescriptionHtml and frozen Final DescriptionHtml on 68/68 rows, so every row was isolated `SOURCE_CONFLICT`. Mutation count and userErrors are zero.
+Historical first attempt: exact 68 Capri title-PASS products were fresh-read. Title, vendor, Product Type, status, taxonomy category, variant count, first PP-SKU, and size scope matched authority; protected drift was zero. Live `descriptionHtml` differed from both frozen Current DescriptionHtml and frozen Final DescriptionHtml on 68/68 rows, so every row was initially isolated `SOURCE_CONFLICT`. That classification was later superseded by the authorized Proposed-baseline evidence below.
 
 Independent post-read passed: 68/68 full pre/post equality, 68/68 protected equality, and the four `NO_WRITE_EVIDENCE_EXHAUSTED` products remained untouched 4/4. Commerce Stress Test ST-012 passed fail-closed with `DELTA_REBUILD_REQUIRED`; seeded spot QA was 5/5. PI Completion Registry, PCC, and Current Project State contain the same evidence. Tags, media, alt text, and product title remained closed.
 
@@ -70,3 +70,9 @@ At 2026-08-14T11:23:50Z, Codex fresh-read the mandatory BPC authority chain. PCC
 ### Fresh read-only rerun
 
 At 2026-08-14T12:07:47Z, the same exact-68 reconciliation was rerun under explicit read-only authority. Shopify identity remained Best Prints Co.; A=68, B=0, C=0; exact and normalized LIVE==Proposed=68/68. Exact clean-scope pre/post and protected equality passed 68/68, and all four NO_WRITE exceptions remained unchanged. Shopify/Drive mutation count remained zero. Private run evidence is under `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-recon-20260814T1127Z/`. Stop condition satisfied; downstream stages remain closed.
+
+### Capri final Description/native SEO execution complete
+
+Final state: `DESCRIPTION_SEO_COMPLETE_RUNTIME_VERIFIED`. Canonical reissue was fresh-proven at PCC `Next Actions!726`, `Codex Jobs!41`, and Current Project State. Under the same immutable job, exact 68 live descriptions passed the Proposed-baseline and protected precheck, then Bulk Operation `gid://shopify/BulkOperation/5782206644304` wrote only frozen Final DescriptionHtml, Final SEO Title, and Final Meta Description. Operation/result rows 68/68; userErrors 0; retries 0.
+
+Fresh Shopify post-read passed all outputs 68/68, protected equality 68/68, and ST-012 `PASS_AUTHORIZED_BASELINE`. Shopify serialized six literal ampersands as `&amp;`; deterministic entity normalization proved equivalent frozen HTML. Four NO_WRITE products remained identical 4/4. PI Completion Registry readback shows 68 `DESCRIPTION_SEO_COMPLETE_RUNTIME_VERIFIED` rows; Tags/Media remain NOT_STARTED and the four exceptions remain `NO_WRITE_EVIDENCE_EXHAUSTED`. Rollback CSV/JSON/JSONL and validation evidence are in `tmp/BPC-CAT-PI-FAST-CORE-001/capri-final-desc-seo-20260814T1220Z/`. Implementation commit: `6f511d8`. Stop before Tags/Media/Title/new family.

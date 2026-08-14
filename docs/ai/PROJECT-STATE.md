@@ -34,7 +34,8 @@ Draft PR: #3
 
 ## BPC-CAT-PI-FAST-CORE-001
 
-- Status: CHANGES_REQUIRED — SOURCE_CONFLICT / NO SHOPIFY WRITE.
+- Status: DESCRIPTION_SEO_COMPLETE_RUNTIME_VERIFIED — exact 68 PASS.
+- The original fail-closed bullets below are historical; the Proposed-baseline reconciliation and final execution sections supersede their old continuation state.
 - Branch `task/BPC-CAT-PI-FAST-CORE-001`; start `fb63136`; tooling/evidence commit `d8b7f2f`.
 - Same immutable job accepted; Shopify identity PASS for Best Prints Co. / `cute-sneakers.myshopify.com` / Shop `25581027408`. AKILTA writes: 0.
 - Exact pre-read: 68/68. Authority/protected checks PASS except live `descriptionHtml` conflicts with both frozen Current and frozen Final on 68/68; `SOURCE_CONFLICT=68`, `PROTECTED_DRIFT=0`.
@@ -67,3 +68,12 @@ Draft PR: #3
 - Fresh Proposed-first result: A EXPECTED_INTERIM 68, B ALREADY_FINAL 0, C TRUE_SOURCE_CONFLICT 0; exact and normalized LIVE==Proposed 68/68.
 - Independent pre/post full equality 68/68 and protected equality 68/68; four NO_WRITE exceptions unchanged 4/4; mutation count 0.
 - Private evidence: `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-recon-20260814T1127Z/result.json`; Tags, media, titles, other families, and frozen content remained untouched.
+
+### Capri final DescriptionHtml + native SEO execution — 2026-08-14T12:48:41Z
+
+- Canonical reissue confirmed at PCC `Next Actions!726`, `Codex Jobs!41`, and Current Project State; same immutable job retained.
+- Best Prints Co. identity PASS. Fresh precheck: 68/68 live DescriptionHtml equals authorized Proposed baseline; source conflicts 0; protected drift 0.
+- Shopify Bulk Operation `gid://shopify/BulkOperation/5782206644304` COMPLETED 68/68; row errors 0; retries 0.
+- Fresh post-read: Final DescriptionHtml 68/68, native SEO title 68/68, native meta description 68/68, protected equality 68/68, ST-012 PASS_AUTHORIZED_BASELINE.
+- Four NO_WRITE products remained untouched 4/4. PI Completion Registry updated only for the proven 68 rows; Tags and Media remain NOT_STARTED.
+- Rollback/evidence: `tmp/BPC-CAT-PI-FAST-CORE-001/capri-final-desc-seo-20260814T1220Z/`; implementation commit `6f511d8`.
