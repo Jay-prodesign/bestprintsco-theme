@@ -80,3 +80,7 @@ Fresh Shopify post-read passed all outputs 68/68, protected equality 68/68, and 
 ### Capri pilot primary-media read-only evidence — 2026-08-14
 
 Best Prints Co. identity passed. The exact 12 rows from canonical `PI CQ v0.4 Capri Pilot` were fresh-read from Shopify; observed primary MediaImage IDs matched expected IDs 12/12. Exact current Shopify CDN bytes were fetched without transformation; all were 1000x1500 JPEGs and received SHA-256 fingerprints. Packet JSONL SHA-256: `e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575`. Shopify mutation count: 0. Private evidence remains under `tmp/BPC-CAT-PI-FAST-CORE-001/capri-pilot-media-20260814/`; no media or catalog field changed.
+
+### Capri CQ read-only visual inspection — 2026-08-14
+
+Same immutable job `BPC-CAT-PI-CAPRI-CQ-REMEDIATION-001`; exact accepted media bytes were revalidated with SHA mismatch 0, then visually inspected without Proposed* context. Results: DESIGN_INTELLIGENCE_PASS 8, EVIDENCE_NEEDED 3, NO_FINAL 1. `Sunflowers White` supports White only as the image background/ground field. `Purple Blue Butterflies` does not visually support butterflies/purple; `Denim Blue Abstrcat` supports abstract semantics but remains NO_FINAL without token-renaming authority. Shopify mutation count 0. Private packet SHA-256: `51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015`.

@@ -84,3 +84,10 @@ Draft PR: #3
 - Best Prints Co. identity PASS; current primary files are direct Shopify CDN references, 1000x1500 JPEG, byte-level SHA-256 captured.
 - Evidence packet hash: `e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575`; private evidence is Git-ignored under `tmp/BPC-CAT-PI-FAST-CORE-001/capri-pilot-media-20260814/`.
 - Shopify mutation count 0; media replace/reorder/upload and all catalog copy writes 0. Scope stopped after evidence capture.
+
+### Capri CQ Design Intelligence — read-only — 2026-08-14
+
+- Exact accepted image pixels inspected 12/12; accepted byte SHA mismatch 0; Proposed* diagnostic fields excluded.
+- States: DESIGN_INTELLIGENCE_PASS 8, EVIDENCE_NEEDED 3, NO_FINAL 1.
+- Exceptions: Colorful Boho Aztec cultural attribution needs authority; Sugar Skulls & Roses flower species needs evidence; Purple Blue Butterflies visually conflicts with paisley/floral image; Denim Blue Abstrcat remains NO_FINAL under NO_GUESS.
+- Shopify mutation count 0; no copy generated; private packet SHA-256 `51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015`.

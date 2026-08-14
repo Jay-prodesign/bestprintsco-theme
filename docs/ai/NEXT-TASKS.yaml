@@ -74,3 +74,5 @@ tasks:
     rollback_path: "tmp/BPC-CAT-PI-FAST-CORE-001/capri-final-desc-seo-20260814T1220Z/plan-v2/rollback.{csv,json,jsonl}"
     capri_pilot_primary_media_read: "PASS — exact 12/12 expected MediaImage IDs matched fresh primary MediaImage IDs; direct Shopify CDN byte SHA-256 captured; mutation_count=0"
     capri_pilot_media_packet_sha256: "e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575"
+    capri_cq_visual_inspection: "READ_ONLY_COMPLETE — 12/12 accepted pixels; PASS=8, EVIDENCE_NEEDED=3, NO_FINAL=1; mutation_count=0"
+    capri_cq_visual_packet_sha256: "51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015"
