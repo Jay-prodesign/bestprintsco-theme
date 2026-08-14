@@ -54,3 +54,11 @@ Exact 68 Capri title-PASS products were fresh-read. Title, vendor, Product Type,
 Independent post-read passed: 68/68 full pre/post equality, 68/68 protected equality, and the four `NO_WRITE_EVIDENCE_EXHAUSTED` products remained untouched 4/4. Commerce Stress Test ST-012 passed fail-closed with `DELTA_REBUILD_REQUIRED`; seeded spot QA was 5/5. PI Completion Registry, PCC, and Current Project State contain the same evidence. Tags, media, alt text, and product title remained closed.
 
 Rollback: no changed rows; CSV/JSON/JSONL rollback manifests are empty by design. Private pre/post and rollback evidence remains under the immutable job's ignored `tmp/` directory. Next action: BPC-MASTER reconciles or delta-rebuilds the 68 Current DescriptionHtml authority rows, then reissues the same immutable scope only if frozen finals remain controlling.
+
+### Read-only Capri baseline reconciliation correction
+
+Final state: `BASELINE_RECON_PASS — PRIOR SOURCE_CONFLICT WAS BASELINE-SELECTION FALSE POSITIVE`.
+
+PCC Change Log row 1363 proves the earlier interim Capri description write was authorized, intentionally preserved, and previously passed 72/72 Shopify post-read/protected equality. A fresh read of manifest columns I, J, and AN plus exact live Shopify readback established A EXPECTED_INTERIM = 68, B ALREADY_FINAL = 0, C TRUE_SOURCE_CONFLICT = 0. All 68 live descriptions equal Proposed DescriptionHtml byte-for-byte and after deterministic HTML normalization; none equals Final DescriptionHtml.
+
+Shopify identity remained Best Prints Co. / `cute-sneakers.myshopify.com` / Shop `25581027408`. Shopify mutation count = 0. The four evidence-exhausted products remain full-snapshot identical 4/4. Private evidence: `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-reconciliation.json`. Tooling commit: `5a7d6fd`. PCC global summary tabs were not written. Tags, media, alt, and title remain closed; final Description/SEO mutation was not executed.

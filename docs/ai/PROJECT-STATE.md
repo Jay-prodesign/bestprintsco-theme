@@ -43,3 +43,13 @@ Draft PR: #3
 - Regression ST-012: PASS_FAIL_CLOSED / `DELTA_REBUILD_REQUIRED`; seeded spot checks 5/5.
 - PI Completion Registry, PCC, and Current Project State updated. Tags, media, alt, and title writes remained closed.
 - Exact continuation: BPC-MASTER must reconcile/delta-rebuild the 68 Current DescriptionHtml authority rows before the same scope can be reissued.
+
+### Capri baseline reconciliation
+
+- State corrected to `BASELINE_RECON_PASS — PRIOR SOURCE_CONFLICT WAS BASELINE-SELECTION FALSE POSITIVE`.
+- Change Log row 1363 makes manifest Proposed DescriptionHtml the authorized interim baseline candidate.
+- Fresh exact comparison: A EXPECTED_INTERIM 68; B ALREADY_FINAL 0; C TRUE_SOURCE_CONFLICT 0.
+- Exact and normalized live-vs-Proposed equality: 68/68. Live-vs-Final equality: 0/68.
+- Shopify identity PASS; read count 68/68; mutation count 0; four NO_WRITE products untouched 4/4.
+- Evidence tooling commit `5a7d6fd`; private result `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-reconciliation.json`.
+- No PCC global summary write. Tags, media, alt, title, and final Description/SEO mutation remain closed.
