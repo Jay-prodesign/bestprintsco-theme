@@ -39,3 +39,18 @@ Validation: Nstyled writes/queries 0; live spend USD 0; dataset sources contain 
 Changed records: `docs/bpc-meta/*` including asset/protected manifests, change log, restriction state, Shopify integration, measurement bridge, organic automation, first-US-ad manifest, owner actions, next trigger, and machine-readable state.
 
 Rollback: every live change and its exact reversal is in `docs/bpc-meta/CHANGELOG.md`; historical assets must not be deleted. Recommended next action: resume only when Meta exposes a working switch/release flow or Support returns a case/reference result for `1104252943250335`, then continue at `docs/bpc-meta/NEXT_TRIGGER.md` without restarting the audit.
+
+## BPC-CAT-PI-FAST-CORE-001 — Capri Description/SEO runtime handoff
+
+Status: CHANGES_REQUIRED — SOURCE_CONFLICT / NO SHOPIFY WRITE
+Branch/worktree: `task/BPC-CAT-PI-FAST-CORE-001`, `C:\Projects\bestprintsco-cat-pi-fast-core`
+Start commit: `fb63136`
+Implementation/evidence tooling commit: `d8b7f2f`
+
+Shopify CLI identity passed for `gid://shopify/Shop/25581027408`, `Best Prints Co.`, `cute-sneakers.myshopify.com`, primary domain `bestprintsco.com`. The connected AKILTA surface was identified separately and received no write. The existing immutable job was accepted without a new job, cursor reset, or family wave.
+
+Exact 68 Capri title-PASS products were fresh-read. Title, vendor, Product Type, status, taxonomy category, variant count, first PP-SKU, and size scope matched authority; protected drift was zero. Live `descriptionHtml` differed from both frozen Current DescriptionHtml and frozen Final DescriptionHtml on 68/68 rows, so every row was isolated `SOURCE_CONFLICT`. Mutation count and userErrors are zero.
+
+Independent post-read passed: 68/68 full pre/post equality, 68/68 protected equality, and the four `NO_WRITE_EVIDENCE_EXHAUSTED` products remained untouched 4/4. Commerce Stress Test ST-012 passed fail-closed with `DELTA_REBUILD_REQUIRED`; seeded spot QA was 5/5. PI Completion Registry, PCC, and Current Project State contain the same evidence. Tags, media, alt text, and product title remained closed.
+
+Rollback: no changed rows; CSV/JSON/JSONL rollback manifests are empty by design. Private pre/post and rollback evidence remains under the immutable job's ignored `tmp/` directory. Next action: BPC-MASTER reconciles or delta-rebuilds the 68 Current DescriptionHtml authority rows, then reissues the same immutable scope only if frozen finals remain controlling.

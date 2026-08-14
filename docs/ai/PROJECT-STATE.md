@@ -31,3 +31,15 @@ Draft PR: #3
 - First-US-ad deployable manifest exists, but no Meta draft was created because Instagram, domain, Purchase/deduplication, creative, budget, and payment gates remain open.
 - Owner explicitly deferred payment setup. Nstyled writes/queries: 0. Live ad spend: USD 0.
 - Exact continuation and safe fallback: `docs/bpc-meta/NEXT_TRIGGER.md`.
+
+## BPC-CAT-PI-FAST-CORE-001
+
+- Status: CHANGES_REQUIRED — SOURCE_CONFLICT / NO SHOPIFY WRITE.
+- Branch `task/BPC-CAT-PI-FAST-CORE-001`; start `fb63136`; tooling/evidence commit `d8b7f2f`.
+- Same immutable job accepted; Shopify identity PASS for Best Prints Co. / `cute-sneakers.myshopify.com` / Shop `25581027408`. AKILTA writes: 0.
+- Exact pre-read: 68/68. Authority/protected checks PASS except live `descriptionHtml` conflicts with both frozen Current and frozen Final on 68/68; `SOURCE_CONFLICT=68`, `PROTECTED_DRIFT=0`.
+- Shopify mutation count: 0; userErrors: 0. Post-read: 68/68 full equality and 68/68 protected equality.
+- Four `NO_WRITE_EVIDENCE_EXHAUSTED` Capri products remained untouched 4/4.
+- Regression ST-012: PASS_FAIL_CLOSED / `DELTA_REBUILD_REQUIRED`; seeded spot checks 5/5.
+- PI Completion Registry, PCC, and Current Project State updated. Tags, media, alt, and title writes remained closed.
+- Exact continuation: BPC-MASTER must reconcile/delta-rebuild the 68 Current DescriptionHtml authority rows before the same scope can be reissued.

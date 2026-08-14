@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-08-03T17:06:43Z"
+last_updated: "2026-08-14T10:58:56Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -43,3 +43,23 @@ tasks:
     nstyled_writes: 0
     nstyled_queries: 0
     live_ad_spend: 0
+  - id: BPC-CAT-PI-FAST-CORE-001
+    status: changes_required_source_conflict
+    branch: task/BPC-CAT-PI-FAST-CORE-001
+    start_commit: fb63136
+    implementation_commit: d8b7f2f
+    shopify_identity: "PASS — Best Prints Co. / cute-sneakers.myshopify.com / gid://shopify/Shop/25581027408"
+    accepted_same_job: true
+    pre_read_products: 68
+    post_read_products: 68
+    source_conflicts: 68
+    protected_drift: 0
+    shopify_mutations: 0
+    user_errors: 0
+    protected_equality: "68/68"
+    no_write_exceptions_untouched: "4/4"
+    regression: "ST-012 PASS_FAIL_CLOSED — DELTA_REBUILD_REQUIRED"
+    seeded_spot_checks: "5/5"
+    safe_fallback: "NO_WRITE; keep Tags, media, alt, and title stages closed."
+    responsible: "BPC-MASTER"
+    terminal_condition: "Reconcile or delta-rebuild the 68 Current DescriptionHtml authority rows, then reissue the same immutable scope only if frozen finals remain controlling."
