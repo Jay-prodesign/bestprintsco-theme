@@ -60,3 +60,10 @@ Draft PR: #3
 - No final Description/native SEO reissue exists: the lock still permits read-only exact-68 reconciliation only, and the job remains `BLOCKED — execution closed / CHANGES_REQUIRED`.
 - Codex cannot assume the BPC-MASTER planning/priority role or self-authorize the mutation. Shopify/Drive mutation count for this check: 0.
 - Terminal condition: BPC-MASTER/ChatGPT must record an explicit reissue of the same immutable exact-68 final Description/native SEO scope in the canonical queue; then Codex may re-accept and execute it.
+
+### Read-only Capri baseline reconciliation rerun — 2026-08-14T12:07:47Z
+
+- Same immutable job and exact 68 scope; Best Prints Co. identity PASS.
+- Fresh Proposed-first result: A EXPECTED_INTERIM 68, B ALREADY_FINAL 0, C TRUE_SOURCE_CONFLICT 0; exact and normalized LIVE==Proposed 68/68.
+- Independent pre/post full equality 68/68 and protected equality 68/68; four NO_WRITE exceptions unchanged 4/4; mutation count 0.
+- Private evidence: `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-recon-20260814T1127Z/result.json`; Tags, media, titles, other families, and frozen content remained untouched.

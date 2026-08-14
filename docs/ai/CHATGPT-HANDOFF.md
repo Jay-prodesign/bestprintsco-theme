@@ -66,3 +66,7 @@ Shopify identity remained Best Prints Co. / `cute-sneakers.myshopify.com` / Shop
 ### Canonical reissue check
 
 At 2026-08-14T11:23:50Z, Codex fresh-read the mandatory BPC authority chain. PCC `Workstreams & Locks` row 8 still authorizes only the completed read-only exact-68 baseline reconciliation, and `Codex Jobs` row 41 remains blocked/closed. The user request to “take over Master” does not create the missing queue reissue because the Operating Manual assigns planning, prioritization, and final completion authority to ChatGPT/BPC Brain. No Shopify or Drive write occurred. Next action: BPC-MASTER records an explicit same-job final Description/native SEO reissue; Codex then re-accepts and executes only that exact scope.
+
+### Fresh read-only rerun
+
+At 2026-08-14T12:07:47Z, the same exact-68 reconciliation was rerun under explicit read-only authority. Shopify identity remained Best Prints Co.; A=68, B=0, C=0; exact and normalized LIVE==Proposed=68/68. Exact clean-scope pre/post and protected equality passed 68/68, and all four NO_WRITE exceptions remained unchanged. Shopify/Drive mutation count remained zero. Private run evidence is under `tmp/BPC-CAT-PI-FAST-CORE-001/capri-baseline-recon-20260814T1127Z/`. Stop condition satisfied; downstream stages remain closed.
