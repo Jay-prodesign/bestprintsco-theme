@@ -76,3 +76,16 @@ tasks:
     capri_pilot_media_packet_sha256: "e76b3a4feee7b755b1e2534913cda83fa4da49096b9977edf384117a83eeb575"
     capri_cq_visual_inspection: "READ_ONLY_COMPLETE — 12/12 accepted pixels; PASS=8, EVIDENCE_NEEDED=3, NO_FINAL=1; mutation_count=0"
     capri_cq_visual_packet_sha256: "51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015"
+  - id: BPC-CAT-PI-CAPRI-CQ-REMEDIATION-001
+    status: ready_for_qa
+    branch: task/BPC-CAT-PI-FAST-CORE-001
+    immutable_job_preserved: true
+    blind_benchmark: "PASS 11/11 — sanitized independent evaluator"
+    evaluator_evidence_sha256: "7f626ff02ddb82b0b5f0604479db7cd41f2f381dcec7be77fae0b800b0346bb2"
+    no_write_acceptance_sha256: "858b79b20b36ae94d1d26bdfde324a32845372f8bc04e9524545d424db20a113"
+    rollback: "CSV/JSON/JSONL exact 11 private artifacts captured"
+    applicable_stress_tests: "ST-001/002/003/009/011/015/016 PASS"
+    isolated_conflict: "gid://shopify/Product/6838279471184 — EVIDENCE_NEEDED_IDENTITY_CONFLICT / untouched"
+    shopify_mutations: 0
+    v04_production_authority: false
+    next_action: "BPC Brain governed promotion/human acceptance; no Codex production write is authorized."

@@ -84,3 +84,9 @@ Best Prints Co. identity passed. The exact 12 rows from canonical `PI CQ v0.4 Ca
 ### Capri CQ read-only visual inspection — 2026-08-14
 
 Same immutable job `BPC-CAT-PI-CAPRI-CQ-REMEDIATION-001`; exact accepted media bytes were revalidated with SHA mismatch 0, then visually inspected without Proposed* context. Results: DESIGN_INTELLIGENCE_PASS 8, EVIDENCE_NEEDED 3, NO_FINAL 1. `Sunflowers White` supports White only as the image background/ground field. `Purple Blue Butterflies` does not visually support butterflies/purple; `Denim Blue Abstrcat` supports abstract semantics but remains NO_FINAL without token-renaming authority. Shopify mutation count 0. Private packet SHA-256: `51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015`.
+
+### Capri CQ independent blind benchmark + no-write package — 2026-08-15
+
+Canonical PCC/CPS exact next action was executed under the same `BPC-CAT-PI-CAPRI-CQ-REMEDIATION-001`. Sanitized exact-11 blind evaluation passed 11/11; product-name removal, design-name substitution, unrelated-product swap, factuality and customer-language tests passed. Max token-stripped bigram Jaccard: SEO 0.143, meta 0.067, opening 0.071, description 0.081; normalized first-four-token prefixes were unique 11/11. Evaluator evidence SHA-256: `7f626ff02ddb82b0b5f0604479db7cd41f2f381dcec7be77fae0b800b0346bb2`.
+
+Shopify identity and exact-11 live baseline passed; accepted primary MediaImage IDs matched 11/11 without media redownload. No-write manifest plus rollback CSV/JSON/JSONL and ST-001/002/003/009/011/015/016 acceptance evidence are private under `tmp/BPC-CAT-PI-CAPRI-CQ-REMEDIATION-001/blind-evaluator-20260815/`; acceptance SHA-256 `858b79b20b36ae94d1d26bdfde324a32845372f8bc04e9524545d424db20a113`. Shopify mutation count 0. Purple Blue Butterflies remains excluded/untouched. v0.4 remains `NO_PRODUCTION_AUTHORITY`; PCC Codex Jobs row 43 is `READY_FOR_QA` at the BPC Brain governed-promotion/human-acceptance authority boundary.

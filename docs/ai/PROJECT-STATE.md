@@ -91,3 +91,11 @@ Draft PR: #3
 - States: DESIGN_INTELLIGENCE_PASS 8, EVIDENCE_NEEDED 3, NO_FINAL 1.
 - Exceptions: Colorful Boho Aztec cultural attribution needs authority; Sugar Skulls & Roses flower species needs evidence; Purple Blue Butterflies visually conflicts with paisley/floral image; Denim Blue Abstrcat remains NO_FINAL under NO_GUESS.
 - Shopify mutation count 0; no copy generated; private packet SHA-256 `51790c3575714ca36a0c0b4e8a7272e97472242c740ae08b963b3026f6a98015`.
+
+### Capri CQ blind benchmark / no-write acceptance — 2026-08-15
+
+- Same immutable job; canonical exact-11 sanitized blind benchmark PASS 11/11 and readback frozen in `PI CQ v0.4 Blind Packet` and `PI CQ v0.4 Candidates`.
+- Adversarial tests PASS 11/11; cohort max bigram Jaccard SEO 0.143, meta 0.067, opening 0.071, description 0.081; prefixes unique 11/11.
+- Fresh Best Prints Co. baseline 11/11; primary MediaImage equality 11/11; rollback CSV/JSON/JSONL captured; applicable ST-001/002/003/009/011/015/016 PASS.
+- Purple Blue Butterflies remains `EVIDENCE_NEEDED_IDENTITY_CONFLICT`, excluded and untouched. Shopify mutation count 0.
+- `BPC-PI-ENGINE-v0.4.0-CANDIDATE` remains no-production-authority. Codex Jobs row 43 is `READY_FOR_QA`; BPC Brain governed promotion/human acceptance is the current authority boundary.
