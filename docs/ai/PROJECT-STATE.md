@@ -99,3 +99,12 @@ Draft PR: #3
 - Fresh Best Prints Co. baseline 11/11; primary MediaImage equality 11/11; rollback CSV/JSON/JSONL captured; applicable ST-001/002/003/009/011/015/016 PASS.
 - Purple Blue Butterflies remains `EVIDENCE_NEEDED_IDENTITY_CONFLICT`, excluded and untouched. Shopify mutation count 0.
 - `BPC-PI-ENGINE-v0.4.0-CANDIDATE` remains no-production-authority. Codex Jobs row 43 is `READY_FOR_QA`; BPC Brain governed promotion/human acceptance is the current authority boundary.
+
+### Capri CQ exact-2 SEO reblind / owner-review gate — 2026-08-15
+
+- Same immutable job; fresh canonical state was `CHANGES_REQUIRED — EXACT 2 SEO REBLIND`.
+- Independent sanitized SEO reblind passed 2/2. Frozen choices: `6837802827856` = `Blue Camo Capri Leggings with Pale and Navy Patches`; `6838280847440` = `Navy Capri Leggings with Woven-Hoop and Feather Print`.
+- Content SEO v1.7 final assembly completed 11/11 using each blind-selected full description only; standalone opening concatenation count 0.
+- Final cross-field/cohort/adversarial QA passed 11/11; max bigram Jaccard SEO 0.143, meta 0.067, DescriptionHtml 0.077; duplicate final fields 0.
+- Owner packet: CAT-PI `PI CQ v0.4 Owner Review!A1:P16`; bundle SHA `4faadfcf1dd994d97cbfa02708d8789fc9c5b493b2b9181b2f02cc5e3165b421`; QA SHA `ceb63a030318ec954eecc1690665cc659bede3f8b5fd264838fb63e2e6712ea6`.
+- Shopify mutation count 0. Purple Blue Butterflies remains excluded. v0.4 remains not promoted. Current state is controlling owner human review required; Tags/Media/new family remain closed.
