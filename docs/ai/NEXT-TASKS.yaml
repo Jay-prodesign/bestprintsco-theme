@@ -1,8 +1,16 @@
 version: 2
-last_updated: "2026-08-15T10:21:45Z"
+last_updated: "2026-08-15T10:33:47Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
+  - id: BPC-CAT-CONTENT-SCALE-v1.8
+    status: complete
+    shopify_mutations: 0
+    canonical_sheet_id: "1038BRpH_FSPERsdZJgLlimr80HDclDeI8HYMi-JM5lo"
+    owner_source: "Source Register!A19:G19"
+    versions: "BPC-CONTENT-SEO-v1.8 / BPC-COPY-VARIATION-v1.6 / BPC-PI-EXECUTION-v3.1"
+    rule: "Family structure shared; customer-facing product identity unique; supplier facts evidence-bound; immutable source/content hashes; isolate failed Product GIDs; exact bulk manifest."
+    next_action: "At the next separately authorized family wave, take one fresh bounded baseline, generate/QA Product-GID bundles, freeze one bulk manifest, execute through Shopify Bulk Operations, and perform one fresh scoped post-read."
   - id: BPC-CAT-SUPPLIER-EVIDENCE-v1.1
     status: complete
     shopify_mutations: 0

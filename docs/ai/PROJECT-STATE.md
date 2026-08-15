@@ -1,5 +1,15 @@
 # Project State
 
+## BPC-CAT-CONTENT-SCALE-v1.8
+
+- Status: COMPLETE — content production and bulk-scaling governance corrected; Shopify mutation count 0.
+- Family facts and exact supplier facts are reusable controlled inputs; unique customer copy is generated independently from each Product GID's accepted identity and Design Intelligence.
+- Every Product GID now requires an immutable source-packet hash and content hash. Passed rows are reused without reread/regeneration until a controlling-source or protected runtime fingerprint changes.
+- Complete-family cohort QA strips shared facts/modules, detects exact/near duplicates, proves remaining differentiating tokens against each product packet, and isolates only failed rows.
+- Family-wave execution now requires one fresh bounded baseline, Product-GID manifests, one authorized Shopify Bulk Operation, and one fresh scoped post-read; manual product-by-product writes and family-scan restarts are prohibited.
+- Canonical versions: `BPC-CONTENT-SEO-v1.8`, `BPC-COPY-VARIATION-v1.6`, `BPC-PI-EXECUTION-v3.1`; owner source `SRC-019` dated `2026-08-15`.
+- `BPC-PI-ENGINE-v0.3.0` and all Shopify product/catalog fields remain unchanged.
+
 ## BPC-CAT-SUPPLIER-EVIDENCE-v1.1
 
 - Status: COMPLETE — canonical evidence policy corrected; Shopify mutation count 0.

@@ -3,6 +3,7 @@
 | ID | Date | Decision | Reason | Status |
 | --- | --- | --- | --- | --- |
 | AI-DEC-001 | 2026-07-14 | Use `docs/ai/` as the GitHub communication layer. | Persistent review evidence. | active |
+| CAT-PI-DEC-019 | 2026-08-15 | Scale catalog copy by exact supplier/model family with shared governed inputs but Product-GID-specific customer copy, immutable source/content hashes, complete-wave duplicate QA, isolated retries, and one exact bulk manifest. | This preserves speed without copying generic descriptions, inventing uniqueness, repeatedly rescanning passed products, or falling back to manual product writes. | active-owner-approved |
 | CAT-PI-DEC-018 | 2026-08-15 | Treat exact-model Pillow Profits / POPCUSTOMS specifications as accepted supplier evidence; allow restrained supplier-stated functional claims after exact model/SKU lineage proof, while keeping inference, certification, and dynamic-commerce boundaries. | The prior blanket prohibition rejected valid exact supplier facts and encouraged generic inference; the revised claim classes preserve truth without overblocking. | active-owner-approved |
 | CAT-DEC-000 | 2026-07-22 | Shopify/live is runtime truth; PCC Codex Jobs is the shared queue. | Prevent stale IDs/counts and overlapping work. | active |
 | CAT-DEC-001 | 2026-07-22 | Resume duplicate scan only at SKU-STREAM-201 after PP.13849559. | Preserve completed work. | active |

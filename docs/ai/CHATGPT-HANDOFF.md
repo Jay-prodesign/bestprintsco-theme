@@ -1,5 +1,17 @@
 # ChatGPT Handoff
 
+## BPC-CAT-CONTENT-SCALE-v1.8 — family-shared / product-unique system
+
+Status: COMPLETE — canonical governance updated; Shopify mutation count 0
+Objective: permit fast family-wave processing while proving every Product-GID title, SEO, description and governed tag bundle is product-specific and evidence-bound.
+Branch/worktree: `task/BPC-CAT-SUPPLIER-EVIDENCE-V1-1`, `C:\Projects\bestprintsco-theme`
+Start commit: `755cabad8a007e49a5bb1ce0be847a664ef7f5e0`
+Canonical resource changed: CAT-PI spreadsheet `1038BRpH_FSPERsdZJgLlimr80HDclDeI8HYMi-JM5lo`; `Source Register!A19:G19`, `Content SEO Standard!A30:L30`, `Copy Variation QA!A22:J22`, and `PI Execution Blueprint v3` rows `P3-03`, `P3-13`, `P3-18`, `P3-19`.
+Versions: `BPC-CONTENT-SEO-v1.8`, `BPC-COPY-VARIATION-v1.6`, `BPC-PI-EXECUTION-v3.1`.
+Validation: connector readback matched every value and native format; changed rows use wrapped top-aligned rendering with fitted row heights; Google-rendered views inspected; frozen engine and Shopify resources unchanged.
+Rollback: restore the recorded prior values for the four blueprint rows and clear the added Source/Content/QA rows.
+Next action: apply these rules only inside the next separately authorized exact family content wave; take one fresh baseline, reuse unchanged hashes, isolate failed Product GIDs, freeze one exact bulk manifest, and post-read once.
+
 ## BPC-CAT-SUPPLIER-EVIDENCE-v1.1 — canonical rule correction
 
 Status: COMPLETE — governance-only; Shopify mutation count 0
