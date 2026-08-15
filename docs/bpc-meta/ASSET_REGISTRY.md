@@ -9,7 +9,7 @@ Write policy: only assets explicitly marked `ALLOWLISTED` may receive a scoped B
 | Business Portfolio | Best Prints Co. | `913146750869963` | Gurkan Senel full control; no partners | ALLOWLISTED; no visible portfolio restriction |
 | Facebook Page business asset | Best Prints Co | `1153511934521436` | Portfolio `913146750869963`; owner full control | ALLOWLISTED; Page Quality clean |
 | Facebook public alias | Best Prints Co | `61588760788226` | Maps to Page asset `1153511934521436` | REFERENCE ONLY |
-| Instagram professional account | `@bestprintsco_` | `17841401039012650` | Basic Page link present; controlling-portfolio claim/release pending Meta case `1667557011016000` | ALLOWLISTED ONLY FOR EXACT CLAIM/RELEASE; NO ACTIVE INSTAGRAM ENFORCEMENT |
+| Instagram professional account | `@bestprintsco_` | `17841401039012650` | Basic Page link present; controlling-portfolio claim/release pending official Business Manager admin dispute; prior case `1667557011016000` auto-closed unresolved | ALLOWLISTED ONLY FOR EXACT CLAIM/RELEASE; NO ACTIVE INSTAGRAM ENFORCEMENT |
 | Controlling Ad Account | BestPrintsCo Ads | `2258717414903571`; internal asset `120249954540640219` | Portfolio `913146750869963`; owner full control | ALLOWLISTED; ACTIVE; USD; Pacific; NO PAYMENT; ZERO ADS/SPEND |
 | Legacy Instagram Ad Account | `cvtie-ad` | `1104252943250335` | Directly surfaced by Instagram; no portfolio ownership shown | HISTORICAL CVTIE; DISABLED; AUTOMATED REVIEW INELIGIBLE; RELEASE/SWITCH ONLY |
 | Historical personal Ad Account | Gurkan Senel | `55495642` | Personal advertising account | HISTORICAL; DISABLED; REVIEW EXPIRED; DO NOT USE |
@@ -37,7 +37,7 @@ Write policy: only assets explicitly marked `ALLOWLISTED` may receive a scoped B
 - Security Center did not require portfolio-wide 2FA or business verification at the audit cursor.
 - The new ad account has no payment method, no balance due, no ads, and no spend. The owner elected not to add payment now.
 - Facebook Page and the new ad account showed no active restriction.
-- Meta support confirmed that Instagram `17841401039012650` has no active restriction or enforcement. Full portfolio/shop eligibility remains pending specialist release from disabled legacy account `1104252943250335` under case `1667557011016000`.
+- Meta support confirmed that Instagram `17841401039012650` has no active restriction or enforcement. Full portfolio/shop eligibility remains pending release from disabled legacy account `1104252943250335`; the controlling recovery route is now the official Business Manager admin dispute requiring owner documents.
 
 ## Unknown - no write
 

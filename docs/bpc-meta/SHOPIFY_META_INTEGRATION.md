@@ -11,7 +11,7 @@ Live domain: `bestprintsco.com`
 | Official sales channel | Facebook & Instagram by Meta / Shopify by Facebook | Installed and active |
 | Business Portfolio | `913146750869963` | Connected BestPrintsCo portfolio |
 | Facebook Page | `1153511934521436` | Connected; Facebook Shop active |
-| Instagram | `17841401039012650` | Basic Page link only; full portfolio/shop claim pending Meta specialist case `1667557011016000` |
+| Instagram | `17841401039012650` | Basic Page link only; full portfolio/shop claim pending official Business Manager admin dispute; prior case `1667557011016000` auto-closed unresolved |
 | Ad Account | `2258717414903571` | Active, linked to the dataset, no payment method, no ads, no spend |
 | Catalog | `1046542707869496` | Controlling Shopify catalog; default country United States |
 | Commerce Account | `1995776851046152` | Facebook channel present; Instagram channel incomplete |

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "task": "BPC-META-FOUNDATION-001",
-  "evidence_date": "2026-08-10",
-  "classification": "BLOCKED_TECHNICAL_OR_PLATFORM_BLOCKER",
+  "evidence_date": "2026-08-15",
+  "classification": "PARTIAL_OWNER_AUTHENTICATION_REQUIRED",
   "bestprintsco": {
     "business_portfolio_id": "913146750869963",
     "facebook_page_id": "1153511934521436",
@@ -20,12 +20,12 @@
   },
   "support": {
     "case_id": "1667557011016000",
-    "status": "active_received_specialist_review_pending",
+    "status": "prior_case_auto_closed_admin_dispute_form_open_owner_documents_required",
     "submitted_date": "2026-08-10",
     "appeal_submitted": false
   },
   "gates": {
-    "instagram_portfolio_claim": "blocked_pending_meta_specialist_release_from_disabled_legacy_ad_account",
+    "instagram_portfolio_claim": "blocked_pending_owner_admin_dispute_documents_or_meta_release",
     "domain_verification": "verified",
     "purchase_event": "not_verified",
     "approved_creatives": "not_found",
@@ -39,5 +39,5 @@
     "live_spend_usd": 0,
     "secrets_persisted": false
   },
-  "next_trigger": "Meta updates case 1667557011016000 or releases Instagram 17841401039012650 from legacy ad account 1104252943250335"
+  "next_trigger": "Owner says Belgeler hazır after preparing ID, business-ownership proof, and signed authorization letter; or Instagram 17841401039012650 is independently released from legacy ad account 1104252943250335"
 }

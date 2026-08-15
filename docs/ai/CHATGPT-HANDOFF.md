@@ -21,9 +21,9 @@ Next action: Resolve the recorded pilot blocker while keeping CAT-MEDIA-001 scal
 
 Terra fresh-read six unambiguous ACTIVE/live products and nine still-present approved links.  The first detach call returned an incomplete connector payload, so `userErrors = 0` could not be objectively proven.  Immediate Shopify reread proved the target association remained present; no catalog mutation occurred in this checkpoint and no rollback was needed.  Private prewrite evidence: before Drive `1K_YxiLdUrrxmILNZ6N1V0Ch-PLYLz4Ow` (2,595 bytes, SHA-256 `d9b0e87c6ba7909dcfbf5f979ab7063291aaadcc5480ae7070c74d4d3f2fe588`) and rollback Drive `14YRXUQ7JhLDH_w6f9GrGJJnM1QOOd9qo` (1,218 bytes, SHA-256 `7474559187340aa41c28ec315fe91330c257ddc1f5243cf012bf3c3593467563`). Scaling is stopped; no downstream job started.
 
-## BPC-META-FOUNDATION-001 — platform blocker after foundation implementation
+## BPC-META-FOUNDATION-001 — owner document gate after foundation implementation
 
-Status: BLOCKED — TECHNICAL OR PLATFORM BLOCKER
+Status: PARTIAL — OWNER AUTHENTICATION REQUIRED
 Objective: separate BestPrintsCo from Nstyled, implement the safe Meta/Shopify foundation, prepare read-only measurement/organic automation, and bring the first US footwear campaign to the maximum truthful pre-publish state without spend.
 Branch/worktree: `task/BPC-META-FOUNDATION-001`, `C:\Projects\bestprintsco-theme`
 Start commit: `47f55f24340bc3407ebcbaee56f7c17b37f75318`
@@ -34,10 +34,10 @@ Implemented resources: portfolio `913146750869963`; Page `1153511934521436`; new
 
 Exact blocker: Instagram `17841401039012650` itself has no active enforcement, but its portfolio/shop claim remains blocked pending Meta specialist release from disabled Instagram-created account `cvtie-ad` `1104252943250335`. Meta says that legacy account is not eligible for automated review. Historical personal account `55495642` is separate, disabled, and review-expired. Do not delete either historical account, add payment as remediation, terminate unrecognized sessions, or create another bypass asset.
 
-Support state: case `1667557011016000` is active, received on 2026-08-10, and routed through the working Meta case channel for asset-recovery/account-management specialist review. Two direct case-chat sends remained stuck and were not retried a third time. This is an asset-release support case, not a policy appeal.
+Support state: case `1667557011016000` was automatically closed on 2026-08-12 without remediation. On 2026-08-15, an exact-ID escalation reconfirmed that the disabled linked account and inaccessible owning-admin chain cause the error. Owner-approved full-control assignment failed with `Unable to update permissions`. Meta's official `Business Manager admin dispute` form is open and requires requester ID, business-ownership proof, and a signed authorization letter; no owner data or submission was entered.
 
 Validation: domain asset `1033409412946916` is verified; Nstyled writes/queries 0; live spend USD 0; dataset sources contain no Nstyled domain; automation config/queue/reconciliation tests PASS. Shopify's official Meta channel remains active, with Facebook Shop connected and Instagram Shop pending the release case. Current Windows/Chrome is signed in only to `@bestprintsco_`; no Accounts Center profile or mobile session was logged out. Payment method remains blank by explicit owner decision. No appeal, ad draft, publish, or billing action occurred.
 
 Changed records: `docs/bpc-meta/*` including asset/protected manifests, change log, restriction state, Shopify integration, measurement bridge, organic automation, first-US-ad manifest, owner actions, next trigger, and machine-readable state.
 
-Rollback: every live change and its exact reversal is in `docs/bpc-meta/CHANGELOG.md`; historical assets must not be deleted. Recommended next action: when Meta updates case `1667557011016000` or releases Instagram `17841401039012650`, continue at `docs/bpc-meta/NEXT_TRIGGER.md` without restarting the audit. Owner acts only if Meta requests login, 2FA, identity confirmation, or final transfer confirmation.
+Rollback: every live change and its exact reversal is in `docs/bpc-meta/CHANGELOG.md`; historical assets must not be deleted. Recommended next action: owner prepares the three official dispute documents and says `Belgeler hazır`; then continue at the already-open support form without restarting the audit. Codex may draft non-sensitive text, but owner privately uploads documents, signs/affirms ownership, and performs final Submit. Do not repeat permission self-assignment, Switch, or Page-confirmation.

@@ -1,5 +1,5 @@
 version: 2
-last_updated: "2026-08-10T11:30:42Z"
+last_updated: "2026-08-15T09:21:33Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
@@ -28,7 +28,7 @@ tasks:
   - id: DOWNSTREAM-CATALOG-JOBS
     status: not_started
   - id: BPC-META-FOUNDATION-001
-    status: blocked_platform
+    status: partial_owner_authentication_required
     branch: task/BPC-META-FOUNDATION-001
     portfolio_id: "913146750869963"
     page_id: "1153511934521436"
@@ -36,13 +36,13 @@ tasks:
     ad_account_id: "2258717414903571"
     legacy_instagram_ad_account_id: "1104252943250335"
     foundation_commit: "1cab7381c4103e356d2802370bf1085c25e267f9"
-    blocker: "Instagram 17841401039012650 has no active enforcement, but its portfolio/shop claim is pending Meta specialist release from disabled legacy Instagram-created account 1104252943250335."
-    support_conversation: "Asset release / account management"
+    blocker: "Instagram 17841401039012650 remains linked through disabled legacy account 1104252943250335 in an owning portfolio the current profile cannot administer; self-assigned full control failed."
+    support_conversation: "Business Manager admin dispute"
     support_case_id: "1667557011016000"
-    support_case_status: active_received_specialist_review_pending
+    support_case_status: prior_case_auto_closed_admin_dispute_form_open_owner_documents_required
     domain_verification: verified
-    owner_action: "None now. If case 1667557011016000 requests login, 2FA, identity confirmation, or final transfer confirmation, Gurkan Senel completes only that exact step. Payment setup remains explicitly deferred."
-    continuation: "When Meta updates case 1667557011016000 or releases Instagram 17841401039012650, continue at docs/bpc-meta/NEXT_TRIGGER.md without repeating the broad audit."
+    owner_action: "Prepare accepted requester ID, accepted business-ownership proof, and a signed authorization letter; say Belgeler hazır. Upload, ownership affirmation, and final Submit are owner-only. Payment setup remains explicitly deferred."
+    continuation: "At Belgeler hazır, resume at the open Meta Support Home admin-dispute form; draft only non-sensitive text, then stop for owner upload/affirmation/final Submit. Do not repeat the broad audit or failed permission/Switch/Page-confirmation paths."
     safe_fallback: "Keep the basic Page connection, both historical accounts preserved, the new account payment empty, and all ads unpublished."
     nstyled_writes: 0
     nstyled_queries: 0
