@@ -1,5 +1,14 @@
 # Project State
 
+## BPC-CAT-SUPPLIER-EVIDENCE-v1.1
+
+- Status: COMPLETE — canonical evidence policy corrected; Shopify mutation count 0.
+- `PI-016`: official Pillow Profits / POPCUSTOMS specifications are accepted facts only when tied to the exact base by model/product code or proven SKU crosswalk, with URL/date/version retained.
+- `PI-022`: default is now `NO INFERENCE`; exact-model supplier facts may be `ALLOWED`, and supplier-stated functional claims may be `QUALIFIED`. They are not promoted to independently tested or certified claims.
+- `PI-023`: certification, regulatory, medical, safety, sustainability, guarantees, quantified performance, shipping, delivery, stock, and other dynamic commercial claims retain their separate evidence thresholds.
+- Canonical evidence: CAT-PI `Source Register!A18:G18`; `Field Authority Matrix` rows 17, 23, and 24; schema `CAT-PI-FAM-v1.1`; owner approval date `2026-08-15`.
+- Frozen `BPC-PI-ENGINE-v0.3.0`, Shopify catalog, products, variants, SKUs, prices, inventory, media, and publication state were not changed.
+
 Status: CAT-AUTO-001 active; CAT-MEDIA-001 CHECKPOINT-010 BLOCKED; scaling stopped
 Last updated: 2026-07-22T14:29:30Z
 Repository: `Jay-prodesign/bestprintsco-theme`

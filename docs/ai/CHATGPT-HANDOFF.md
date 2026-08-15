@@ -1,5 +1,17 @@
 # ChatGPT Handoff
 
+## BPC-CAT-SUPPLIER-EVIDENCE-v1.1 — canonical rule correction
+
+Status: COMPLETE — governance-only; Shopify mutation count 0
+Objective: accept exact Pillow Profits / POPCUSTOMS product facts and restrained supplier-stated functional claims without allowing material-based inference or certification overreach.
+Branch/worktree: `task/BPC-CAT-SUPPLIER-EVIDENCE-V1-1`, `C:\Projects\bestprintsco-theme`
+Start commit: `d7c414249a0d9222bd79a5752f93f291eff2deae`
+Files changed: `docs/ai/CHATGPT-HANDOFF.md`, `docs/ai/PROJECT-STATE.md`, `docs/ai/DECISION-LOG.md`, `docs/ai/NEXT-TASKS.yaml`.
+Canonical resource changed: BPC-MASTER CAT-PI spreadsheet `1038BRpH_FSPERsdZJgLlimr80HDclDeI8HYMi-JM5lo`; `Source Register!A18:G18` and `Field Authority Matrix` rows `PI-016`, `PI-022`, `PI-023`.
+Validation: connector readback matched all written values; copied native row structure and link survived; Google-rendered wrapped layout inspected; no unrelated cells, frozen engine rules, products, catalog fields, or Shopify resources changed.
+Rollback: restore the pre-change values for the three authority rows and clear `Source Register!A18:G18` from the recorded connector before-state.
+Next action: future content jobs may use exact-model supplier facts only after model/product-code or SKU crosswalk proof; do not reopen the current frozen Capri content scope automatically.
+
 Task: CAT-AUTO-001 activation and CAT-MEDIA-001 PILOT-001
 Status: PASS; bounded autonomy active; stopped after smallest pilot
 Branch: `task/CAT-000-catalog-governance`

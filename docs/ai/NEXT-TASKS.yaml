@@ -1,8 +1,16 @@
 version: 2
-last_updated: "2026-08-15T09:21:33Z"
+last_updated: "2026-08-15T10:21:45Z"
 runtime_source_of_truth: "Shopify Admin and live storefront"
 shared_queue: "PCC Codex Jobs"
 tasks:
+  - id: BPC-CAT-SUPPLIER-EVIDENCE-v1.1
+    status: complete
+    shopify_mutations: 0
+    canonical_sheet_id: "1038BRpH_FSPERsdZJgLlimr80HDclDeI8HYMi-JM5lo"
+    evidence_source: "Source Register!A18:G18"
+    rules_changed: "Field Authority Matrix PI-016, PI-022, PI-023"
+    rule: "Exact-model supplier facts allowed after model/product-code or proven SKU crosswalk; functional claims remain supplier-stated/qualified; certification and dynamic-commerce claims require separate authority."
+    next_action: "Apply only within a separately approved content batch; do not reopen frozen Capri work automatically."
   - id: CAT-BACKUP-001
     status: done
     corrective_publication_drive_id: 1ftIqQbEmKW4EykaXhwt19dbj_9YCyVHd
